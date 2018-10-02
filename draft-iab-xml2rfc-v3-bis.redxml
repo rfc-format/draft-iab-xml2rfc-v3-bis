@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="US-ASCII"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This XML document is the output of clean-for-DTD.xslt; a tool that strips
+    extensions to RFC2629(bis) from documents for processing with xml2rfc.
+-->
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
-
 <?rfc toc="yes"?>
 <?rfc symrefs="yes"?>
 <?rfc sortrefs="yes"?>
@@ -9,40 +12,9 @@
 <?rfc inline="yes"?>
 <?rfc linkmailto="no" ?>
 <?rfc rfcedstyle="yes"?>
-<?rfc-ext allow-markup-in-artwork="yes" ?>
-<?rfc-ext include-references-in-index="yes" ?>
-
-<!DOCTYPE rfc [
-<!ENTITY rfc2026 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml">
-<!ENTITY rfc2397 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2397.xml">
-<!ENTITY rfc3339 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3339.xml">
-<!ENTITY rfc3470 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3470.xml">
-<!ENTITY rfc3667 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3667.xml">
-<!ENTITY rfc3966 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3966.xml">
-<!ENTITY rfc3978 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3978.xml">
-<!ENTITY rfc3986 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3986.xml">
-<!ENTITY rfc5234 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5234.xml">
-<!ENTITY rfc5378 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5378.xml">
-<!ENTITY rfc6068 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6068.xml">
-<!ENTITY rfc6266 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6266.xml">
-<!ENTITY rfc6838 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6838.xml">
-<!ENTITY rfc6949 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6949.xml">
-<!ENTITY rfc7303 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7303.xml">
-<!ENTITY rfc7322 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7322.xml">
-<!ENTITY rfc7669 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7669.xml">
-<!ENTITY rfc7749 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7749.xml">
-<!ENTITY rfc7841 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7841.xml">
-<!ENTITY rfc7991 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7991.xml">
-<!ENTITY rfc7996 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7996.xml">
-<!ENTITY rfc7997 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7997.xml">
-<!ENTITY rfc7998 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7998.xml">
-]>
-
-<rfc docName="draft-iab-xml2rfc-v3-bis-latest"
-	obsoletes="7991"
-	category="info"
-	submissionType="IAB"
-	ipr="trust200902">
+<!DOCTYPE rfc
+  PUBLIC "" "rfc2629.dtd">
+<rfc docName="draft-iab-xml2rfc-v3-bis-latest" obsoletes="7991" category="info" submissionType="IAB" ipr="trust200902">
   
         <front>
   <title>The "xml2rfc" Version 3 Vocabulary</title>
@@ -51,7 +23,7 @@
         <address><email>paul.hoffman@icann.org</email></address>
   </author>
 
-  <date />
+  <date/>
 
   <abstract>
     <t>
@@ -160,9 +132,7 @@ and other lists
 instead of &lt;<xref target="element.t" format="none">t</xref>&gt;.</t>
 
 <t>Add &lt;<xref target="element.strong" format="none">strong</xref>&gt;, &lt;<xref target="element.em" format="none">em</xref>&gt;,
-&lt;<xref target="element.tt" format="none">tt</xref>&gt;, &lt;<xref
-target="element.sub" format="none">sub</xref>&gt;, and &lt;<xref
-target="element.sup" format="none">sup</xref>&gt; for character formatting.
+&lt;<xref target="element.tt" format="none">tt</xref>&gt;, &lt;<xref target="element.sub" format="none">sub</xref>&gt;, and &lt;<xref target="element.sup" format="none">sup</xref>&gt; for character formatting.
 
 </t>
 
@@ -233,9 +203,7 @@ entry and still allow the ASCII-equivalent values to appear in the processed doc
 <t>Add the "removeInRFC" attribute to &lt;<xref target="element.note" format="none">note</xref>&gt;.</t>
 
 <t>Add "pn" to &lt;<xref target="element.artwork" format="none">artwork</xref>&gt;,
-&lt;<xref target="element.aside" format="none">aside</xref>&gt;, &lt;<xref
-target="element.blockquote" format="none">blockquote</xref>&gt;, &lt;<xref
-target="element.boilerplate" format="none">boilerplate</xref>&gt;,
+&lt;<xref target="element.aside" format="none">aside</xref>&gt;, &lt;<xref target="element.blockquote" format="none">blockquote</xref>&gt;, &lt;<xref target="element.boilerplate" format="none">boilerplate</xref>&gt;,
 &lt;<xref target="element.dt" format="none">dt</xref>&gt;,
 &lt;<xref target="element.figure" format="none">figure</xref>&gt;, &lt;<xref target="element.iref" format="none">iref</xref>&gt;, &lt;<xref target="element.li" format="none">li</xref>&gt;, &lt;<xref target="element.references" format="none">references</xref>&gt;, &lt;<xref target="element.section" format="none">section</xref>&gt;,
 &lt;<xref target="element.sourcecode" format="none">sourcecode</xref>&gt;, &lt;<xref target="element.t" format="none">t</xref>&gt;,
@@ -1042,30 +1010,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       "The packet &lt;bcp14&gt;MUST&lt;/bcp14&gt; be dropped.", but it is not correct to say
       "&lt;bcp14&gt;The packet MUST be dropped.&lt;/bcp14&gt;".
    </t>
-   <t>This element appears as a child element of &lt;<xref
-   target="element.annotation" format="none">annotation</xref>&gt; (<xref
-   target="element.annotation"/>), &lt;<xref target="element.blockquote"
-   format="none">blockquote</xref>&gt; (<xref target="element.blockquote"/>),
-   &lt;<xref target="element.dd" format="none">dd</xref>&gt; (<xref
-   target="element.dd"/>), &lt;<xref target="element.dt"
-   format="none">dt</xref>&gt; (<xref target="element.dt"/>), &lt;<xref
-   target="element.em" format="none">em</xref>&gt; (<xref
-   target="element.em"/>), &lt;<xref target="element.li"
-   format="none">li</xref>&gt; (<xref target="element.li"/>), &lt;<xref
-   target="element.preamble" format="none">preamble</xref>&gt; (<xref
-   target="element.preamble"/>), &lt;<xref target="element.refcontent"
-   format="none">refcontent</xref>&gt; (<xref target="element.refcontent"/>),
-   &lt;<xref target="element.strong" format="none">strong</xref>&gt; (<xref
-   target="element.strong"/>), &lt;<xref target="element.sub"
-   format="none">sub</xref>&gt; (<xref target="element.sub"/>), &lt;<xref
-   target="element.sup" format="none">sup</xref>&gt; (<xref
-   target="element.sup"/>), &lt;<xref target="element.t"
-   format="none">t</xref>&gt; (<xref target="element.t"/>), &lt;<xref
-   target="element.td" format="none">td</xref>&gt; (<xref
-   target="element.td"/>), &lt;<xref target="element.th"
-   format="none">th</xref>&gt; (<xref target="element.th"/>), and &lt;<xref
-   target="element.tt" format="none">tt</xref>&gt; (<xref
-   target="element.tt"/>).
+   <t>This element appears as a child element of &lt;<xref target="element.annotation" format="none">annotation</xref>&gt; (<xref target="element.annotation"/>), &lt;<xref target="element.blockquote" format="none">blockquote</xref>&gt; (<xref target="element.blockquote"/>),
+   &lt;<xref target="element.dd" format="none">dd</xref>&gt; (<xref target="element.dd"/>), &lt;<xref target="element.dt" format="none">dt</xref>&gt; (<xref target="element.dt"/>), &lt;<xref target="element.em" format="none">em</xref>&gt; (<xref target="element.em"/>), &lt;<xref target="element.li" format="none">li</xref>&gt; (<xref target="element.li"/>), &lt;<xref target="element.preamble" format="none">preamble</xref>&gt; (<xref target="element.preamble"/>), &lt;<xref target="element.refcontent" format="none">refcontent</xref>&gt; (<xref target="element.refcontent"/>),
+   &lt;<xref target="element.strong" format="none">strong</xref>&gt; (<xref target="element.strong"/>), &lt;<xref target="element.sub" format="none">sub</xref>&gt; (<xref target="element.sub"/>), &lt;<xref target="element.sup" format="none">sup</xref>&gt; (<xref target="element.sup"/>), &lt;<xref target="element.t" format="none">t</xref>&gt; (<xref target="element.t"/>), &lt;<xref target="element.td" format="none">td</xref>&gt; (<xref target="element.td"/>), &lt;<xref target="element.th" format="none">th</xref>&gt; (<xref target="element.th"/>), and &lt;<xref target="element.tt" format="none">tt</xref>&gt; (<xref target="element.tt"/>).
 
 </t>
    <t anchor="element.bcp14.contents">
@@ -2089,8 +2036,7 @@ this element will be
       (defined in <xref target="RFC2026"/>), using values of "std" for
       "Standards Track", "bcp" for "BCP", "info" for "Informational", "exp" for "Experimental", and
       "historic" for "Historic".
-      The "name" attributes of those multiple &lt;<xref
-      target="element.seriesInfo" format="none">seriesInfo</xref>&gt; elements
+      The "name" attributes of those multiple &lt;<xref target="element.seriesInfo" format="none">seriesInfo</xref>&gt; elements
       interact as described in <xref target="element.seriesInfo"/>.
    </t>
    <t>This element appears as a child element of &lt;<xref target="element.reference" format="none">reference</xref>&gt; (<xref target="element.reference"/>) and &lt;<xref target="element.rfc" format="none">rfc</xref>&gt; (<xref target="element.rfc"/>).</t>
@@ -3825,8 +3771,7 @@ in the same &lt;front&gt; element.
         element has one of those statuses, the "value" attribute for that name
         needs to be the number within
         that series. That &lt;<xref target="element.front" format="none">front</xref>&gt; element might also contain an additional
-        &lt;<xref target="element.seriesInfo"
-        format="none">seriesInfo</xref>&gt; element with the status of "info", "exp", or "historic" and a name of "" to
+        &lt;<xref target="element.seriesInfo" format="none">seriesInfo</xref>&gt; element with the status of "info", "exp", or "historic" and a name of "" to
         indicate the status of the RFC.
       </t>
             <t>
@@ -3835,11 +3780,9 @@ in the same &lt;front&gt; element.
          element that has the name "RFC". 
       </t>
             <t>
-         The &lt;<xref target="element.seriesInfo"
-         format="none">seriesInfo</xref>&gt; element can contain the DOI for the referenced document.
+         The &lt;<xref target="element.seriesInfo" format="none">seriesInfo</xref>&gt; element can contain the DOI for the referenced document.
          This cannot be used when the &lt;<xref target="element.seriesInfo" format="none">seriesInfo</xref>&gt;
-         element is an eventual child element of an &lt;<xref
-         target="element.rfc" format="none">rfc</xref>&gt; element --
+         element is an eventual child element of an &lt;<xref target="element.rfc" format="none">rfc</xref>&gt; element --
          only as an eventual child of a &lt;<xref target="element.reference" format="none">reference</xref>&gt; element.
          The "value" attribute should use the form specified in <xref target="RFC7669"/>.
       </t>
@@ -5231,7 +5174,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <t anchor="element.format.contents">Content model: this element does not have any contents.</t>
 
 
-   <section anchor="element.format.attribute.octets" toc="exclude" title="&quot;octets&quot; Attribute">
+   <section anchor="element.format.attribute.octets" toc="exclude" title="&#34;octets&#34; Attribute">
       <iref item="Attributes" subitem="octets"/>
       <iref item="format element" subitem="octets attribute"/>
       <iref item="octets attribute" subitem="in format element"/>
@@ -5241,7 +5184,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.format.attribute.target" toc="exclude" title="&quot;target&quot; Attribute">
+   <section anchor="element.format.attribute.target" toc="exclude" title="&#34;target&#34; Attribute">
       <iref item="Attributes" subitem="target"/>
       <iref item="format element" subitem="target attribute"/>
       <iref item="target attribute" subitem="in format element"/>
@@ -5251,7 +5194,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.format.attribute.type" toc="exclude" title="&quot;type&quot; Attribute (Mandatory)">
+   <section anchor="element.format.attribute.type" toc="exclude" title="&#34;type&#34; Attribute (Mandatory)">
       <iref item="Attributes" subitem="type"/>
       <iref item="format element" subitem="type attribute"/>
       <iref item="type attribute" subitem="in format element"/>
@@ -5283,7 +5226,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       
 
 
-   <section anchor="element.list.attribute.counter" toc="exclude" title="&quot;counter&quot; Attribute">
+   <section anchor="element.list.attribute.counter" toc="exclude" title="&#34;counter&#34; Attribute">
       <iref item="Attributes" subitem="counter"/>
       <iref item="list element" subitem="counter attribute"/>
       <iref item="counter attribute" subitem="in list element"/>
@@ -5293,7 +5236,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.list.attribute.hangIndent" toc="exclude" title="&quot;hangIndent&quot; Attribute">
+   <section anchor="element.list.attribute.hangIndent" toc="exclude" title="&#34;hangIndent&#34; Attribute">
       <iref item="Attributes" subitem="hangIndent"/>
       <iref item="list element" subitem="hangIndent attribute"/>
       <iref item="hangIndent attribute" subitem="in list element"/>
@@ -5303,7 +5246,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.list.attribute.style" toc="exclude" title="&quot;style&quot; Attribute">
+   <section anchor="element.list.attribute.style" toc="exclude" title="&#34;style&#34; Attribute">
       <iref item="Attributes" subitem="style"/>
       <iref item="list element" subitem="style attribute"/>
       <iref item="style attribute" subitem="in list element"/>
@@ -5427,7 +5370,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <t anchor="element.spanx.contents">Content model: only text content.</t>
 
 
-   <section anchor="element.spanx.attribute.style" toc="exclude" title="&quot;style&quot; Attribute">
+   <section anchor="element.spanx.attribute.style" toc="exclude" title="&#34;style&#34; Attribute">
       <iref item="Attributes" subitem="style"/>
       <iref item="spanx element" subitem="style attribute"/>
       <iref item="style attribute" subitem="in spanx element"/>
@@ -5439,7 +5382,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.spanx.attribute.xml-space" toc="exclude" title="&quot;xml:space&quot; Attribute">
+   <section anchor="element.spanx.attribute.xml-space" toc="exclude" title="&#34;xml:space&#34; Attribute">
       <iref item="Attributes" subitem="xml:space"/>
       <iref item="spanx element" subitem="xml:space attribute"/>
       <iref item="xml:space attribute" subitem="in spanx element"/>
@@ -5494,7 +5437,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </t>
 
 
-   <section anchor="element.texttable.attribute.align" toc="exclude" title="&quot;align&quot; Attribute">
+   <section anchor="element.texttable.attribute.align" toc="exclude" title="&#34;align&#34; Attribute">
       <iref item="Attributes" subitem="align"/>
       <iref item="texttable element" subitem="align attribute"/>
       <iref item="align attribute" subitem="in texttable element"/>
@@ -5510,7 +5453,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.texttable.attribute.anchor" toc="exclude" title="&quot;anchor&quot; Attribute">
+   <section anchor="element.texttable.attribute.anchor" toc="exclude" title="&#34;anchor&#34; Attribute">
       <iref item="Attributes" subitem="anchor"/>
       <iref item="texttable element" subitem="anchor attribute"/>
       <iref item="anchor attribute" subitem="in texttable element"/>
@@ -5520,7 +5463,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.texttable.attribute.style" toc="exclude" title="&quot;style&quot; Attribute">
+   <section anchor="element.texttable.attribute.style" toc="exclude" title="&#34;style&#34; Attribute">
       <iref item="Attributes" subitem="style"/>
       <iref item="texttable element" subitem="style attribute"/>
       <iref item="style attribute" subitem="in texttable element"/>
@@ -5530,7 +5473,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.texttable.attribute.suppress-title" toc="exclude" title="&quot;suppress-title&quot; Attribute">
+   <section anchor="element.texttable.attribute.suppress-title" toc="exclude" title="&#34;suppress-title&#34; Attribute">
       <iref item="Attributes" subitem="suppress-title"/>
       <iref item="texttable element" subitem="suppress-title attribute"/>
       <iref item="suppress-title attribute" subitem="in texttable element"/>
@@ -5545,7 +5488,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.texttable.attribute.title" toc="exclude" title="&quot;title&quot; Attribute">
+   <section anchor="element.texttable.attribute.title" toc="exclude" title="&#34;title&#34; Attribute">
       <iref item="Attributes" subitem="title"/>
       <iref item="texttable element" subitem="title attribute"/>
       <iref item="title attribute" subitem="in texttable element"/>
@@ -5586,8 +5529,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </t>
 
 
-   <section anchor="element.ttcol.attribute.align" toc="exclude"
-      title="&quot;align&quot; Attribute">
+   <section anchor="element.ttcol.attribute.align" toc="exclude" title="&#34;align&#34; Attribute">
       <iref item="Attributes" subitem="align"/>
       <iref item="ttcol element" subitem="align attribute"/>
       <iref item="align attribute" subitem="in ttcol element"/>
@@ -5603,7 +5545,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    </section>
 
 
-   <section anchor="element.ttcol.attribute.width" toc="exclude" title="&quot;width&quot; Attribute">
+   <section anchor="element.ttcol.attribute.width" toc="exclude" title="&#34;width&#34; Attribute">
       <iref item="Attributes" subitem="width"/>
       <iref item="ttcol element" subitem="width attribute"/>
       <iref item="width attribute" subitem="in ttcol element"/>
@@ -5628,7 +5570,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <t anchor="element.vspace.contents">Content model: this element does not have any contents.</t>
 
 
-   <section anchor="element.vspace.attribute.blankLines" toc="exclude" title="&quot;blankLines&quot; Attribute">
+   <section anchor="element.vspace.attribute.blankLines" toc="exclude" title="&#34;blankLines&#34; Attribute">
       <iref item="Attributes" subitem="blankLines"/>
       <iref item="vspace element" subitem="blankLines attribute"/>
       <iref item="blankLines attribute" subitem="in vspace element"/>
@@ -5848,16 +5790,11 @@ not those that are part of a sequence of resources.</t>
       <eref target="http://www.w3.org/TR/xml"/>.
     </annotation></reference>
 
-<reference anchor='BCP14' target='http://www.rfc-editor.org/info/bcp14'>
-<front>
+<reference anchor="BCP14" target="http://www.rfc-editor.org/info/bcp14"><front>
 <title>Key words for use in RFCs to Indicate Requirement Levels</title>
-<author initials='S.' surname='Bradner' fullname='S. Bradner'><organization /></author>
-<date year='1997' month='March' />
-</front>
-<seriesInfo name='BCP' value='14'/>
-<seriesInfo name='RFC' value='2119'/>
-<seriesInfo name='DOI' value='10.17487/RFC2119'/>
-</reference>
+<author initials="S." surname="Bradner" fullname="S. Bradner"><organization/></author>
+<date year="1997" month="March"/>
+</front><seriesInfo name="BCP" value="14"/><seriesInfo name="RFC" value="2119"/><seriesInfo name="DOI" value="10.17487/RFC2119"/></reference>
 
 </references>
 
@@ -5877,29 +5814,230 @@ not those that are part of a sequence of resources.</t>
       <date/>
     </front></reference>
 
-&rfc2026;
-&rfc2397;
-&rfc3339;
-&rfc3470;
-&rfc3667;
-&rfc3966;
-&rfc3978;
-&rfc3986;
-&rfc5234;
-&rfc5378;
-&rfc6068;
-&rfc6266;
-&rfc6838;
-&rfc6949;
-&rfc7303;
-&rfc7322;
-&rfc7669;
-&rfc7749;
-&rfc7841;
-&rfc7991;
-&rfc7996;
-&rfc7997;
-&rfc7998;
+
+
+<reference anchor="RFC2026" target="https://www.rfc-editor.org/info/rfc2026"><front>
+<title>The Internet Standards Process -- Revision 3</title>
+<author initials="S." surname="Bradner" fullname="S. Bradner"><organization/></author>
+<date year="1996" month="October"/>
+<abstract><t>This memo documents the process used by the Internet community for the standardization of protocols and procedures.  It defines the stages in the standardization process, the requirements for moving a document between stages and the types of documents used during this process. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</t></abstract>
+</front><seriesInfo name="BCP" value="9"/><seriesInfo name="RFC" value="2026"/><seriesInfo name="DOI" value="10.17487/RFC2026"/></reference>
+
+
+
+<reference anchor="RFC2397" target="https://www.rfc-editor.org/info/rfc2397"><front>
+<title>The "data" URL scheme</title>
+<author initials="L." surname="Masinter" fullname="L. Masinter"><organization/></author>
+<date year="1998" month="August"/>
+<abstract><t>A new URL scheme, "data", is defined. It allows inclusion of small data items as "immediate" data, as if it had been included externally. [STANDARDS-TRACK]</t></abstract>
+</front><seriesInfo name="RFC" value="2397"/><seriesInfo name="DOI" value="10.17487/RFC2397"/></reference>
+
+
+
+<reference anchor="RFC3339" target="https://www.rfc-editor.org/info/rfc3339"><front>
+<title>Date and Time on the Internet: Timestamps</title>
+<author initials="G." surname="Klyne" fullname="G. Klyne"><organization/></author>
+<author initials="C." surname="Newman" fullname="C. Newman"><organization/></author>
+<date year="2002" month="July"/>
+<abstract><t>This document defines a date and time format for use in Internet protocols that is a profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.</t></abstract>
+</front><seriesInfo name="RFC" value="3339"/><seriesInfo name="DOI" value="10.17487/RFC3339"/></reference>
+
+
+
+<reference anchor="RFC3470" target="https://www.rfc-editor.org/info/rfc3470"><front>
+<title>Guidelines for the Use of Extensible Markup Language (XML) within IETF Protocols</title>
+<author initials="S." surname="Hollenbeck" fullname="S. Hollenbeck"><organization/></author>
+<author initials="M." surname="Rose" fullname="M. Rose"><organization/></author>
+<author initials="L." surname="Masinter" fullname="L. Masinter"><organization/></author>
+<date year="2003" month="January"/>
+<abstract><t>The Extensible Markup Language (XML) is a framework for structuring data.  While it evolved from Standard Generalized Markup Language (SGML) -- a markup language primarily focused on structuring documents -- XML has evolved to be a widely-used mechanism for representing structured data. There are a wide variety of Internet protocols being developed; many have need for a representation for structured data relevant to their application.  There has been much interest in the use of XML as a representation method.  This document describes basic XML concepts, analyzes various alternatives in the use of XML, and provides guidelines for the use of XML within IETF standards-track protocols.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</t></abstract>
+</front><seriesInfo name="BCP" value="70"/><seriesInfo name="RFC" value="3470"/><seriesInfo name="DOI" value="10.17487/RFC3470"/></reference>
+
+
+
+<reference anchor="RFC3667" target="https://www.rfc-editor.org/info/rfc3667"><front>
+<title>IETF Rights in Contributions</title>
+<author initials="S." surname="Bradner" fullname="S. Bradner"><organization/></author>
+<date year="2004" month="February"/>
+<abstract><t>The IETF policies about rights in Contributions to the IETF are designed to ensure that such Contributions can be made available to the IETF and Internet communities while permitting the authors to retain as many rights as possible.  This memo details the IETF policies on rights in Contributions to the IETF.  It also describes the objectives that the policies are designed to meet.  This memo updates RFC 2026, and, with RFC 3668, replaces Section 10 of RFC 2026.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</t></abstract>
+</front><seriesInfo name="RFC" value="3667"/><seriesInfo name="DOI" value="10.17487/RFC3667"/></reference>
+
+
+
+<reference anchor="RFC3966" target="https://www.rfc-editor.org/info/rfc3966"><front>
+<title>The tel URI for Telephone Numbers</title>
+<author initials="H." surname="Schulzrinne" fullname="H. Schulzrinne"><organization/></author>
+<date year="2004" month="December"/>
+<abstract><t>This document specifies the URI (Uniform Resource Identifier) scheme "tel".  The "tel" URI describes resources identified by telephone numbers.  This document obsoletes RFC 2806.  [STANDARDS-TRACK]</t></abstract>
+</front><seriesInfo name="RFC" value="3966"/><seriesInfo name="DOI" value="10.17487/RFC3966"/></reference>
+
+
+
+<reference anchor="RFC3978" target="https://www.rfc-editor.org/info/rfc3978"><front>
+<title>IETF Rights in Contributions</title>
+<author initials="S." surname="Bradner" fullname="S. Bradner" role="editor"><organization/></author>
+<date year="2005" month="March"/>
+<abstract><t>The IETF policies about rights in Contributions to the IETF are designed to ensure that such Contributions can be made available to the IETF and Internet communities while permitting the authors to retain as many rights as possible.  This memo details the IETF policies on rights in Contributions to the IETF.  It also describes the objectives that the policies are designed to meet.  This memo updates RFC 2026, and, with RFC 3979, replaces Section 10 of RFC 2026.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</t></abstract>
+</front><seriesInfo name="RFC" value="3978"/><seriesInfo name="DOI" value="10.17487/RFC3978"/></reference>
+
+
+
+<reference anchor="RFC3986" target="https://www.rfc-editor.org/info/rfc3986"><front>
+<title>Uniform Resource Identifier (URI): Generic Syntax</title>
+<author initials="T." surname="Berners-Lee" fullname="T. Berners-Lee"><organization/></author>
+<author initials="R." surname="Fielding" fullname="R. Fielding"><organization/></author>
+<author initials="L." surname="Masinter" fullname="L. Masinter"><organization/></author>
+<date year="2005" month="January"/>
+<abstract><t>A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource.  This specification defines the generic URI syntax and a process for resolving URI references that might be in relative form, along with guidelines and security considerations for the use of URIs on the Internet.  The URI syntax defines a grammar that is a superset of all valid URIs, allowing an implementation to parse the common components of a URI reference without knowing the scheme-specific requirements of every possible identifier.  This specification does not define a generative grammar for URIs; that task is performed by the individual specifications of each URI scheme.  [STANDARDS-TRACK]</t></abstract>
+</front><seriesInfo name="STD" value="66"/><seriesInfo name="RFC" value="3986"/><seriesInfo name="DOI" value="10.17487/RFC3986"/></reference>
+
+
+
+<reference anchor="RFC5234" target="https://www.rfc-editor.org/info/rfc5234"><front>
+<title>Augmented BNF for Syntax Specifications: ABNF</title>
+<author initials="D." surname="Crocker" fullname="D. Crocker" role="editor"><organization/></author>
+<author initials="P." surname="Overell" fullname="P. Overell"><organization/></author>
+<date year="2008" month="January"/>
+<abstract><t>Internet technical specifications often need to define a formal syntax.  Over the years, a modified version of Backus-Naur Form (BNF), called Augmented BNF (ABNF), has been popular among many Internet specifications.  The current specification documents ABNF. It balances compactness and simplicity with reasonable representational power.  The differences between standard BNF and ABNF involve naming rules, repetition, alternatives, order-independence, and value ranges.  This specification also supplies additional rule definitions and encoding for a core lexical analyzer of the type common to several Internet specifications.  [STANDARDS-TRACK]</t></abstract>
+</front><seriesInfo name="STD" value="68"/><seriesInfo name="RFC" value="5234"/><seriesInfo name="DOI" value="10.17487/RFC5234"/></reference>
+
+
+
+<reference anchor="RFC5378" target="https://www.rfc-editor.org/info/rfc5378"><front>
+<title>Rights Contributors Provide to the IETF Trust</title>
+<author initials="S." surname="Bradner" fullname="S. Bradner" role="editor"><organization/></author>
+<author initials="J." surname="Contreras" fullname="J. Contreras" role="editor"><organization/></author>
+<date year="2008" month="November"/>
+<abstract><t>The IETF policies about rights in Contributions to the IETF are designed to ensure that such Contributions can be made available to the IETF and Internet communities while permitting the authors to retain as many rights as possible.  This memo details the IETF policies on rights in Contributions to the IETF.  It also describes the objectives that the policies are designed to meet.  This memo obsoletes RFCs 3978 and 4748 and, with BCP 79 and RFC 5377, replaces Section 10 of RFC 2026.  This document  specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</t></abstract>
+</front><seriesInfo name="BCP" value="78"/><seriesInfo name="RFC" value="5378"/><seriesInfo name="DOI" value="10.17487/RFC5378"/></reference>
+
+
+
+<reference anchor="RFC6068" target="https://www.rfc-editor.org/info/rfc6068"><front>
+<title>The 'mailto' URI Scheme</title>
+<author initials="M." surname="Duerst" fullname="M. Duerst"><organization/></author>
+<author initials="L." surname="Masinter" fullname="L. Masinter"><organization/></author>
+<author initials="J." surname="Zawinski" fullname="J. Zawinski"><organization/></author>
+<date year="2010" month="October"/>
+<abstract><t>This document defines the format of Uniform Resource Identifiers (URIs) to identify resources that are reached using Internet mail. It adds better internationalization and compatibility with Internationalized Resource Identifiers (IRIs; RFC 3987) to the previous syntax of 'mailto' URIs (RFC 2368).  [STANDARDS-TRACK]</t></abstract>
+</front><seriesInfo name="RFC" value="6068"/><seriesInfo name="DOI" value="10.17487/RFC6068"/></reference>
+
+
+
+<reference anchor="RFC6266" target="https://www.rfc-editor.org/info/rfc6266"><front>
+<title>Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)</title>
+<author initials="J." surname="Reschke" fullname="J. Reschke"><organization/></author>
+<date year="2011" month="June"/>
+<abstract><t>RFC 2616 defines the Content-Disposition response header field, but points out that it is not part of the HTTP/1.1 Standard.  This specification takes over the definition and registration of Content-Disposition, as used in HTTP, and clarifies internationalization aspects.  [STANDARDS-TRACK]</t></abstract>
+</front><seriesInfo name="RFC" value="6266"/><seriesInfo name="DOI" value="10.17487/RFC6266"/></reference>
+
+
+
+<reference anchor="RFC6838" target="https://www.rfc-editor.org/info/rfc6838"><front>
+<title>Media Type Specifications and Registration Procedures</title>
+<author initials="N." surname="Freed" fullname="N. Freed"><organization/></author>
+<author initials="J." surname="Klensin" fullname="J. Klensin"><organization/></author>
+<author initials="T." surname="Hansen" fullname="T. Hansen"><organization/></author>
+<date year="2013" month="January"/>
+<abstract><t>This document defines procedures for the specification and registration of media types for use in HTTP, MIME, and other Internet protocols.  This memo documents an Internet Best Current Practice.</t></abstract>
+</front><seriesInfo name="BCP" value="13"/><seriesInfo name="RFC" value="6838"/><seriesInfo name="DOI" value="10.17487/RFC6838"/></reference>
+
+
+
+<reference anchor="RFC6949" target="https://www.rfc-editor.org/info/rfc6949"><front>
+<title>RFC Series Format Requirements and Future Development</title>
+<author initials="H." surname="Flanagan" fullname="H. Flanagan"><organization/></author>
+<author initials="N." surname="Brownlee" fullname="N. Brownlee"><organization/></author>
+<date year="2013" month="May"/>
+<abstract><t>This document describes the current requirements and requests for enhancements for the format of the canonical version of RFCs.  Terms are defined to help clarify exactly which stages of document production are under discussion for format changes.  The requirements described in this document will determine what changes will be made to RFC format.  This document updates RFC 2223.</t></abstract>
+</front><seriesInfo name="RFC" value="6949"/><seriesInfo name="DOI" value="10.17487/RFC6949"/></reference>
+
+
+
+<reference anchor="RFC7303" target="https://www.rfc-editor.org/info/rfc7303"><front>
+<title>XML Media Types</title>
+<author initials="H." surname="Thompson" fullname="H. Thompson"><organization/></author>
+<author initials="C." surname="Lilley" fullname="C. Lilley"><organization/></author>
+<date year="2014" month="July"/>
+<abstract><t>This specification standardizes three media types -- application/xml, application/xml-external-parsed-entity, and application/xml-dtd -- for use in exchanging network entities that are related to the Extensible Markup Language (XML) while defining text/xml and text/ xml-external-parsed-entity as aliases for the respective application/ types.  This specification also standardizes the '+xml' suffix for naming media types outside of these five types when those media types represent XML MIME entities.</t></abstract>
+</front><seriesInfo name="RFC" value="7303"/><seriesInfo name="DOI" value="10.17487/RFC7303"/></reference>
+
+
+
+<reference anchor="RFC7322" target="https://www.rfc-editor.org/info/rfc7322"><front>
+<title>RFC Style Guide</title>
+<author initials="H." surname="Flanagan" fullname="H. Flanagan"><organization/></author>
+<author initials="S." surname="Ginoza" fullname="S. Ginoza"><organization/></author>
+<date year="2014" month="September"/>
+<abstract><t>This document describes the fundamental and unique style conventions and editorial policies currently in use for the RFC Series.  It captures the RFC Editor's basic requirements and offers guidance regarding the style and structure of an RFC.  Additional guidance is captured on a website that reflects the experimental nature of that guidance and prepares it for future inclusion in the RFC Style Guide.  This document obsoletes RFC 2223, "Instructions to RFC Authors".</t></abstract>
+</front><seriesInfo name="RFC" value="7322"/><seriesInfo name="DOI" value="10.17487/RFC7322"/></reference>
+
+
+
+<reference anchor="RFC7669" target="https://www.rfc-editor.org/info/rfc7669"><front>
+<title>Assigning Digital Object Identifiers to RFCs</title>
+<author initials="J." surname="Levine" fullname="J. Levine"><organization/></author>
+<date year="2015" month="October"/>
+<abstract><t>This document describes the way that Digital Object Identifiers (DOIs) are assigned to past and future RFCs.  The DOI is a widely used system that assigns unique identifiers to digital documents that can be queried and managed in a consistent fashion.</t></abstract>
+</front><seriesInfo name="RFC" value="7669"/><seriesInfo name="DOI" value="10.17487/RFC7669"/></reference>
+
+
+
+<reference anchor="RFC7749" target="https://www.rfc-editor.org/info/rfc7749"><front>
+<title>The "xml2rfc" Version 2 Vocabulary</title>
+<author initials="J." surname="Reschke" fullname="J. Reschke"><organization/></author>
+<date year="2016" month="February"/>
+<abstract><t>This document defines the "xml2rfc" version 2 vocabulary: an XML-based language used for writing RFCs and Internet-Drafts.</t><t>Version 2 represents the state of the vocabulary (as implemented by several tools and as used by the RFC Editor) around 2014.</t><t>This document obsoletes RFC 2629.</t></abstract>
+</front><seriesInfo name="RFC" value="7749"/><seriesInfo name="DOI" value="10.17487/RFC7749"/></reference>
+
+
+
+<reference anchor="RFC7841" target="https://www.rfc-editor.org/info/rfc7841"><front>
+<title>RFC Streams, Headers, and Boilerplates</title>
+<author initials="J." surname="Halpern" fullname="J. Halpern" role="editor"><organization/></author>
+<author initials="L." surname="Daigle" fullname="L. Daigle" role="editor"><organization/></author>
+<author initials="O." surname="Kolkman" fullname="O. Kolkman" role="editor"><organization/></author>
+<date year="2016" month="May"/>
+<abstract><t>RFC documents contain a number of fixed elements such as the title page header, standard boilerplates, and copyright/IPR statements. This document describes them and introduces some updates to reflect current usage and requirements of RFC publication.  In particular, this updated structure is intended to communicate clearly the source of RFC creation and review.  This document obsoletes RFC 5741, moving detailed content to an IAB web page and preparing for more flexible output formats.</t></abstract>
+</front><seriesInfo name="RFC" value="7841"/><seriesInfo name="DOI" value="10.17487/RFC7841"/></reference>
+
+
+
+<reference anchor="RFC7991" target="https://www.rfc-editor.org/info/rfc7991"><front>
+<title>The "xml2rfc" Version 3 Vocabulary</title>
+<author initials="P." surname="Hoffman" fullname="P. Hoffman"><organization/></author>
+<date year="2016" month="December"/>
+<abstract><t>This document defines the "xml2rfc" version 3 vocabulary: an XML-based language used for writing RFCs and Internet-Drafts.  It is heavily derived from the version 2 vocabulary that is also under discussion.  This document obsoletes the v2 grammar described in RFC 7749.</t></abstract>
+</front><seriesInfo name="RFC" value="7991"/><seriesInfo name="DOI" value="10.17487/RFC7991"/></reference>
+
+
+
+<reference anchor="RFC7996" target="https://www.rfc-editor.org/info/rfc7996"><front>
+<title>SVG Drawings for RFCs: SVG 1.2 RFC</title>
+<author initials="N." surname="Brownlee" fullname="N. Brownlee"><organization/></author>
+<date year="2016" month="December"/>
+<abstract><t>This document specifies SVG 1.2 RFC -- an SVG profile for use in diagrams that may appear in RFCs -- and considers some of the issues concerning the creation and use of such diagrams.</t></abstract>
+</front><seriesInfo name="RFC" value="7996"/><seriesInfo name="DOI" value="10.17487/RFC7996"/></reference>
+
+
+
+<reference anchor="RFC7997" target="https://www.rfc-editor.org/info/rfc7997"><front>
+<title>The Use of Non-ASCII Characters in RFCs</title>
+<author initials="H." surname="Flanagan" fullname="H. Flanagan" role="editor"><organization/></author>
+<date year="2016" month="December"/>
+<abstract><t>In order to support the internationalization of protocols and a more diverse Internet community, the RFC Series must evolve to allow for the use of non-ASCII characters in RFCs.  While English remains the required language of the Series, the encoding of future RFCs will be in UTF-8, allowing for a broader range of characters than typically used in the English language.  This document describes the RFC Editor requirements and gives guidance regarding the use of non-ASCII characters in RFCs.</t><t>This document updates RFC 7322.  Please view this document in PDF form to see the full text.</t></abstract>
+</front><seriesInfo name="RFC" value="7997"/><seriesInfo name="DOI" value="10.17487/RFC7997"/></reference>
+
+
+
+<reference anchor="RFC7998" target="https://www.rfc-editor.org/info/rfc7998"><front>
+<title>"xml2rfc" Version 3 Preparation Tool Description</title>
+<author initials="P." surname="Hoffman" fullname="P. Hoffman"><organization/></author>
+<author initials="J." surname="Hildebrand" fullname="J. Hildebrand"><organization/></author>
+<date year="2016" month="December"/>
+<abstract><t>This document describes some aspects of the "prep tool" that is expected to be created when the new xml2rfc version 3 specification is deployed.</t></abstract>
+</front><seriesInfo name="RFC" value="7998"/><seriesInfo name="DOI" value="10.17487/RFC7998"/></reference>
+
 
 
   <reference anchor="RNC" target="https://www.oasis-open.org/committees/relax-ng/compact-20021121.html"><front>
@@ -5910,8 +6048,7 @@ not those that are part of a sequence of resources.</t>
         </address>
       </author>
       <date month="November" year="2002"/>
-    </front><seriesInfo name="The Organization for the Advancement of
-    Structured Information Standards" value="(OASIS)"/></reference>
+    </front><seriesInfo name="The Organization for the Advancement of     Structured Information Standards" value="(OASIS)"/></reference>
 
   <reference anchor="RNG"><front>
       <title>Information Technology - Document Schema Definition
@@ -6532,8 +6669,7 @@ the "src" attribute if that attribute is removed by the prep tool.</t>
 <t>&lt;xref&gt; "derivedContent" attribute -- This attribute is filled in if there is no content in
 the &lt;xref&gt; element.  The value for this attribute is based on
 the value in the "displayFormat" attribute.
-Examples of how this value is filled can be found in <xref
-target="element.xref.attribute.format"/>.</t>
+Examples of how this value is filled can be found in <xref target="element.xref.attribute.format"/>.</t>
 
 </list></t>
 
@@ -7506,7 +7642,7 @@ start |= rfc
 
 </section>
 
-<section title="Differences from RFC 7991" anchor="diff7991">
+<section anchor="diff7991" title="Differences from RFC 7991">
 
 <t>
 This document obsoletes <xref target="RFC7991"/>. The larger differences between this document
@@ -7527,10 +7663,12 @@ obsoleted RFC 7749. Simlarly, the appendix on "Schema Differences from v2" was a
      The IAB members at the time this memo was approved
      were (in alphabetical order):
 
+
 <?rfc subcompact="yes" ?>
 <list>
  <t>... to be added when turned into an RFC ...</t>
 </list>
+
 <?rfc subcompact="no" ?>
    </t>
 </section>
