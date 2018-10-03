@@ -67,6 +67,21 @@ XML and HTML. The term "representation" is used when talking about a specific in
 of a format, such as an XML document or an HTML document that was created by an XML document.
 </t>
 
+<section anchor="diff7991" title="Differences from RFC 7991">
+
+<t>
+This document obsoletes <xref target="RFC7991"/>. The larger differences between this document
+and RFC 7991 are listed here.
+<list style="symbols">
+
+<t>
+Discussion about obsoleting <xref target="RFC7749"/> (the v2 format) were removed because RFC 7991 already
+obsoleted RFC 7749. Simlarly, the appendix on "Schema Differences from v2" was also removed.
+</t>
+
+</list></t>
+</section>
+
 <section title="Expected Updates to the Specification">
 
 <t>
@@ -7642,35 +7657,14 @@ start |= rfc
 
 </section>
 
-<section anchor="diff7991" title="Differences from RFC 7991">
-
-<t>
-This document obsoletes <xref target="RFC7991"/>. The larger differences between this document
-and RFC 7991 are listed here.
-<list>
-
-<t>
-Discussion about obsoleting <xref target="RFC7749"/> (the v2 format) were removed because RFC 7991 already
-obsoleted RFC 7749. Simlarly, the appendix on "Schema Differences from v2" was also removed.
-</t>
-
-</list></t>
-</section>
-
 <section title="IAB Members at the Time of Approval">
 
-   <t>
-     The IAB members at the time this memo was approved
-     were (in alphabetical order):
-
-
-<?rfc subcompact="yes" ?>
+<t>
+The IAB members at the time this memo was approved
+were (in alphabetical order):
 <list>
- <t>... to be added when turned into an RFC ...</t>
-</list>
-
-<?rfc subcompact="no" ?>
-   </t>
+<t>... to be added when turned into an RFC ...</t>
+</list></t>
 </section>
 
 <section anchor="acknowledgements" title="Acknowledgements">

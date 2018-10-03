@@ -12,6 +12,10 @@
 <?rfc-ext allow-markup-in-artwork="yes" ?>
 <?rfc-ext include-references-in-index="yes" ?>
 
+<!-- 
+https://datatracker.ietf.org/submit/status/98390/42a45545b12aabc3e88a080a33bd2fee/
+-->
+
 <!DOCTYPE rfc [
 <!ENTITY rfc2026 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml">
 <!ENTITY rfc2397 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2397.xml">
@@ -94,6 +98,21 @@ In this document, the term "format" is used when describing types of documents, 
 XML and HTML. The term "representation" is used when talking about a specific instantiation
 of a format, such as an XML document or an HTML document that was created by an XML document.
 </t>
+
+<section title="Differences from RFC 7991" anchor="diff7991">
+
+<t>
+This document obsoletes <xref target="RFC7991"/>. The larger differences between this document
+and RFC 7991 are listed here.
+<list style="symbols">
+
+<t>
+Discussion about obsoleting <xref target="RFC7749"/> (the v2 format) were removed because RFC 7991 already
+obsoleted RFC 7749. Simlarly, the appendix on "Schema Differences from v2" was also removed.
+</t>
+
+</list></t>
+</section>
 
 <section title="Expected Updates to the Specification">
 
@@ -7506,33 +7525,14 @@ start |= rfc
 
 </section>
 
-<section title="Differences from RFC 7991" anchor="diff7991">
-
-<t>
-This document obsoletes <xref target="RFC7991"/>. The larger differences between this document
-and RFC 7991 are listed here.
-<list>
-
-<t>
-Discussion about obsoleting <xref target="RFC7749"/> (the v2 format) were removed because RFC 7991 already
-obsoleted RFC 7749. Simlarly, the appendix on "Schema Differences from v2" was also removed.
-</t>
-
-</list></t>
-</section>
-
 <section title="IAB Members at the Time of Approval">
 
-   <t>
-     The IAB members at the time this memo was approved
-     were (in alphabetical order):
-
-<?rfc subcompact="yes" ?>
+<t>
+The IAB members at the time this memo was approved
+were (in alphabetical order):
 <list>
- <t>... to be added when turned into an RFC ...</t>
-</list>
-<?rfc subcompact="no" ?>
-   </t>
+<t>... to be added when turned into an RFC ...</t>
+</list></t>
 </section>
 
 <section anchor="acknowledgements" title="Acknowledgements">
