@@ -12,10 +12,6 @@
 <?rfc-ext allow-markup-in-artwork="yes" ?>
 <?rfc-ext include-references-in-index="yes" ?>
 
-<!-- 
-https://datatracker.ietf.org/submit/status/98390/42a45545b12aabc3e88a080a33bd2fee/
--->
-
 <!DOCTYPE rfc [
 <!ENTITY rfc2026 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml">
 <!ENTITY rfc2397 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2397.xml">
@@ -41,6 +37,8 @@ https://datatracker.ietf.org/submit/status/98390/42a45545b12aabc3e88a080a33bd2fe
 <!ENTITY rfc7997 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7997.xml">
 <!ENTITY rfc7998 PUBLIC "" "https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7998.xml">
 ]>
+
+<!-- ISSUE 40 maybe add text about intention to allow hand-editing -->
 
 <rfc docName="draft-iab-xml2rfc-v3-bis-latest"
 	obsoletes="7991"
@@ -761,6 +759,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          See <xref target="RFC7998"/> for a description of this.
       </t>
       <t>
+<!-- ISSUE 34 -->
          It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
       </t>
    </section>
@@ -1239,6 +1238,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
 </section>
 
 
+<!-- ISSUE 37  Maybe eliminate this, or allowing it in more places, or rename it to be cell-specific -->
+
 <section anchor="element.br" title="&lt;br&gt;">
    
    
@@ -1647,6 +1648,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
 
 <section anchor="element.dl" title="&lt;dl&gt;">
    
+<!-- ISSUE 39 maybe add an "indent" attribute -->
    
    <iref item="Elements" subitem="dl" primary="true"/>
    <iref item="dl element" primary="true"/>
@@ -1685,7 +1687,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for the list.
       </t>
    </section>
-
 
    <section anchor="element.dl.attribute.hanging" toc="exclude" title="&#34;hanging&#34; Attribute">
       
@@ -2260,6 +2261,8 @@ this element will be
       Content model: only text content.</t>
 </section>
 
+
+<!-- ISSUE 35 maybe allow <li> to have <blockquote> -->
 
 <section anchor="element.li" title="&lt;li&gt;">
    
