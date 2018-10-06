@@ -758,10 +758,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          In some cases, the prep tool may remove the "src" attribute after processing its value.
          See <xref target="RFC7998"/> for a description of this.
       </t>
-      <t>
-<!-- ISSUE 34 -->
-         It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
-      </t>
    </section>
 
 

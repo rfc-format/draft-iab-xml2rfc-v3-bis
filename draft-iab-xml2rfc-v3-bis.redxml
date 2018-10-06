@@ -11,7 +11,7 @@
 <?rfc comments="yes"?>
 <?rfc inline="yes"?>
 <?rfc linkmailto="no" ?>
-<?rfc rfcedstyle="yes"?>
+<?rfc rfcedstyle="yes"?><!-- ISSUE 40 maybe add text about intention to allow hand-editing -->
 <!DOCTYPE rfc
   PUBLIC "" "rfc2629.dtd">
 <rfc docName="draft-iab-xml2rfc-v3-bis-latest" obsoletes="7991" category="info" submissionType="IAB" ipr="trust200902">
@@ -724,9 +724,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          In some cases, the prep tool may remove the "src" attribute after processing its value.
          See <xref target="RFC7998"/> for a description of this.
       </t>
-      <t>
-         It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
-      </t>
    </section>
 
 
@@ -1182,6 +1179,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
 </section>
 
 
+<!-- ISSUE 37  Maybe eliminate this, or allowing it in more places, or rename it to be cell-specific -->
+
 <section anchor="element.br" title="&lt;br&gt;">
    
    
@@ -1590,6 +1589,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
 
 <section anchor="element.dl" title="&lt;dl&gt;">
    
+<!-- ISSUE 39 maybe add an "indent" attribute -->
    
    <iref item="Elements" subitem="dl" primary="true"/>
    <iref item="dl element" primary="true"/>
@@ -1628,7 +1628,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for the list.
       </t>
    </section>
-
 
    <section anchor="element.dl.attribute.hanging" toc="exclude" title="&#34;hanging&#34; Attribute">
       
@@ -2202,6 +2201,8 @@ this element will be
       Content model: only text content.</t>
 </section>
 
+
+<!-- ISSUE 35 maybe allow <li> to have <blockquote> -->
 
 <section anchor="element.li" title="&lt;li&gt;">
    
