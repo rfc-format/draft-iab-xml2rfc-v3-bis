@@ -1,0 +1,2450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:x="http://purl.org/net/xml2rfc/ext" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
+   <define name="rfc">
+      <element name="rfc">
+         <a:annotation>This is the root element of the xml2rfc vocabulary.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="number">
+               <a:annotation>Deprecated; instead, use the "value" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="obsoletes" a:defaultValue="">
+               <a:annotation>A comma-separated list of RFC numbers or Internet-Draft names.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="updates" a:defaultValue="">
+               <a:annotation>A comma-separated list of RFC numbers or Internet-Draft names.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="category">
+               <a:annotation>Deprecated; instead, use the "name" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mode"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="consensus" a:defaultValue="false">
+               <a:annotation>Affects the generated boilerplate. Note that the values of "no" and "yes" are deprecated and are replaced by "false" (the default) and "true".</a:annotation>
+               <choice>
+                  <value>no</value>
+                  <value>yes</value>
+                  <value>false</value>
+                  <value>true</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="seriesNo">
+               <a:annotation>Deprecated; instead, use the "value" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ipr">
+               <a:annotation>Represents the Intellectual Property status of the document. See Appendix "The "ipr" Attribute" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest for details.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="iprExtract">
+               <a:annotation>Identifies a single section within the document for which extraction "as is" is explicitly allowed (only relevant for historic values of the "ipr" attribute).</a:annotation>
+               <data type="IDREF"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="submissionType" a:defaultValue="IETF">
+               <a:annotation>The document stream, as described in [RFC7841]. (The RFC Series Editor may change the list of allowed values in the future.)</a:annotation>
+               <choice>
+                  <value>IETF</value>
+                  <value>IAB</value>
+                  <value>IRTF</value>
+                  <value>independent</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="docName">
+               <a:annotation>Deprecated; instead, use the "value" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="sortRefs" a:defaultValue="false">
+               <a:annotation>Specifies whether or not the prep tool will sort the references in each reference section.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="symRefs" a:defaultValue="true">
+               <a:annotation>Specifies whether or not a formatter is requested to use symbolic references (such as "[RFC2119]"). If the value for this is "false", the references come out as numbers (such as "[3]").</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="tocInclude" a:defaultValue="true">
+               <a:annotation>Specifies whether or not a formatter is requested to include a table of contents in generated files.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="tocDepth" a:defaultValue="3">
+               <a:annotation>Specifies the number of levels of headings that a formatter is requested to include in the table of contents; the default is "3".</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="prepTime">
+               <a:annotation>The date that the XML was processed by a prep tool. This is included in the XML file just before it is saved to disk. The value is formatted using the "date-time" format defined in Section 5.6 of [RFC3339]. The "time-offset" should be "Z".</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="indexInclude" a:defaultValue="true">
+               <a:annotation>Specifies whether or not a formatter is requested to include an index in generated files. If the source file has no &lt;Section "&lt;iref&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, an index is never generated. This option is useful for generating documents where the source document has &lt;Section "&lt;iref&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements but the author no longer wants an index.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="version">
+               <a:annotation>Specifies the version of xml2rfc syntax used in this document. The only expected value (for now) is "3".</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="scripts" a:defaultValue="Common,Latin"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="expiresDate"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <ref name="link"/>
+         </zeroOrMore>
+         <ref name="front"/>
+         <ref name="middle"/>
+         <optional>
+            <ref name="back"/>
+         </optional>
+      </element>
+   </define>
+   <define name="link">
+      <element name="link">
+         <a:annotation>A link to an external document that is related to the RFC.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="href">
+            <a:annotation>The URI of the external document.</a:annotation>
+         </attribute>
+         <optional>
+            <attribute name="rel">
+               <a:annotation>The relationship of the external document to this one. The relationships are taken from the "Link Relations" registry maintained by IANA [LINKRELATIONS].</a:annotation>
+            </attribute>
+         </optional>
+      </element>
+   </define>
+   <define name="front">
+      <element name="front">
+         <a:annotation>Represents the "front matter": metadata (such as author information), the Abstract, and additional notes.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <ref name="title"/>
+         <zeroOrMore>
+            <ref name="seriesInfo"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="author"/>
+         </oneOrMore>
+         <optional>
+            <ref name="date"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="area"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="workgroup"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="keyword"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="abstract"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="note"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="boilerplate"/>
+         </optional>
+      </element>
+   </define>
+   <define name="title">
+      <element name="title">
+         <a:annotation>Represents the document title.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="abbrev">
+               <a:annotation>Specifies an abbreviated variant of the document title.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the title.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="author">
+      <element name="author">
+         <a:annotation>Provides information about a document's author. This is used both for the document itself (at the beginning of the document) and for referenced documents.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="initials">
+               <a:annotation>An abbreviated variant of the given name(s), to be used in conjunction with the separately specified surname. It usually appears on the front page, in footers, and in references.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiInitials">
+               <a:annotation>The ASCII equivalent of the author's initials, to be used in conjunction with the separately specified asciiSurname.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="surname">
+               <a:annotation>The author's surname, to be used in conjunction with the separately specified initials. It usually appears on the front page, in footers, and in references.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiSurname">
+               <a:annotation>The ASCII equivalent of the author's surname, to be used in conjunction with the separately specified asciiInitials.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fullname">
+               <a:annotation>The full name (used in the automatically generated "Author's Address" section). Although this attribute is optional, if one or more of the "asciiFullname", "asciiInitials", or "asciiSurname" attributes have values, the "fullname" attribute is required.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="role">
+               <a:annotation>Specifies the role the author had in creating the document.</a:annotation>
+               <choice>
+                  <value>editor</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiFullname">
+               <a:annotation>The ASCII equivalent of the author's full name.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="organization"/>
+         </optional>
+         <optional>
+            <ref name="address"/>
+         </optional>
+      </element>
+   </define>
+   <define name="organization">
+      <element name="organization">
+         <a:annotation>Specifies the affiliation [RFC7322] of an author.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="abbrev">
+               <a:annotation>Abbreviated variant.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the organization's name.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="address">
+      <element name="address">
+         <a:annotation>Provides address information for the author.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <ref name="postal"/>
+         </optional>
+         <optional>
+            <ref name="phone"/>
+         </optional>
+         <optional>
+            <ref name="facsimile"/>
+         </optional>
+         <optional>
+            <ref name="email"/>
+         </optional>
+         <optional>
+            <ref name="uri"/>
+         </optional>
+      </element>
+   </define>
+   <define name="postal">
+      <element name="postal">
+         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;Section "&lt;street&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;city&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;region&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;code&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, and &lt;Section "&lt;country&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, or only an ordered set of &lt;Section "&lt;postalLine&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, but not both.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <choice>
+            <zeroOrMore>
+               <choice>
+                  <ref name="city"/>
+                  <ref name="code"/>
+                  <ref name="country"/>
+                  <ref name="region"/>
+                  <ref name="street"/>
+               </choice>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="postalLine"/>
+            </oneOrMore>
+         </choice>
+      </element>
+   </define>
+   <define name="street">
+      <element name="street">
+         <a:annotation>Provides a street address.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the street address.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="city">
+      <element name="city">
+         <a:annotation>Gives the city name in a postal address.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the city name.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="region">
+      <element name="region">
+         <a:annotation>Provides the region name in a postal address.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the region name.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="code">
+      <element name="code">
+         <a:annotation>Gives the postal region code.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the postal code.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="country">
+      <element name="country">
+         <a:annotation>Gives the country name or code in a postal address.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the country name.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="postalLine">
+      <element name="postalLine">
+         <a:annotation>Represents one line of a postal address. When more than one &lt;postalLine&gt; is given, the prep tool emits them in the order given.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the text in the address line.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="phone">
+      <element name="phone">
+         <a:annotation>Represents a phone number.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="facsimile">
+      <element name="facsimile">
+         <a:annotation>Deprecated. The &lt;Section "&lt;email&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element is a much more useful way to get in touch with authors.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="email">
+      <element name="email">
+         <a:annotation>Provides an email address.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the author's email address. This is only used if the email address has any internationalized components.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="uri">
+      <element name="uri">
+         <a:annotation>Contains a web address associated with the author.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="date">
+      <element name="date">
+         <a:annotation>Provides information about the publication date. This element is used for two cases: the boilerplate of the document being produced, and inside bibliographic references that use the &lt;Section "&lt;front&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. This element defines the date of publication for the current document (Internet-Draft or RFC). When producing Internet-Drafts, the prep tool uses this date to compute the expiration date (see [IDGUIDE]). When one or more of "year", "month", or "day" are left out, the prep tool will attempt to use the current system date if the attributes that are present are consistent with that date. In dates in &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, the month must be a number or a month in English. The prep tool will silently change text month names to numbers. Similarly, the year must be a four-digit number. When the prep tool is used to create Internet-Drafts, it will reject a submitted Internet-Draft that has a &lt;Section "&lt;date&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element in the boilerplate for itself that is anything other than today. That is, the tool will not allow a submitter to specify a date other than the day of submission. To avoid this problem, authors might simply not include a &lt;Section "&lt;date&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element in the boilerplate. In dates in &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, the date information can have prose text for the month or year. For example, vague dates (year="ca. 2000"), date ranges (year="2012-2013"), non-specific months (month="Second quarter"), and so on are allowed.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="day">
+               <a:annotation>The day of publication.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="month">
+               <a:annotation>The month or months of publication.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="year">
+               <a:annotation>The year or years of publication.</a:annotation>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="area">
+      <element name="area">
+         <a:annotation>Provides information about the IETF area to which this document relates (currently not used when generating documents).</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="workgroup">
+      <element name="workgroup">
+         <a:annotation>This element is used to specify the Working Group (IETF) or Research Group (IRTF) from which the document originates, if any. The recommended format is the official name of the Working Group (with some capitalization).</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="keyword">
+      <element name="keyword">
+         <a:annotation>Specifies a keyword applicable to the document.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="abstract">
+      <element name="abstract">
+         <a:annotation>Contains the Abstract of the document. See [RFC7322] for more information on restrictions for the Abstract.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the Abstract.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <oneOrMore>
+            <choice>
+               <ref name="dl"/>
+               <ref name="ol"/>
+               <ref name="t"/>
+               <ref name="ul"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="note">
+      <element name="note">
+         <a:annotation>Creates an unnumbered, titled block of text that appears after the Abstract.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="title">
+               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="removeInRFC" a:defaultValue="false">
+               <a:annotation>If set to "true", this note is marked in the prep tool with text indicating that it should be removed before the document is published as an RFC. That text will be "This note is to be removed before publishing as an RFC."</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="name"/>
+         </optional>
+         <oneOrMore>
+            <choice>
+               <ref name="dl"/>
+               <ref name="ol"/>
+               <ref name="t"/>
+               <ref name="ul"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="boilerplate">
+      <element name="boilerplate">
+         <a:annotation>Holds the boilerplate text for the document. This element is filled in by the prep tool.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="section"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="middle">
+      <element name="middle">
+         <a:annotation>Represents the main content of the document.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="section"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="section">
+      <element name="section">
+         <a:annotation>Represents a section (when inside a &lt;middle&gt; element) or an appendix (when inside a &lt;back&gt; element).</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this section.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="title">
+               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="numbered" a:defaultValue="true">
+               <a:annotation>If set to "false", the formatter is requested to not display a section number. The prep tool will verify that such a section is not followed by a numbered section in this part of the document and will verify that the section is a top-level section.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="toc" a:defaultValue="default">
+               <a:annotation>Indicates to a formatter whether or not the section is to be included in a table of contents, if such a table of contents is produced. This only takes effect if the level of the section would have appeared in the table of contents based on the "tocDepth" attribute of the &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, and of course only if the table of contents is being created based on the "tocInclude" attribute of the &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. If this is set to "exclude", any section below this one will be excluded as well. The "default" value indicates inclusion of the section if it would be included by the tocDepth attribute of the &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+               <choice>
+                  <value>include</value>
+                  <value>exclude</value>
+                  <value>default</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="removeInRFC" a:defaultValue="false">
+               <a:annotation>If set to "true", this note is marked in the prep tool with text indicating that it should be removed before the document is published as an RFC. That text will be "This note is to be removed before publishing as an RFC."</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="name"/>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <ref name="artwork"/>
+               <ref name="aside"/>
+               <ref name="blockquote"/>
+               <ref name="dl"/>
+               <ref name="figure"/>
+               <ref name="iref"/>
+               <ref name="ol"/>
+               <ref name="sourcecode"/>
+               <ref name="t"/>
+               <ref name="table"/>
+               <ref name="texttable"/>
+               <ref name="ul"/>
+            </choice>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="section"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="name">
+      <element name="name">
+         <a:annotation>The name of the section, note, figure, or texttable. This name can indicate markup of flowing text (for example, including references or making some characters use a fixed-width font).</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="slugifiedName"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="cref"/>
+               <ref name="eref"/>
+               <ref name="relref"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="t">
+      <element name="t">
+         <a:annotation>Contains a paragraph of text.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this paragraph.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="hangText">
+               <a:annotation>Deprecated. Instead, use &lt;Section "&lt;dd&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; inside of a definition list (&lt;Section "&lt;dl&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="keepWithNext" a:defaultValue="false">
+               <a:annotation>Acts as a hint to the output formatters that do pagination to do a best-effort attempt to keep the paragraph with the next element, whatever that happens to be. For example, the HTML output @media print CSS ("CSS" refers to Cascading Style Sheets) might translate this to page-break-after: avoid. For PDF, the paginator could attempt to keep the paragraph with the next element. Note: this attribute is strictly a hint and not always actionable.</a:annotation>
+               <choice>
+                  <value>false</value>
+                  <value>true</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="keepWithPrevious" a:defaultValue="false">
+               <a:annotation>Acts as a hint to the output formatters that do pagination to do a best-effort attempt to keep the paragraph with the previous element, whatever that happens to be. For example, the HTML output @media print CSS might translate this to page-break-before: avoid. For PDF, the paginator could attempt to keep the paragraph with the previous element. Note: this attribute is strictly a hint and not always actionable.</a:annotation>
+               <choice>
+                  <value>false</value>
+                  <value>true</value>
+               </choice>
+            </attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="list"/>
+               <ref name="relref"/>
+               <ref name="spanx"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+               <ref name="vspace"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="aside">
+      <element name="aside">
+         <a:annotation>This element is a container for content that is semantically less important or tangential to the content that surrounds it.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this aside.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <ref name="artwork"/>
+               <ref name="dl"/>
+               <ref name="figure"/>
+               <ref name="iref"/>
+               <ref name="list"/>
+               <ref name="ol"/>
+               <ref name="t"/>
+               <ref name="table"/>
+               <ref name="ul"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="blockquote">
+      <element name="blockquote">
+         <a:annotation>Specifies that a block of text is a quotation.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this quotation.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="cite">
+               <a:annotation>The source of the citation. This must be a URI. If the "quotedFrom" attribute is given, this URI will be used by processing tools as the link for the text of that attribute.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="quotedFrom">
+               <a:annotation>Name of person or document the text in this element is quoted from. A formatter should render this as visible text at the end of the quotation.</a:annotation>
+            </attribute>
+         </optional>
+         <choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="artwork"/>
+                  <ref name="dl"/>
+                  <ref name="figure"/>
+                  <ref name="ol"/>
+                  <ref name="sourcecode"/>
+                  <ref name="t"/>
+                  <ref name="ul"/>
+               </choice>
+            </oneOrMore>
+            <oneOrMore>
+               <choice>
+                  <text/>
+                  <ref name="bcp14"/>
+                  <ref name="cref"/>
+                  <ref name="em"/>
+                  <ref name="eref"/>
+                  <ref name="iref"/>
+                  <ref name="relref"/>
+                  <ref name="strong"/>
+                  <ref name="sub"/>
+                  <ref name="sup"/>
+                  <ref name="tt"/>
+                  <ref name="xref"/>
+               </choice>
+            </oneOrMore>
+         </choice>
+      </element>
+   </define>
+   <define name="list">
+      <element name="list">
+         <a:annotation>Deprecated. Instead, use &lt;Section "&lt;dl&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; for list/@style "hanging"; &lt;Section "&lt;ul&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; for list/@style "empty" or "symbols"; and &lt;Section "&lt;ol&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; for list/@style "letters", "numbers", "counter", or "format".</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="style" a:defaultValue="empty">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="hangIndent">
+               <a:annotation>Deprecated. Use &lt;Section "&lt;dl&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="counter">
+               <a:annotation>Deprecated. The functionality of this attribute has been replaced with &lt;Section "&lt;ol&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;/@start.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="t"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ol">
+      <element name="ol">
+         <a:annotation>An ordered list. The labels on the items will be either a number or a letter, depending on the value of the style attribute.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the list.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type" a:defaultValue="1">
+               <a:annotation>The type of the labels on list items. If the length of the type value is 1, the meaning is the same as it is for HTML: Lowercase letters (a, b, c, ...)Uppercase letters (A, B, C, ...)Decimal numbers (1, 2, 3, ...)Lowercase Roman numerals (i, ii, iii, ...)Uppercase Roman numerals (I, II, III, ...) For types "a" and "A", after the 26th entry, the numbering starts at "aa"/"AA", then "ab"/"AB", and so on.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="start" a:defaultValue="1">
+               <a:annotation>The ordinal value at which to start the list. This defaults to "1" and must be an integer of 0 or greater.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="group">
+               <a:annotation>When the prep tool sees an &lt;ol&gt; element with a "group" attribute that has already been seen, it continues the numbering of the list from where the previous list with the same group name left off. If an &lt;ol&gt; element has both a "group" attribute and a "start" attribute, the group's numbering is reset to the given start value.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="spacing" a:defaultValue="normal">
+               <a:annotation>Defines whether or not there is a blank line between entries. spacing="normal" indicates a single blank line, while spacing="compact" indicates no space between.</a:annotation>
+               <choice>
+                  <value>normal</value>
+                  <value>compact</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="li"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="ul">
+      <element name="ul">
+         <a:annotation>An unordered list. The labels on the items will be symbols picked by the formatter.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the list.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="spacing" a:defaultValue="normal">
+               <a:annotation>Defines whether or not there is a blank line between entries. spacing="normal" indicates a single blank line, while spacing="compact" indicates no space between.</a:annotation>
+               <choice>
+                  <value>normal</value>
+                  <value>compact</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="empty" a:defaultValue="false">
+               <a:annotation>Defines whether or not the label is empty. empty="true" indicates that no label will be shown.</a:annotation>
+               <choice>
+                  <value>false</value>
+                  <value>true</value>
+               </choice>
+            </attribute>
+            <optional>
+               <attribute name="pn"><?hidden-in-prose?></attribute>
+            </optional>
+         </optional>
+         <oneOrMore>
+            <ref name="li"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="li">
+      <element name="li">
+         <a:annotation>A list element, used in &lt;Section "&lt;ol&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; and &lt;Section "&lt;ul&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this list item.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="artwork"/>
+                  <ref name="dl"/>
+                  <ref name="figure"/>
+                  <ref name="ol"/>
+                  <ref name="sourcecode"/>
+                  <ref name="t"/>
+                  <ref name="ul"/>
+               </choice>
+            </oneOrMore>
+            <oneOrMore>
+               <choice>
+                  <text/>
+                  <ref name="bcp14"/>
+                  <ref name="cref"/>
+                  <ref name="em"/>
+                  <ref name="eref"/>
+                  <ref name="iref"/>
+                  <ref name="relref"/>
+                  <ref name="strong"/>
+                  <ref name="sub"/>
+                  <ref name="sup"/>
+                  <ref name="tt"/>
+                  <ref name="xref"/>
+               </choice>
+            </oneOrMore>
+         </choice>
+      </element>
+   </define>
+   <define name="dl">
+      <element name="dl">
+         <a:annotation>A definition list. Each entry has a pair of elements: a term (&lt;Section "&lt;dt&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;) and a definition (&lt;Section "&lt;dd&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;). (This is slightly different and simpler than the model used in HTML, which allows for multiple terms for a single definition.)</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the list.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="spacing" a:defaultValue="normal">
+               <a:annotation>Defines whether or not there is a blank line between entries. spacing="normal" indicates a single blank line, while spacing="compact" indicates no space between.</a:annotation>
+               <choice>
+                  <value>normal</value>
+                  <value>compact</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="hanging" a:defaultValue="true">
+               <a:annotation>The "hanging" attribute defines whether or not the term appears on the same line as the definition. hanging="true" indicates that the term is to the left of the definition, while hanging="false" indicates that the term will be on a separate line.</a:annotation>
+               <choice>
+                  <value>false</value>
+                  <value>true</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="dt"/>
+            <ref name="dd"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="dt">
+      <element name="dt">
+         <a:annotation>The term being defined in a definition list.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this term.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="dd">
+      <element name="dd">
+         <a:annotation>The definition part of an entry in a definition list.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this definition.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="artwork"/>
+                  <ref name="dl"/>
+                  <ref name="figure"/>
+                  <ref name="ol"/>
+                  <ref name="sourcecode"/>
+                  <ref name="t"/>
+                  <ref name="ul"/>
+               </choice>
+            </oneOrMore>
+            <oneOrMore>
+               <choice>
+                  <text/>
+                  <ref name="bcp14"/>
+                  <ref name="cref"/>
+                  <ref name="em"/>
+                  <ref name="eref"/>
+                  <ref name="iref"/>
+                  <ref name="relref"/>
+                  <ref name="strong"/>
+                  <ref name="sub"/>
+                  <ref name="sup"/>
+                  <ref name="tt"/>
+                  <ref name="xref"/>
+               </choice>
+            </oneOrMore>
+         </choice>
+      </element>
+   </define>
+   <define name="xref">
+      <element name="xref">
+         <a:annotation>A reference to an anchor in this document. Formatters that have links (such as HTML and PDF) are likely to render &lt;xref&gt; elements as internal hyperlinks. This element is useful for referring to references in the "References" section, to specific sections of this document, to specific figures, and so on. The "target" attribute is required.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="target">
+            <a:annotation>Identifies the document component being referenced. The value needs to match the value of the "anchor" attribute of an element in the document; otherwise, it is an error.</a:annotation>
+            <data type="IDREF"/>
+         </attribute>
+         <optional>
+            <attribute name="pageno" a:defaultValue="false">
+               <a:annotation>Deprecated.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="format" a:defaultValue="default">
+               <a:annotation>This attribute signals to formatters what the desired format of the reference should be. Formatters for document types that have linking capability should wrap the displayed text in hyperlinks.</a:annotation>
+               <choice>
+                  <value>default</value>
+                  <value>title</value>
+                  <value>counter</value>
+                  <value>none</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="derivedContent"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="relref">
+      <element name="relref">
+         <a:annotation>Represents a link to a specific part of a document that appears in a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. Formatters that have links (such as HTML and PDF) render &lt;relref&gt; elements as external hyperlinks to the specified part of the reference, creating the link target by combining the base URI from the &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element with the "relative" attribute from this element. The "target" attribute is required, and it must be the anchor of a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="target">
+            <a:annotation>The anchor of the reference for this element. If this value is not an anchor to a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; or &lt;Section "&lt;referencegroup&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, it is an error. If the reference at the target has no URI, it is an error.</a:annotation>
+            <data type="IDREF"/>
+         </attribute>
+         <optional>
+            <attribute name="displayFormat" a:defaultValue="of">
+               <a:annotation>This attribute is used to signal formatters what the desired format of the relative reference should be. Formatters for document types that have linking capability should wrap each part of the displayed text in hyperlinks. If there is content in the &lt;relref&gt; element, formatters will ignore the value of this attribute.</a:annotation>
+               <choice>
+                  <value>of</value>
+                  <value>comma</value>
+                  <value>parens</value>
+                  <value>bare</value>
+               </choice>
+            </attribute>
+         </optional>
+         <attribute name="section">
+            <a:annotation>Specifies a section of the target reference. If the reference is not an RFC or Internet-Draft in the v3 format, it is an error.</a:annotation>
+         </attribute>
+         <optional>
+            <attribute name="relative">
+               <a:annotation>Specifies a relative reference from the URI in the target reference. This value must include whatever leading character is needed to create the relative reference; typically, this is "#" for HTML documents.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="derivedLink"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="eref">
+      <element name="eref">
+         <a:annotation>Represents an "external" link (as specified in the "target" attribute). This is useful for embedding URIs in the body of a document.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="target">
+            <a:annotation>URI of the link target [RFC3986]. This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.</a:annotation>
+         </attribute>
+         <text/>
+      </element>
+   </define>
+   <define name="iref">
+      <element name="iref">
+         <a:annotation>Provides terms for the document's index.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="item">
+            <a:annotation>The item to include.</a:annotation>
+         </attribute>
+         <optional>
+            <attribute name="subitem" a:defaultValue="">
+               <a:annotation>The subitem to include.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="primary" a:defaultValue="false">
+               <a:annotation>Setting this to "true" declares the occurrence as "primary", which might cause it to be highlighted in the index. There is no restriction on the number of occurrences that can be "primary".</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="cref">
+      <element name="cref">
+         <a:annotation>Represents a comment.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this comment.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="source">
+               <a:annotation>Holds the "source" of a comment, such as the name or the initials of the person who made the comment.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="display" a:defaultValue="true">
+               <a:annotation>Suggests whether or not the comment should be displayed by formatting tools. This might be set to "false" if you want to keep a comment in a document after the contents of the comment have already been dealt with.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="relref"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="tt">
+      <element name="tt">
+         <a:annotation>Causes the text to be displayed in a constant-width font. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="strong">
+      <element name="strong">
+         <a:annotation>Indicates text that is semantically strong. Text enclosed within this element will be displayed as bold after processing. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="em">
+      <element name="em">
+         <a:annotation>Indicates text that is semantically emphasized. Text enclosed within this element will be displayed as italic after processing. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="sub">
+      <element name="sub">
+         <a:annotation>Causes the text to be displayed as subscript, approximately half a letter-height lower than normal text. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="strong"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="sup">
+      <element name="sup">
+         <a:annotation>Causes the text to be displayed as superscript, approximately half a letter-height higher than normal text. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="strong"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="spanx">
+      <element name="spanx">
+         <a:annotation>Deprecated.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:space" a:defaultValue="preserve">
+               <choice>
+                  <value>default</value>
+                  <value>preserve</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="style" a:defaultValue="emph">
+               <a:annotation>Deprecated. Instead of &lt;spanx style="emph"&gt;, use &lt;Section "&lt;em&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;; instead of &lt;spanx style="strong"&gt;, use &lt;Section "&lt;strong&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;; instead of &lt;spanx style="verb"&gt;, use &lt;tt&gt;.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="vspace">
+      <element name="vspace">
+         <a:annotation>Deprecated. In earlier versions of this format, &lt;vspace&gt; was often used to get an extra blank line in a list element; in the v3 vocabulary, that can be done instead by using multiple &lt;Section "&lt;t&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements inside the &lt;Section "&lt;li&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. Other uses have no direct replacement.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="blankLines" a:defaultValue="0">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="figure">
+      <element name="figure">
+         <a:annotation>Contains a figure with a caption with the figure number. If the element contains a &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, the caption will also show that name.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this figure.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="title" a:defaultValue="">
+               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="suppress-title" a:defaultValue="false">
+               <a:annotation>Deprecated.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="src">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="originalSrc"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="align" a:defaultValue="left">
+               <a:annotation>Deprecated.</a:annotation>
+               <choice>
+                  <value>left</value>
+                  <value>center</value>
+                  <value>right</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="alt" a:defaultValue="">
+               <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="width" a:defaultValue="">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="height" a:defaultValue="">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="name"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="iref"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="preamble"/>
+         </optional>
+         <oneOrMore>
+            <choice>
+               <ref name="artwork"/>
+               <ref name="sourcecode"/>
+            </choice>
+         </oneOrMore>
+         <optional>
+            <ref name="postamble"/>
+         </optional>
+      </element>
+   </define>
+   <define name="table">
+      <element name="table">
+         <a:annotation>Contains a table with a caption with the table number. If the element contains a &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, the caption will also show that name.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this table.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <ref name="name"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="iref"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="thead"/>
+         </optional>
+         <oneOrMore>
+            <ref name="tbody"/>
+         </oneOrMore>
+         <optional>
+            <ref name="tfoot"/>
+         </optional>
+      </element>
+   </define>
+   <define name="preamble">
+      <element name="preamble">
+         <a:annotation>Deprecated. Instead, use a regular paragraph before the figure or table.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="spanx"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="artwork">
+      <element name="artwork">
+         <a:annotation>This element allows the inclusion of "artwork" in the document. &lt;artwork&gt; provides full control of horizontal whitespace and line breaks; thus, it is used for a variety of things, such as diagrams ("line art") and protocol unit diagrams. Tab characters (U+0009) inside of this element are prohibited.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this artwork.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:space"/>
+         </optional>
+         <optional>
+            <attribute name="name" a:defaultValue="">
+               <a:annotation>A filename suitable for the contents (such as for extraction to a local file). This attribute can be helpful for other kinds of tools (such as automated syntax checkers, which work by extracting the artwork). Note that the "name" attribute does not need to be unique for &lt;artwork&gt; elements in a document. If multiple &lt;artwork&gt; elements have the same "name" attribute, a processing tool might assume that the elements are all fragments of a single file, and the tool can collect those fragments for later processing. See Section "Security Considerations" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest for a discussion of possible problems with the value of this attribute.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type" a:defaultValue="">
+               <a:annotation>Specifies the type of the artwork. The value of this attribute is free text with certain values designated as preferred.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="src">
+               <a:annotation>The URI reference of a graphics file [RFC3986], or the name of a file on the local disk. This can be a "data" URI [RFC2397] that contains the contents of the graphics file. Note that the inclusion of art with the "src" attribute depends on the capabilities of the processing tool reading the XML document. Tools need to be able to handle the file: URI, and they should be able to handle http: and https: URIs as well. The prep tool will be able to handle reading the "src" attribute.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="align" a:defaultValue="left">
+               <a:annotation>Controls whether the artwork appears left justified (default), centered, or right justified. Artwork is aligned relative to the left margin of the document.</a:annotation>
+               <choice>
+                  <value>left</value>
+                  <value>center</value>
+                  <value>right</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="alt" a:defaultValue="">
+               <a:annotation>Alternative text description of the artwork (which is more than just a summary or caption). When the art comes from the "src" attribute and the format of that artwork supports alternate text, the alternative text comes from the text of the artwork itself, not from this attribute. The contents of this attribute are important to readers who are visually impaired, as well as those reading on devices that cannot show the artwork well, or at all.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="width" a:defaultValue="">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="height" a:defaultValue="">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="originalSrc"><?hidden-in-prose?></attribute>
+         </optional>
+         <choice>
+            <zeroOrMore>
+               <text/>
+            </zeroOrMore>
+            <ref name="svg"/>
+         </choice>
+      </element>
+   </define><!-- TODO: replace with link to RSE site, or provide an inline version -->
+   <include href="https://raw.githubusercontent.com/nevil-brownlee/draft-svg-rfc/master/svg.rng"/>
+   <define name="sourcecode">
+      <element name="sourcecode">
+         <a:annotation>This element allows the inclusion of source code into the document.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this source code.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="name" a:defaultValue="">
+               <a:annotation>A filename suitable for the contents (such as for extraction to a local file). This attribute can be helpful for other kinds of tools (such as automated syntax checkers, which work by extracting the source code). Note that the "name" attribute does not need to be unique for &lt;artwork&gt; elements in a document. If multiple &lt;sourcecode&gt; elements have the same "name" attribute, a formatter might assume that the elements are all fragments of a single file, and such a formatter can collect those fragments for later processing.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type" a:defaultValue="">
+               <a:annotation>Specifies the type of the source code. The value of this attribute is free text with certain values designated as preferred.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="src">
+               <a:annotation>The URI reference of a source file [RFC3986].</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="originalSrc"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="thead">
+      <element name="thead">
+         <a:annotation>A container for a set of header rows for a table.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the thead.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="tr"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="tbody">
+      <element name="tbody">
+         <a:annotation>A container for a set of body rows for a table.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the tbody.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="tr"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="tfoot">
+      <element name="tfoot">
+         <a:annotation>A container for a set of footer rows for a table.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the tfoot.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="tr"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="tr">
+      <element name="tr">
+         <a:annotation>A row of a table.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the row.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <oneOrMore>
+            <choice>
+               <ref name="td"/>
+               <ref name="th"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="td">
+      <element name="td">
+         <a:annotation>A cell in a table row.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the cell.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colspan" a:defaultValue="0">
+               <a:annotation>The number of columns that the cell is to span. For example, setting "colspan='3'" indicates that the cell occupies the same horizontal space as three cells of a row without any "colspan" attributes.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rowspan" a:defaultValue="0">
+               <a:annotation>The number of rows that the cell is to span. For example, setting "rowspan='3'" indicates that the cell occupies the same vertical space as three rows.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="align" a:defaultValue="left">
+               <a:annotation>Controls whether the content of the cell appears left justified (default), centered, or right justified. Note that "center" or "right" will probably only work well in cells with plain text; any other elements might make the contents render badly.</a:annotation>
+               <choice>
+                  <value>left</value>
+                  <value>center</value>
+                  <value>right</value>
+               </choice>
+            </attribute>
+         </optional>
+         <choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="artwork"/>
+                  <ref name="dl"/>
+                  <ref name="figure"/>
+                  <ref name="ol"/>
+                  <ref name="sourcecode"/>
+                  <ref name="t"/>
+                  <ref name="ul"/>
+               </choice>
+            </oneOrMore>
+            <zeroOrMore>
+               <choice>
+                  <text/>
+                  <ref name="bcp14"/>
+                  <ref name="br"/>
+                  <ref name="cref"/>
+                  <ref name="em"/>
+                  <ref name="eref"/>
+                  <ref name="iref"/>
+                  <ref name="relref"/>
+                  <ref name="strong"/>
+                  <ref name="sub"/>
+                  <ref name="sup"/>
+                  <ref name="tt"/>
+                  <ref name="xref"/>
+               </choice>
+            </zeroOrMore>
+         </choice>
+      </element>
+   </define>
+   <define name="th">
+      <element name="th">
+         <a:annotation>A cell in a table row. When rendered, this will normally come out in boldface; other than that, there is no difference between this and the &lt;Section "&lt;td&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for the row.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="colspan" a:defaultValue="0">
+               <a:annotation>The number of columns that the cell is to span. For example, setting "colspan='3'" indicates that the cell occupies the same horizontal space as three cells of a row without any "colspan" attributes.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rowspan" a:defaultValue="0">
+               <a:annotation>The number of rows that the cell is to span. For example, setting "rowspan='3'" indicates that the cell occupies the same vertical space as three rows.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="align" a:defaultValue="left">
+               <a:annotation>Controls whether the content of the cell appears left justified (default), centered, or right justified. Note that "center" or "right" will probably only work well in cells with plain text; any other elements might make the contents render badly.</a:annotation>
+               <choice>
+                  <value>left</value>
+                  <value>center</value>
+                  <value>right</value>
+               </choice>
+            </attribute>
+         </optional>
+         <choice>
+            <oneOrMore>
+               <choice>
+                  <ref name="artwork"/>
+                  <ref name="dl"/>
+                  <ref name="figure"/>
+                  <ref name="ol"/>
+                  <ref name="sourcecode"/>
+                  <ref name="t"/>
+                  <ref name="ul"/>
+               </choice>
+            </oneOrMore>
+            <zeroOrMore>
+               <choice>
+                  <text/>
+                  <ref name="bcp14"/>
+                  <ref name="br"/>
+                  <ref name="cref"/>
+                  <ref name="em"/>
+                  <ref name="eref"/>
+                  <ref name="iref"/>
+                  <ref name="relref"/>
+                  <ref name="strong"/>
+                  <ref name="sub"/>
+                  <ref name="sup"/>
+                  <ref name="tt"/>
+                  <ref name="xref"/>
+               </choice>
+            </zeroOrMore>
+         </choice>
+      </element>
+   </define>
+   <define name="postamble">
+      <element name="postamble">
+         <a:annotation>Deprecated. Instead, use a regular paragraph after the figure or table.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="cref"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="spanx"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="texttable">
+      <element name="texttable">
+         <a:annotation>Deprecated. Use &lt;Section "&lt;table&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Deprecated.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="title" a:defaultValue="">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="suppress-title" a:defaultValue="false">
+               <a:annotation>Deprecated.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="align" a:defaultValue="center">
+               <a:annotation>Deprecated.</a:annotation>
+               <choice>
+                  <value>left</value>
+                  <value>center</value>
+                  <value>right</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="style" a:defaultValue="full">
+               <a:annotation>Deprecated.</a:annotation>
+               <choice>
+                  <value>all</value>
+                  <value>none</value>
+                  <value>headers</value>
+                  <value>full</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="name"/>
+         </optional>
+         <optional>
+            <ref name="preamble"/>
+         </optional>
+         <oneOrMore>
+            <ref name="ttcol"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="c"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="postamble"/>
+         </optional>
+      </element>
+   </define>
+   <define name="ttcol">
+      <element name="ttcol">
+         <a:annotation>Deprecated. Instead, use &lt;Section "&lt;tr&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;td&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, and &lt;Section "&lt;th&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="width">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="align" a:defaultValue="left">
+               <a:annotation>Deprecated.</a:annotation>
+               <choice>
+                  <value>left</value>
+                  <value>center</value>
+                  <value>right</value>
+               </choice>
+            </attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <ref name="cref"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="xref"/>
+               <text/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="c">
+      <element name="c">
+         <a:annotation>Deprecated. Instead, use &lt;Section "&lt;tr&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;td&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, and &lt;Section "&lt;th&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="cref"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="spanx"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="bcp14">
+      <element name="bcp14">
+         <a:annotation>Marks text that are phrases defined in [BCP14] such as "MUST", "SHOULD NOT", and so on. When shown in some of the output representations, the text in this element might be highlighted. The use of this element is optional.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="br">
+      <element name="br">
+         <a:annotation>Indicates that a line break should be inserted in the generated output by a formatting tool. Multiple successive instances of this element are ignored.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="back">
+      <element name="back">
+         <a:annotation>Contains the "back" part of the document: the references and appendices. In &lt;back&gt;, &lt;Section "&lt;section&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements indicate appendices.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <ref name="displayreference"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="references"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="section"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="displayreference">
+      <element name="displayreference">
+         <a:annotation>This element gives a mapping between the anchor of a reference and a name that will be displayed instead. This allows authors to display more mnemonic anchor names for automatically included references. The mapping in this element only applies to &lt;Section "&lt;xref&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements whose format is "default". For example, if the reference uses the anchor "RFC6949", the following would cause that anchor in the body of displayed documents to be "RFC-dev": &lt;displayreference target="RFC6949" to="RFC-dev"/&gt;</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="target">
+            <a:annotation>This attribute must be the name of an anchor in a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; or &lt;Section "&lt;referencegroup&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+            <data type="IDREF"/>
+         </attribute>
+         <attribute name="to">
+            <a:annotation>This attribute is a name that will be displayed as the anchor instead of the anchor that is given in the &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. The string given must start with one of the following characters: 0-9, a-z, or A-Z. The other characters in the string must be 0-9, a-z, A-Z, "-", ".", or "_".</a:annotation>
+         </attribute>
+      </element>
+   </define>
+   <define name="references">
+      <element name="references">
+         <a:annotation>Contains a set of bibliographic references.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>An optional user-supplied identifier for this set of references.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="title">
+               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="name"/>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <ref name="reference"/>
+               <ref name="referencegroup"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="reference">
+      <element name="reference">
+         <a:annotation>Represents a bibliographic reference.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="anchor">
+            <a:annotation>Document-wide unique identifier for this reference. Usually, this will be used both to "label" the reference in the "References" section and as an identifier in links to this reference entry.</a:annotation>
+            <data type="ID"/>
+         </attribute>
+         <optional>
+            <attribute name="target">
+               <a:annotation>Holds the URI for the reference.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="quoteTitle" a:defaultValue="true">
+               <a:annotation>Specifies whether or not the title in the reference should be quoted. This can be used to prevent quoting, such as on errata.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <ref name="front"/>
+         <zeroOrMore>
+            <choice>
+               <ref name="annotation"/>
+               <ref name="format"/>
+               <ref name="refcontent"/>
+               <ref name="seriesInfo"><?deprecated?></ref>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="referencegroup">
+      <element name="referencegroup">
+         <a:annotation>Represents a list of bibliographic references that will be represented as a single reference. This is most often used to reference STDs and BCPs, where a single reference (such as "BCP 9") may encompass more than one RFC.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="anchor">
+            <a:annotation>Document-wide unique identifier for this reference group. Usually, this will be used both to "label" the reference group in the "References" section and as an identifier in links to this reference entry.</a:annotation>
+            <data type="ID"/>
+         </attribute>
+         <oneOrMore>
+            <ref name="reference"/>
+         </oneOrMore>
+      </element>
+   </define>
+   <define name="seriesInfo">
+      <element name="seriesInfo">
+         <a:annotation>Specifies the document series in which this document appears, and also specifies an identifier within that series.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <attribute name="name">
+            <a:annotation>The name of the series. The currently known values are "RFC", "Internet-Draft", and "DOI". The RFC Series Editor may change this list in the future.</a:annotation>
+         </attribute>
+         <attribute name="value">
+            <a:annotation>The identifier within the series specified by the "name" attribute.</a:annotation>
+         </attribute>
+         <optional>
+            <attribute name="asciiName">
+               <a:annotation>The ASCII equivalent of the name field.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiValue">
+               <a:annotation>The ASCII equivalent of the value field.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="status">
+               <a:annotation>The status of this document. The currently known values are "standard", "informational", "experimental", "bcp", "fyi", and "full-standard". The RFC Series Editor may change this list in the future.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="stream" a:defaultValue="IETF">
+               <a:annotation>The stream (as described in [RFC7841]) that originated the document. (The RFC Series Editor may change this list in the future.)</a:annotation>
+               <choice>
+                  <value>IETF</value>
+                  <value>IAB</value>
+                  <value>IRTF</value>
+                  <value>independent</value>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="format">
+      <element name="format">
+         <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="target">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <attribute name="type">
+            <a:annotation>Deprecated.</a:annotation>
+         </attribute>
+         <optional>
+            <attribute name="octets">
+               <a:annotation>Deprecated.</a:annotation>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="annotation">
+      <element name="annotation">
+         <a:annotation>Provides additional prose augmenting a bibliographic reference. This text is intended to be shown after the rest of the generated reference text.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="cref"/>
+               <ref name="em"/>
+               <ref name="eref"/>
+               <ref name="iref"/>
+               <ref name="relref"/>
+               <ref name="spanx"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+               <ref name="xref"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="refcontent">
+      <element name="refcontent">
+         <a:annotation>Text that should appear between the title and the date of a reference. The purpose of this element is to prevent the need to abuse &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; to get such text in a reference.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="bcp14"/>
+               <ref name="em"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+   <start combine="choice">
+      <choice>
+         <ref name="rfc"/>
+      </choice>
+   </start>
+</grammar>
