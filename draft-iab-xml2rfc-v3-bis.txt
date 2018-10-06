@@ -3,13 +3,13 @@
 
 Network Working Group                                         P. Hoffman
 Internet-Draft                                                     ICANN
-Obsoletes: 7991 (if approved)                            October 2, 2018
+Obsoletes: 7991 (if approved)                            October 6, 2018
 Intended status: Informational
-Expires: April 5, 2019
+Expires: April 9, 2019
 
 
                    The "xml2rfc" Version 3 Vocabulary
-                      draft-iab-xml2rfc-v3-bis-00
+                    draft-iab-xml2rfc-v3-bis-latest
 
 Abstract
 
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 5, 2019.
+   This Internet-Draft will expire on April 9, 2019.
 
 Copyright Notice
 
@@ -52,7 +52,7 @@ Copyright Notice
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 1]
+Hoffman                   Expires April 9, 2019                 [Page 1]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -108,7 +108,7 @@ Table of Contents
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 2]
+Hoffman                   Expires April 9, 2019                 [Page 2]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -164,7 +164,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 3]
+Hoffman                   Expires April 9, 2019                 [Page 3]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -220,7 +220,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 4]
+Hoffman                   Expires April 9, 2019                 [Page 4]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -276,7 +276,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 5]
+Hoffman                   Expires April 9, 2019                 [Page 5]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -332,7 +332,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 6]
+Hoffman                   Expires April 9, 2019                 [Page 6]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -388,7 +388,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 7]
+Hoffman                   Expires April 9, 2019                 [Page 7]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -444,7 +444,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 8]
+Hoffman                   Expires April 9, 2019                 [Page 8]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -500,7 +500,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                 [Page 9]
+Hoffman                   Expires April 9, 2019                 [Page 9]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -556,7 +556,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 10]
+Hoffman                   Expires April 9, 2019                [Page 10]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -612,7 +612,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 11]
+Hoffman                   Expires April 9, 2019                [Page 11]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -668,7 +668,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 12]
+Hoffman                   Expires April 9, 2019                [Page 12]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -724,7 +724,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 13]
+Hoffman                   Expires April 9, 2019                [Page 13]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -780,7 +780,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 14]
+Hoffman                   Expires April 9, 2019                [Page 14]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -836,7 +836,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 15]
+Hoffman                   Expires April 9, 2019                [Page 15]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -892,7 +892,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 16]
+Hoffman                   Expires April 9, 2019                [Page 16]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -948,7 +948,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 17]
+Hoffman                   Expires April 9, 2019                [Page 17]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1004,7 +1004,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 18]
+Hoffman                   Expires April 9, 2019                [Page 18]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1060,7 +1060,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 19]
+Hoffman                   Expires April 9, 2019                [Page 19]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1116,7 +1116,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 20]
+Hoffman                   Expires April 9, 2019                [Page 20]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1172,7 +1172,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 21]
+Hoffman                   Expires April 9, 2019                [Page 21]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1228,7 +1228,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 22]
+Hoffman                   Expires April 9, 2019                [Page 22]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1284,7 +1284,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 23]
+Hoffman                   Expires April 9, 2019                [Page 23]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1340,7 +1340,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 24]
+Hoffman                   Expires April 9, 2019                [Page 24]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1396,7 +1396,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 25]
+Hoffman                   Expires April 9, 2019                [Page 25]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1452,7 +1452,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 26]
+Hoffman                   Expires April 9, 2019                [Page 26]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1508,7 +1508,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 27]
+Hoffman                   Expires April 9, 2019                [Page 27]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1564,7 +1564,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 28]
+Hoffman                   Expires April 9, 2019                [Page 28]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1620,7 +1620,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 29]
+Hoffman                   Expires April 9, 2019                [Page 29]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1676,7 +1676,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 30]
+Hoffman                   Expires April 9, 2019                [Page 30]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1732,7 +1732,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 31]
+Hoffman                   Expires April 9, 2019                [Page 31]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1788,7 +1788,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 32]
+Hoffman                   Expires April 9, 2019                [Page 32]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1844,7 +1844,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 33]
+Hoffman                   Expires April 9, 2019                [Page 33]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1900,7 +1900,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 34]
+Hoffman                   Expires April 9, 2019                [Page 34]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -1956,7 +1956,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 35]
+Hoffman                   Expires April 9, 2019                [Page 35]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2012,7 +2012,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 36]
+Hoffman                   Expires April 9, 2019                [Page 36]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2068,7 +2068,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 37]
+Hoffman                   Expires April 9, 2019                [Page 37]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2124,7 +2124,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 38]
+Hoffman                   Expires April 9, 2019                [Page 38]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2180,7 +2180,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 39]
+Hoffman                   Expires April 9, 2019                [Page 39]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2236,7 +2236,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 40]
+Hoffman                   Expires April 9, 2019                [Page 40]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2292,7 +2292,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 41]
+Hoffman                   Expires April 9, 2019                [Page 41]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2348,7 +2348,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 42]
+Hoffman                   Expires April 9, 2019                [Page 42]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2404,7 +2404,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 43]
+Hoffman                   Expires April 9, 2019                [Page 43]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2460,7 +2460,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 44]
+Hoffman                   Expires April 9, 2019                [Page 44]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2516,7 +2516,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 45]
+Hoffman                   Expires April 9, 2019                [Page 45]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2572,7 +2572,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 46]
+Hoffman                   Expires April 9, 2019                [Page 46]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2628,7 +2628,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 47]
+Hoffman                   Expires April 9, 2019                [Page 47]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2684,7 +2684,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 48]
+Hoffman                   Expires April 9, 2019                [Page 48]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2740,7 +2740,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 49]
+Hoffman                   Expires April 9, 2019                [Page 49]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2796,7 +2796,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 50]
+Hoffman                   Expires April 9, 2019                [Page 50]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2852,7 +2852,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 51]
+Hoffman                   Expires April 9, 2019                [Page 51]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2908,7 +2908,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 52]
+Hoffman                   Expires April 9, 2019                [Page 52]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -2964,7 +2964,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 53]
+Hoffman                   Expires April 9, 2019                [Page 53]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3020,7 +3020,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 54]
+Hoffman                   Expires April 9, 2019                [Page 54]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3076,7 +3076,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 55]
+Hoffman                   Expires April 9, 2019                [Page 55]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3132,7 +3132,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 56]
+Hoffman                   Expires April 9, 2019                [Page 56]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3188,7 +3188,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 57]
+Hoffman                   Expires April 9, 2019                [Page 57]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3244,7 +3244,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 58]
+Hoffman                   Expires April 9, 2019                [Page 58]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3300,7 +3300,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 59]
+Hoffman                   Expires April 9, 2019                [Page 59]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3356,7 +3356,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 60]
+Hoffman                   Expires April 9, 2019                [Page 60]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3412,7 +3412,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 61]
+Hoffman                   Expires April 9, 2019                [Page 61]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3468,7 +3468,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 62]
+Hoffman                   Expires April 9, 2019                [Page 62]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3524,7 +3524,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 63]
+Hoffman                   Expires April 9, 2019                [Page 63]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3580,7 +3580,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 64]
+Hoffman                   Expires April 9, 2019                [Page 64]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3636,7 +3636,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 65]
+Hoffman                   Expires April 9, 2019                [Page 65]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3692,7 +3692,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 66]
+Hoffman                   Expires April 9, 2019                [Page 66]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3748,7 +3748,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 67]
+Hoffman                   Expires April 9, 2019                [Page 67]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3804,7 +3804,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 68]
+Hoffman                   Expires April 9, 2019                [Page 68]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3860,7 +3860,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 69]
+Hoffman                   Expires April 9, 2019                [Page 69]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3916,7 +3916,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 70]
+Hoffman                   Expires April 9, 2019                [Page 70]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -3972,7 +3972,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 71]
+Hoffman                   Expires April 9, 2019                [Page 71]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4028,7 +4028,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 72]
+Hoffman                   Expires April 9, 2019                [Page 72]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4084,7 +4084,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 73]
+Hoffman                   Expires April 9, 2019                [Page 73]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4140,7 +4140,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 74]
+Hoffman                   Expires April 9, 2019                [Page 74]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4196,7 +4196,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 75]
+Hoffman                   Expires April 9, 2019                [Page 75]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4252,7 +4252,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 76]
+Hoffman                   Expires April 9, 2019                [Page 76]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4308,7 +4308,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 77]
+Hoffman                   Expires April 9, 2019                [Page 77]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4364,7 +4364,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 78]
+Hoffman                   Expires April 9, 2019                [Page 78]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4420,7 +4420,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 79]
+Hoffman                   Expires April 9, 2019                [Page 79]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4476,7 +4476,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 80]
+Hoffman                   Expires April 9, 2019                [Page 80]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4532,7 +4532,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 81]
+Hoffman                   Expires April 9, 2019                [Page 81]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4588,7 +4588,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 82]
+Hoffman                   Expires April 9, 2019                [Page 82]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4644,7 +4644,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 83]
+Hoffman                   Expires April 9, 2019                [Page 83]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4700,7 +4700,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 84]
+Hoffman                   Expires April 9, 2019                [Page 84]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4756,7 +4756,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 85]
+Hoffman                   Expires April 9, 2019                [Page 85]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4812,7 +4812,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 86]
+Hoffman                   Expires April 9, 2019                [Page 86]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4868,7 +4868,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 87]
+Hoffman                   Expires April 9, 2019                [Page 87]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4924,7 +4924,7 @@ A.1.1.  Current Values: "*trust200902"
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 88]
+Hoffman                   Expires April 9, 2019                [Page 88]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -4980,7 +4980,7 @@ A.1.1.4.  pre5378Trust200902
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 89]
+Hoffman                   Expires April 9, 2019                [Page 89]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5036,7 +5036,7 @@ A.2.  The "submissionType" Attribute
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 90]
+Hoffman                   Expires April 9, 2019                [Page 90]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5092,7 +5092,7 @@ A.3.  The "consensus" Attribute
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 91]
+Hoffman                   Expires April 9, 2019                [Page 91]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5148,7 +5148,7 @@ Appendix B.  The v3 Format and Processing Tools
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 92]
+Hoffman                   Expires April 9, 2019                [Page 92]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5204,7 +5204,7 @@ B.1.  Including External Text with XInclude
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 93]
+Hoffman                   Expires April 9, 2019                [Page 93]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5260,7 +5260,7 @@ B.2.  Anchors and IDs
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 94]
+Hoffman                   Expires April 9, 2019                [Page 94]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5316,7 +5316,7 @@ B.2.1.  Overlapping Values
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 95]
+Hoffman                   Expires April 9, 2019                [Page 95]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5372,7 +5372,7 @@ B.3.  Attributes Controlled by the Prep Tool
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 96]
+Hoffman                   Expires April 9, 2019                [Page 96]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5428,7 +5428,7 @@ Appendix C.  RELAX NG Schema
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 97]
+Hoffman                   Expires April 9, 2019                [Page 97]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5484,7 +5484,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 98]
+Hoffman                   Expires April 9, 2019                [Page 98]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5540,7 +5540,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019                [Page 99]
+Hoffman                   Expires April 9, 2019                [Page 99]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5596,7 +5596,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 100]
+Hoffman                   Expires April 9, 2019               [Page 100]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5652,7 +5652,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 101]
+Hoffman                   Expires April 9, 2019               [Page 101]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5708,7 +5708,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 102]
+Hoffman                   Expires April 9, 2019               [Page 102]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5764,7 +5764,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 103]
+Hoffman                   Expires April 9, 2019               [Page 103]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5820,7 +5820,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 104]
+Hoffman                   Expires April 9, 2019               [Page 104]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5876,7 +5876,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 105]
+Hoffman                   Expires April 9, 2019               [Page 105]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5932,7 +5932,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 106]
+Hoffman                   Expires April 9, 2019               [Page 106]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -5988,7 +5988,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 107]
+Hoffman                   Expires April 9, 2019               [Page 107]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6044,7 +6044,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 108]
+Hoffman                   Expires April 9, 2019               [Page 108]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6100,7 +6100,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 109]
+Hoffman                   Expires April 9, 2019               [Page 109]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6156,7 +6156,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 110]
+Hoffman                   Expires April 9, 2019               [Page 110]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6212,7 +6212,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 111]
+Hoffman                   Expires April 9, 2019               [Page 111]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6268,7 +6268,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 112]
+Hoffman                   Expires April 9, 2019               [Page 112]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6324,7 +6324,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 113]
+Hoffman                   Expires April 9, 2019               [Page 113]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6380,7 +6380,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 114]
+Hoffman                   Expires April 9, 2019               [Page 114]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6436,7 +6436,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 115]
+Hoffman                   Expires April 9, 2019               [Page 115]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6492,7 +6492,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 116]
+Hoffman                   Expires April 9, 2019               [Page 116]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6548,7 +6548,7 @@ Index
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 117]
+Hoffman                   Expires April 9, 2019               [Page 117]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6604,7 +6604,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 118]
+Hoffman                   Expires April 9, 2019               [Page 118]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6660,7 +6660,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 119]
+Hoffman                   Expires April 9, 2019               [Page 119]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6716,7 +6716,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 120]
+Hoffman                   Expires April 9, 2019               [Page 120]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6772,7 +6772,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 121]
+Hoffman                   Expires April 9, 2019               [Page 121]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6828,7 +6828,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 122]
+Hoffman                   Expires April 9, 2019               [Page 122]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6884,7 +6884,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 123]
+Hoffman                   Expires April 9, 2019               [Page 123]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6940,7 +6940,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 124]
+Hoffman                   Expires April 9, 2019               [Page 124]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -6996,7 +6996,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 125]
+Hoffman                   Expires April 9, 2019               [Page 125]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7052,7 +7052,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 126]
+Hoffman                   Expires April 9, 2019               [Page 126]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7108,7 +7108,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 127]
+Hoffman                   Expires April 9, 2019               [Page 127]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7164,7 +7164,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 128]
+Hoffman                   Expires April 9, 2019               [Page 128]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7220,7 +7220,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 129]
+Hoffman                   Expires April 9, 2019               [Page 129]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7276,7 +7276,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 130]
+Hoffman                   Expires April 9, 2019               [Page 130]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7332,7 +7332,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 131]
+Hoffman                   Expires April 9, 2019               [Page 131]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7388,7 +7388,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 132]
+Hoffman                   Expires April 9, 2019               [Page 132]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7444,7 +7444,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 133]
+Hoffman                   Expires April 9, 2019               [Page 133]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7500,7 +7500,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 134]
+Hoffman                   Expires April 9, 2019               [Page 134]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7556,7 +7556,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 135]
+Hoffman                   Expires April 9, 2019               [Page 135]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7612,7 +7612,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 136]
+Hoffman                   Expires April 9, 2019               [Page 136]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7668,7 +7668,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 137]
+Hoffman                   Expires April 9, 2019               [Page 137]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7724,7 +7724,7 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 138]
+Hoffman                   Expires April 9, 2019               [Page 138]
 
 Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
 
@@ -7780,5 +7780,5 @@ Author's Address
 
 
 
-Hoffman                   Expires April 5, 2019               [Page 139]
+Hoffman                   Expires April 9, 2019               [Page 139]
 
