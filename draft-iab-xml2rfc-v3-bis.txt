@@ -830,8 +830,8 @@ Internet-Draft     The "xml2rfc" Version 3 Vocabulary       October 2018
    In some cases, the prep tool may remove the "src" attribute after
    processing its value.  See [RFC7998] for a description of this.
 
-   It is an error to have both a "src" attribute and content in the
-   <artwork> element.
+
+
 
 
 
