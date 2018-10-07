@@ -79,6 +79,11 @@ Discussion about obsoleting <xref target="RFC7749"/> (the v2 format) were remove
 obsoleted RFC 7749. Simlarly, the appendix on "Schema Differences from v2" was also removed.
 </t>
 
+<t>
+Removed the following from the description of the &lt;artwork&gt; element:
+"It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
+</t>
+
 </list></t>
 </section>
 

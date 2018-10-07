@@ -109,6 +109,11 @@ Discussion about obsoleting <xref target="RFC7749"/> (the v2 format) were remove
 obsoleted RFC 7749. Simlarly, the appendix on "Schema Differences from v2" was also removed.
 </t>
 
+<t>
+Removed the following from the description of the &lt;artwork&gt; element:
+"It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
+</t>
+
 </list></t>
 </section>
 
@@ -757,10 +762,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          In some cases, the prep tool may remove the "src" attribute after processing its value.
          See <xref target="RFC7998"/> for a description of this.
-      </t>
-      <t>
-<!-- ISSUE 34 -->
-         It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
       </t>
    </section>
 
