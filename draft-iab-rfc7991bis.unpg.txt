@@ -244,7 +244,9 @@ Table of Contents
    This is a (hopefully) complete list of all the technical changes
    between [RFC7991] and this document.
 
-   o  [[ More will appear here in future drafts. ]]
+   o  Changed the text about what this draft obsoletes and updates.
+
+   o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
 

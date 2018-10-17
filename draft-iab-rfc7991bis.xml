@@ -12,8 +12,9 @@
 <?rfc-ext include-references-in-index="yes" ?>
 
 <!--
+Notes for the author:
 
-... some notes might go here ... 
+- Before publication, search for "[[" to look for internal notes 
 
 -->
 
@@ -167,7 +168,9 @@ and this document.
 
 <t><list style="symbols">
 
-<t>[[ More will appear here in future drafts. ]]</t>
+<t>Changed the text about what this draft obsoletes and updates.</t>
+
+<t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
 

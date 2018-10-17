@@ -9,7 +9,7 @@ Expires: April 20, 2019
 
 
                    The "xml2rfc" version 3 Vocabulary
-                          draft-iab-rfc7991bis
+                        draft-iab-rfc7991bis-00
 
 Abstract
 
@@ -303,7 +303,9 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    This is a (hopefully) complete list of all the technical changes
    between [RFC7991] and this document.
 
-   o  [[ More will appear here in future drafts. ]]
+   o  Changed the text about what this draft obsoletes and updates.
+
+   o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
 
@@ -327,8 +329,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  Add <sourcecode> to differentiate from <artwork>.
 
-   o  Add <table>, <thead>, <tbody>, <tfoot>, <tr>, <td>, and <th> to
-      give table functionality like that in HTML.
 
 
 
@@ -336,6 +336,9 @@ Hoffman                  Expires April 20, 2019                 [Page 6]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  Add <table>, <thead>, <tbody>, <tfoot>, <tr>, <td>, and <th> to
+      give table functionality like that in HTML.
 
    o  Add <boilerplate> to hold the automatically generated boilerplate
       text.
@@ -382,9 +385,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    o  Add "ascii" attributes to <email>, <organization>, <street>,
       <city>, <region>, <country>, and <code>.  Also add
       "asciiFullname", "asciiInitials", and "asciiSurname" to <author>.
-      This allows an author to specify their information in their native
-      scripts as the primary entry and still allow the ASCII-equivalent
-      values to appear in the processed documents.
 
 
 
@@ -392,6 +392,10 @@ Hoffman                  Expires April 20, 2019                 [Page 7]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+      This allows an author to specify their information in their native
+      scripts as the primary entry and still allow the ASCII-equivalent
+      values to appear in the processed documents.
 
    o  Add "anchor" attributes to many block elements to allow them to be
       linked with <relref> and <xref>.
@@ -436,11 +440,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
       table elements (<table> and the elements that can be contained
       within it).
 
-   o  Deprecate <facsimile> because it is rarely used.
 
-   o  Deprecate <format> because it is not useful and has caused
-      surprise for authors in the past.  If the goal is to provide a
-      single URI (Uniform Resource Identifier) for a reference, use the
 
 
 
@@ -449,6 +449,11 @@ Hoffman                  Expires April 20, 2019                 [Page 8]
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
 
+   o  Deprecate <facsimile> because it is rarely used.
+
+   o  Deprecate <format> because it is not useful and has caused
+      surprise for authors in the past.  If the goal is to provide a
+      single URI (Uniform Resource Identifier) for a reference, use the
       "target" attribute in <reference> instead.
 
    o  Deprecate <preamble> and <postamble> in favor of simply using <t>
@@ -492,11 +497,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  In <front>, make <date> optional.
 
-   o  In <date>, add restrictions to the "date" and "year" attributes
-      when used in the <front> for the document's boilerplate text.
-
-   o  In <postal>, allow the sub-elements to be in any order.  Also
-      allow the inclusion of the new <postalLine> instead of the older
 
 
 
@@ -505,6 +505,11 @@ Hoffman                  Expires April 20, 2019                 [Page 9]
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
 
+   o  In <date>, add restrictions to the "date" and "year" attributes
+      when used in the <front> for the document's boilerplate text.
+
+   o  In <postal>, allow the sub-elements to be in any order.  Also
+      allow the inclusion of the new <postalLine> instead of the older
       elements.
 
    o  In <section>, restrict the names of the anchors that can be used
@@ -548,11 +553,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    whitespace and line breaks to a single whitespace (except inside
    <artwork> and <sourcecode>) and will trim leading and trailing
    whitespace.  Tab characters (U+0009) inside <artwork> and
-   <sourcecode> are prohibited.
-
-   Some of the elements have attributes that are not described in this
-   section because those attributes are specific to the prep tool.
-   People writing tools to process this format should read all of the
 
 
 
@@ -561,6 +561,11 @@ Hoffman                  Expires April 20, 2019                [Page 10]
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
 
+   <sourcecode> are prohibited.
+
+   Some of the elements have attributes that are not described in this
+   section because those attributes are specific to the prep tool.
+   People writing tools to process this format should read all of the
    appendices for a complete description of these attributes.
 
    Every element in the v3 vocabulary can have an "xml:lang" attribute,
@@ -604,11 +609,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    In this order:
 
-   1.  One optional <postal> element (Section 2.37)
-
-   2.  One optional <phone> element (Section 2.36)
-
-
 
 
 
@@ -616,6 +616,10 @@ Hoffman                  Expires April 20, 2019                [Page 11]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   1.  One optional <postal> element (Section 2.37)
+
+   2.  One optional <phone> element (Section 2.36)
 
    3.  One optional <facsimile> element (Section 3.2)
 
@@ -660,10 +664,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  <tt> elements (Section 2.62)
 
-   o  <xref> elements (Section 2.66)
-
-
-
 
 
 
@@ -672,6 +672,8 @@ Hoffman                  Expires April 20, 2019                [Page 12]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  <xref> elements (Section 2.66)
 
 2.4.  <area>
 
@@ -719,8 +721,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    o  As a data: URI, such as: <artwork type="svg" src="data:image/
       svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3...">
 
-   o  As a URI to an external entity, such as: <artwork type="svg"
-      src="http://www.example.com/...">
 
 
 
@@ -728,6 +728,9 @@ Hoffman                  Expires April 20, 2019                [Page 13]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  As a URI to an external entity, such as: <artwork type="svg"
+      src="http://www.example.com/...">
 
    o  As a local file, such as: <artwork type="svg" src="diagram12.svg">
 
@@ -773,9 +776,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    o  "center"
 
    o  "right"
-
-
-
 
 
 
@@ -8134,8 +8134,8 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          note  33, 38
          ol  11, 17, 20, 25, 35, 38-39, 53, 65, 67
          organization  18, 41
-         phone  11, 41
-         postal  11, 42
+         phone  12, 41
+         postal  12, 42
          postalLine  42
          postamble  32, 77, 79
          preamble  31, 78-79
@@ -8183,7 +8183,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          uri  12, 72
          vspace  63, 81
          workgroup  33, 72
-         xref  12, 21, 23, 26, 28-29, 36, 38, 60-63, 66, 68, 71-72, 75,
+         xref  13, 21, 23, 26, 28-29, 36, 38, 60-63, 66, 68, 71-72, 75,
             77-78, 80
       em element  29, 98
          inside annotation  12
@@ -8439,9 +8439,9 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
       pageno attribute
          in xref element  74
       phone element  41, 98
-         inside address  11
+         inside address  12
       postal element  42, 98
-         inside address  11
+         inside address  12
       postalLine element  42, 98
          ascii attribute  42
          inside postal  42
@@ -8880,7 +8880,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          in spanx element  79
       xref element  72, 98
          format attribute  73
-         inside annotation  12
+         inside annotation  13
          inside blockquote  21
          inside c  75
          inside cref  23
