@@ -170,7 +170,12 @@ and this document.
 
 <t>Changed the text about what this draft obsoletes and updates.</t>
 
-<t>[[ More will be added here as the draft progresses. ]]</t>
+<t>Allow &lt;blockquote&gt; as a child of &lt;li&gt;.</t>
+
+<t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
+from <xref target="element.artwork.attribute.src"/>.</t>
+
+<t>Added the "indent" attribute to &lt;dl&gt;.</t>
 
 </list></t>
 
@@ -783,9 +788,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          In some cases, the prep tool may remove the "src" attribute after processing its value.
          See <xref target="RFC7998"/> for a description of this.
       </t>
-      <t>
-         It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
-      </t>
    </section>
 
    <!--artwork/@type-->
@@ -1106,7 +1108,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       Specifies that a block of text is a quotation.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>) and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.blockquote.contents"><!--AG-->
       <xref format="none" target="grammar.blockquote">Content model</xref>:
     </t>
@@ -1730,6 +1732,22 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </ul>
    </section>
 
+   <!--dl/@indent-->
+   <section anchor="element.dl.attribute.indent" toc="exclude" title="&#34;indent&#34; Attribute">
+      
+      <iref item="Attributes" subitem="indent"/>
+      <iref item="dl element" subitem="indent attribute"/>
+      <iref item="indent attribute" subitem="in dl element"/>
+      <t>
+         Indicates the indentation to be used for the rendering of the second and
+         following lines of the item (the first line starts with the term, and is not indented).
+         The indentation amount is interpreted as characters when rendering
+         plain-text documents, and en-space units when rendering in formats that have
+         richer typographic support such as HTML or PDF.
+         One en-space is assumed to be the length of 0.5 em-space in CSS units.
+      </t>
+   </section>
+   
    <!--dl/@spacing-->
    <section anchor="element.dl.attribute.spacing" toc="exclude">
       <name>"spacing" Attribute</name>
@@ -2324,6 +2342,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside li"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="blockquote"/>
+               <iref item="blockquote element" subitem="inside li"/>&lt;<x:ref>blockquote</x:ref>&gt; elements (<xref target="element.blockquote"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="dl"/>
                <iref item="dl element" subitem="inside li"/>&lt;<x:ref>dl</x:ref>&gt; elements (<xref target="element.dl"/>)</li>
@@ -7118,7 +7139,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
-    ((artwork | dl | figure | ol | sourcecode | t | ul)+
+    ((artwork | blockquote | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
         | cref
@@ -8103,7 +8124,8 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     ((artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artwork | blockquote | dl | figure | ol | sourcecode | t | 
++ ul)+
 +      | (text
 +         | bcp14
 +         | cref

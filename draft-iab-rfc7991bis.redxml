@@ -141,7 +141,7 @@ and this document.
 <t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
 from <xref target="element.artwork.attribute.src"/>.</t>
 
-<t>[[ More will be added here as the draft progresses. ]]</t>
+<t>Added the "indent" attribute to &lt;dl&gt;.</t>
 
 </list></t>
 
@@ -1653,6 +1653,22 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <t>"false"</t>
          <t>"true" (default)</t>
       </list></t>
+   </section>
+
+   <!--dl/@indent-->
+   <section anchor="element.dl.attribute.indent" toc="exclude" title="&#34;indent&#34; Attribute">
+      
+      <iref item="Attributes" subitem="indent"/>
+      <iref item="dl element" subitem="indent attribute"/>
+      <iref item="indent attribute" subitem="in dl element"/>
+      <t>
+         Indicates the indentation to be used for the rendering of the second and
+         following lines of the item (the first line starts with the term, and is not indented).
+         The indentation amount is interpreted as characters when rendering
+         plain-text documents, and en-space units when rendering in formats that have
+         richer typographic support such as HTML or PDF.
+         One en-space is assumed to be the length of 0.5 em-space in CSS units.
+      </t>
    </section>
 
    <!--dl/@spacing-->
@@ -7131,6 +7147,7 @@ dl =
     attribute spacing { "normal" | "compact" }?,
     [ a:defaultValue = "true" ]
     attribute hanging { "false" | "true" }?,
+    [ a:defaultValue = "0" ] attribute indent { text }?,
     attribute pn { text }?,
     (dt, dd)+
   }
@@ -8116,6 +8133,7 @@ to the v3 schema.</t>
 +     attribute spacing { "normal" | "compact" }?,
 +     [ a:defaultValue = "true" ]
 +     attribute hanging { "false" | "true" }?,
++     [ a:defaultValue = "0" ] attribute indent { text }?,
 +     attribute pn { text }?,
 +     (dt, dd)+
 +   }
@@ -8170,7 +8188,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8181,7 +8199,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,

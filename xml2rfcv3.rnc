@@ -387,6 +387,7 @@ dl =
     attribute spacing { "normal" | "compact" }?,
     [ a:defaultValue = "true" ]
     attribute hanging { "false" | "true" }?,
+    [ a:defaultValue = "0" ] attribute indent { text }?,
     attribute pn { text }?,
     (dt, dd)+
   }
