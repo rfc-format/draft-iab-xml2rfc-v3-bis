@@ -6,48 +6,7 @@
    <iref item="Elements" subitem="c" primary="true"/>
    <iref item="c element" primary="true"/>
    <t>
-      Deprecated. Instead, use &lt;<xref target="element.tr" format="none">tr</xref>&gt;, &lt;<xref target="element.td" format="none">td</xref>&gt;, and &lt;<xref target="element.th" format="none">th</xref>&gt;.
-   </t>
-   <t>This element appears as a child element of &lt;<xref target="element.texttable" format="none">texttable</xref>&gt; (<xref target="element.texttable"/>).</t>
-   <t anchor="element.c.contents">
-      Content model:
-    </t>
-   <t>In any order: <list style="symbols">
-         <t>Text</t>
-         <t>
-            <iref item="Elements" subitem="bcp14"/>
-            <iref item="bcp14 element" subitem="inside c"/>&lt;<xref target="element.bcp14" format="none">bcp14</xref>&gt; elements (<xref target="element.bcp14"/>)</t>
-         <t>
-            <iref item="Elements" subitem="cref"/>
-            <iref item="cref element" subitem="inside c"/>&lt;<xref target="element.cref" format="none">cref</xref>&gt; elements (<xref target="element.cref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="em"/>
-            <iref item="em element" subitem="inside c"/>&lt;<xref target="element.em" format="none">em</xref>&gt; elements (<xref target="element.em"/>)</t>
-         <t>
-            <iref item="Elements" subitem="eref"/>
-            <iref item="eref element" subitem="inside c"/>&lt;<xref target="element.eref" format="none">eref</xref>&gt; elements (<xref target="element.eref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="iref"/>
-            <iref item="iref element" subitem="inside c"/>&lt;<xref target="element.iref" format="none">iref</xref>&gt; elements (<xref target="element.iref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="spanx"/>
-            <iref item="spanx element" subitem="inside c"/>&lt;<xref target="element.spanx" format="none">spanx</xref>&gt; elements (<xref target="element.spanx"/>)</t>
-         <t>
-            <iref item="Elements" subitem="strong"/>
-            <iref item="strong element" subitem="inside c"/>&lt;<xref target="element.strong" format="none">strong</xref>&gt; elements (<xref target="element.strong"/>)</t>
-         <t>
-            <iref item="Elements" subitem="sub"/>
-            <iref item="sub element" subitem="inside c"/>&lt;<xref target="element.sub" format="none">sub</xref>&gt; elements (<xref target="element.sub"/>)</t>
-         <t>
-            <iref item="Elements" subitem="sup"/>
-            <iref item="sup element" subitem="inside c"/>&lt;<xref target="element.sup" format="none">sup</xref>&gt; elements (<xref target="element.sup"/>)</t>
-         <t>
-            <iref item="Elements" subitem="tt"/>
-            <iref item="tt element" subitem="inside c"/>&lt;<xref target="element.tt" format="none">tt</xref>&gt; elements (<xref target="element.tt"/>)</t>
-         <t>
-            <iref item="Elements" subitem="xref"/>
-            <iref item="xref element" subitem="inside c"/>&lt;<xref target="element.xref" format="none">xref</xref>&gt; elements (<xref target="element.xref"/>)</t>
-      </list>
+      Deprecated. Instead, use &lt;<x:ref>tr</x:ref>&gt;, &lt;<x:ref>td</x:ref>&gt;, and &lt;<x:ref>th</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>texttable</x:ref>&gt; (<xref target="element.texttable"/>).</t>
    <t anchor="element.c.contents"><!--AG-->
@@ -80,10 +39,8 @@
    <iref item="Elements" subitem="facsimile" primary="true"/>
    <iref item="facsimile element" primary="true"/>
    <t>
-      Deprecated. The &lt;<xref target="element.email" format="none">email</xref>&gt; element is a much more useful way to get in touch with authors.
+      Deprecated. The &lt;<x:ref>email</x:ref>&gt; element is a much more useful way to get in touch with authors.
    </t>
-   <t>This element appears as a child element of &lt;<xref target="element.address" format="none">address</xref>&gt; (<xref target="element.address"/>).</t>
-   <t anchor="element.facsimile.contents">Content model: only text content.</t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>address</x:ref>&gt; (<xref target="element.address"/>).</t>
    <t anchor="element.facsimile.contents"><!--AG-->
       <xref format="none" target="grammar.facsimile">Content model</xref>: only text content.</t>
@@ -96,10 +53,8 @@
    <iref item="format element" primary="true"/>
    <t>
       Deprecated. If the goal is to provide a single URI for
-      a reference, use the "target" attribute in &lt;<xref target="element.reference" format="none">reference</xref>&gt; instead.
+      a reference, use the "target" attribute on &lt;<x:ref>reference</x:ref>&gt; instead.
    </t>
-   <t>This element appears as a child element of &lt;<xref target="element.reference" format="none">reference</xref>&gt; (<xref target="element.reference"/>).</t>
-   <t anchor="element.format.contents">Content model: this element does not have any contents.</t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.format.contents"><!--AG-->
       <xref format="none" target="grammar.format">Content model</xref>: this element does not have any contents.</t>
@@ -142,17 +97,10 @@
    <iref item="list element" primary="true"/>
    <t>
       Deprecated. Instead, use
-      &lt;<xref target="element.dl" format="none">dl</xref>&gt; for list/@style "hanging";
-      &lt;<xref target="element.ul" format="none">ul</xref>&gt; for list/@style "empty" or "symbols"; and
-      &lt;<xref target="element.ol" format="none">ol</xref>&gt; for list/@style "letters", "numbers", "counter", or "format".
+      &lt;<x:ref>dl</x:ref>&gt; for list/@style "hanging";
+      &lt;<x:ref>ul</x:ref>&gt; for list/@style "empty" or "symbols"; and
+      &lt;<x:ref>ol</x:ref>&gt; for list/@style "letters", "numbers", "counter", or "format".
    </t>
-   <t>This element appears as a child element of &lt;<xref target="element.t" format="none">t</xref>&gt; (<xref target="element.t"/>).</t>
-   <t anchor="element.list.contents">
-      Content model:
-    </t>
-   <t>
-      <iref item="Elements" subitem="t"/>
-      <iref item="t element" subitem="inside list"/>One or more &lt;<xref target="element.t" format="none">t</xref>&gt; elements (<xref target="element.t"/>)</t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>) and &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>).</t>
    <t anchor="element.list.contents"><!--AG-->
       <xref format="none" target="grammar.list">Content model</xref>:
@@ -169,7 +117,7 @@
       <iref item="list element" subitem="counter attribute"/>
       <iref item="counter attribute" subitem="in list element"/>
       <t>
-        Deprecated. The functionality of this attribute has been replaced with &lt;<xref target="element.ol" format="none">ol</xref>&gt;/@start.
+        Deprecated. The functionality of this attribute has been replaced with &lt;<x:ref>ol</x:ref>&gt;/@start.
       </t>
    </section>
 
@@ -179,7 +127,7 @@
       <iref item="list element" subitem="hangIndent attribute"/>
       <iref item="hangIndent attribute" subitem="in list element"/>
       <t>
-         Deprecated. Use &lt;<xref target="element.dl" format="none">dl</xref>&gt; instead.
+         Deprecated. Use &lt;<x:ref>dl</x:ref>&gt; instead.
       </t>
    </section>
 
@@ -201,47 +149,6 @@
    <iref item="postamble element" primary="true"/>
    <t>
       Deprecated. Instead, use a regular paragraph after the figure or table.
-   </t>
-   <t>This element appears as a child element of &lt;<xref target="element.figure" format="none">figure</xref>&gt; (<xref target="element.figure"/>) and &lt;<xref target="element.texttable" format="none">texttable</xref>&gt; (<xref target="element.texttable"/>).</t>
-   <t anchor="element.postamble.contents">
-      Content model:
-    </t>
-   <t>In any order: <list style="symbols">
-         <t>Text</t>
-         <t>
-            <iref item="Elements" subitem="bcp14"/>
-            <iref item="bcp14 element" subitem="inside postamble"/>&lt;<xref target="element.bcp14" format="none">bcp14</xref>&gt; elements (<xref target="element.bcp14"/>)</t>
-         <t>
-            <iref item="Elements" subitem="cref"/>
-            <iref item="cref element" subitem="inside postamble"/>&lt;<xref target="element.cref" format="none">cref</xref>&gt; elements (<xref target="element.cref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="em"/>
-            <iref item="em element" subitem="inside postamble"/>&lt;<xref target="element.em" format="none">em</xref>&gt; elements (<xref target="element.em"/>)</t>
-         <t>
-            <iref item="Elements" subitem="eref"/>
-            <iref item="eref element" subitem="inside postamble"/>&lt;<xref target="element.eref" format="none">eref</xref>&gt; elements (<xref target="element.eref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="iref"/>
-            <iref item="iref element" subitem="inside postamble"/>&lt;<xref target="element.iref" format="none">iref</xref>&gt; elements (<xref target="element.iref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="spanx"/>
-            <iref item="spanx element" subitem="inside postamble"/>&lt;<xref target="element.spanx" format="none">spanx</xref>&gt; elements (<xref target="element.spanx"/>)</t>
-         <t>
-            <iref item="Elements" subitem="strong"/>
-            <iref item="strong element" subitem="inside postamble"/>&lt;<xref target="element.strong" format="none">strong</xref>&gt; elements (<xref target="element.strong"/>)</t>
-         <t>
-            <iref item="Elements" subitem="sub"/>
-            <iref item="sub element" subitem="inside postamble"/>&lt;<xref target="element.sub" format="none">sub</xref>&gt; elements (<xref target="element.sub"/>)</t>
-         <t>
-            <iref item="Elements" subitem="sup"/>
-            <iref item="sup element" subitem="inside postamble"/>&lt;<xref target="element.sup" format="none">sup</xref>&gt; elements (<xref target="element.sup"/>)</t>
-         <t>
-            <iref item="Elements" subitem="tt"/>
-            <iref item="tt element" subitem="inside postamble"/>&lt;<xref target="element.tt" format="none">tt</xref>&gt; elements (<xref target="element.tt"/>)</t>
-         <t>
-            <iref item="Elements" subitem="xref"/>
-            <iref item="xref element" subitem="inside postamble"/>&lt;<xref target="element.xref" format="none">xref</xref>&gt; elements (<xref target="element.xref"/>)</t>
-      </list>
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>) and &lt;<x:ref>texttable</x:ref>&gt; (<xref target="element.texttable"/>).</t>
    <t anchor="element.postamble.contents"><!--AG-->
@@ -275,47 +182,6 @@
    <iref item="preamble element" primary="true"/>
    <t>
       Deprecated. Instead, use a regular paragraph before the figure or table.
-   </t>
-   <t>This element appears as a child element of &lt;<xref target="element.figure" format="none">figure</xref>&gt; (<xref target="element.figure"/>) and &lt;<xref target="element.texttable" format="none">texttable</xref>&gt; (<xref target="element.texttable"/>).</t>
-   <t anchor="element.preamble.contents">
-      Content model:
-    </t>
-   <t>In any order: <list style="symbols">
-         <t>Text</t>
-         <t>
-            <iref item="Elements" subitem="bcp14"/>
-            <iref item="bcp14 element" subitem="inside preamble"/>&lt;<xref target="element.bcp14" format="none">bcp14</xref>&gt; elements (<xref target="element.bcp14"/>)</t>
-         <t>
-            <iref item="Elements" subitem="cref"/>
-            <iref item="cref element" subitem="inside preamble"/>&lt;<xref target="element.cref" format="none">cref</xref>&gt; elements (<xref target="element.cref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="em"/>
-            <iref item="em element" subitem="inside preamble"/>&lt;<xref target="element.em" format="none">em</xref>&gt; elements (<xref target="element.em"/>)</t>
-         <t>
-            <iref item="Elements" subitem="eref"/>
-            <iref item="eref element" subitem="inside preamble"/>&lt;<xref target="element.eref" format="none">eref</xref>&gt; elements (<xref target="element.eref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="iref"/>
-            <iref item="iref element" subitem="inside preamble"/>&lt;<xref target="element.iref" format="none">iref</xref>&gt; elements (<xref target="element.iref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="spanx"/>
-            <iref item="spanx element" subitem="inside preamble"/>&lt;<xref target="element.spanx" format="none">spanx</xref>&gt; elements (<xref target="element.spanx"/>)</t>
-         <t>
-            <iref item="Elements" subitem="strong"/>
-            <iref item="strong element" subitem="inside preamble"/>&lt;<xref target="element.strong" format="none">strong</xref>&gt; elements (<xref target="element.strong"/>)</t>
-         <t>
-            <iref item="Elements" subitem="sub"/>
-            <iref item="sub element" subitem="inside preamble"/>&lt;<xref target="element.sub" format="none">sub</xref>&gt; elements (<xref target="element.sub"/>)</t>
-         <t>
-            <iref item="Elements" subitem="sup"/>
-            <iref item="sup element" subitem="inside preamble"/>&lt;<xref target="element.sup" format="none">sup</xref>&gt; elements (<xref target="element.sup"/>)</t>
-         <t>
-            <iref item="Elements" subitem="tt"/>
-            <iref item="tt element" subitem="inside preamble"/>&lt;<xref target="element.tt" format="none">tt</xref>&gt; elements (<xref target="element.tt"/>)</t>
-         <t>
-            <iref item="Elements" subitem="xref"/>
-            <iref item="xref element" subitem="inside preamble"/>&lt;<xref target="element.xref" format="none">xref</xref>&gt; elements (<xref target="element.xref"/>)</t>
-      </list>
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>) and &lt;<x:ref>texttable</x:ref>&gt; (<xref target="element.texttable"/>).</t>
    <t anchor="element.preamble.contents"><!--AG-->
@@ -371,8 +237,6 @@
    <t>
       Deprecated.
    </t>
-   <t>This element appears as a child element of &lt;<xref target="element.annotation" format="none">annotation</xref>&gt; (<xref target="element.annotation"/>), &lt;<xref target="element.c" format="none">c</xref>&gt; (<xref target="element.c"/>), &lt;<xref target="element.postamble" format="none">postamble</xref>&gt; (<xref target="element.postamble"/>), &lt;<xref target="element.preamble" format="none">preamble</xref>&gt; (<xref target="element.preamble"/>), and &lt;<xref target="element.t" format="none">t</xref>&gt; (<xref target="element.t"/>).</t>
-   <t anchor="element.spanx.contents">Content model: only text content.</t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), and &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>).</t>
    <t anchor="element.spanx.contents"><!--AG-->
       <xref format="none" target="grammar.spanx">Content model</xref>: only text content.</t>
@@ -383,8 +247,8 @@
       <iref item="spanx element" subitem="style attribute"/>
       <iref item="style attribute" subitem="in spanx element"/>
       <t>
-         Deprecated. Instead of &lt;spanx style="emph"&gt;, use &lt;<xref target="element.em" format="none">em</xref>&gt;;
-      instead of &lt;spanx style="strong"&gt;, use &lt;<xref target="element.strong" format="none">strong</xref>&gt;;
+         Deprecated. Instead of &lt;spanx style="emph"&gt;, use &lt;<x:ref>em</x:ref>&gt;;
+      instead of &lt;spanx style="strong"&gt;, use &lt;<x:ref>strong</x:ref>&gt;;
       instead of &lt;spanx style="verb"&gt;, use &lt;tt&gt;.
       </t>
    </section>
@@ -396,11 +260,6 @@
       <iref item="xml:space attribute" subitem="in spanx element"/>
       <t>
          Deprecated.
-      </t>
-      <t>Allowed values: <list style="symbols">
-            <t>"default"</t>
-            <t>"preserve" (default)</t>
-         </list>
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -416,27 +275,7 @@
    <iref item="Elements" subitem="texttable" primary="true"/>
    <iref item="texttable element" primary="true"/>
    <t>
-      Deprecated. Use &lt;<xref target="element.table" format="none">table</xref>&gt; instead.
-   </t>
-   <t>This element appears as a child element of &lt;<xref target="element.aside" format="none">aside</xref>&gt; (<xref target="element.aside"/>) and &lt;<xref target="element.section" format="none">section</xref>&gt; (<xref target="element.section"/>).</t>
-   <t anchor="element.texttable.contents">Content model:</t>
-   <t>In this order:<list style="numbers">
-         <t>
-            <iref item="Elements" subitem="name"/>
-            <iref item="name element" subitem="inside texttable"/>One optional &lt;<xref target="element.name" format="none">name</xref>&gt; element (<xref target="element.name"/>)</t>
-         <t>
-            <iref item="Elements" subitem="preamble"/>
-            <iref item="preamble element" subitem="inside texttable"/>One optional &lt;<xref target="element.preamble" format="none">preamble</xref>&gt; element (<xref target="element.preamble"/>)</t>
-         <t>
-            <iref item="Elements" subitem="ttcol"/>
-            <iref item="ttcol element" subitem="inside texttable"/>One or more &lt;<xref target="element.ttcol" format="none">ttcol</xref>&gt; elements (<xref target="element.ttcol"/>)</t>
-         <t>
-            <iref item="Elements" subitem="c"/>
-            <iref item="c element" subitem="inside texttable"/>Optional &lt;<xref target="element.c" format="none">c</xref>&gt; elements (<xref target="element.c"/>)</t>
-         <t>
-            <iref item="Elements" subitem="postamble"/>
-            <iref item="postamble element" subitem="inside texttable"/>One optional &lt;<xref target="element.postamble" format="none">postamble</xref>&gt; element (<xref target="element.postamble"/>)</t>
-      </list>
+      Deprecated. Use &lt;<x:ref>table</x:ref>&gt; instead.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.texttable.contents"><!--AG-->
@@ -476,14 +315,8 @@
       <iref item="texttable element" subitem="align attribute"/>
       <iref item="align attribute" subitem="in texttable element"/>
       <t>
-            Deprecated.
+            Deprecated
          </t>
-      <t>Allowed values: <list style="symbols">
-            <t>"left"</t>
-            <t>"center" (default)</t>
-            <t>"right"</t>
-         </list>
-      </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"left"</li>
@@ -498,7 +331,7 @@
       <iref item="texttable element" subitem="anchor attribute"/>
       <iref item="anchor attribute" subitem="in texttable element"/>
       <t>
-        Deprecated.
+        Deprecated
       </t>
    </section>
 
@@ -527,11 +360,6 @@
       <t>
         Deprecated.
       </t>
-      <t>Allowed values: <list style="symbols">
-            <t>"true"</t>
-            <t>"false" (default)</t>
-         </list>
-      </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"true"</li>
@@ -556,27 +384,7 @@
    <iref item="Elements" subitem="ttcol" primary="true"/>
    <iref item="ttcol element" primary="true"/>
    <t>
-      Deprecated. Instead, use &lt;<xref target="element.tr" format="none">tr</xref>&gt;, &lt;<xref target="element.td" format="none">td</xref>&gt;, and &lt;<xref target="element.th" format="none">th</xref>&gt;.
-   </t>
-   <t>This element appears as a child element of &lt;<xref target="element.texttable" format="none">texttable</xref>&gt; (<xref target="element.texttable"/>).</t>
-   <t anchor="element.ttcol.contents">
-      Content model:
-    </t>
-   <t>In any order: <list style="symbols">
-         <t>Text</t>
-         <t>
-            <iref item="Elements" subitem="cref"/>
-            <iref item="cref element" subitem="inside ttcol"/>&lt;<xref target="element.cref" format="none">cref</xref>&gt; elements (<xref target="element.cref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="eref"/>
-            <iref item="eref element" subitem="inside ttcol"/>&lt;<xref target="element.eref" format="none">eref</xref>&gt; elements (<xref target="element.eref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="iref"/>
-            <iref item="iref element" subitem="inside ttcol"/>&lt;<xref target="element.iref" format="none">iref</xref>&gt; elements (<xref target="element.iref"/>)</t>
-         <t>
-            <iref item="Elements" subitem="xref"/>
-            <iref item="xref element" subitem="inside ttcol"/>&lt;<xref target="element.xref" format="none">xref</xref>&gt; elements (<xref target="element.xref"/>)</t>
-      </list>
+      Deprecated. Instead, use &lt;<x:ref>tr</x:ref>&gt;, &lt;<x:ref>td</x:ref>&gt;, and &lt;<x:ref>th</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>texttable</x:ref>&gt; (<xref target="element.texttable"/>).</t>
    <t anchor="element.ttcol.contents"><!--AG-->
@@ -607,12 +415,6 @@
       <t>
         Deprecated.
       </t>
-      <t>Allowed values: <list style="symbols">
-            <t>"left" (default)</t>
-            <t>"center"</t>
-            <t>"right"</t>
-         </list>
-      </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"left" (default)</li>
@@ -640,11 +442,9 @@
    <t>
       Deprecated.  In earlier versions of this format, &lt;vspace&gt; was often
       used to get an extra blank line in a list element; in the v3 vocabulary,
-      that can be done instead by using multiple &lt;<xref target="element.t" format="none">t</xref>&gt; elements inside the
-      &lt;<xref target="element.li" format="none">li</xref>&gt; element. Other uses have no direct replacement.
+      that can be done instead by using multiple &lt;<x:ref>t</x:ref>&gt; elements inside the
+      &lt;<x:ref>li</x:ref>&gt; element. Other uses have no direct replacement.
    </t>
-   <t>This element appears as a child element of &lt;<xref target="element.t" format="none">t</xref>&gt; (<xref target="element.t"/>).</t>
-   <t anchor="element.vspace.contents">Content model: this element does not have any contents.</t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>).</t>
    <t anchor="element.vspace.contents"><!--AG-->
       <xref format="none" target="grammar.vspace">Content model</xref>: this element does not have any contents.</t>
