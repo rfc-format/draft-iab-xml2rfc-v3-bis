@@ -12,8 +12,9 @@
 <?rfc-ext include-references-in-index="yes" ?>
 
 <!--
+Notes for the author:
 
-... some notes might go here ... 
+- Before publication, search for "[[" to look for internal notes 
 
 -->
 
@@ -167,7 +168,9 @@ and this document.
 
 <t><list style="symbols">
 
-<t>[[ More will appear here in future drafts. ]]</t>
+<t>Changed the text about what this draft obsoletes and updates.</t>
+
+<t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
 
@@ -3467,17 +3470,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
-   <!--rfc/@FAKEATTRIBUTE-->
-   <section anchor="element.rfc.attribute.FAKEATTRIBUTE" toc="exclude">
-      <name>"FAKEATTRIBUTE" Attribute</name>
-      <iref item="Attributes" subitem="FAKEATTRIBUTE"/>
-      <iref item="rfc element" subitem="FAKEATTRIBUTE attribute"/>
-      <iref item="FAKEATTRIBUTE attribute" subitem="in rfc element"/>
-      <t><!--AG-->
-         <cref anchor="element.rfc.attribute.FAKEATTRIBUTE.missing">attribute description missing</cref>
-      </t>
-   </section>
-
    <!--rfc/@indexInclude-->
    <section anchor="element.rfc.attribute.indexInclude" toc="exclude">
       <name>"indexInclude" Attribute</name>
@@ -6733,7 +6725,6 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element rfc {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
-    attribute FAKEATTRIBUTE { text }?,
     attribute number { text }?,
     [ a:defaultValue = "" ] attribute obsoletes { text }?,
     [ a:defaultValue = "" ] attribute updates { text }?,
@@ -7700,7 +7691,6 @@ to the v3 schema.</t>
     element rfc {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
-+     attribute FAKEATTRIBUTE { text }?,
       attribute number { text }?,
       [ a:defaultValue = "" ] attribute obsoletes { text }?,
       [ a:defaultValue = "" ] attribute updates { text }?,
