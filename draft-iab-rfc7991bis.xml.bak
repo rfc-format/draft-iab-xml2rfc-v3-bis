@@ -12,8 +12,9 @@
 <?rfc-ext include-references-in-index="yes" ?>
 
 <!--
+Notes for the author:
 
-... some notes might go here ... 
+- Before publication, search for "[[" to look for internal notes 
 
 -->
 
@@ -167,7 +168,9 @@ and this document.
 
 <t><list style="symbols">
 
-<t>[[ More will appear here in future drafts. ]]</t>
+<t>Changed the text about what this draft obsoletes and updates.</t>
+
+<t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
 
@@ -1239,23 +1242,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside boilerplate"/>One or more &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
       
-</section>
-
-<!--br-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.br">
-   <name>
-      <tt>&lt;br&gt;</tt>
-   </name>
-   <x:anchor-alias value="br"/>
-   <iref item="Elements" subitem="br" primary="true"/>
-   <iref item="br element" primary="true"/>
-   <t>
-      Indicates that a line break should be inserted in the generated output by a formatting tool.
-      Multiple successive instances of this element are ignored.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>) and &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>).</t>
-   <t anchor="element.br.contents"><!--AG-->
-      <xref format="none" target="grammar.br">Content model</xref>: this element does not have any contents.</t>
 </section>
 
 <!--city-->
@@ -3464,17 +3450,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="docName attribute" subitem="in rfc element"/>
       <t>
             Deprecated; instead, use the "value" attribute in &lt;<x:ref>seriesInfo</x:ref>&gt;.
-      </t>
-   </section>
-
-   <!--rfc/@FAKEATTRIBUTE-->
-   <section anchor="element.rfc.attribute.FAKEATTRIBUTE" toc="exclude">
-      <name>"FAKEATTRIBUTE" Attribute</name>
-      <iref item="Attributes" subitem="FAKEATTRIBUTE"/>
-      <iref item="rfc element" subitem="FAKEATTRIBUTE attribute"/>
-      <iref item="FAKEATTRIBUTE attribute" subitem="in rfc element"/>
-      <t><!--AG-->
-         <cref anchor="element.rfc.attribute.FAKEATTRIBUTE.missing">attribute description missing</cref>
       </t>
    </section>
 
@@ -6733,7 +6708,6 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element rfc {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
-    attribute FAKEATTRIBUTE { text }?,
     attribute number { text }?,
     [ a:defaultValue = "" ] attribute obsoletes { text }?,
     [ a:defaultValue = "" ] attribute updates { text }?,
@@ -7575,13 +7549,6 @@ include "svg.rnc"
     text
   }
 
-<strong anchor="grammar.br">br</strong><iref item="br element"/> =
-  element br {
-    attribute xml:base { text }?,
-    attribute xml:lang { text }?,
-    empty
-  }
-
 <strong anchor="grammar.back">back</strong><iref item="back element"/> =
   element back {
     attribute xml:base { text }?,
@@ -7700,7 +7667,6 @@ to the v3 schema.</t>
     element rfc {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
-+     attribute FAKEATTRIBUTE { text }?,
       attribute number { text }?,
       [ a:defaultValue = "" ] attribute obsoletes { text }?,
       [ a:defaultValue = "" ] attribute updates { text }?,
@@ -8544,12 +8510,6 @@ to the v3 schema.</t>
     }
 - c = element c { (text | xref | eref | iref | cref | spanx)* }
 - back = element back { references*, section* }
-+ br =
-+   element br {
-+     attribute xml:base { text }?,
-+     attribute xml:lang { text }?,
-+     empty
-+   }
 + back =
 +   element back {
 +     attribute xml:base { text }?,

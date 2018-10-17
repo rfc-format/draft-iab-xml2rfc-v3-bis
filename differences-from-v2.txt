@@ -765,7 +765,6 @@
 +     ((artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
-+         | br
 +         | cref
 +         | em
 +         | eref
@@ -789,7 +788,6 @@
 +     ((artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
-+         | br
 +         | cref
 +         | em
 +         | eref
@@ -849,12 +847,6 @@
     }
 - c = element c { (text | xref | eref | iref | cref | spanx)* }
 - back = element back { references*, section* }
-+ br =
-+   element br {
-+     attribute xml:base { text }?,
-+     attribute xml:lang { text }?,
-+     empty
-+   }
 + back =
 +   element back {
 +     attribute xml:base { text }?,
