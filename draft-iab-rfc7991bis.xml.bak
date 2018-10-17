@@ -12,8 +12,9 @@
 <?rfc-ext include-references-in-index="yes" ?>
 
 <!--
+Notes for the author:
 
-... some notes might go here ... 
+- Before publication, search for "[[" to look for internal notes 
 
 -->
 
@@ -167,7 +168,14 @@ and this document.
 
 <t><list style="symbols">
 
-<t>[[ More will appear here in future drafts. ]]</t>
+<t>Changed the text about what this draft obsoletes and updates.</t>
+
+<t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
+from <xref target="element.artwork.attribute.src"/>.</t>
+
+<t>Added the "align" attribute to &lt;table&gt;.</t>
+
+<t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
 
@@ -779,9 +787,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          In some cases, the prep tool may remove the "src" attribute after processing its value.
          See <xref target="RFC7998"/> for a description of this.
-      </t>
-      <t>
-         It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
       </t>
    </section>
 
@@ -3467,17 +3472,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
-   <!--rfc/@FAKEATTRIBUTE-->
-   <section anchor="element.rfc.attribute.FAKEATTRIBUTE" toc="exclude">
-      <name>"FAKEATTRIBUTE" Attribute</name>
-      <iref item="Attributes" subitem="FAKEATTRIBUTE"/>
-      <iref item="rfc element" subitem="FAKEATTRIBUTE attribute"/>
-      <iref item="FAKEATTRIBUTE attribute" subitem="in rfc element"/>
-      <t><!--AG-->
-         <cref anchor="element.rfc.attribute.FAKEATTRIBUTE.missing">attribute description missing</cref>
-      </t>
-   </section>
-
    <!--rfc/@indexInclude-->
    <section anchor="element.rfc.attribute.indexInclude" toc="exclude">
       <name>"indexInclude" Attribute</name>
@@ -4481,6 +4475,18 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="anchor attribute" subitem="in table element"/>
       <t>
         Document-wide unique identifier for this table.
+      </t>
+   </section>
+
+   <!--table/@align-->
+   <section align="element.table.attribute.align" toc="exclude">
+      <name>"align" Attribute</name>
+      <iref item="Attributes" subitem="align"/>
+      <iref item="table element" subitem="align attribute"/>
+      <iref item="align attribute" subitem="in table element"/>
+      <t>
+        Controls whether the table as a whole appears left justified, centered
+        (default), or right justified.
       </t>
    </section>
 </section>
@@ -6733,7 +6739,6 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element rfc {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
-    attribute FAKEATTRIBUTE { text }?,
     attribute number { text }?,
     [ a:defaultValue = "" ] attribute obsoletes { text }?,
     [ a:defaultValue = "" ] attribute updates { text }?,
@@ -7700,7 +7705,6 @@ to the v3 schema.</t>
     element rfc {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
-+     attribute FAKEATTRIBUTE { text }?,
       attribute number { text }?,
       [ a:defaultValue = "" ] attribute obsoletes { text }?,
       [ a:defaultValue = "" ] attribute updates { text }?,

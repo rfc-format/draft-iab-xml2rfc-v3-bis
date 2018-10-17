@@ -173,6 +173,7 @@ and this document.
 <t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
 from <xref target="element.artwork.attribute.src"/>.</t>
 
+<t>Added the "align" attribute to &lt;table&gt;.</t>
 
 <t>[[ More will be added here as the draft progresses. ]]</t>
 
@@ -4466,6 +4467,23 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       
    </ol>
 
+   <!--table/@align-->
+   <section anchor="element.table.attribute.align" toc="exclude">
+      <name>"align" Attribute</name>
+      <iref item="Attributes" subitem="align"/>
+      <iref item="table element" subitem="align attribute"/>
+      <iref item="align attribute" subitem="in table element"/>
+      <t><!--AG-->
+         <cref anchor="element.table.attribute.align.missing">attribute description missing</cref>
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"left"</li>
+         <li>"center" (default)</li>
+         <li>"right"</li>
+      </ul>
+   </section>
+
    <!--table/@anchor-->
    <section anchor="element.table.attribute.anchor" toc="exclude">
       <name>"anchor" Attribute</name>
@@ -7374,6 +7392,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
+    [ a:defaultValue = "center" ]
+    attribute align { "left" | "center" | "right" }?,
     attribute pn { text }?,
     name?,
     iref*,
@@ -8349,6 +8369,8 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
++     [ a:defaultValue = "center" ]
++     attribute align { "left" | "center" | "right" }?,
 +     attribute pn { text }?,
 +     name?,
 +     iref*,

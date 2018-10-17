@@ -663,6 +663,8 @@
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
++     [ a:defaultValue = "center" ]
++     attribute align { "left" | "center" | "right" }?,
 +     attribute pn { text }?,
 +     name?,
 +     iref*,
