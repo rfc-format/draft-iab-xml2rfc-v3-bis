@@ -12,8 +12,9 @@
 <?rfc-ext include-references-in-index="yes" ?>
 
 <!--
+Notes for the author:
 
-... some notes might go here ... 
+- Before publication, search for "[[" to look for internal notes 
 
 -->
 
@@ -167,7 +168,11 @@ and this document.
 
 <t><list style="symbols">
 
-<t>[[ More will appear here in future drafts. ]]</t>
+<t>Changed the text about what this draft obsoletes and updates.</t>
+
+<t>Changed the "hanging" attribute of &lt;dt&gt; to "newline".</t>
+
+<t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
 
@@ -1709,12 +1714,12 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
-   <!--dl/@hanging-->
-   <section anchor="element.dl.attribute.hanging" toc="exclude">
+   <!--dl/@newline-->
+   <section anchor="element.dl.attribute.newline" toc="exclude">
       <name>"hanging" Attribute</name>
-      <iref item="Attributes" subitem="hanging"/>
-      <iref item="dl element" subitem="hanging attribute"/>
-      <iref item="hanging attribute" subitem="in dl element"/>
+      <iref item="Attributes" subitem="newline"/>
+      <iref item="dl element" subitem="newline attribute"/>
+      <iref item="newline attribute" subitem="in dl element"/>
       <t>
          The "hanging" attribute defines whether or not the term appears on the same line as the definition.
          hanging="true" indicates that the term is to the left of the definition, while hanging="false"
@@ -3464,17 +3469,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="docName attribute" subitem="in rfc element"/>
       <t>
             Deprecated; instead, use the "value" attribute in &lt;<x:ref>seriesInfo</x:ref>&gt;.
-      </t>
-   </section>
-
-   <!--rfc/@FAKEATTRIBUTE-->
-   <section anchor="element.rfc.attribute.FAKEATTRIBUTE" toc="exclude">
-      <name>"FAKEATTRIBUTE" Attribute</name>
-      <iref item="Attributes" subitem="FAKEATTRIBUTE"/>
-      <iref item="rfc element" subitem="FAKEATTRIBUTE attribute"/>
-      <iref item="FAKEATTRIBUTE attribute" subitem="in rfc element"/>
-      <t><!--AG-->
-         <cref anchor="element.rfc.attribute.FAKEATTRIBUTE.missing">attribute description missing</cref>
       </t>
    </section>
 
@@ -6733,7 +6727,6 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element rfc {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
-    attribute FAKEATTRIBUTE { text }?,
     attribute number { text }?,
     [ a:defaultValue = "" ] attribute obsoletes { text }?,
     [ a:defaultValue = "" ] attribute updates { text }?,
@@ -7700,7 +7693,6 @@ to the v3 schema.</t>
     element rfc {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
-+     attribute FAKEATTRIBUTE { text }?,
       attribute number { text }?,
       [ a:defaultValue = "" ] attribute obsoletes { text }?,
       [ a:defaultValue = "" ] attribute updates { text }?,

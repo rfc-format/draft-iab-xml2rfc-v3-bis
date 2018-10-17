@@ -422,7 +422,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "normal" ]
     attribute spacing { "normal" | "compact" }?,
     [ a:defaultValue = "true" ]
-    attribute hanging { "false" | "true" }?,
+    attribute newline { "false" | "true" }?,
     attribute pn { text }?,
     (dt, dd)+
   }
