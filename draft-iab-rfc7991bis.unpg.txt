@@ -246,6 +246,8 @@ Table of Contents
 
    o  Changed the text about what this draft obsoletes and updates.
 
+   o  Changed the "hanging" attribute of <dt> to "newline".
+
    o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
@@ -1253,11 +1255,11 @@ Table of Contents
 
    Document-wide unique identifier for the list.
 
-2.20.2.  "hanging" Attribute
+2.20.2.  "newline" Attribute
 
-   The "hanging" attribute defines whether or not the term appears on
-   the same line as the definition. hanging="true" indicates that the
-   term is to the left of the definition, while hanging="false"
+   The "newline" attribute defines whether or not the term appears on
+   the same line as the definition. newline="true" indicates that the
+   term is to the left of the definition, while newline="false"
    indicates that the term will be on a separate line.
 
    Allowed values:
@@ -5023,7 +5025,7 @@ Appendix C.  RELAX NG Schema
        [ a:defaultValue = "normal" ]
        attribute spacing { "normal" | "compact" }?,
        [ a:defaultValue = "true" ]
-       attribute hanging { "false" | "true" }?,
+       attribute newline { "false" | "true" }?,
        attribute pn { text }?,
        (dt, dd)+
      }
@@ -6004,7 +6006,7 @@ Appendix D.  Schema Differences from v2
    +     [ a:defaultValue = "normal" ]
    +     attribute spacing { "normal" | "compact" }?,
    +     [ a:defaultValue = "true" ]
-   +     attribute hanging { "false" | "true" }?,
+   +     attribute newline { "false" | "true" }?,
    +     attribute pn { text }?,
    +     (dt, dd)+
    +   }
@@ -6656,7 +6658,6 @@ Index
          fullname  1
          group  1
          hangIndent  1
-         hanging  1
          hangText  1
          height  1
          href  1
@@ -6669,6 +6670,7 @@ Index
          keepWithPrevious  1
          month  1
          name  1
+         newline  1
          number  1
          numbered  1
          obsoletes  1
@@ -6822,7 +6824,6 @@ Index
          to attribute  1
       dl element  1
          anchor attribute  1
-         hanging attribute  1
          inside abstract  1
          inside aside  1
          inside blockquote  1
@@ -6832,6 +6833,7 @@ Index
          inside section  1
          inside td  1
          inside th  1
+         newline attribute  1
          spacing attribute  1
       docName attribute
          in rfc element  1
@@ -7002,8 +7004,6 @@ Index
    H
       hangIndent attribute
          in list element  1
-      hanging attribute
-         in dl element  1
       hangText attribute
          in t element  1
       height attribute
@@ -7102,6 +7102,8 @@ Index
          inside section  1
          inside table  1
          inside texttable  1
+      newline attribute
+         in dl element  1
       note element  1
          inside front  1
          removeInRFC attribute  1
