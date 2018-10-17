@@ -53,7 +53,7 @@
    <iref item="format element" primary="true"/>
    <t>
       Deprecated. If the goal is to provide a single URI for
-      a reference, use the "target" attribute on &lt;<x:ref>reference</x:ref>&gt; instead.
+      a reference, use the "target" attribute in &lt;<x:ref>reference</x:ref>&gt; instead.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.format.contents"><!--AG-->
@@ -315,7 +315,7 @@
       <iref item="texttable element" subitem="align attribute"/>
       <iref item="align attribute" subitem="in texttable element"/>
       <t>
-            Deprecated
+            Deprecated.
          </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -331,7 +331,7 @@
       <iref item="texttable element" subitem="anchor attribute"/>
       <iref item="anchor attribute" subitem="in texttable element"/>
       <t>
-        Deprecated
+        Deprecated.
       </t>
    </section>
 

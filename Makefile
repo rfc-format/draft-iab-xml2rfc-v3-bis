@@ -16,7 +16,7 @@ xml2rfcv3-annotated.rng: xml2rfcv3.rng annotate-rng.xslt draft-iab-rfc7991bis.xm
 	saxon $< annotate-rng.xslt doc=draft-iab-rfc7991bis.xml > $@
 
 xml2rfcv3-spec.xml: xml2rfcv3.rng rng2xml2rfc.xslt
-	saxon $< rng2xml2rfc.xslt voc=v3 draft-iab-rfc7991bis.xml > $@
+	saxon $< rng2xml2rfc.xslt voc=v3 specsrc=draft-iab-rfc7991bis.xml > $@
 
 xml2rfcv3-spec-deprecated.xml: xml2rfcv3.rng rng2xml2rfc.xslt
 	saxon $< rng2xml2rfc.xslt specsrc=draft-iab-rfc7991bis.xml deprecated=yes > $@
@@ -40,9 +40,6 @@ differences-from-v2.txt:	xml2rfcv3.rnc $(xml2rfcv2)
 
 xml2rfcv3-full.rng: xml2rfcv3.rng
 	./postprocess-rng.py
-
-%.html:	%.xml tools/rfc2629.xslt myxml2rfc.xslt
-	saxon -l $< myxml2rfc.xslt > $@
 
 %.redxml:	%.xml tools/clean-for-DTD.xslt
 	saxon -l $< tools/clean-for-DTD.xslt > $@

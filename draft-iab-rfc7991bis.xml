@@ -13,7 +13,7 @@
 
 <!--
 
-...some notes might go here... 
+... some notes might go here ... 
 
 -->
 
@@ -7415,7 +7415,9 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute originalSrc { text }?,
     (text* | svg)
   }
-# https://www.rfc-editor.org/materials/format/SVG-1.2-RFC.rnc
+# TODO: replace with link to RSE site, or provide an inline version
+include "svg.rnc"
+
 <strong anchor="grammar.sourcecode">sourcecode</strong><iref item="sourcecode element"/> =
   element sourcecode {
     attribute xml:base { text }?,
@@ -8390,7 +8392,9 @@ to the v3 schema.</t>
 +     attribute originalSrc { text }?,
 +     (text* | svg)
 +   }
-+ # https://www.rfc-editor.org/materials/format/SVG-1.2-RFC.rnc
++ # TODO: replace with link to RSE site, or provide an inline 
++ version
++ include "svg.rnc"
 + sourcecode =
 +   element sourcecode {
 +     attribute xml:base { text }?,
