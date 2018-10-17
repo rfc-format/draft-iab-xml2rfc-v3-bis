@@ -87,7 +87,7 @@ Table of Contents
      2.7.  <author>  . . . . . . . . . . . . . . . . . . . . . . . .  17
      2.8.  <back>  . . . . . . . . . . . . . . . . . . . . . . . . .  19
      2.9.  <bcp14> . . . . . . . . . . . . . . . . . . . . . . . . .  19
-     2.10. <blockquote>  . . . . . . . . . . . . . . . . . . . . . .  19
+     2.10. <blockquote>  . . . . . . . . . . . . . . . . . . . . . .  20
      2.11. <boilerplate> . . . . . . . . . . . . . . . . . . . . . .  21
      2.12. <city>  . . . . . . . . . . . . . . . . . . . . . . . . .  21
      2.13. <code>  . . . . . . . . . . . . . . . . . . . . . . . . .  22
@@ -305,6 +305,8 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  Changed the text about what this draft obsoletes and updates.
 
+   o  Removed <br> from the vocabulary.
+
    o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
@@ -327,8 +329,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    o  Add <aside> for incidental text that will be indented when
       displayed.
 
-   o  Add <sourcecode> to differentiate from <artwork>.
-
 
 
 
@@ -336,6 +336,8 @@ Hoffman                  Expires April 20, 2019                 [Page 6]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  Add <sourcecode> to differentiate from <artwork>.
 
    o  Add <table>, <thead>, <tbody>, <tfoot>, <tr>, <td>, and <th> to
       give table functionality like that in HTML.
@@ -382,9 +384,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
       to render the document.  Add "expiresDate" when an Internet-Draft
       expires.
 
-   o  Add "ascii" attributes to <email>, <organization>, <street>,
-      <city>, <region>, <country>, and <code>.  Also add
-      "asciiFullname", "asciiInitials", and "asciiSurname" to <author>.
+
 
 
 
@@ -393,6 +393,9 @@ Hoffman                  Expires April 20, 2019                 [Page 7]
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
 
+   o  Add "ascii" attributes to <email>, <organization>, <street>,
+      <city>, <region>, <country>, and <code>.  Also add
+      "asciiFullname", "asciiInitials", and "asciiSurname" to <author>.
       This allows an author to specify their information in their native
       scripts as the primary entry and still allow the ASCII-equivalent
       values to appear in the processed documents.
@@ -438,9 +441,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  Deprecate <texttable>, <ttcol>, and <c>; replace them with the new
       table elements (<table> and the elements that can be contained
-      within it).
-
-
 
 
 
@@ -448,6 +448,8 @@ Hoffman                  Expires April 20, 2019                 [Page 8]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+      within it).
 
    o  Deprecate <facsimile> because it is rarely used.
 
@@ -495,8 +497,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    o  Allow more than one <artwork>, or more than one <sourcecode>, in
       <figure>.
 
-   o  In <front>, make <date> optional.
-
 
 
 
@@ -504,6 +504,8 @@ Hoffman                  Expires April 20, 2019                 [Page 9]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  In <front>, make <date> optional.
 
    o  In <date>, add restrictions to the "date" and "year" attributes
       when used in the <front> for the document's boilerplate text.
@@ -551,8 +553,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    Tools interpreting the XML described here will collapse horizontal
    whitespace and line breaks to a single whitespace (except inside
-   <artwork> and <sourcecode>) and will trim leading and trailing
-   whitespace.  Tab characters (U+0009) inside <artwork> and
 
 
 
@@ -561,6 +561,8 @@ Hoffman                  Expires April 20, 2019                [Page 10]
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
 
+   <artwork> and <sourcecode>) and will trim leading and trailing
+   whitespace.  Tab characters (U+0009) inside <artwork> and
    <sourcecode> are prohibited.
 
    Some of the elements have attributes that are not described in this
@@ -607,8 +609,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    Content model:
 
-   In this order:
-
 
 
 
@@ -616,6 +616,8 @@ Hoffman                  Expires April 20, 2019                [Page 11]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   In this order:
 
    1.  One optional <postal> element (Section 2.36)
 
@@ -662,8 +664,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  <sup> elements (Section 2.51)
 
-   o  <tt> elements (Section 2.61)
-
 
 
 
@@ -672,6 +672,8 @@ Hoffman                  Expires April 20, 2019                [Page 12]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  <tt> elements (Section 2.61)
 
    o  <xref> elements (Section 2.65)
 
@@ -718,8 +720,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    o  Inline, but using XInclude (see Appendix B.1), such as: <artwork
       type="svg"><xi:include href=...>
 
-   o  As a data: URI, such as: <artwork type="svg" src="data:image/
-      svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3...">
 
 
 
@@ -728,6 +728,9 @@ Hoffman                  Expires April 20, 2019                [Page 13]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  As a data: URI, such as: <artwork type="svg" src="data:image/
+      svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3...">
 
    o  As a URI to an external entity, such as: <artwork type="svg"
       src="http://www.example.com/...">
@@ -773,9 +776,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  "left" (default)
 
-   o  "center"
-
-   o  "right"
 
 
 
@@ -784,6 +784,10 @@ Hoffman                  Expires April 20, 2019                [Page 14]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  "center"
+
+   o  "right"
 
 2.5.2.  "alt" Attribute
 
@@ -829,10 +833,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    If no URI scheme is given in the attribute, the attribute is
    considered to be a local filename relative to the current directory.
    Processing tools must be careful to not accept dangerous values for
-   the filename, particularly those that contain absolute references
-   outside the current directory.  Document creators should think hard
-   before using relative URIs due to possible later problems if files
-   move around on the disk.  Also, documents should most likely use
 
 
 
@@ -841,6 +841,10 @@ Hoffman                  Expires April 20, 2019                [Page 15]
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
 
+   the filename, particularly those that contain absolute references
+   outside the current directory.  Document creators should think hard
+   before using relative URIs due to possible later problems if files
+   move around on the disk.  Also, documents should most likely use
    explicit URI schemes wherever possible.
 
    In some cases, the prep tool may remove the "src" attribute after
@@ -886,16 +890,16 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    This element is a container for content that is semantically less
    important or tangential to the content that surrounds it.
 
-   This element appears as a child element of <section> (Section 2.45).
-
-   Content model:
-
 
 
 Hoffman                  Expires April 20, 2019                [Page 16]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   This element appears as a child element of <section> (Section 2.45).
+
+   Content model:
 
    In any order:
 
@@ -941,10 +945,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    Note that this specification does not define a precise meaning for
    the term "editor".
 
-   This element appears as a child element of <front> (Section 2.25).
-
-   Content model:
-
 
 
 
@@ -952,6 +952,10 @@ Hoffman                  Expires April 20, 2019                [Page 17]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   This element appears as a child element of <front> (Section 2.25).
+
+   Content model:
 
    In this order:
 
@@ -997,10 +1001,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    Allowed values:
 
-   o  "editor"
-
-
-
 
 
 
@@ -1008,6 +1008,8 @@ Hoffman                  Expires April 20, 2019                [Page 18]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+   o  "editor"
 
 2.7.7.  "surname" Attribute
 
@@ -1053,9 +1055,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    Content model: only text content.
 
-2.10.  <blockquote>
 
-   Specifies that a block of text is a quotation.
 
 
 
@@ -1064,6 +1064,10 @@ Hoffman                  Expires April 20, 2019                [Page 19]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+2.10.  <blockquote>
+
+   Specifies that a block of text is a quotation.
 
    This element appears as a child element of <section> (Section 2.45).
 
@@ -1108,10 +1112,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
       *  <relref> elements (Section 2.43)
 
-      *  <strong> elements (Section 2.49)
-
-      *  <sub> elements (Section 2.50)
-
 
 
 
@@ -1120,6 +1120,10 @@ Hoffman                  Expires April 20, 2019                [Page 20]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
+
+      *  <strong> elements (Section 2.49)
+
+      *  <sub> elements (Section 2.50)
 
       *  <sup> elements (Section 2.51)
 
@@ -1165,10 +1169,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    This element appears as a child element of <postal> (Section 2.36).
 
    Content model: only text content.
-
-
-
-
 
 
 
@@ -7897,7 +7897,7 @@ Hoffman                  Expires April 20, 2019               [Page 141]
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
 
-      blockquote element  19, 97
+      blockquote element  20, 97
          anchor attribute  21
          cite attribute  21
          inside section  53
@@ -8017,7 +8017,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          back  19, 49
          bcp14  12, 19-20, 25, 28-29, 35, 43, 59-62, 65, 67, 70, 74,
             76-77
-         blockquote  19, 53
+         blockquote  20, 53
          boilerplate  21, 33
          c  74, 78
          city  21, 41
@@ -8074,8 +8074,8 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          sourcecode  20, 25, 31, 35, 53, 57, 65, 67
          spanx  12, 62, 75-78
          street  42, 59
-         strong  12, 20, 23, 25, 28-29, 36, 43, 59-62, 65, 67, 70, 75-77
-         sub  12, 20, 23, 25, 28-29, 36, 43, 60, 62, 65, 67, 70, 75, 77
+         strong  12, 21, 23, 25, 28-29, 36, 43, 59-62, 65, 67, 70, 75-77
+         sub  12, 21, 23, 25, 28-29, 36, 43, 60, 62, 65, 67, 70, 75, 77
          sup  12, 21, 23, 25, 28-29, 36, 43, 60-62, 65, 67, 70, 75, 77
          svg  14
          t  11, 17, 20, 25, 35, 38, 53, 61, 65, 67, 76
@@ -8088,7 +8088,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          thead  64, 68
          title  33, 69
          tr  64, 66, 68-69
-         tt  12, 21, 23, 25, 28-29, 36-37, 43, 60-62, 65, 67, 69, 75, 77
+         tt  13, 21, 23, 25, 28-29, 36-37, 43, 60-62, 65, 67, 69, 75, 77
          ttcol  78-79
          ul  11, 17, 20, 25, 35, 38, 53, 65, 67, 70
          uri  12, 71
@@ -8542,7 +8542,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          inside postal  42
       strong element  59, 97
          inside annotation  12
-         inside blockquote  20
+         inside blockquote  21
          inside c  75
          inside cref  23
          inside dd  25
@@ -8572,7 +8572,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          in texttable element  79
       sub element  60, 97
          inside annotation  12
-         inside blockquote  20
+         inside blockquote  21
          inside c  75
          inside cref  23
          inside dd  25
@@ -8712,7 +8712,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          inside tfoot  66
          inside thead  68
       tt element  69, 97
-         inside annotation  12
+         inside annotation  13
          inside blockquote  21
          inside c  75
          inside cref  23

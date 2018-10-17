@@ -245,6 +245,8 @@ Table of Contents
 
    o  Changed the text about what this draft obsoletes and updates.
 
+   o  Removed <br> from the vocabulary.
+
    o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
