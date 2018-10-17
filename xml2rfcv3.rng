@@ -1702,7 +1702,6 @@
           <choice>
             <text/>
             <ref name="bcp14"/>
-            <ref name="br"/>
             <ref name="cref"/>
             <ref name="em"/>
             <ref name="eref"/>
@@ -1762,7 +1761,6 @@
           <choice>
             <text/>
             <ref name="bcp14"/>
-            <ref name="br"/>
             <ref name="cref"/>
             <ref name="em"/>
             <ref name="eref"/>
@@ -1918,17 +1916,6 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
-    </element>
-  </define>
-  <define name="br">
-    <element name="br">
-      <optional>
-        <attribute name="xml:base"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
-      </optional>
-      <empty/>
     </element>
   </define>
   <define name="back">
