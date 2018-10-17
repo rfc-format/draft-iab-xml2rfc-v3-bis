@@ -418,7 +418,8 @@
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     ((artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artwork | blockquote | dl | figure | ol | sourcecode | t | 
++ ul)+
 +      | (text
 +         | bcp14
 +         | cref

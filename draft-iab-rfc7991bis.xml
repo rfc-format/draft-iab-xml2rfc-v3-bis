@@ -170,6 +170,8 @@ and this document.
 
 <t>Changed the text about what this draft obsoletes and updates.</t>
 
+<t>Allow &lt;blockquote&gt; as a child of &lt;li&gt;.</t>
+
 <t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
@@ -1106,7 +1108,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       Specifies that a block of text is a quotation.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>) and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.blockquote.contents"><!--AG-->
       <xref format="none" target="grammar.blockquote">Content model</xref>:
     </t>
@@ -2324,6 +2326,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside li"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="blockquote"/>
+               <iref item="blockquote element" subitem="inside li"/>&lt;<x:ref>blockquote</x:ref>&gt; elements (<xref target="element.blockquote"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="dl"/>
                <iref item="dl element" subitem="inside li"/>&lt;<x:ref>dl</x:ref>&gt; elements (<xref target="element.dl"/>)</li>
@@ -7118,7 +7123,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
-    ((artwork | dl | figure | ol | sourcecode | t | ul)+
+    ((artwork | blockquote | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
         | cref
@@ -8103,7 +8108,8 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     ((artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artwork | blockquote | dl | figure | ol | sourcecode | t | 
++ ul)+
 +      | (text
 +         | bcp14
 +         | cref

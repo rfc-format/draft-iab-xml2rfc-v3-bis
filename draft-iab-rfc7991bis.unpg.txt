@@ -246,6 +246,8 @@ Table of Contents
 
    o  Changed the text about what this draft obsoletes and updates.
 
+   o  Allow <blockquote> as a child of <li>.
+
    o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
@@ -891,7 +893,8 @@ Table of Contents
 
    Specifies that a block of text is a quotation.
 
-   This element appears as a child element of <section> (Section 2.46).
+   This element appears as a child element of <li> (Section 2.29) and
+   <section> (Section 2.46).
 
    Content model:
 
@@ -1625,6 +1628,8 @@ Table of Contents
 
 
       *  <artwork> elements (Section 2.5)
+
+      *  <blockquote> elements (Section 2.10)
 
       *  <dl> elements (Section 2.20)
 
@@ -5000,7 +5005,7 @@ Appendix C.  RELAX NG Schema
        attribute xml:lang { text }?,
        attribute anchor { xsd:ID }?,
        attribute pn { text }?,
-       ((artwork | dl | figure | ol | sourcecode | t | ul)+
+       ((artwork | blockquote | dl | figure | ol | sourcecode | t | ul)+
         | (text
            | bcp14
            | cref
@@ -5982,7 +5987,8 @@ Appendix D.  Schema Differences from v2
    +     attribute xml:lang { text }?,
    +     attribute anchor { xsd:ID }?,
    +     attribute pn { text }?,
-   +     ((artwork | dl | figure | ol | sourcecode | t | ul)+
+   +     ((artwork | blockquote | dl | figure | ol | sourcecode | t |
+   + ul)+
    +      | (text
    +         | bcp14
    +         | cref
@@ -6747,6 +6753,7 @@ Index
       blockquote element  1
          anchor attribute  1
          cite attribute  1
+         inside li  1
          inside section  1
          quotedFrom attribute  1
       boilerplate element  1
