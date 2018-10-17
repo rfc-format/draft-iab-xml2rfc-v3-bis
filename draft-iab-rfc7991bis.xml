@@ -170,6 +170,8 @@ and this document.
 
 <t>Changed the text about what this draft obsoletes and updates.</t>
 
+<t>Removed &lt;br&gt; from the vocabulary.</t>
+
 <t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
@@ -1242,23 +1244,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside boilerplate"/>One or more &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
       
-</section>
-
-<!--br-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.br">
-   <name>
-      <tt>&lt;br&gt;</tt>
-   </name>
-   <x:anchor-alias value="br"/>
-   <iref item="Elements" subitem="br" primary="true"/>
-   <iref item="br element" primary="true"/>
-   <t>
-      Indicates that a line break should be inserted in the generated output by a formatting tool.
-      Multiple successive instances of this element are ignored.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>) and &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>).</t>
-   <t anchor="element.br.contents"><!--AG-->
-      <xref format="none" target="grammar.br">Content model</xref>: this element does not have any contents.</t>
 </section>
 
 <!--city-->
@@ -4564,9 +4549,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside td"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
             <li><!--AG-->
-               <iref item="Elements" subitem="br"/>
-               <iref item="br element" subitem="inside td"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
-            <li><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside td"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
             <li><!--AG-->
@@ -4743,9 +4725,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside th"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
-            <li><!--AG-->
-               <iref item="Elements" subitem="br"/>
-               <iref item="br element" subitem="inside th"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside th"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
@@ -7478,7 +7457,6 @@ include "svg.rnc"
     ((artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
-        | br
         | cref
         | em
         | eref
@@ -7503,7 +7481,6 @@ include "svg.rnc"
     ((artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
-        | br
         | cref
         | em
         | eref
@@ -7564,13 +7541,6 @@ include "svg.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     text
-  }
-
-<strong anchor="grammar.br">br</strong><iref item="br element"/> =
-  element br {
-    attribute xml:base { text }?,
-    attribute xml:lang { text }?,
-    empty
   }
 
 <strong anchor="grammar.back">back</strong><iref item="back element"/> =
@@ -8450,7 +8420,6 @@ to the v3 schema.</t>
 +     ((artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
-+         | br
 +         | cref
 +         | em
 +         | eref
@@ -8474,7 +8443,6 @@ to the v3 schema.</t>
 +     ((artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
-+         | br
 +         | cref
 +         | em
 +         | eref
@@ -8534,12 +8502,6 @@ to the v3 schema.</t>
     }
 - c = element c { (text | xref | eref | iref | cref | spanx)* }
 - back = element back { references*, section* }
-+ br =
-+   element br {
-+     attribute xml:base { text }?,
-+     attribute xml:lang { text }?,
-+     empty
-+   }
 + back =
 +   element back {
 +     attribute xml:base { text }?,

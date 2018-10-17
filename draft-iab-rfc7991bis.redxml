@@ -136,6 +136,8 @@ and this document.
 
 <t>Changed the text about what this draft obsoletes and updates.</t>
 
+<t>Removed &lt;br&gt; from the vocabulary.</t>
+
 <t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
@@ -194,7 +196,7 @@ as STDs and BCPs.</t>
 
 <t>Add &lt;<xref target="element.link" format="none">link</xref>&gt; to point to a resource related to the RFC.</t>
 
-<t>Add &lt;<xref target="element.br" format="none">br</xref>&gt; to allow line breaks (but not blank lines) in the generated output
+<t>Add &lt;br&gt; to allow line breaks (but not blank lines) in the generated output
 for table cells.</t>
 
 <t>Add &lt;<xref target="element.svg" format="none">svg</xref>&gt; to allow easy inclusion of SVG drawings in &lt;<xref target="element.artwork" format="none">artwork</xref>&gt;.</t>
@@ -1185,21 +1187,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside boilerplate"/>One or more &lt;<xref target="element.section" format="none">section</xref>&gt; elements (<xref target="element.section"/>)</t>
       
-</section>
-
-<!--br-->
-<section anchor="element.br" title="&lt;br&gt;">
-   
-   
-   <iref item="Elements" subitem="br" primary="true"/>
-   <iref item="br element" primary="true"/>
-   <t>
-      Indicates that a line break should be inserted in the generated output by a formatting tool.
-      Multiple successive instances of this element are ignored.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<xref target="element.td" format="none">td</xref>&gt; (<xref target="element.td"/>) and &lt;<xref target="element.th" format="none">th</xref>&gt; (<xref target="element.th"/>).</t>
-   <t anchor="element.br.contents"><!--AG-->
-      Content model: this element does not have any contents.</t>
 </section>
 
 <!--city-->
@@ -4406,9 +4393,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside td"/>&lt;<xref target="element.bcp14" format="none">bcp14</xref>&gt; elements (<xref target="element.bcp14"/>)</t>
             <t><!--AG-->
-               <iref item="Elements" subitem="br"/>
-               <iref item="br element" subitem="inside td"/>&lt;<xref target="element.br" format="none">br</xref>&gt; elements (<xref target="element.br"/>)</t>
-            <t><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside td"/>&lt;<xref target="element.cref" format="none">cref</xref>&gt; elements (<xref target="element.cref"/>)</t>
             <t><!--AG-->
@@ -4581,9 +4565,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t><!--AG-->
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside th"/>&lt;<xref target="element.bcp14" format="none">bcp14</xref>&gt; elements (<xref target="element.bcp14"/>)</t>
-            <t><!--AG-->
-               <iref item="Elements" subitem="br"/>
-               <iref item="br element" subitem="inside th"/>&lt;<xref target="element.br" format="none">br</xref>&gt; elements (<xref target="element.br"/>)</t>
             <t><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside th"/>&lt;<xref target="element.cref" format="none">cref</xref>&gt; elements (<xref target="element.cref"/>)</t>
@@ -6699,7 +6680,7 @@ are controlled by the prep tool.</t>
 
 <t>The following is the RELAX NG schema for the v3 format.</t>
 
-<figure><iref item="rfc element"/><iref item="link element"/><iref item="front element"/><iref item="title element"/><iref item="author element"/><iref item="organization element"/><iref item="address element"/><iref item="postal element"/><iref item="street element"/><iref item="city element"/><iref item="region element"/><iref item="code element"/><iref item="country element"/><iref item="postalLine element"/><iref item="phone element"/><iref item="facsimile element"/><iref item="email element"/><iref item="uri element"/><iref item="date element"/><iref item="area element"/><iref item="workgroup element"/><iref item="keyword element"/><iref item="abstract element"/><iref item="note element"/><iref item="boilerplate element"/><iref item="middle element"/><iref item="section element"/><iref item="name element"/><iref item="t element"/><iref item="aside element"/><iref item="blockquote element"/><iref item="list element"/><iref item="ol element"/><iref item="ul element"/><iref item="li element"/><iref item="dl element"/><iref item="dt element"/><iref item="dd element"/><iref item="xref element"/><iref item="relref element"/><iref item="eref element"/><iref item="iref element"/><iref item="cref element"/><iref item="tt element"/><iref item="strong element"/><iref item="em element"/><iref item="sub element"/><iref item="sup element"/><iref item="spanx element"/><iref item="vspace element"/><iref item="figure element"/><iref item="table element"/><iref item="preamble element"/><iref item="artwork element"/><iref item="sourcecode element"/><iref item="thead element"/><iref item="tbody element"/><iref item="tfoot element"/><iref item="tr element"/><iref item="td element"/><iref item="th element"/><iref item="postamble element"/><iref item="texttable element"/><iref item="ttcol element"/><iref item="c element"/><iref item="bcp14 element"/><iref item="br element"/><iref item="back element"/><iref item="displayreference element"/><iref item="references element"/><iref item="reference element"/><iref item="referencegroup element"/><iref item="seriesInfo element"/><iref item="format element"/><iref item="annotation element"/><iref item="refcontent element"/><artwork type="application/relax-ng-compact-syntax"><![CDATA[
+<figure><iref item="rfc element"/><iref item="link element"/><iref item="front element"/><iref item="title element"/><iref item="author element"/><iref item="organization element"/><iref item="address element"/><iref item="postal element"/><iref item="street element"/><iref item="city element"/><iref item="region element"/><iref item="code element"/><iref item="country element"/><iref item="postalLine element"/><iref item="phone element"/><iref item="facsimile element"/><iref item="email element"/><iref item="uri element"/><iref item="date element"/><iref item="area element"/><iref item="workgroup element"/><iref item="keyword element"/><iref item="abstract element"/><iref item="note element"/><iref item="boilerplate element"/><iref item="middle element"/><iref item="section element"/><iref item="name element"/><iref item="t element"/><iref item="aside element"/><iref item="blockquote element"/><iref item="list element"/><iref item="ol element"/><iref item="ul element"/><iref item="li element"/><iref item="dl element"/><iref item="dt element"/><iref item="dd element"/><iref item="xref element"/><iref item="relref element"/><iref item="eref element"/><iref item="iref element"/><iref item="cref element"/><iref item="tt element"/><iref item="strong element"/><iref item="em element"/><iref item="sub element"/><iref item="sup element"/><iref item="spanx element"/><iref item="vspace element"/><iref item="figure element"/><iref item="table element"/><iref item="preamble element"/><iref item="artwork element"/><iref item="sourcecode element"/><iref item="thead element"/><iref item="tbody element"/><iref item="tfoot element"/><iref item="tr element"/><iref item="td element"/><iref item="th element"/><iref item="postamble element"/><iref item="texttable element"/><iref item="ttcol element"/><iref item="c element"/><iref item="bcp14 element"/><iref item="back element"/><iref item="displayreference element"/><iref item="references element"/><iref item="reference element"/><iref item="referencegroup element"/><iref item="seriesInfo element"/><iref item="format element"/><iref item="annotation element"/><iref item="refcontent element"/><artwork type="application/relax-ng-compact-syntax"><![CDATA[
 
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 
@@ -7462,7 +7443,6 @@ td =
     ((artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
-        | br
         | cref
         | em
         | eref
@@ -7487,7 +7467,6 @@ th =
     ((artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
-        | br
         | cref
         | em
         | eref
@@ -7548,13 +7527,6 @@ bcp14 =
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     text
-  }
-
-br =
-  element br {
-    attribute xml:base { text }?,
-    attribute xml:lang { text }?,
-    empty
   }
 
 back =
@@ -8434,7 +8406,6 @@ to the v3 schema.</t>
 +     ((artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
-+         | br
 +         | cref
 +         | em
 +         | eref
@@ -8458,7 +8429,6 @@ to the v3 schema.</t>
 +     ((artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
-+         | br
 +         | cref
 +         | em
 +         | eref
@@ -8518,12 +8488,6 @@ to the v3 schema.</t>
     }
 - c = element c { (text | xref | eref | iref | cref | spanx)* }
 - back = element back { references*, section* }
-+ br =
-+   element br {
-+     attribute xml:base { text }?,
-+     attribute xml:lang { text }?,
-+     empty
-+   }
 + back =
 +   element back {
 +     attribute xml:base { text }?,
