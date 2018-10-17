@@ -251,7 +251,7 @@ Table of Contents
    o  Removed "It is an error to have both a "src" attribute and content
       in the <artwork> element." from Section 2.5.6.
 
-   o  [[ More will be added here as the draft progresses. ]]
+   o  Changed the "hanging" attribute of <dt> to "newline".
 
 1.4.  Differences from v2 to v3
 
@@ -1256,12 +1256,10 @@ Table of Contents
 
    Document-wide unique identifier for the list.
 
-2.20.2.  "hanging" Attribute
+2.20.2.  "indent" Attribute
 
-   The "hanging" attribute defines whether or not the term appears on
-   the same line as the definition. hanging="true" indicates that the
-   term is to the left of the definition, while hanging="false"
-   indicates that the term will be on a separate line.
+   [[element.dl.attribute.indent.missing: attribute description
+   missing]]
 
    Allowed values:
 
@@ -5028,7 +5026,7 @@ Appendix C.  RELAX NG Schema
        [ a:defaultValue = "normal" ]
        attribute spacing { "normal" | "compact" }?,
        [ a:defaultValue = "true" ]
-       attribute hanging { "false" | "true" }?,
+       attribute indent { "false" | "true" }?,
        attribute pn { text }?,
        (dt, dd)+
      }
@@ -6010,7 +6008,7 @@ Appendix D.  Schema Differences from v2
    +     [ a:defaultValue = "normal" ]
    +     attribute spacing { "normal" | "compact" }?,
    +     [ a:defaultValue = "true" ]
-   +     attribute hanging { "false" | "true" }?,
+   +     attribute indent { "false" | "true" }?,
    +     attribute pn { text }?,
    +     (dt, dd)+
    +   }
@@ -6662,10 +6660,10 @@ Index
          fullname  1
          group  1
          hangIndent  1
-         hanging  1
          hangText  1
          height  1
          href  1
+         indent  1
          indexInclude  1
          initials  1
          ipr  1
@@ -6829,7 +6827,7 @@ Index
          to attribute  1
       dl element  1
          anchor attribute  1
-         hanging attribute  1
+         indent attribute  1
          inside abstract  1
          inside aside  1
          inside blockquote  1
@@ -7009,8 +7007,6 @@ Index
    H
       hangIndent attribute
          in list element  1
-      hanging attribute
-         in dl element  1
       hangText attribute
          in t element  1
       height attribute
@@ -7020,6 +7016,8 @@ Index
          in link element  1
 
    I
+      indent attribute
+         in dl element  1
       indexInclude attribute
          in rfc element  1
       initials attribute

@@ -339,9 +339,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          In some cases, the prep tool may remove the "src" attribute after processing its value.
          See <xref target="RFC7998"/> for a description of this.
       </t>
-      <t>
-         It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
-      </t>
    </section>
 
    <!--artwork/@type-->
@@ -1268,16 +1265,14 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
-   <!--dl/@hanging-->
-   <section anchor="element.dl.attribute.hanging" toc="exclude">
-      <name>"hanging" Attribute</name>
-      <iref item="Attributes" subitem="hanging"/>
-      <iref item="dl element" subitem="hanging attribute"/>
-      <iref item="hanging attribute" subitem="in dl element"/>
-      <t>
-         The "hanging" attribute defines whether or not the term appears on the same line as the definition.
-         hanging="true" indicates that the term is to the left of the definition, while hanging="false"
-         indicates that the term will be on a separate line.
+   <!--dl/@indent-->
+   <section anchor="element.dl.attribute.indent" toc="exclude">
+      <name>"indent" Attribute</name>
+      <iref item="Attributes" subitem="indent"/>
+      <iref item="dl element" subitem="indent attribute"/>
+      <iref item="indent attribute" subitem="in dl element"/>
+      <t><!--AG-->
+         <cref anchor="element.dl.attribute.indent.missing">attribute description missing</cref>
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->

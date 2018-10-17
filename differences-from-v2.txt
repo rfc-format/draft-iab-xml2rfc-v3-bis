@@ -441,7 +441,7 @@
 +     [ a:defaultValue = "normal" ]
 +     attribute spacing { "normal" | "compact" }?,
 +     [ a:defaultValue = "true" ]
-+     attribute hanging { "false" | "true" }?,
++     attribute indent { "false" | "true" }?,
 +     attribute pn { text }?,
 +     (dt, dd)+
 +   }
