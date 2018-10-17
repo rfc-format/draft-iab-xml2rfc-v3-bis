@@ -307,6 +307,9 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  Allow <blockquote> as a child of <li>.
 
+   o  Removed "It is an error to have both a "src" attribute and content
+      in the <artwork> element." from Section 2.5.6.
+
    o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
@@ -328,7 +331,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
    o  Add <aside> for incidental text that will be indented when
       displayed.
-
 
 
 
@@ -850,9 +852,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    In some cases, the prep tool may remove the "src" attribute after
    processing its value.  See [RFC7998] for a description of this.
 
-   It is an error to have both a "src" attribute and content in the
-   <artwork> element.
-
 2.5.7.  "type" Attribute
 
    Specifies the type of the artwork.  The value of this attribute is
@@ -890,14 +889,13 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    This element is a container for content that is semantically less
    important or tangential to the content that surrounds it.
 
+   This element appears as a child element of <section> (Section 2.46).
 
 
 Hoffman                  Expires April 20, 2019                [Page 16]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
-
-   This element appears as a child element of <section> (Section 2.46).
 
    Content model:
 
@@ -945,15 +943,13 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
    Note that this specification does not define a precise meaning for
    the term "editor".
 
-
+   This element appears as a child element of <front> (Section 2.26).
 
 
 Hoffman                  Expires April 20, 2019                [Page 17]
 
 Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
 
-
-   This element appears as a child element of <front> (Section 2.26).
 
    Content model:
 
@@ -1112,7 +1108,6 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
       *  <iref> elements (Section 2.27)
 
       *  <relref> elements (Section 2.44)
-
 
 
 
@@ -8169,6 +8164,7 @@ Internet-Draft     The "xml2rfc" version 3 Vocabulary       October 2018
          tfoot  64, 67
          th  67, 70
          thead  64, 69
+
 
 
 
