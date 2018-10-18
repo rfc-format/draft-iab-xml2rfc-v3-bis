@@ -4453,6 +4453,25 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       
    </ol>
 
+   <!--table/@align-->
+   <section anchor="element.table.attribute.align" toc="exclude">
+      <name>"align" Attribute</name>
+      <iref item="Attributes" subitem="align"/>
+      <iref item="table element" subitem="align attribute"/>
+      <iref item="align attribute" subitem="in table element"/>
+      <t><!--AG-->
+            Controls whether the table appears left justified, centered (default),
+            or right justified.
+            Tables are aligned relative to the left margin of the document.
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"left"</li>
+         <li>"center" (default)</li>
+         <li>"right"</li>
+      </ul>
+   </section>
+
    <!--table/@anchor-->
    <section anchor="element.table.attribute.anchor" toc="exclude">
       <name>"anchor" Attribute</name>
@@ -7354,6 +7373,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element table {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
+    [ a:defaultValue = "center" ]
+    attribute align { "left" | "center" | "right" }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
     name?,
@@ -8321,6 +8342,8 @@ to the v3 schema.</t>
 +   element table {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
++     [ a:defaultValue = "center" ]
++     attribute align { "left" | "center" | "right" }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
 +     name?,
