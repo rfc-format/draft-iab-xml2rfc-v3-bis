@@ -175,7 +175,7 @@ and this document.
 <t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
 from <xref target="element.artwork.attribute.src"/>.</t>
 
-<t>Changed the "hanging" attribute of &lt;dt&gt; to "newline".</t>
+<t>[[ More will be added here as the draft progresses. ]]</t>
 
 </list></t>
 

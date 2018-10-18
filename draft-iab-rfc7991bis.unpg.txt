@@ -3,9 +3,9 @@
 
 Network Working Group                                         P. Hoffman
 Internet-Draft                                                     ICANN
-Obsoletes: 7991 (if approved)                           October 17, 2018
+Obsoletes: 7991 (if approved)                           October 18, 2018
 Intended status: Informational
-Expires: April 20, 2019
+Expires: April 21, 2019
 
 
                    The "xml2rfc" version 3 Vocabulary
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 20, 2019.
+   This Internet-Draft will expire on April 21, 2019.
 
 Copyright Notice
 
@@ -251,7 +251,7 @@ Table of Contents
    o  Removed "It is an error to have both a "src" attribute and content
       in the <artwork> element." from Section 2.5.6.
 
-   o  Changed the "hanging" attribute of <dt> to "newline".
+   o  [[ More will be added here as the draft progresses. ]]
 
 1.4.  Differences from v2 to v3
 
