@@ -759,7 +759,6 @@ include "svg.rnc"
     ((artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
-        | br
         | cref
         | em
         | eref
@@ -784,7 +783,6 @@ include "svg.rnc"
     ((artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
-        | br
         | cref
         | em
         | eref
@@ -845,13 +843,6 @@ include "svg.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     text
-  }
-
-<strong anchor="grammar.br">br</strong><iref item="br element"/> =
-  element br {
-    attribute xml:base { text }?,
-    attribute xml:lang { text }?,
-    empty
   }
 
 <strong anchor="grammar.back">back</strong><iref item="back element"/> =
