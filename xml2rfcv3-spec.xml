@@ -339,9 +339,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          In some cases, the prep tool may remove the "src" attribute after processing its value.
          See <xref target="RFC7998"/> for a description of this.
       </t>
-      <t>
-         It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element.
-      </t>
    </section>
 
    <!--artwork/@type-->
@@ -4023,6 +4020,27 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="tfoot element" subitem="inside table"/>One optional &lt;<x:ref>tfoot</x:ref>&gt; element (<xref target="element.tfoot"/>)</li>
       
    </ol>
+
+   <!--table/@align-->
+   <section anchor="element.table.attribute.align" toc="exclude">
+      <name>"align" Attribute</name>
+      <iref item="Attributes" subitem="align"/>
+      <iref item="table element" subitem="align attribute"/>
+      <iref item="align attribute" subitem="in table element"/>
+      <t>
+         <list style="symbols">
+            <t>"left"</t>
+            <t>"center" (default)</t>
+            <t>"right"</t>
+         </list>
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"left"</li>
+         <li>"center" (default)</li>
+         <li>"right"</li>
+      </ul>
+   </section>
 
    <!--table/@anchor-->
    <section anchor="element.table.attribute.anchor" toc="exclude">

@@ -251,7 +251,7 @@ Table of Contents
    o  Removed "It is an error to have both a "src" attribute and content
       in the <artwork> element." from Section 2.5.6.
 
-   o  [[ More will be added here as the draft progresses. ]]
+   o  Added the "align" attribute to <table>.
 
 1.4.  Differences from v2 to v3
 
@@ -3008,7 +3008,23 @@ Table of Contents
 
    5.  One optional <tfoot> element (Section 2.57)
 
-2.54.1.  "anchor" Attribute
+2.54.1.  "align" Attribute
+
+   o  "left"
+
+   o  "center" (default)
+
+   o  "right"
+
+   Allowed values:
+
+   o  "left"
+
+   o  "center" (default)
+
+   o  "right"
+
+2.54.2.  "anchor" Attribute
 
    Document-wide unique identifier for this table.
 
@@ -5261,6 +5277,8 @@ Appendix C.  RELAX NG Schema
        attribute xml:lang { text }?,
        attribute anchor { xsd:ID }?,
        attribute pn { text }?,
+       [ a:defaultValue = "center" ]
+       attribute align { "left" | "center" | "right" }?,
        name?,
        iref*,
        thead?,
@@ -6234,6 +6252,8 @@ Appendix D.  Schema Differences from v2
    +     attribute xml:lang { text }?,
    +     attribute anchor { xsd:ID }?,
    +     attribute pn { text }?,
+   +     [ a:defaultValue = "center" ]
+   +     attribute align { "left" | "center" | "right" }?,
    +     name?,
    +     iref*,
    +     thead?,
@@ -6556,6 +6576,7 @@ Index
       align attribute
          in artwork element  1
          in figure element  1
+         in table element  1
          in td element  1
          in texttable element  1
          in th element  1
@@ -7392,6 +7413,7 @@ Index
          keepWithNext attribute  1
          keepWithPrevious attribute  1
       table element  1
+         align attribute  1
          anchor attribute  1
          inside aside  1
          inside section  1

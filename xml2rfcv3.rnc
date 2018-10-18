@@ -603,6 +603,8 @@ table =
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
+    [ a:defaultValue = "center" ]
+    attribute align { "left" | "center" | "right" }?,
     name?,
     iref*,
     thead?,

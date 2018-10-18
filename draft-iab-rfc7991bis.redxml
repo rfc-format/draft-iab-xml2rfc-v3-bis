@@ -141,7 +141,7 @@ and this document.
 <t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
 from <xref target="element.artwork.attribute.src"/>.</t>
 
-<t>[[ More will be added here as the draft progresses. ]]</t>
+<t>Added the "align" attribute to &lt;table&gt;.</t>
 
 </list></t>
 
@@ -4316,6 +4316,27 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       
    </list></t>
 
+   <!--table/@align-->
+   <section anchor="element.table.attribute.align" toc="exclude" title="&#34;align&#34; Attribute">
+      
+      <iref item="Attributes" subitem="align"/>
+      <iref item="table element" subitem="align attribute"/>
+      <iref item="align attribute" subitem="in table element"/>
+      <t>
+         <list style="symbols">
+            <t>"left"</t>
+            <t>"center" (default)</t>
+            <t>"right"</t>
+         </list>
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <t><list style="symbols"><!--AG-->
+         <t>"left"</t>
+         <t>"center" (default)</t>
+         <t>"right"</t>
+      </list></t>
+   </section>
+
    <!--table/@anchor-->
    <section anchor="element.table.attribute.anchor" toc="exclude" title="&#34;anchor&#34; Attribute">
       
@@ -7363,6 +7384,8 @@ table =
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
+    [ a:defaultValue = "center" ]
+    attribute align { "left" | "center" | "right" }?,
     name?,
     iref*,
     thead?,
@@ -8339,6 +8362,8 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
++     [ a:defaultValue = "center" ]
++     attribute align { "left" | "center" | "right" }?,
 +     name?,
 +     iref*,
 +     thead?,

@@ -1450,6 +1450,15 @@
         <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
+        <attribute name="align" a:defaultValue="center">
+          <choice>
+            <value>left</value>
+            <value>center</value>
+            <value>right</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
         <ref name="name"/>
       </optional>
       <zeroOrMore>
