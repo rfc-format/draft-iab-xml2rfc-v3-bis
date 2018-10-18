@@ -971,6 +971,9 @@
         </attribute>
       </optional>
       <optional>
+        <attribute name="indent" a:defaultValue="0"/>
+      </optional>
+      <optional>
         <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
