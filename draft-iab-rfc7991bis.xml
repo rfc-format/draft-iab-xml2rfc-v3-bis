@@ -1703,6 +1703,22 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
+   <!--dl/@indent-->
+   <section anchor="element.dl.attribute.indent" toc="exclude">
+      <name>"indent" Attribute</name>
+      <iref item="Attributes" subitem="indent"/>
+      <iref item="dl element" subitem="indent attribute"/>
+      <iref item="indent attribute" subitem="in dl element"/>
+      <t>
+         Indicates the indentation to be used for the rendering of the second and
+         following lines of the item (the first line starts with the term, and is not indented).
+         The indentation amount is interpreted as characters when rendering
+         plain-text documents, and en-space units when rendering in formats that have
+         richer typographic support such as HTML or PDF.
+         One en-space is assumed to be the length of 0.5 em-space in CSS units.
+      </t>
+   </section>
+
    <!--dl/@newline-->
    <section anchor="element.dl.attribute.newline" toc="exclude">
       <name>"newline" Attribute</name>
@@ -1719,22 +1735,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>"false"</li>
          <li>"true" (default)</li>
       </ul>
-   </section>
-
-   <!--dl/@indent-->
-   <section anchor="element.dl.attribute.indent" toc="exclude">
-      <name>"indent" Attribute</name>
-      <iref item="Attributes" subitem="indent"/>
-      <iref item="dl element" subitem="indent attribute"/>
-      <iref item="indent attribute" subitem="in dl element"/>
-      <t>
-         Indicates the indentation to be used for the rendering of the second and
-         following lines of the item (the first line starts with the term, and is not indented).
-         The indentation amount is interpreted as characters when rendering
-         plain-text documents, and en-space units when rendering in formats that have
-         richer typographic support such as HTML or PDF.
-         One en-space is assumed to be the length of 0.5 em-space in CSS units.
-      </t>
    </section>
 
    <!--dl/@spacing-->
@@ -4482,9 +4482,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="table element" subitem="align attribute"/>
       <iref item="align attribute" subitem="in table element"/>
       <t><!--AG-->
-            Controls whether the table appears left justified, centered (default),
-            or right justified.
-            Tables are aligned relative to the left margin of the document.
+        Controls whether the table appears left justified, centered (default),
+        or right justified.
+        Tables are aligned relative to the left margin of the document.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
