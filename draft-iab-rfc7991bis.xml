@@ -177,6 +177,12 @@ from <xref target="element.artwork.attribute.src"/>.</t>
 
 <t>Removed &lt;br&gt; from the vocabulary.</t>
 
+<t>Changed the "hanging" attribute of &lt;dl&gt; to "newline".</t>
+
+<t>Added the "indent" attribute to &lt;dl&gt;.</t>
+
+<t>Added the "align" attribute to &lt;table&gt;.</t>
+
 </list></t>
 
 </section>
@@ -1697,15 +1703,15 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
-   <!--dl/@hanging-->
-   <section anchor="element.dl.attribute.hanging" toc="exclude">
-      <name>"hanging" Attribute</name>
-      <iref item="Attributes" subitem="hanging"/>
-      <iref item="dl element" subitem="hanging attribute"/>
-      <iref item="hanging attribute" subitem="in dl element"/>
+   <!--dl/@newline-->
+   <section anchor="element.dl.attribute.newline" toc="exclude">
+      <name>"newline" Attribute</name>
+      <iref item="Attributes" subitem="newline"/>
+      <iref item="dl element" subitem="newline attribute"/>
+      <iref item="newline attribute" subitem="in dl element"/>
       <t>
-         The "hanging" attribute defines whether or not the term appears on the same line as the definition.
-         hanging="true" indicates that the term is to the left of the definition, while hanging="false"
+         The "newline" attribute defines whether or not the term appears on the same line as the definition.
+         newline="true" indicates that the term is to the left of the definition, while newline="false"
          indicates that the term will be on a separate line.
       </t>
       <t><!--AG-->Allowed values:</t>
@@ -4469,6 +4475,25 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       
    </ol>
 
+   <!--table/@align-->
+   <section anchor="element.table.attribute.align" toc="exclude">
+      <name>"align" Attribute</name>
+      <iref item="Attributes" subitem="align"/>
+      <iref item="table element" subitem="align attribute"/>
+      <iref item="align attribute" subitem="in table element"/>
+      <t><!--AG-->
+            Controls whether the table appears left justified, centered (default),
+            or right justified.
+            Tables are aligned relative to the left margin of the document.
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"left"</li>
+         <li>"center" (default)</li>
+         <li>"right"</li>
+      </ul>
+   </section>
+
    <!--table/@anchor-->
    <section anchor="element.table.attribute.anchor" toc="exclude">
       <name>"anchor" Attribute</name>
@@ -7139,7 +7164,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "normal" ]
     attribute spacing { "normal" | "compact" }?,
     [ a:defaultValue = "true" ]
-    attribute hanging { "false" | "true" }?,
+    attribute newline { "false" | "true" }?,
     [ a:defaultValue = "0" ] attribute indent { text }?,
     attribute pn { text }?,
     (dt, dd)+
@@ -7371,6 +7396,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element table {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
+    [ a:defaultValue = "center" ]
+    attribute align { "left" | "center" | "right" }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
     name?,
@@ -8116,7 +8143,7 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "normal" ]
 +     attribute spacing { "normal" | "compact" }?,
 +     [ a:defaultValue = "true" ]
-+     attribute hanging { "false" | "true" }?,
++     attribute newline { "false" | "true" }?,
 +     [ a:defaultValue = "0" ] attribute indent { text }?,
 +     attribute pn { text }?,
 +     (dt, dd)+
@@ -8339,6 +8366,8 @@ to the v3 schema.</t>
 +   element table {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
++     [ a:defaultValue = "center" ]
++     attribute align { "left" | "center" | "right" }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
 +     name?,

@@ -963,7 +963,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="hanging" a:defaultValue="true">
+        <attribute name="newline" a:defaultValue="true">
           <choice>
             <value>false</value>
             <value>true</value>
@@ -1443,6 +1443,15 @@
       </optional>
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="align" a:defaultValue="center">
+          <choice>
+            <value>left</value>
+            <value>center</value>
+            <value>right</value>
+          </choice>
+        </attribute>
       </optional>
       <optional>
         <attribute name="anchor">
