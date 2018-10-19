@@ -239,7 +239,7 @@ as STDs and BCPs.</t>
 
 <t>Add &lt;<x:ref>link</x:ref>&gt; to point to a resource related to the RFC.</t>
 
-<t>Add &lt;<x:ref>br</x:ref>&gt; to allow line breaks (but not blank lines) in the generated output
+<t>Add &lt;br&gt; to allow line breaks (but not blank lines) in the generated output
 for table cells.</t>
 
 <t>Add &lt;<x:ref>svg</x:ref>&gt; to allow easy inclusion of SVG drawings in &lt;<x:ref>artwork</x:ref>&gt;.</t>
