@@ -4523,6 +4523,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Controls whether the table appears left justified, centered (default),
         or right justified.
         Tables are aligned relative to the left margin of the document.
+        The caption will be centred under the table, and the combined table and
+        caption will be aligned according to the "align" attribute.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
