@@ -94,7 +94,7 @@ Desired result has single references in back, and choice of references+  or (ref
 >
 	<front>
   <title>The "xml2rfc" version 3 Vocabulary</title>
-  <author initials="P." surname="Hoffman" fullname="Paul Hoffman">
+  <author initials="P." surname="Hoffman" fullname="Paul Hoffman" role="editor">
     <organization>ICANN</organization>
 	<address><email>paul.hoffman@icann.org</email></address>
   </author>
@@ -8708,6 +8708,10 @@ to the v3 schema.</t>
   Thanks to everybody who reviewed this document and provided feedback and/or
   specification text. Thanks especially go to Julian Reschke for editing <xref target="RFC7749"/>
   and those who provided feedback on that document. 
+</t>
+<t>
+  Most of the changes between this document and RFC 7991 came from the diligent
+  work of Henrik Levkowetz.
 </t>
 <t>
   We also thank Marshall T. Rose for both the original design and the reference
