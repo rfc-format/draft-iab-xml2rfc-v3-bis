@@ -23,6 +23,7 @@ Most recent consensus decisions to be implemented:
 Issue #31 - consensus reached: add align, default center, wrapping the title to match the max table width for the table caption
 The caption will be centred under the table, and the combined table and
 caption will be aligned according to the 'align' attribute on <table>.
+## PR 68
 
 Issue #47 - consensus reached: change the <name> element schema to permit all inline elements that <tt> can contain, in addition to <tt>.
 
