@@ -7,10 +7,10 @@ xml2rfc.all: \
 	draft-iab-rfc7991bis.xml xml2rfcv3-annotated.rng
 
 xml2rfcv3.rnc: xml2rfcv3.rng
-	java -jar tools/trang.jar -o lineLength=69 $< $@
+	java -jar trang.jar -o lineLength=69 $< $@
 
 #xml2rfcv3.dtd: xml2rfcv3.rng
-#	java -jar tools/trang.jar $< $@
+#	java -jar trang.jar $< $@
 
 xml2rfcv3-annotated.rng: xml2rfcv3.rng annotate-rng.xslt draft-iab-rfc7991bis.xml
 	saxon $< annotate-rng.xslt doc=draft-iab-rfc7991bis.xml > $@
@@ -41,8 +41,8 @@ differences-from-v2.txt:	xml2rfcv3.rnc $(xml2rfcv2)
 xml2rfcv3-full.rng: xml2rfcv3.rng
 	./postprocess-rng.py
 
-%.redxml:	%.xml tools/clean-for-DTD.xslt
-	saxon -l $< tools/clean-for-DTD.xslt > $@
+%.redxml:	%.xml clean-for-DTD.xslt
+	saxon -l $< clean-for-DTD.xslt > $@
 
 %.txt:	%.redxml
 	tclsh xml2rfc.tcl xml2rfc $< $@
