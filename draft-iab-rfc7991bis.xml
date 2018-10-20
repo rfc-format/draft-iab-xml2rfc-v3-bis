@@ -26,6 +26,7 @@ caption will be aligned according to the 'align' attribute on <table>.
 ## PR 68
 
 Issue #47 - consensus reached: change the <name> element schema to permit all inline elements that <tt> can contain, in addition to <tt>.
+## PR 69
 
 Issue #49 - decision made: References must be expanded and complete in the final XML.
 TOC and Index are completely derivable from the XML, but the actual format of those may change
@@ -4538,8 +4539,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Attributes" subitem="align"/>
       <iref item="table element" subitem="align attribute"/>
       <iref item="align attribute" subitem="in table element"/>
-      <t><!--AG-->
-         <cref anchor="element.table.attribute.align.missing">attribute description missing</cref>
+      <t>
+        Controls whether the table appears left justified, centered (default),
+        or right justified.
+        Tables are aligned relative to the left margin of the document.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
