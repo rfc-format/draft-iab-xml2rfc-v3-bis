@@ -16,6 +16,43 @@ Notes for the author:
 
 - Before publication, search for "[[" to look for internal notes 
 
+==================
+
+Most recent consensus decisions to be implemented:
+
+Issue #31 - consensus reached: add align, default center, wrapping the title to match the max table width for the table caption
+Paul asked on list (2018-10-19) how to implement this
+
+Issue #47 - consensus reached: change the <name> element schema to permit all inline elements that <tt> can contain, in addition to <tt>.
+
+Issue #49 - decision made: References must be expanded and complete in the final XML.
+TOC and Index are completely derivable from the XML, but the actual format of those may change
+per publication format - no specification in the v3 spec required.
+
+Desired result has single references in back, and choice of references+  or (reference | referencegroup)* for references.
+
+   back =
+     element back {
+       attribute xml:base { text }?,
+       attribute xml:lang { text }?,
+       displayreference*,
+       references,
+       section*
+     }
+
+   references =
+     element references {
+       attribute xml:base { text }?,
+       attribute xml:lang { text }?,
+       attribute pn { text }?,
+       attribute anchor { xsd:ID }?,
+       attribute title { text }?,
+       name?,
+       (references+ | (reference | referencegroup)*)
+     }
+
+======================
+
 -->
 
 <!DOCTYPE rfc [
