@@ -4524,7 +4524,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
         Controls whether the table appears left justified, centered (default),
         or right justified.
-        Tables are aligned relative to the left margin of the document.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
