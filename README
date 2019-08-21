@@ -16,7 +16,7 @@ Building
 Building the spec requires:
 
 1) java
-2) tclsh (for xml2rfc.tcl)
+2) xml2rfc
 3) an XSLT 1.0 processor that support exslt:node-set, such as xsltproc or Saxon 6.5.5 (http://sourceforge.net/projects/saxon/files/saxon6/6.5.5/)
 
 (the XSLT process currently is started by using whatever "saxon" does on the local system)
