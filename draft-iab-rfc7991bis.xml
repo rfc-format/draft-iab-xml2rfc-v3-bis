@@ -109,7 +109,7 @@ Desired result has single references in back, and choice of references+  or (ref
       language used for writing RFCs and Internet-Drafts. It is heavily derived
       from the version 2 vocabulary that is also under discussion. This document
       obsoletes the earlier v3 grammar described in RFC 7991, which in turn
-      obsoleted the v2 grammar in RFC 7749.
+      obsoleted the v2 grammar in RFC 7749. 
     </t>
   </abstract>
 
@@ -283,6 +283,8 @@ as STDs and BCPs.</t>
 for table cells.</t>
 
 <t>Add &lt;<x:ref>svg</x:ref>&gt; to allow easy inclusion of SVG drawings in &lt;<x:ref>artwork</x:ref>&gt;.</t>
+
+<t>Add &lt;<x:ref>artset</x:ref>&gt; to allow support of alternative artwork formats.</t>
 
 </list></t>
 
@@ -663,6 +665,42 @@ the appendices for a complete description of these attributes.
       <xref format="none" target="grammar.area">Content model</xref>: only text content.</t>
 </section>
 
+<!--artset-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.artset">
+   <name>
+      <tt>&lt;artset&gt;</tt>
+   </name>
+   <x:anchor-alias value="artset"/>
+   <iref item="Elements" subitem="artset" primary="true"/>
+   <iref item="artset element" primary="true"/>
+   <t>
+      This element allows for the support of alternative artwork formats. This will allow the renderer to pick the most appropriate &lt;artwork&gt; instance for its format from the alternatives present within an &lt;artset&gt; element.
+   </t>
+   <t>
+      If more than one &lt;artwork&gt; element is found within an &lt;artset&gt; element, with the same "type" attribute, the rendere could select the first one, or possibly choose between the alternative instances based on the output format and some quality of the alternative instances that made one more suitable than the other for that particular format, such as size, aspect ration, etc.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), and &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>).</t>
+   <t anchor="element.artset.contents"><!--AG-->
+      <xref format="none" target="grammar.artset">Content model</xref>:
+    </t>
+        
+   <t><!--AG-->
+      <iref item="Elements" subitem="artwork"/>
+      <iref item="artwork element" subitem="inside artset"/>One or more &lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</t>
+      
+
+   <!--artset/@anchor-->
+   <section anchor="element.artset.attribute.anchor" toc="exclude">
+      <name>"anchor" Attribute</name>
+      <iref item="Attributes" subitem="anchor"/>
+      <iref item="artset element" subitem="anchor attribute"/>
+      <iref item="anchor attribute" subitem="in artset element"/>
+      <t>
+         Same as for the &lt;<x:ref>artwork</x:ref>&gt; element (<xref target="element.artwork"/>).
+      </t>
+   </section>
+</section>
+
 <!--artwork-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.artwork">
    <name>
@@ -716,7 +754,7 @@ the appendices for a complete description of these attributes.
 See <xref target="cdata.and.escaping"/> for a description of how to deal with issues of using
 "&amp;" and "&lt;" characters in artwork.
 </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), and &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>artset</x:ref>&gt; (<xref target="element.artset"/>), &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), and &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>).</t>
    <t anchor="element.artwork.contents"><!--AG-->
       <xref format="none" target="grammar.artwork">Content model</xref>:
     </t>
@@ -903,6 +941,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
     </t>
    <t><!--AG-->In any order:</t>
    <ul><!--AG-->
+      <li><!--AG-->
+         <iref item="Elements" subitem="artset"/>
+         <iref item="artset element" subitem="inside aside"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="artwork"/>
          <iref item="artwork element" subitem="inside aside"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
@@ -1163,6 +1204,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <t>In any order, but at least one of:</t>
          <ul><!--AG-->
+            <li><!--AG-->
+               <iref item="Elements" subitem="artset"/>
+               <iref item="artset element" subitem="inside blockquote"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside blockquote"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
@@ -1561,6 +1605,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <t>In any order, but at least one of:</t>
          <ul><!--AG-->
+            <li><!--AG-->
+               <iref item="Elements" subitem="artset"/>
+               <iref item="artset element" subitem="inside dd"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside dd"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
@@ -2054,6 +2101,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <t>In any order, but at least one of:</t>
          <ul><!--AG-->
             <li><!--AG-->
+               <iref item="Elements" subitem="artset"/>
+               <iref item="artset element" subitem="inside figure"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside figure"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
             <li><!--AG-->
@@ -2368,6 +2418,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <t>In any order, but at least one of:</t>
          <ul><!--AG-->
+            <li><!--AG-->
+               <iref item="Elements" subitem="artset"/>
+               <iref item="artset element" subitem="inside li"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside li"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
@@ -3754,6 +3807,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <t>In any order:</t>
          <ul><!--AG-->
             <li><!--AG-->
+               <iref item="Elements" subitem="artset"/>
+               <iref item="artset element" subitem="inside section"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside section"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
             <li><!--AG-->
@@ -4600,6 +4656,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <t>In any order, but at least one of:</t>
          <ul><!--AG-->
             <li><!--AG-->
+               <iref item="Elements" subitem="artset"/>
+               <iref item="artset element" subitem="inside td"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside td"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
             <li><!--AG-->
@@ -4776,6 +4835,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <t>In any order, but at least one of:</t>
          <ul><!--AG-->
+            <li><!--AG-->
+               <iref item="Elements" subitem="artset"/>
+               <iref item="artset element" subitem="inside th"/>&lt;<x:ref>artset</x:ref>&gt; elements (<xref target="element.artset"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside th"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
@@ -7054,7 +7116,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "false" ]
     attribute removeInRFC { "true" | "false" }?,
     name?,
-    (artwork
+    (artset
+     | artwork
      | aside
      | blockquote
      | dl
@@ -7111,7 +7174,16 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
-    (artwork | dl | figure | iref | \list | ol | t | table | ul)*
+    (artset
+     | artwork
+     | dl
+     | figure
+     | iref
+     | \list
+     | ol
+     | t
+     | table
+     | ul)*
   }
 
 <strong anchor="grammar.blockquote">blockquote</strong><iref item="blockquote element"/> =
@@ -7122,7 +7194,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute pn { text }?,
     attribute cite { text }?,
     attribute quotedFrom { text }?,
-    ((artwork | dl | figure | ol | sourcecode | t | ul)+
+    ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
         | cref
@@ -7181,7 +7253,15 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
-    ((artwork | blockquote | dl | figure | ol | sourcecode | t | ul)+
+    ((artset
+      | artwork
+      | blockquote
+      | dl
+      | figure
+      | ol
+      | sourcecode
+      | t
+      | ul)+
      | (text
         | bcp14
         | cref
@@ -7236,7 +7316,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
-    ((artwork | dl | figure | ol | sourcecode | t | ul)+
+    ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
         | cref
@@ -7428,7 +7508,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     name?,
     iref*,
     preamble?,
-    (artwork | sourcecode)+,
+    (artset | artwork | sourcecode)+,
     postamble?
   }
 
@@ -7464,6 +7544,15 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
      | sup
      | tt
      | xref)*
+  }
+
+<strong anchor="grammar.artset">artset</strong><iref item="artset element"/> =
+  element artset {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    attribute anchor { xsd:ID }?,
+    attribute pn { text }?,
+    artwork+
   }
 
 <strong anchor="grammar.artwork">artwork</strong><iref item="artwork element"/> =
@@ -7541,7 +7630,7 @@ include "svg.rnc"
     [ a:defaultValue = "0" ] attribute rowspan { text }?,
     [ a:defaultValue = "left" ]
     attribute align { "left" | "center" | "right" }?,
-    ((artwork | dl | figure | ol | sourcecode | t | ul)+
+    ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
         | cref
@@ -7565,7 +7654,7 @@ include "svg.rnc"
     [ a:defaultValue = "0" ] attribute rowspan { text }?,
     [ a:defaultValue = "left" ]
     attribute align { "left" | "center" | "right" }?,
-    ((artwork | dl | figure | ol | sourcecode | t | ul)+
+    ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
         | cref
@@ -8035,7 +8124,8 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "false" ]
 +     attribute removeInRFC { "true" | "false" }?,
 +     name?,
-+     (artwork
++     (artset
++      | artwork
 +      | aside
 +      | blockquote
 +      | dl
@@ -8068,19 +8158,14 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "false" ]
 +     attribute keepWithPrevious { "false" | "true" }?,
       (text
--      | \list
--      | figure
--      | xref
 +      | bcp14
 +      | cref
 +      | em
-       | eref
-       | iref
--      | cref
-+      | \list
++      | eref
++      | iref
+       | \list
 +      | relref
-       | spanx
--      | vspace)*
++      | spanx
 +      | strong
 +      | sub
 +      | sup
@@ -8094,7 +8179,18 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     (artwork | dl | figure | iref | \list | ol | t | table | ul)*
++     (artset
++      | artwork
++      | dl
+       | figure
+-      | xref
+-      | eref
+       | iref
++      | \list
++      | ol
++      | t
++      | table
++      | ul)*
 +   }
 + blockquote =
 +   element blockquote {
@@ -8104,10 +8200,12 @@ to the v3 schema.</t>
 +     attribute pn { text }?,
 +     attribute cite { text }?,
 +     attribute quotedFrom { text }?,
-+     ((artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
-+         | cref
+       | cref
+-      | spanx
+-      | vspace)*
 +         | em
 +         | eref
 +         | iref
@@ -8160,8 +8258,15 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     ((artwork | blockquote | dl | figure | ol | sourcecode | t | 
-+ ul)+
++     ((artset
++       | artwork
++       | blockquote
++       | dl
++       | figure
++       | ol
++       | sourcecode
++       | t
++       | ul)+
 +      | (text
 +         | bcp14
 +         | cref
@@ -8213,7 +8318,7 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     ((artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
 +         | cref
@@ -8239,7 +8344,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8250,7 +8355,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -8399,7 +8504,7 @@ to the v3 schema.</t>
       iref*,
       preamble?,
 -     artwork,
-+     (artwork | sourcecode)+,
++     (artset | artwork | sourcecode)+,
       postamble?
     }
 + table =
@@ -8434,6 +8539,14 @@ to the v3 schema.</t>
 +      | sup
 +      | tt
 +      | xref)*
++   }
++ artset =
++   element artset {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     attribute anchor { xsd:ID }?,
++     attribute pn { text }?,
++     artwork+
 +   }
   artwork =
     element artwork {
@@ -8508,7 +8621,7 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "0" ] attribute rowspan { text }?,
 +     [ a:defaultValue = "left" ]
 +     attribute align { "left" | "center" | "right" }?,
-+     ((artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
 +         | cref
@@ -8531,7 +8644,7 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "0" ] attribute rowspan { text }?,
 +     [ a:defaultValue = "left" ]
 +     attribute align { "left" | "center" | "right" }?,
-+     ((artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
 +         | cref
