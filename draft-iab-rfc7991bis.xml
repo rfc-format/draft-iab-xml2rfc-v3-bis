@@ -1147,11 +1147,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="displayreference"/>
          <iref item="displayreference element" subitem="inside back"/>Optional &lt;<x:ref>displayreference</x:ref>&gt; elements (<xref target="element.displayreference"/>)</li>
       
-        
       <li><!--AG-->
          <iref item="Elements" subitem="references"/>
-         <iref item="references element" subitem="inside back"/>Optional &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
-      
+         <iref item="references element" subitem="inside back"/>One &lt;<x:ref>references</x:ref>&gt; element (<xref target="element.references"/>)</li>
         
       <li><!--AG-->
          <iref item="Elements" subitem="section"/>
@@ -3200,7 +3198,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       This vocabulary supports the split with the &lt;<x:ref>name</x:ref>&gt; child element.
       In general, the title should be either "Normative References" or "Informative References".
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>back</x:ref>&gt; (<xref target="element.back"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>back</x:ref>&gt; (<xref target="element.back"/>) and &lt;<x:ref>references</x:ref>&gt; (<xref target="element.references"/>).</t>
    <t anchor="element.references.contents"><!--AG-->
       <xref format="none" target="grammar.references">Content model</xref>:</t>
    <t><!--AG-->In this order:</t>
@@ -3210,17 +3208,28 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="name"/>
          <iref item="name element" subitem="inside references"/>One optional &lt;<x:ref>name</x:ref>&gt; element (<xref target="element.name"/>)</li>
       
-      <li><!--AG-->
-         <t>In any order:</t>
-         <ul><!--AG-->
-            <li><!--AG-->
-               <iref item="Elements" subitem="reference"/>
-               <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
-            <li><!--AG-->
-               <iref item="Elements" subitem="referencegroup"/>
-               <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
-         </ul>
-      </li>
+      <t><!--AG-->Either:</t>
+      <ul empty="true"><!--AG-->
+          
+         <li><!--AG-->
+            <iref item="Elements" subitem="references"/>
+            <iref item="references element" subitem="inside references"/>One or more &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
+        
+      </ul>
+      <t><!--AG-->Or:</t>
+      <ul empty="true"><!--AG-->
+         <li><!--AG-->
+            <t>In any order:</t>
+            <ul><!--AG-->
+               <li><!--AG-->
+                  <iref item="Elements" subitem="reference"/>
+                  <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
+               <li><!--AG-->
+                  <iref item="Elements" subitem="referencegroup"/>
+                  <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
+            </ul>
+         </li>
+      </ul>
    </ol>
 
    <!--references/@anchor-->
@@ -7755,7 +7764,7 @@ include "svg.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     displayreference*,
-    references*,
+    references,
     section*
   }
 
@@ -7775,7 +7784,7 @@ include "svg.rnc"
     attribute anchor { xsd:ID }?,
     attribute title { text }?,
     name?,
-    (reference | referencegroup)*
+    (references+ | (reference | referencegroup)*)
   }
 
 <strong anchor="grammar.reference">reference</strong><iref item="reference element"/> =
@@ -8753,7 +8762,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     displayreference*,
-+     references*,
++     references,
 +     section*
 +   }
 + displayreference =
@@ -8773,7 +8782,7 @@ to the v3 schema.</t>
 +     attribute anchor { xsd:ID }?,
 +     attribute title { text }?,
 +     name?,
-+     (reference | referencegroup)*
++     (references+ | (reference | referencegroup)*)
     }
   reference =
     element reference {
