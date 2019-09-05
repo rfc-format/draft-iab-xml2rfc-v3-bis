@@ -221,7 +221,14 @@ from <xref target="element.artwork.attribute.src"/>.</t>
 
 <t>Added the "indent" attribute to &lt;dl&gt;.</t>
 
-<t>Added the "align" attribute to &lt;table&gt;.</t>
+<t>Added the "align" attribute to &lt;table&gt;. Made the table title centered under the table.</t>
+
+<t>The &lt;name&gt; element now allows many more elements inside of it.</t?
+
+<t>Redefined &lt;references&gt; to allow &lt;references&gt; within it.
+In the typical case, an outer &lt;references&gt; will be used to hold an
+inner &lt;references&gt; for normative references and an inner &lt;references&gt;
+to hold informative references.</t>
 
 </list></t>
 
