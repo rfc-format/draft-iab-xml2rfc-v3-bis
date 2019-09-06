@@ -334,6 +334,20 @@
 </xsl:template>
 
 <xsl:template match="rng:choice">
+  <xsl:param name="in-list" select="false()"/>
+  <xsl:choose>
+    <xsl:when test="$in-list">
+      <li>
+        <xsl:call-template name="choice"/>
+      </li>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:call-template name="choice"/>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template name="choice">
   <xsl:for-each select="*">
     <t>
       <xsl:comment>AG</xsl:comment>
