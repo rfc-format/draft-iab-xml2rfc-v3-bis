@@ -611,6 +611,7 @@
       </optional>
       <zeroOrMore>
         <choice>
+          <ref name="artset"/>
           <ref name="artwork"/>
           <ref name="aside"/>
           <ref name="blockquote"/>
@@ -644,9 +645,15 @@
       <zeroOrMore>
         <choice>
           <text/>
+          <ref name="bcp14"/>
           <ref name="cref"/>
+          <ref name="em"/>
           <ref name="eref"/>
+          <ref name="iref"/>
           <ref name="relref"/>
+          <ref name="strong"/>
+          <ref name="sub"/>
+          <ref name="sup"/>
           <ref name="tt"/>
           <ref name="xref"/>
         </choice>
@@ -727,6 +734,7 @@
       </optional>
       <zeroOrMore>
         <choice>
+          <ref name="artset"/>
           <ref name="artwork"/>
           <ref name="dl"/>
           <ref name="figure"/>
@@ -765,6 +773,7 @@
       <choice>
         <oneOrMore>
           <choice>
+            <ref name="artset"/>
             <ref name="artwork"/>
             <ref name="dl"/>
             <ref name="figure"/>
@@ -912,6 +921,7 @@
       <choice>
         <oneOrMore>
           <choice>
+            <ref name="artset"/>
             <ref name="artwork"/>
             <ref name="blockquote"/>
             <ref name="dl"/>
@@ -1035,6 +1045,7 @@
       <choice>
         <oneOrMore>
           <choice>
+            <ref name="artset"/>
             <ref name="artwork"/>
             <ref name="dl"/>
             <ref name="figure"/>
@@ -1427,6 +1438,7 @@
       </optional>
       <oneOrMore>
         <choice>
+          <ref name="artset"/>
           <ref name="artwork"/>
           <ref name="sourcecode"/>
         </choice>
@@ -1503,6 +1515,27 @@
           <ref name="xref"/>
         </choice>
       </zeroOrMore>
+    </element>
+  </define>
+  <define name="artset">
+    <element name="artset">
+      <optional>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="anchor">
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
+      </optional>
+      <oneOrMore>
+        <ref name="artwork"/>
+      </oneOrMore>
     </element>
   </define>
   <define name="artwork">
@@ -1701,6 +1734,7 @@
       <choice>
         <oneOrMore>
           <choice>
+            <ref name="artset"/>
             <ref name="artwork"/>
             <ref name="dl"/>
             <ref name="figure"/>
@@ -1760,6 +1794,7 @@
       <choice>
         <oneOrMore>
           <choice>
+            <ref name="artset"/>
             <ref name="artwork"/>
             <ref name="dl"/>
             <ref name="figure"/>
@@ -1941,9 +1976,7 @@
       <zeroOrMore>
         <ref name="displayreference"/>
       </zeroOrMore>
-      <zeroOrMore>
-        <ref name="references"/>
-      </zeroOrMore>
+      <ref name="references"/>
       <zeroOrMore>
         <ref name="section"/>
       </zeroOrMore>
@@ -1985,12 +2018,17 @@
       <optional>
         <ref name="name"/>
       </optional>
-      <zeroOrMore>
-        <choice>
-          <ref name="reference"/>
-          <ref name="referencegroup"/>
-        </choice>
-      </zeroOrMore>
+      <choice>
+        <oneOrMore>
+          <ref name="references"/>
+        </oneOrMore>
+        <zeroOrMore>
+          <choice>
+            <ref name="reference"/>
+            <ref name="referencegroup"/>
+          </choice>
+        </zeroOrMore>
+      </choice>
     </element>
   </define>
   <define name="reference">

@@ -45,8 +45,7 @@ xml2rfcv3-full.rng: xml2rfcv3.rng
 	saxon -l $< clean-for-DTD.xslt > $@
 
 %.txt:	%.redxml
-	tclsh xml2rfc.tcl xml2rfc $< $@
+	xml2rfc --text $< -o $@
 
 %.unpg.txt:	%.redxml
-	tclsh xml2rfc.tcl xml2rfc $< $@.unpg
-	mv $@.unpg $@
+	xml2rfc --raw $< -o $@
