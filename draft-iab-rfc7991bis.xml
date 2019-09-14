@@ -964,9 +964,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="iref"/>
          <iref item="iref element" subitem="inside aside"/>&lt;<x:ref>iref</x:ref>&gt; elements (<xref target="element.iref"/>)</li>
       <li><!--AG-->
-         <iref item="Elements" subitem="list"/>
-         <iref item="list element" subitem="inside aside"/>&lt;<x:ref>list</x:ref>&gt; elements (<xref target="element.list"/>)</li>
-      <li><!--AG-->
          <iref item="Elements" subitem="ol"/>
          <iref item="ol element" subitem="inside aside"/>&lt;<x:ref>ol</x:ref>&gt; elements (<xref target="element.ol"/>)</li>
       <li><!--AG-->
@@ -1230,6 +1227,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="t"/>
                <iref item="t element" subitem="inside blockquote"/>&lt;<x:ref>t</x:ref>&gt; elements (<xref target="element.t"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="table"/>
+               <iref item="table element" subitem="inside blockquote"/>&lt;<x:ref>table</x:ref>&gt; elements (<xref target="element.table"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="ul"/>
                <iref item="ul element" subitem="inside blockquote"/>&lt;<x:ref>ul</x:ref>&gt; elements (<xref target="element.ul"/>)</li>
@@ -3215,28 +3215,30 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="name"/>
          <iref item="name element" subitem="inside references"/>One optional &lt;<x:ref>name</x:ref>&gt; element (<xref target="element.name"/>)</li>
       
-      <t><!--AG-->Either:</t>
-      <ul empty="true"><!--AG-->
+      <li>
+         <t><!--AG-->Either:</t>
+         <ul empty="true"><!--AG-->
           
-         <li><!--AG-->
-            <iref item="Elements" subitem="references"/>
-            <iref item="references element" subitem="inside references"/>One or more &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="references"/>
+               <iref item="references element" subitem="inside references"/>One or more &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
         
-      </ul>
-      <t><!--AG-->Or:</t>
-      <ul empty="true"><!--AG-->
-         <li><!--AG-->
-            <t>In any order:</t>
-            <ul><!--AG-->
-               <li><!--AG-->
-                  <iref item="Elements" subitem="reference"/>
-                  <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
-               <li><!--AG-->
-                  <iref item="Elements" subitem="referencegroup"/>
-                  <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
-            </ul>
-         </li>
-      </ul>
+         </ul>
+         <t><!--AG-->Or:</t>
+         <ul empty="true"><!--AG-->
+            <li><!--AG-->
+               <t>In any order:</t>
+               <ul><!--AG-->
+                  <li><!--AG-->
+                     <iref item="Elements" subitem="reference"/>
+                     <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
+                  <li><!--AG-->
+                     <iref item="Elements" subitem="referencegroup"/>
+                     <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
+               </ul>
+            </li>
+         </ul>
+      </li>
    </ol>
 
    <!--references/@anchor-->
@@ -4573,7 +4575,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       to contain the rows of the table's footer. If the XML is converted to a representation that has page
       breaks (such as PDFs or printed HTML), the header and footer are meant to appear on each page.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>) and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.table.contents"><!--AG-->
       <xref format="none" target="grammar.table">Content model</xref>:</t>
    <t><!--AG-->In this order:</t>
@@ -7220,16 +7222,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
-    (artset
-     | artwork
-     | dl
-     | figure
-     | iref
-     | \list
-     | ol
-     | t
-     | table
-     | ul)*
+    (artset | artwork | dl | figure | iref | ol | t | table | ul)*
   }
 
 <strong anchor="grammar.blockquote">blockquote</strong><iref item="blockquote element"/> =
@@ -7240,7 +7233,15 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute pn { text }?,
     attribute cite { text }?,
     attribute quotedFrom { text }?,
-    ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
+    ((artset
+      | artwork
+      | dl
+      | figure
+      | ol
+      | sourcecode
+      | t
+      | table
+      | ul)+
      | (text
         | bcp14
         | cref
@@ -8236,18 +8237,7 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     (artset
-+      | artwork
-+      | dl
-       | figure
--      | xref
--      | eref
-       | iref
-+      | \list
-+      | ol
-+      | t
-+      | table
-+      | ul)*
++     (artset | artwork | dl | figure | iref | ol | t | table | ul)*
 +   }
 + blockquote =
 +   element blockquote {
@@ -8257,15 +8247,25 @@ to the v3 schema.</t>
 +     attribute pn { text }?,
 +     attribute cite { text }?,
 +     attribute quotedFrom { text }?,
-+     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
++     ((artset
++       | artwork
++       | dl
+       | figure
+-      | xref
++       | ol
++       | sourcecode
++       | t
++       | table
++       | ul)+
 +      | (text
 +         | bcp14
-       | cref
++         | cref
++         | em
+       | eref
+       | iref
+-      | cref
 -      | spanx
 -      | vspace)*
-+         | em
-+         | eref
-+         | iref
 +         | relref
 +         | strong
 +         | sub
@@ -8401,7 +8401,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-  }?,
++ }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8412,7 +8412,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-+ }?,
+  }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
