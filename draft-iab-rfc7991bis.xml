@@ -3147,15 +3147,15 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
-   <!--reference/@quoteTitle-->
-   <section anchor="element.reference.attribute.quoteTitle" toc="exclude">
-      <name>"quoteTitle" Attribute</name>
-      <iref item="Attributes" subitem="quoteTitle"/>
-      <iref item="reference element" subitem="quoteTitle attribute"/>
-      <iref item="quoteTitle attribute" subitem="in reference element"/>
+   <!--reference/@quote-title-->
+   <section anchor="element.reference.attribute.quote-title" toc="exclude">
+      <name>"quote-title" Attribute</name>
+      <iref item="Attributes" subitem="quote-title"/>
+      <iref item="reference element" subitem="quote-title attribute"/>
+      <iref item="quote-title attribute" subitem="in reference element"/>
       <t>
-         Specifies whether or not the title in the reference should be quoted.
-         This can be used to prevent quoting, such as on errata.
+	Specifies whether or not the title in the reference should be quoted.
+   This can be used to prevent quoting, such as on errata.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -7825,7 +7825,7 @@ include "svg.rnc"
     attribute anchor { xsd:ID },
     attribute target { text }?,
     [ a:defaultValue = "true" ]
-    attribute quoteTitle { "true" | "false" }?,
+    attribute quote-title { "true" | "false" }?,
     front,
     (annotation | format | refcontent | seriesInfo)*
   }
@@ -8823,7 +8823,7 @@ to the v3 schema.</t>
       attribute anchor { xsd:ID },
       attribute target { text }?,
 +     [ a:defaultValue = "true" ]
-+     attribute quoteTitle { "true" | "false" }?,
++     attribute quote-title { "true" | "false" }?,
       front,
 -     seriesInfo*,
 -     format*,

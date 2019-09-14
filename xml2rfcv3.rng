@@ -2054,7 +2054,7 @@
         <attribute name="target"/>
       </optional>
       <optional>
-        <attribute name="quoteTitle" a:defaultValue="true">
+        <attribute name="quote-title" a:defaultValue="true">
           <choice>
             <value>true</value>
             <value>false</value>
