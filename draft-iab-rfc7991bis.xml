@@ -2901,6 +2901,33 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          The ASCII equivalent of the organization's name.
       </t>
    </section>
+
+   <!--organization/@asciiAbbrev-->
+   <section anchor="element.organization.attribute.asciiAbbrev" toc="exclude">
+      <name>"asciiAbbrev" Attribute</name>
+      <iref item="Attributes" subitem="asciiAbbrev"/>
+      <iref item="organization element" subitem="asciiAbbrev attribute"/>
+      <iref item="asciiAbbrev attribute" subitem="in organization element"/>
+      <t>
+	  To support abbreviated organization names in both ASCII and non-ASCII contexts. 
+      </t>
+   </section>
+
+   <!--organization/@showOnFrontPage-->
+   <section anchor="element.organization.attribute.showOnFrontPage" toc="exclude">
+      <name>"showOnFrontPage" Attribute</name>
+      <iref item="Attributes" subitem="showOnFrontPage"/>
+      <iref item="organization element" subitem="showOnFrontPage attribute"/>
+      <iref item="showOnFrontPage attribute" subitem="in organization element"/>
+      <t>
+	  To support turning off listing organization with author name.
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"true" (default)</li>
+         <li>"false"</li>
+      </ul>
+   </section>
 </section>
 
 <!--phone-->
@@ -6970,6 +6997,9 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute abbrev { text }?,
     attribute ascii { text }?,
+    attribute asciiAbbrev { text }?,
+    [ a:defaultValue = "true" ]
+    attribute showOnFrontPage { "true" | "false" }?,
     text
   }
 
@@ -7986,6 +8016,9 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
       attribute abbrev { text }?,
 +     attribute ascii { text }?,
++     attribute asciiAbbrev { text }?,
++     [ a:defaultValue = "true" ]
++     attribute showOnFrontPage { "true" | "false" }?,
 +     text
 +   }
 + address =
