@@ -2901,6 +2901,33 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          The ASCII equivalent of the organization's name.
       </t>
    </section>
+
+   <!--organization/@asciiAbbrev-->
+   <section anchor="element.organization.attribute.asciiAbbrev" toc="exclude">
+      <name>"asciiAbbrev" Attribute</name>
+      <iref item="Attributes" subitem="asciiAbbrev"/>
+      <iref item="organization element" subitem="asciiAbbrev attribute"/>
+      <iref item="asciiAbbrev attribute" subitem="in organization element"/>
+      <t>
+	  To support abbreviated organization names in both ASCII and non-ASCII contexts. 
+      </t>
+   </section>
+
+   <!--organization/@showOnFrontPage-->
+   <section anchor="element.organization.attribute.showOnFrontPage" toc="exclude">
+      <name>"showOnFrontPage" Attribute</name>
+      <iref item="Attributes" subitem="showOnFrontPage"/>
+      <iref item="organization element" subitem="showOnFrontPage attribute"/>
+      <iref item="showOnFrontPage attribute" subitem="in organization element"/>
+      <t>
+	  To support turning off listing organization with author name.
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"true" (default)</li>
+         <li>"false"</li>
+      </ul>
+   </section>
 </section>
 
 <!--phone-->
@@ -3215,28 +3242,30 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="name"/>
          <iref item="name element" subitem="inside references"/>One optional &lt;<x:ref>name</x:ref>&gt; element (<xref target="element.name"/>)</li>
       
-      <t><!--AG-->Either:</t>
-      <ul empty="true"><!--AG-->
+      <li>
+         <t><!--AG-->Either:</t>
+         <ul empty="true"><!--AG-->
           
-         <li><!--AG-->
-            <iref item="Elements" subitem="references"/>
-            <iref item="references element" subitem="inside references"/>One or more &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="references"/>
+               <iref item="references element" subitem="inside references"/>One or more &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
         
-      </ul>
-      <t><!--AG-->Or:</t>
-      <ul empty="true"><!--AG-->
-         <li><!--AG-->
-            <t>In any order:</t>
-            <ul><!--AG-->
-               <li><!--AG-->
-                  <iref item="Elements" subitem="reference"/>
-                  <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
-               <li><!--AG-->
-                  <iref item="Elements" subitem="referencegroup"/>
-                  <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
-            </ul>
-         </li>
-      </ul>
+         </ul>
+         <t><!--AG-->Or:</t>
+         <ul empty="true"><!--AG-->
+            <li><!--AG-->
+               <t>In any order:</t>
+               <ul><!--AG-->
+                  <li><!--AG-->
+                     <iref item="Elements" subitem="reference"/>
+                     <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
+                  <li><!--AG-->
+                     <iref item="Elements" subitem="referencegroup"/>
+                     <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
+               </ul>
+            </li>
+         </ul>
+      </li>
    </ol>
 
    <!--references/@anchor-->
@@ -6973,6 +7002,9 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute abbrev { text }?,
     attribute ascii { text }?,
+    attribute asciiAbbrev { text }?,
+    [ a:defaultValue = "true" ]
+    attribute showOnFrontPage { "true" | "false" }?,
     text
   }
 
@@ -7991,6 +8023,9 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
       attribute abbrev { text }?,
 +     attribute ascii { text }?,
++     attribute asciiAbbrev { text }?,
++     [ a:defaultValue = "true" ]
++     attribute showOnFrontPage { "true" | "false" }?,
 +     text
 +   }
 + address =
