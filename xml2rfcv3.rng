@@ -739,7 +739,6 @@
           <ref name="dl"/>
           <ref name="figure"/>
           <ref name="iref"/>
-          <ref name="list"/>
           <ref name="ol"/>
           <ref name="t"/>
           <ref name="table"/>
@@ -780,6 +779,7 @@
             <ref name="ol"/>
             <ref name="sourcecode"/>
             <ref name="t"/>
+            <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
