@@ -2143,6 +2143,9 @@
       <attribute name="anchor">
         <data type="ID"/>
       </attribute>
+      <optional>
+        <attribute name="target"/>
+      </optional>
       <oneOrMore>
         <ref name="reference"/>
       </oneOrMore>

@@ -3371,6 +3371,17 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         as an identifier in links to this reference entry.
       </t>
    </section>
+
+   <!--referencegroup/@target-->
+   <section anchor="element.referencegroup.attribute.target" toc="exclude">
+      <name>"target" Attribute</name>
+      <iref item="Attributes" subitem="target"/>
+      <iref item="referencegroup element" subitem="target attribute"/>
+      <iref item="target attribute" subitem="in referencegroup element"/>
+      <t>
+        Holds the URI for the reference.
+      </t>
+   </section>
 </section>
 
 <!--references-->
@@ -8084,6 +8095,7 @@ include "svg.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
+    attribute target { text }?,
     reference+
   }
 
@@ -8714,7 +8726,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8725,7 +8737,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -9121,6 +9133,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID },
++     attribute target { text }?,
 +     reference+
     }
   seriesInfo =
