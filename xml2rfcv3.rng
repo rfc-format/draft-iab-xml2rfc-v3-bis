@@ -290,9 +290,13 @@
         <zeroOrMore>
           <choice>
             <ref name="city"/>
+            <ref name="cityarea"/>
             <ref name="code"/>
             <ref name="country"/>
+            <ref name="extaddr"/>
+            <ref name="pobox"/>
             <ref name="region"/>
+            <ref name="sortingcode"/>
             <ref name="street"/>
           </choice>
         </zeroOrMore>
@@ -300,6 +304,62 @@
           <ref name="postalLine"/>
         </oneOrMore>
       </choice>
+    </element>
+  </define>
+  <define name="cityarea">
+    <element name="cityarea">
+      <optional>
+        <attribute name="xml:base"/>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"/>
+      </optional>
+      <optional>
+        <attribute name="ascii"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="extaddr">
+    <element name="extaddr">
+      <optional>
+        <attribute name="xml:base"/>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"/>
+      </optional>
+      <optional>
+        <attribute name="ascii"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="pobox">
+    <element name="pobox">
+      <optional>
+        <attribute name="xml:base"/>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"/>
+      </optional>
+      <optional>
+        <attribute name="ascii"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="sortingcode">
+    <element name="sortingcode">
+      <optional>
+        <attribute name="xml:base"/>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"/>
+      </optional>
+      <optional>
+        <attribute name="ascii"/>
+      </optional>
+      <text/>
     </element>
   </define>
   <define name="street">
