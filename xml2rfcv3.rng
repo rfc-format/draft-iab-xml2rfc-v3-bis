@@ -2138,6 +2138,9 @@
         <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
+        <attribute name="target"/>
+      </optional>
+      <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="anchor">

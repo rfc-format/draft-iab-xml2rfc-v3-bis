@@ -3313,8 +3313,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="reference element" subitem="quote-title attribute"/>
       <iref item="quote-title attribute" subitem="in reference element"/>
       <t>
-	Specifies whether or not the title in the reference should be quoted.
-   This can be used to prevent quoting, such as on errata.
+        Specifies whether or not the title in the reference should be quoted.
+        This can be used to prevent quoting, such as on errata.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -3369,6 +3369,17 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for this reference group. Usually, this will
         be used both to "label" the reference group in the "References" section and
         as an identifier in links to this reference entry.
+      </t>
+   </section>
+
+   <!--referencegroup/@target-->
+   <section anchor="element.referencegroup.attribute.target" toc="exclude">
+      <name>"target" Attribute</name>
+      <iref item="Attributes" subitem="target"/>
+      <iref item="referencegroup element" subitem="target attribute"/>
+      <iref item="target attribute" subitem="in referencegroup element"/>
+      <t>
+        Holds the URI for the reference.
       </t>
    </section>
 </section>
@@ -8082,6 +8093,7 @@ include "svg.rnc"
 <strong anchor="grammar.referencegroup">referencegroup</strong><iref item="referencegroup element"/> =
   element referencegroup {
     attribute xml:base { text }?,
+    attribute target { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
     reference+
@@ -9119,6 +9131,7 @@ to the v3 schema.</t>
 + referencegroup =
 +   element referencegroup {
 +     attribute xml:base { text }?,
++     attribute target { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID },
 +     reference+
