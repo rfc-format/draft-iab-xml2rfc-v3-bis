@@ -8096,6 +8096,7 @@ include "svg.rnc"
     attribute target { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
+    attribute target { text }?,
     reference+
   }
 
@@ -8726,7 +8727,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8737,7 +8738,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -9134,6 +9135,7 @@ to the v3 schema.</t>
 +     attribute target { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID },
++     attribute target { text }?,
 +     reference+
     }
   seriesInfo =
