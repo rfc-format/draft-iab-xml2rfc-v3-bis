@@ -3120,15 +3120,15 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 
-   <!--reference/@quoteTitle-->
-   <section anchor="element.reference.attribute.quoteTitle" toc="exclude">
-      <name>"quoteTitle" Attribute</name>
-      <iref item="Attributes" subitem="quoteTitle"/>
-      <iref item="reference element" subitem="quoteTitle attribute"/>
-      <iref item="quoteTitle attribute" subitem="in reference element"/>
+   <!--reference/@quote-title-->
+   <section anchor="element.reference.attribute.quote-title" toc="exclude">
+      <name>"quote-title" Attribute</name>
+      <iref item="Attributes" subitem="quote-title"/>
+      <iref item="reference element" subitem="quote-title attribute"/>
+      <iref item="quote-title attribute" subitem="in reference element"/>
       <t>
-         Specifies whether or not the title in the reference should be quoted.
-         This can be used to prevent quoting, such as on errata.
+        Specifies whether or not the title in the reference should be quoted.
+        This can be used to prevent quoting, such as on errata.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -3185,6 +3185,17 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         as an identifier in links to this reference entry.
       </t>
    </section>
+
+   <!--referencegroup/@target-->
+   <section anchor="element.referencegroup.attribute.target" toc="exclude">
+      <name>"target" Attribute</name>
+      <iref item="Attributes" subitem="target"/>
+      <iref item="referencegroup element" subitem="target attribute"/>
+      <iref item="target attribute" subitem="in referencegroup element"/>
+      <t>
+        Holds the URI for the reference.
+      </t>
+   </section>
 </section>
 
 <!--references-->
@@ -3215,28 +3226,30 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="name"/>
          <iref item="name element" subitem="inside references"/>One optional &lt;<x:ref>name</x:ref>&gt; element (<xref target="element.name"/>)</li>
       
-      <t><!--AG-->Either:</t>
-      <ul empty="true"><!--AG-->
+      <li>
+         <t><!--AG-->Either:</t>
+         <ul empty="true"><!--AG-->
           
-         <li><!--AG-->
-            <iref item="Elements" subitem="references"/>
-            <iref item="references element" subitem="inside references"/>One or more &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="references"/>
+               <iref item="references element" subitem="inside references"/>One or more &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
         
-      </ul>
-      <t><!--AG-->Or:</t>
-      <ul empty="true"><!--AG-->
-         <li><!--AG-->
-            <t>In any order:</t>
-            <ul><!--AG-->
-               <li><!--AG-->
-                  <iref item="Elements" subitem="reference"/>
-                  <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
-               <li><!--AG-->
-                  <iref item="Elements" subitem="referencegroup"/>
-                  <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
-            </ul>
-         </li>
-      </ul>
+         </ul>
+         <t><!--AG-->Or:</t>
+         <ul empty="true"><!--AG-->
+            <li><!--AG-->
+               <t>In any order:</t>
+               <ul><!--AG-->
+                  <li><!--AG-->
+                     <iref item="Elements" subitem="reference"/>
+                     <iref item="reference element" subitem="inside references"/>&lt;<x:ref>reference</x:ref>&gt; elements (<xref target="element.reference"/>)</li>
+                  <li><!--AG-->
+                     <iref item="Elements" subitem="referencegroup"/>
+                     <iref item="referencegroup element" subitem="inside references"/>&lt;<x:ref>referencegroup</x:ref>&gt; elements (<xref target="element.referencegroup"/>)</li>
+               </ul>
+            </li>
+         </ul>
+      </li>
    </ol>
 
    <!--references/@anchor-->
@@ -7800,7 +7813,7 @@ include "svg.rnc"
     attribute anchor { xsd:ID },
     attribute target { text }?,
     [ a:defaultValue = "true" ]
-    attribute quoteTitle { "true" | "false" }?,
+    attribute quote-title { "true" | "false" }?,
     front,
     (annotation | format | refcontent | seriesInfo)*
   }
@@ -7808,6 +7821,7 @@ include "svg.rnc"
 <strong anchor="grammar.referencegroup">referencegroup</strong><iref item="referencegroup element"/> =
   element referencegroup {
     attribute xml:base { text }?,
+    attribute target { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
     reference+
@@ -8401,7 +8415,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-  }?,
++ }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8412,7 +8426,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-+ }?,
+  }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -8797,7 +8811,7 @@ to the v3 schema.</t>
       attribute anchor { xsd:ID },
       attribute target { text }?,
 +     [ a:defaultValue = "true" ]
-+     attribute quoteTitle { "true" | "false" }?,
++     attribute quote-title { "true" | "false" }?,
       front,
 -     seriesInfo*,
 -     format*,
@@ -8807,6 +8821,7 @@ to the v3 schema.</t>
 + referencegroup =
 +   element referencegroup {
 +     attribute xml:base { text }?,
++     attribute target { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID },
 +     reference+
