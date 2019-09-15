@@ -239,6 +239,17 @@
       <optional>
         <attribute name="ascii"/>
       </optional>
+      <optional>
+         <attribute name="asciiAbbrev"/>
+      </optional>
+      <optional>
+        <attribute name="showOnFrontPage" a:defaultValue="true">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
+      </optional>
       <text/>
     </element>
   </define>
@@ -739,7 +750,6 @@
           <ref name="dl"/>
           <ref name="figure"/>
           <ref name="iref"/>
-          <ref name="list"/>
           <ref name="ol"/>
           <ref name="t"/>
           <ref name="table"/>
@@ -780,6 +790,7 @@
             <ref name="ol"/>
             <ref name="sourcecode"/>
             <ref name="t"/>
+            <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
@@ -1476,9 +1487,6 @@
       <optional>
         <ref name="name"/>
       </optional>
-      <zeroOrMore>
-        <ref name="iref"/>
-      </zeroOrMore>
       <optional>
         <ref name="thead"/>
       </optional>
