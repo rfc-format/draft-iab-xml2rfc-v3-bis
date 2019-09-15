@@ -1368,6 +1368,55 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </section>
 </section>
 
+<!--cityarea-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.cityarea">
+   <name>
+      <tt>&lt;cityarea&gt;</tt>
+   </name>
+   <x:anchor-alias value="cityarea"/>
+   <iref item="Elements" subitem="cityarea" primary="true"/>
+   <iref item="cityarea element" primary="true"/>
+   <t>
+     TBD
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.cityarea.contents"><!--AG-->
+      <xref format="none" target="grammar.cityarea">Content model</xref>: only text content.</t>
+
+   <!--cityarea/@ascii-->
+   <section anchor="element.cityarea.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="cityarea element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in cityarea element"/>
+      <t><!--AG-->
+         <cref anchor="element.cityarea.attribute.ascii.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--cityarea/@xml:base-->
+   <section anchor="element.cityarea.attribute.xml-base" toc="exclude">
+      <name>"xml:base" Attribute</name>
+      <iref item="Attributes" subitem="xml:base"/>
+      <iref item="cityarea element" subitem="xml:base attribute"/>
+      <iref item="xml:base attribute" subitem="in cityarea element"/>
+      <t><!--AG-->
+         <cref anchor="element.cityarea.attribute.xml-base.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--cityarea/@xml:lang-->
+   <section anchor="element.cityarea.attribute.xml-lang" toc="exclude">
+      <name>"xml:lang" Attribute</name>
+      <iref item="Attributes" subitem="xml:lang"/>
+      <iref item="cityarea element" subitem="xml:lang attribute"/>
+      <iref item="xml:lang attribute" subitem="in cityarea element"/>
+      <t><!--AG-->
+         <cref anchor="element.cityarea.attribute.xml-lang.missing">attribute description missing</cref>
+      </t>
+   </section>
+</section>
+
 <!--code-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.code">
    <name>
@@ -2067,6 +2116,55 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          URI of the link target <xref target="RFC3986"/>.
          This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.
          </t>
+   </section>
+</section>
+
+<!--extaddr-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.extaddr">
+   <name>
+      <tt>&lt;extaddr&gt;</tt>
+   </name>
+   <x:anchor-alias value="extaddr"/>
+   <iref item="Elements" subitem="extaddr" primary="true"/>
+   <iref item="extaddr element" primary="true"/>
+   <t>
+     TBD 
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.extaddr.contents"><!--AG-->
+      <xref format="none" target="grammar.extaddr">Content model</xref>: only text content.</t>
+
+   <!--extaddr/@ascii-->
+   <section anchor="element.extaddr.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="extaddr element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in extaddr element"/>
+      <t><!--AG-->
+         <cref anchor="element.extaddr.attribute.ascii.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--extaddr/@xml:base-->
+   <section anchor="element.extaddr.attribute.xml-base" toc="exclude">
+      <name>"xml:base" Attribute</name>
+      <iref item="Attributes" subitem="xml:base"/>
+      <iref item="extaddr element" subitem="xml:base attribute"/>
+      <iref item="xml:base attribute" subitem="in extaddr element"/>
+      <t><!--AG-->
+         <cref anchor="element.extaddr.attribute.xml-base.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--extaddr/@xml:lang-->
+   <section anchor="element.extaddr.attribute.xml-lang" toc="exclude">
+      <name>"xml:lang" Attribute</name>
+      <iref item="Attributes" subitem="xml:lang"/>
+      <iref item="extaddr element" subitem="xml:lang attribute"/>
+      <iref item="xml:lang attribute" subitem="in extaddr element"/>
+      <t><!--AG-->
+         <cref anchor="element.extaddr.attribute.xml-lang.missing">attribute description missing</cref>
+      </t>
    </section>
 </section>
 
@@ -2952,6 +3050,55 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <xref format="none" target="grammar.phone">Content model</xref>: only text content.</t>
 </section>
 
+<!--pobox-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.pobox">
+   <name>
+      <tt>&lt;pobox&gt;</tt>
+   </name>
+   <x:anchor-alias value="pobox"/>
+   <iref item="Elements" subitem="pobox" primary="true"/>
+   <iref item="pobox element" primary="true"/>
+   <t>
+      TBD
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.pobox.contents"><!--AG-->
+      <xref format="none" target="grammar.pobox">Content model</xref>: only text content.</t>
+
+   <!--pobox/@ascii-->
+   <section anchor="element.pobox.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="pobox element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in pobox element"/>
+      <t><!--AG-->
+         <cref anchor="element.pobox.attribute.ascii.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--pobox/@xml:base-->
+   <section anchor="element.pobox.attribute.xml-base" toc="exclude">
+      <name>"xml:base" Attribute</name>
+      <iref item="Attributes" subitem="xml:base"/>
+      <iref item="pobox element" subitem="xml:base attribute"/>
+      <iref item="xml:base attribute" subitem="in pobox element"/>
+      <t><!--AG-->
+         <cref anchor="element.pobox.attribute.xml-base.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--pobox/@xml:lang-->
+   <section anchor="element.pobox.attribute.xml-lang" toc="exclude">
+      <name>"xml:lang" Attribute</name>
+      <iref item="Attributes" subitem="xml:lang"/>
+      <iref item="pobox element" subitem="xml:lang attribute"/>
+      <iref item="xml:lang attribute" subitem="in pobox element"/>
+      <t><!--AG-->
+         <cref anchor="element.pobox.attribute.xml-lang.missing">attribute description missing</cref>
+      </t>
+   </section>
+</section>
+
 <!--postal-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.postal">
    <name>
@@ -2980,14 +3127,26 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="city"/>
                <iref item="city element" subitem="inside postal"/>&lt;<x:ref>city</x:ref>&gt; elements (<xref target="element.city"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="cityarea"/>
+               <iref item="cityarea element" subitem="inside postal"/>&lt;<x:ref>cityarea</x:ref>&gt; elements (<xref target="element.cityarea"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="code"/>
                <iref item="code element" subitem="inside postal"/>&lt;<x:ref>code</x:ref>&gt; elements (<xref target="element.code"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="country"/>
                <iref item="country element" subitem="inside postal"/>&lt;<x:ref>country</x:ref>&gt; elements (<xref target="element.country"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="extaddr"/>
+               <iref item="extaddr element" subitem="inside postal"/>&lt;<x:ref>extaddr</x:ref>&gt; elements (<xref target="element.extaddr"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="pobox"/>
+               <iref item="pobox element" subitem="inside postal"/>&lt;<x:ref>pobox</x:ref>&gt; elements (<xref target="element.pobox"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="region"/>
                <iref item="region element" subitem="inside postal"/>&lt;<x:ref>region</x:ref>&gt; elements (<xref target="element.region"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="sortingcode"/>
+               <iref item="sortingcode element" subitem="inside postal"/>&lt;<x:ref>sortingcode</x:ref>&gt; elements (<xref target="element.sortingcode"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="street"/>
                <iref item="street element" subitem="inside postal"/>&lt;<x:ref>street</x:ref>&gt; elements (<xref target="element.street"/>)</li>
@@ -4157,6 +4316,55 @@ in the same &lt;front&gt; element.
             extension. For Internet-Drafts, the value for this attribute should
             be "draft-ietf-somewg-someprotocol-07", not
             "draft-ietf-somewg-someprotocol-07.txt".
+      </t>
+   </section>
+</section>
+
+<!--sortingcode-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sortingcode">
+   <name>
+      <tt>&lt;sortingcode&gt;</tt>
+   </name>
+   <x:anchor-alias value="sortingcode"/>
+   <iref item="Elements" subitem="sortingcode" primary="true"/>
+   <iref item="sortingcode element" primary="true"/>
+   <t>
+     TBD
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.sortingcode.contents"><!--AG-->
+      <xref format="none" target="grammar.sortingcode">Content model</xref>: only text content.</t>
+
+   <!--sortingcode/@ascii-->
+   <section anchor="element.sortingcode.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="sortingcode element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in sortingcode element"/>
+      <t><!--AG-->
+         <cref anchor="element.sortingcode.attribute.ascii.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--sortingcode/@xml:base-->
+   <section anchor="element.sortingcode.attribute.xml-base" toc="exclude">
+      <name>"xml:base" Attribute</name>
+      <iref item="Attributes" subitem="xml:base"/>
+      <iref item="sortingcode element" subitem="xml:base attribute"/>
+      <iref item="xml:base attribute" subitem="in sortingcode element"/>
+      <t><!--AG-->
+         <cref anchor="element.sortingcode.attribute.xml-base.missing">attribute description missing</cref>
+      </t>
+   </section>
+
+   <!--sortingcode/@xml:lang-->
+   <section anchor="element.sortingcode.attribute.xml-lang" toc="exclude">
+      <name>"xml:lang" Attribute</name>
+      <iref item="Attributes" subitem="xml:lang"/>
+      <iref item="sortingcode element" subitem="xml:lang attribute"/>
+      <iref item="xml:lang attribute" subitem="in sortingcode element"/>
+      <t><!--AG-->
+         <cref anchor="element.sortingcode.attribute.xml-lang.missing">attribute description missing</cref>
       </t>
    </section>
 </section>
@@ -7018,7 +7226,48 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element postal {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
-    ((city | code | country | region | street)* | postalLine+)
+    ((city
+      | cityarea
+      | code
+      | country
+      | extaddr
+      | pobox
+      | region
+      | sortingcode
+      | street)*
+     | postalLine+)
+  }
+
+<strong anchor="grammar.cityarea">cityarea</strong><iref item="cityarea element"/> =
+  element cityarea {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    attribute ascii { text }?,
+    text
+  }
+
+<strong anchor="grammar.extaddr">extaddr</strong><iref item="extaddr element"/> =
+  element extaddr {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    attribute ascii { text }?,
+    text
+  }
+
+<strong anchor="grammar.pobox">pobox</strong><iref item="pobox element"/> =
+  element pobox {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    attribute ascii { text }?,
+    text
+  }
+
+<strong anchor="grammar.sortingcode">sortingcode</strong><iref item="sortingcode element"/> =
+  element sortingcode {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    attribute ascii { text }?,
+    text
   }
 
 <strong anchor="grammar.street">street</strong><iref item="street element"/> =
@@ -8035,7 +8284,44 @@ to the v3 schema.</t>
 +   element postal {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
-+     ((city | code | country | region | street)* | postalLine+)
++     ((city
++       | cityarea
++       | code
++       | country
++       | extaddr
++       | pobox
++       | region
++       | sortingcode
++       | street)*
++      | postalLine+)
++   }
++ cityarea =
++   element cityarea {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     attribute ascii { text }?,
++     text
++   }
++ extaddr =
++   element extaddr {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     attribute ascii { text }?,
++     text
++   }
++ pobox =
++   element pobox {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     attribute ascii { text }?,
++     text
++   }
++ sortingcode =
++   element sortingcode {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     attribute ascii { text }?,
++     text
 +   }
 + street =
 +   element street {
