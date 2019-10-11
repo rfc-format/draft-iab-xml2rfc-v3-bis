@@ -309,10 +309,10 @@
   <define name="cityarea">
     <element name="cityarea">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -323,10 +323,10 @@
   <define name="extaddr">
     <element name="extaddr">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -337,10 +337,10 @@
   <define name="pobox">
     <element name="pobox">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -351,10 +351,10 @@
   <define name="sortingcode">
     <element name="sortingcode">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -2146,9 +2146,6 @@
       <attribute name="anchor">
         <data type="ID"/>
       </attribute>
-      <optional>
-        <attribute name="target"/>
-      </optional>
       <oneOrMore>
         <ref name="reference"/>
       </oneOrMore>

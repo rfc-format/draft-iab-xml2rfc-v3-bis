@@ -1389,30 +1389,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Attributes" subitem="ascii"/>
       <iref item="cityarea element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in cityarea element"/>
-      <t><!--AG-->
-         <cref anchor="element.cityarea.attribute.ascii.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--cityarea/@xml:base-->
-   <section anchor="element.cityarea.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="cityarea element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in cityarea element"/>
-      <t><!--AG-->
-         <cref anchor="element.cityarea.attribute.xml-base.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--cityarea/@xml:lang-->
-   <section anchor="element.cityarea.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="cityarea element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in cityarea element"/>
-      <t><!--AG-->
-         <cref anchor="element.cityarea.attribute.xml-lang.missing">attribute description missing</cref>
+      <t>
+	      The ASCII equivalent of the city area name.
       </t>
    </section>
 </section>
@@ -2140,30 +2118,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Attributes" subitem="ascii"/>
       <iref item="extaddr element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in extaddr element"/>
-      <t><!--AG-->
-         <cref anchor="element.extaddr.attribute.ascii.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--extaddr/@xml:base-->
-   <section anchor="element.extaddr.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="extaddr element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in extaddr element"/>
-      <t><!--AG-->
-         <cref anchor="element.extaddr.attribute.xml-base.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--extaddr/@xml:lang-->
-   <section anchor="element.extaddr.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="extaddr element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in extaddr element"/>
-      <t><!--AG-->
-         <cref anchor="element.extaddr.attribute.xml-lang.missing">attribute description missing</cref>
+      <t>
+         ASCII equivalent for extaddr.
       </t>
    </section>
 </section>
@@ -3071,30 +3027,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Attributes" subitem="ascii"/>
       <iref item="pobox element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in pobox element"/>
-      <t><!--AG-->
-         <cref anchor="element.pobox.attribute.ascii.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--pobox/@xml:base-->
-   <section anchor="element.pobox.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="pobox element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in pobox element"/>
-      <t><!--AG-->
-         <cref anchor="element.pobox.attribute.xml-base.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--pobox/@xml:lang-->
-   <section anchor="element.pobox.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="pobox element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in pobox element"/>
-      <t><!--AG-->
-         <cref anchor="element.pobox.attribute.xml-lang.missing">attribute description missing</cref>
+      <t>
+	      ASCII equivalent for pobox. 
       </t>
    </section>
 </section>
@@ -3378,6 +3312,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Attributes" subitem="target"/>
       <iref item="referencegroup element" subitem="target attribute"/>
       <iref item="target attribute" subitem="in referencegroup element"/>
+      <t>
+        Holds the URI for the reference.
+      </t>
       <t>
         Holds the URI for the reference.
       </t>
@@ -3858,7 +3795,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="rfc element" subitem="number attribute"/>
       <iref item="number attribute" subitem="in rfc element"/>
       <t>
-            Deprecated; instead, use the "value" attribute in &lt;<x:ref>seriesInfo</x:ref>&gt;.
+            Used to determine wheher to produce an RFC or an Internet-Draft. 
       </t>
    </section>
 
@@ -4340,7 +4277,7 @@ in the same &lt;front&gt; element.
    <iref item="Elements" subitem="sortingcode" primary="true"/>
    <iref item="sortingcode element" primary="true"/>
    <t>
-     TBD
+     A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.sortingcode.contents"><!--AG-->
@@ -4352,30 +4289,8 @@ in the same &lt;front&gt; element.
       <iref item="Attributes" subitem="ascii"/>
       <iref item="sortingcode element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in sortingcode element"/>
-      <t><!--AG-->
-         <cref anchor="element.sortingcode.attribute.ascii.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--sortingcode/@xml:base-->
-   <section anchor="element.sortingcode.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="sortingcode element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in sortingcode element"/>
-      <t><!--AG-->
-         <cref anchor="element.sortingcode.attribute.xml-base.missing">attribute description missing</cref>
-      </t>
-   </section>
-
-   <!--sortingcode/@xml:lang-->
-   <section anchor="element.sortingcode.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="sortingcode element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in sortingcode element"/>
-      <t><!--AG-->
-         <cref anchor="element.sortingcode.attribute.xml-lang.missing">attribute description missing</cref>
+      <t>
+	      ASCII equivalent for sortingcode.
       </t>
    </section>
 </section>
@@ -8096,7 +8011,6 @@ include "svg.rnc"
     attribute target { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
-    attribute target { text }?,
     reference+
   }
 
@@ -9135,7 +9049,6 @@ to the v3 schema.</t>
 +     attribute target { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID },
-+     attribute target { text }?,
 +     reference+
     }
   seriesInfo =
