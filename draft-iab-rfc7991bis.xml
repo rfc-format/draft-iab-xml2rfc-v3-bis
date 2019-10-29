@@ -4044,7 +4044,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          If set to "false", the formatter is requested to not display a section number. The prep tool will verify that such a
          section is not followed by a numbered section in this part of the document and will verify that the section is a
-         top-level section.
+	 top-level section. Child sections must also be set to "false" if their parent section is set to "false".
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
