@@ -88,7 +88,7 @@ Desired result has single references in back, and choice of references+  or (ref
 <rfc
     obsoletes="7991"
     ipr="trust200902"
-    docName="draft-iab-rfc7991bis"
+    docName="draft-iab-rfc7991bis-00"
     category="info"
     xml:lang="en"
     xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -96,9 +96,9 @@ Desired result has single references in back, and choice of references+  or (ref
 >
 	<front>
   <title>The "xml2rfc" version 3 Vocabulary</title>
-  <author initials="P." surname="Hoffman" fullname="Paul Hoffman" role="editor">
-    <organization>ICANN</organization>
-	<address><email>paul.hoffman@icann.org</email></address>
+  <author initials="H." surname="Flanagan" fullname="Heather Flanagan" role="editor">
+    <organization>RFC Editor</organization>
+	<address><email>rse@rfc-editor.org</email></address>
   </author>
 
   <date/>
@@ -3221,7 +3221,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="refcontent element" subitem="inside reference"/>&lt;<x:ref>refcontent</x:ref>&gt; elements (<xref target="element.refcontent"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="seriesInfo"/>
-               <iref item="seriesInfo element" subitem="inside reference"/>&lt;<x:ref>seriesInfo</x:ref>&gt; elements (<xref target="element.seriesInfo"/>; deprecated in this context)</li>
+               <iref item="seriesInfo element" subitem="inside reference"/>&lt;<x:ref>seriesInfo</x:ref>&gt; elements (<xref target="element.seriesInfo"/>)</li>
          </ul>
       </li>
    </ol>
@@ -4044,7 +4044,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          If set to "false", the formatter is requested to not display a section number. The prep tool will verify that such a
          section is not followed by a numbered section in this part of the document and will verify that the section is a
-	 top-level section. Child sections must also be set to "false" if their parent section is set to "false".
+	 top-level section. Descendant sections of unnumbered sections are unnumbered by definition.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -4134,7 +4134,7 @@ element containing the same "name" value.  Some combinations of &lt;<x:ref>serie
 make no sense, such as having both &lt;seriesInfo name="rfc"/&gt; and &lt;seriesInfo name="Internet-Draft"/&gt;
 in the same &lt;front&gt; element.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>) and &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>; deprecated in this context).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>) and &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.seriesInfo.contents"><!--AG-->
       <xref format="none" target="grammar.seriesInfo">Content model</xref>: this element does not have any contents.</t>
 
@@ -4168,34 +4168,17 @@ in the same &lt;front&gt; element.
       <iref item="seriesInfo element" subitem="name attribute"/>
       <iref item="name attribute" subitem="in seriesInfo element"/>
       <t>
-            The name of the series. The currently known values are "RFC", "Internet-Draft",
-            and "DOI". The RFC Series Editor
-            may change this list in the future.
+	Some series names might trigger specific processing (such as for
+        autogenerating links, inserting descriptions such as "work in
+        progress", or additional functionality like reference diagnostics).
+        Examples for IETF-related series names are "BCP", "FYI",
+        "Internet-Draft", "RFC", and "STD".
       </t>
       <t>
             Some of the values for "name" interact as follows:
       </t>
       <t>
          <list style="symbols">
-            <t>
-         If a &lt;<x:ref>front</x:ref>&gt; element contains a &lt;<x:ref>seriesInfo</x:ref>&gt;
-         element with a name of "Internet-Draft", it can also have at most one additional
-         &lt;<x:ref>seriesInfo</x:ref>&gt; element with a "status" attribute whose value is of
-         "standard", "full-standard", "bcp", "fyi", "informational", "experimental", or
-         "historic" to indicate the intended status of this Internet-Draft, if it were to be later
-         published as an RFC. If such an additional &lt;<x:ref>seriesInfo</x:ref>&gt; element has
-         one of those statuses, the name needs to be "".
-      </t>
-            <t>
-        If a &lt;<x:ref>front</x:ref>&gt; element contains a &lt;<x:ref>seriesInfo</x:ref>&gt;
-        element with a name of "RFC", it can also have at most one additional
-        &lt;<x:ref>seriesInfo</x:ref>&gt; element with a "status" attribute whose value is of "full-standard", "bcp", or "fyi" to indicate
-        the current status of this RFC. If such an additional &lt;<x:ref>seriesInfo</x:ref>&gt;
-        element has one of those statuses, the "value" attribute for that name needs to be the number within
-        that series. That &lt;<x:ref>front</x:ref>&gt; element might also contain an additional
-        &lt;<x:ref>seriesInfo</x:ref>&gt; element with the status of "info", "exp", or "historic" and a name of "" to
-        indicate the status of the RFC.
-      </t>
             <t>
          A &lt;<x:ref>front</x:ref>&gt; element that has a &lt;<x:ref>seriesInfo</x:ref>&gt; element
          that has the name "Internet-Draft" cannot also have a &lt;<x:ref>seriesInfo</x:ref>&gt;
