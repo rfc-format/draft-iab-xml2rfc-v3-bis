@@ -171,20 +171,16 @@ those changes to remain backwards-compatible with the details described in this 
 
 <section title="Design Criteria for the Changes in v3">
 
-<t>The design criteria of the changes from v2 to v3 are as follows:
+<t>The design criteria of the changes from v2 to v3 are as follows:</t>
 
-<list style="symbols">
+<ul>
+<li>The intention is that starting and editing a v3 document will be easier than for a v2 document.</li>
+<li>There will be good v2-to-v3 conversion tools for when an author wants to change versions.</li>
+<li>There are no current plans to make v3 XML the required submission format for drafts or
+RFCs. That might happen eventually, but it is likely to be years away.</li>
+</ul>
 
-<t>The intention is that starting and editing a v3 document will be easier than for a v2 document.</t>
-
-<t>There will be good v2-to-v3 conversion tools for when an author wants to change versions.</t>
-
-<t>There are no current plans to make v3 XML the required submission format for drafts or
-RFCs. That might happen eventually, but it is likely to be years away.</t>
-
-</list>
-
-There is a desire to keep as much of the v2 grammar as makes sense within the above design
+<t>There is a desire to keep as much of the v2 grammar as makes sense within the above design
 criteria and not to make gratuitous changes to the v2 grammar. Another way to say this is
 "we would rather encourage backwards compatibility but not be constrained by it." Still, the
 goal of starting and editing a v3 document being easier than for a v2 document is more
@@ -206,31 +202,29 @@ This is a (hopefully) complete list of all the technical changes between <xref t
 and this document.
 </t>
 
-<t><list style="symbols">
+<ul>
+<li>Changed the text about what this draft obsoletes and updates.</li>
 
-<t>Changed the text about what this draft obsoletes and updates.</t>
+<li>Allow &lt;blockquote&gt; as a child of &lt;li&gt;.</li>
 
-<t>Allow &lt;blockquote&gt; as a child of &lt;li&gt;.</t>
+<li>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
+from <xref target="element.artwork.attribute.src"/>.</li>
 
-<t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
-from <xref target="element.artwork.attribute.src"/>.</t>
+<li>Removed &lt;br&gt; from the vocabulary.</li>
 
-<t>Removed &lt;br&gt; from the vocabulary.</t>
+<li>Changed the "hanging" attribute of &lt;dl&gt; to "newline".</li>
 
-<t>Changed the "hanging" attribute of &lt;dl&gt; to "newline".</t>
+<li>Added the "indent" attribute to &lt;dl&gt;.</li>
 
-<t>Added the "indent" attribute to &lt;dl&gt;.</t>
+<li>Added the "align" attribute to &lt;table&gt;. Made the table title centered under the table.</li>
 
-<t>Added the "align" attribute to &lt;table&gt;. Made the table title centered under the table.</t>
+<li>The &lt;name&gt; element now allows many more elements inside of it.</li>
 
-<t>The &lt;name&gt; element now allows many more elements inside of it.</t>
-
-<t>Redefined &lt;references&gt; to allow &lt;references&gt; within it.
+<li>Redefined &lt;references&gt; to allow &lt;references&gt; within it.
 In the typical case, an outer &lt;references&gt; will be used to hold an
 inner &lt;references&gt; for normative references and an inner &lt;references&gt;
-to hold informative references.</t>
-
-</list></t>
+to hold informative references.</li>
+</ul>
 
 </section>
 
@@ -243,102 +237,102 @@ and this document.
 
 <section title="New Elements in v3">
 
-<t><list style="symbols">
+<ul>
 
-<t>Add &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;, and &lt;<x:ref>ol</x:ref>&gt;
+<li>Add &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;, and &lt;<x:ref>ol</x:ref>&gt;
 as new ways to make lists. This is a significant change from v2 in that the child under
 these elements is &lt;<x:ref>li</x:ref>&gt;, not &lt;<x:ref>t</x:ref>&gt;.
 &lt;<x:ref>li</x:ref>&gt; has a model of either containing one or more
 &lt;<x:ref>t</x:ref>&gt; elements, or containing the flowing text normally found in
 &lt;<x:ref>t</x:ref>&gt;. These lists are children of &lt;<x:ref>section</x:ref>&gt;s
 and other lists
-instead of &lt;<x:ref>t</x:ref>&gt;.</t>
+instead of &lt;<x:ref>t</x:ref>&gt;.</li>
 
-<t>Add &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
-&lt;<x:ref>tt</x:ref>&gt;, &lt;<x:ref>sub</x:ref>&gt;, and &lt;<x:ref>sup</x:ref>&gt; for character formatting.</t>
+<li>Add &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
+&lt;<x:ref>tt</x:ref>&gt;, &lt;<x:ref>sub</x:ref>&gt;, and &lt;<x:ref>sup</x:ref>&gt; for character formatting.</li>
 
-<t>Add &lt;<x:ref>aside</x:ref>&gt; for incidental text that will be indented when displayed.</t>
+<li>Add &lt;<x:ref>aside</x:ref>&gt; for incidental text that will be indented when displayed.</li>
 
-<t>Add &lt;<x:ref>sourcecode</x:ref>&gt; to differentiate from &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Add &lt;<x:ref>sourcecode</x:ref>&gt; to differentiate from &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Add &lt;<x:ref>table</x:ref>&gt;, &lt;<x:ref>thead</x:ref>&gt;, &lt;<x:ref>tbody</x:ref>&gt;, &lt;<x:ref>tfoot</x:ref>&gt;,
+<li>Add &lt;<x:ref>table</x:ref>&gt;, &lt;<x:ref>thead</x:ref>&gt;, &lt;<x:ref>tbody</x:ref>&gt;, &lt;<x:ref>tfoot</x:ref>&gt;,
 &lt;<x:ref>tr</x:ref>&gt;, &lt;<x:ref>td</x:ref>&gt;, and &lt;<x:ref>th</x:ref>&gt;
-to give table functionality like that in HTML.</t>
+to give table functionality like that in HTML.</li>
 
-<t>Add &lt;<x:ref>boilerplate</x:ref>&gt; to hold the automatically generated boilerplate text.</t>
+<li>Add &lt;<x:ref>boilerplate</x:ref>&gt; to hold the automatically generated boilerplate text.</li>
 
-<t>Add &lt;<x:ref>blockquote</x:ref>&gt; to indicate a quotation as in a paragraph-like format.</t>
+<li>Add &lt;<x:ref>blockquote</x:ref>&gt; to indicate a quotation as in a paragraph-like format.</li>
 
-<t>Add &lt;<x:ref>name</x:ref>&gt; to sections, notes, figures, and texttables to allow character formatting
-(fixed-width font) in their titles and to allow references in the names.</t>
+<li>Add &lt;<x:ref>name</x:ref>&gt; to sections, notes, figures, and texttables to allow character formatting
+(fixed-width font) in their titles and to allow references in the names.</li>
 
-<t>Add &lt;<x:ref>postalLine</x:ref>&gt;, free text that represents one line of the address.</t>
+<li>Add &lt;<x:ref>postalLine</x:ref>&gt;, free text that represents one line of the address.</li>
 
-<t>Add &lt;<x:ref>displayreference</x:ref>&gt; to allow display of more mnemonic anchor names
-for automatically included references.</t>
+<li>Add &lt;<x:ref>displayreference</x:ref>&gt; to allow display of more mnemonic anchor names
+for automatically included references.</li>
 
-<t>Add &lt;<x:ref>refcontent</x:ref>&gt; to allow better control of text in a reference.</t>
+<li>Add &lt;<x:ref>refcontent</x:ref>&gt; to allow better control of text in a reference.</li>
 
-<t>Add &lt;<x:ref>referencegroup</x:ref>&gt; to allow referencing multi-RFC documents such
-as STDs and BCPs.</t>
+<li>Add &lt;<x:ref>referencegroup</x:ref>&gt; to allow referencing multi-RFC documents such
+as STDs and BCPs.</li>
 
-<t>Add &lt;<x:ref>relref</x:ref>&gt; to allow referencing specific sections or anchors in references.</t>
+<li>Add &lt;<x:ref>relref</x:ref>&gt; to allow referencing specific sections or anchors in references.</li>
 
-<t>Add &lt;<x:ref>link</x:ref>&gt; to point to a resource related to the RFC.</t>
+<li>Add &lt;<x:ref>link</x:ref>&gt; to point to a resource related to the RFC.</li>
 
-<t>Add &lt;br&gt; to allow line breaks (but not blank lines) in the generated output
-for table cells.</t>
+<li>Add &lt;br&gt; to allow line breaks (but not blank lines) in the generated output
+for table cells.</li>
 
-<t>Add &lt;<x:ref>svg</x:ref>&gt; to allow easy inclusion of SVG drawings in &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Add &lt;<x:ref>svg</x:ref>&gt; to allow easy inclusion of SVG drawings in &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Add &lt;<x:ref>artset</x:ref>&gt; to allow support of alternative artwork formats.</t>
+<li>Add &lt;<x:ref>artset</x:ref>&gt; to allow support of alternative artwork formats.</li>
 
-</list></t>
+</ul>
 
 </section>
 
 <section title="New Attributes for Existing Elements">
 
-<t><list style="symbols">
+<ul>
 
-<t>Add "sortRefs", "symRefs", "tocDepth", and "tocInclude" attributes to &lt;<x:ref>rfc</x:ref>&gt;
+<li>Add "sortRefs", "symRefs", "tocDepth", and "tocInclude" attributes to &lt;<x:ref>rfc</x:ref>&gt;
 to cover Processing Instructions (PIs) that were in v2 that are still needed in the grammar.
 Add "prepTime" to indicate the time that the XML went through a preparation step.
 Add "version" to indicate the version of xml2rfc vocabulary used in the document.
 Add "scripts" to indicate which scripts are needed to render the document.
 Add "expiresDate" when an Internet-Draft expires.
-</t>
+</li>
 
-<t>Add "ascii" attributes to &lt;<x:ref>email</x:ref>&gt;,
+<li>Add "ascii" attributes to &lt;<x:ref>email</x:ref>&gt;,
 &lt;<x:ref>organization</x:ref>&gt;, &lt;<x:ref>street</x:ref>&gt;,
 &lt;<x:ref>city</x:ref>&gt;, &lt;<x:ref>region</x:ref>&gt;, &lt;<x:ref>country</x:ref>&gt;, and &lt;<x:ref>code</x:ref>&gt;.
 Also add "asciiFullname", "asciiInitials", and "asciiSurname" to &lt;<x:ref>author</x:ref>&gt;.
 This allows an author to specify their information in their native scripts as the primary
-entry and still allow the ASCII-equivalent values to appear in the processed documents.</t>
+entry and still allow the ASCII-equivalent values to appear in the processed documents.</li>
 
-<t>Add "anchor" attributes to many block elements to allow them to be linked with
-&lt;<x:ref>relref</x:ref>&gt; and &lt;<x:ref>xref</x:ref>&gt;.</t>
+<li>Add "anchor" attributes to many block elements to allow them to be linked with
+&lt;<x:ref>relref</x:ref>&gt; and &lt;<x:ref>xref</x:ref>&gt;.</li>
 
-<t>Add the "section", "relative", and "sectionFormat" attributes to &lt;<x:ref>xref</x:ref>&gt;.</t>
+<li>Add the "section", "relative", and "sectionFormat" attributes to &lt;<x:ref>xref</x:ref>&gt;.</li>
 
-<t>Add the "numbered" and "removeInRFC" attributes to &lt;<x:ref>section</x:ref>&gt;.</t>
+<li>Add the "numbered" and "removeInRFC" attributes to &lt;<x:ref>section</x:ref>&gt;.</li>
 
-<t>Add the "removeInRFC" attribute to &lt;<x:ref>note</x:ref>&gt;.</t>
+<li>Add the "removeInRFC" attribute to &lt;<x:ref>note</x:ref>&gt;.</li>
 
-<t>Add "pn" to &lt;<x:ref>artwork</x:ref>&gt;,
+<li>Add "pn" to &lt;<x:ref>artwork</x:ref>&gt;,
 &lt;<x:ref>aside</x:ref>&gt;, &lt;<x:ref>blockquote</x:ref>&gt;, &lt;<x:ref>boilerplate</x:ref>&gt;, &lt;<x:ref>dt</x:ref>&gt;,
 &lt;<x:ref>figure</x:ref>&gt;, &lt;<x:ref>iref</x:ref>&gt;, &lt;<x:ref>li</x:ref>&gt;, &lt;<x:ref>references</x:ref>&gt;, &lt;<x:ref>section</x:ref>&gt;,
 &lt;<x:ref>sourcecode</x:ref>&gt;, &lt;<x:ref>t</x:ref>&gt;,
 and &lt;<x:ref>table</x:ref>&gt; to hold automatically generated
-numbers for items in a section that don't have their own numbering (namely figures and tables).</t>
+numbers for items in a section that don't have their own numbering (namely figures and tables).</li>
 
-<t>Add "display" to &lt;<x:ref>cref</x:ref>&gt; to indicate to tools whether or not
-to display the comment.</t>
+<li>Add "display" to &lt;<x:ref>cref</x:ref>&gt; to indicate to tools whether or not
+to display the comment.</li>
 
-<t>Add "keepWithNext" and "keepWithPrevious" to &lt;<x:ref>t</x:ref>&gt; as a hint to tools that
-do pagination that they should try to keep the paragraph with the next/previous element.</t>
+<li>Add "keepWithNext" and "keepWithPrevious" to &lt;<x:ref>t</x:ref>&gt; as a hint to tools that
+do pagination that they should try to keep the paragraph with the next/previous element.</li>
 
-</list></t>
+</ul>
 
 </section>
 
@@ -350,99 +344,99 @@ Deprecated attributes are still listed in <xref target="elements"/>, and depreca
 See <xref target="tools"/> for more information on tools and how they will handle
 deprecated features.</t>
 
-<t><list style="symbols">
+<ul>
 
-<t>Deprecate &lt;<x:ref>list</x:ref>&gt; in favor of &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;,
-and &lt;<x:ref>ol</x:ref>&gt;.</t>
+<li>Deprecate &lt;<x:ref>list</x:ref>&gt; in favor of &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;,
+and &lt;<x:ref>ol</x:ref>&gt;.</li>
 
-<t>Deprecate &lt;<x:ref>spanx</x:ref>&gt;; replace it with &lt;<x:ref>strong</x:ref>&gt;,
+<li>Deprecate &lt;<x:ref>spanx</x:ref>&gt;; replace it with &lt;<x:ref>strong</x:ref>&gt;,
 &lt;<x:ref>em</x:ref>&gt;,
-and &lt;<x:ref>tt</x:ref>&gt;.</t>
+and &lt;<x:ref>tt</x:ref>&gt;.</li>
 
-<t>Deprecate &lt;<x:ref>vspace</x:ref>&gt; because the major use for it,
-creating pseudo-paragraph-breaks in lists, is now handled properly.</t>
+<li>Deprecate &lt;<x:ref>vspace</x:ref>&gt; because the major use for it,
+creating pseudo-paragraph-breaks in lists, is now handled properly.</li>
 
-<t>Deprecate &lt;<x:ref>texttable</x:ref>&gt;, &lt;<x:ref>ttcol</x:ref>&gt;, and &lt;<x:ref>c</x:ref>&gt;;
+<li>Deprecate &lt;<x:ref>texttable</x:ref>&gt;, &lt;<x:ref>ttcol</x:ref>&gt;, and &lt;<x:ref>c</x:ref>&gt;;
 replace them with the new table elements (&lt;<x:ref>table</x:ref>&gt; and the elements that can be
-contained within it).</t>
+contained within it).</li>
 
-<t>Deprecate &lt;<x:ref>facsimile</x:ref>&gt; because it is rarely used.</t>
+<li>Deprecate &lt;<x:ref>facsimile</x:ref>&gt; because it is rarely used.</li>
 
-<t>Deprecate &lt;<x:ref>format</x:ref>&gt; because it is not useful and has caused surprise for authors in the past.
+<li>Deprecate &lt;<x:ref>format</x:ref>&gt; because it is not useful and has caused surprise for authors in the past.
 If the goal is to provide a single URI (Uniform Resource Identifier) for
-a reference, use the "target" attribute in &lt;<x:ref>reference</x:ref>&gt; instead.</t>
+a reference, use the "target" attribute in &lt;<x:ref>reference</x:ref>&gt; instead.</li>
 
-<t>Deprecate &lt;<x:ref>preamble</x:ref>&gt; and &lt;<x:ref>postamble</x:ref>&gt; in favor of 
+<li>Deprecate &lt;<x:ref>preamble</x:ref>&gt; and &lt;<x:ref>postamble</x:ref>&gt; in favor of 
 simply using &lt;<x:ref>t</x:ref>&gt; before or after the figure. This also deprecates the "align" attribute in
-&lt;<x:ref>figure</x:ref>&gt;.</t>
+&lt;<x:ref>figure</x:ref>&gt;.</li>
 
-<t>Deprecate the "title" attribute in &lt;<x:ref>section</x:ref>&gt;,  &lt;<x:ref>note</x:ref>&gt;,
+<li>Deprecate the "title" attribute in &lt;<x:ref>section</x:ref>&gt;,  &lt;<x:ref>note</x:ref>&gt;,
 &lt;<x:ref>figure</x:ref>&gt;, &lt;<x:ref>references</x:ref>&gt;, and 
-&lt;<x:ref>texttable</x:ref>&gt; in favor of the new &lt;<x:ref>name</x:ref>&gt;.</t>
+&lt;<x:ref>texttable</x:ref>&gt; in favor of the new &lt;<x:ref>name</x:ref>&gt;.</li>
 
-<t>Deprecate the "alt" and "src" attributes in &lt;<x:ref>figure</x:ref>&gt;
-because they overlap with the attributes in &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Deprecate the "alt" and "src" attributes in &lt;<x:ref>figure</x:ref>&gt;
+because they overlap with the attributes in &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Deprecate the "xml:space" attribute in &lt;<x:ref>artwork</x:ref>&gt; because there was only one useful value.
+<li>Deprecate the "xml:space" attribute in &lt;<x:ref>artwork</x:ref>&gt; because there was only one useful value.
 Deprecate the "height" and "width" attributes in both &lt;<x:ref>artwork</x:ref>&gt; and &lt;<x:ref>figure</x:ref>&gt;
-because they are not needed for the new output formats.</t>
+because they are not needed for the new output formats.</li>
 
-<t>Deprecate the "pageno" attribute in &lt;<x:ref>xref</x:ref>&gt; because it was unused in v2.
+<li>Deprecate the "pageno" attribute in &lt;<x:ref>xref</x:ref>&gt; because it was unused in v2.
 Deprecate the "none" values for the "format" attribute in &lt;<x:ref>xref</x:ref>&gt;
-because it makes no sense semantically.</t>
+because it makes no sense semantically.</li>
 
-</list></t>
+</ul>
 
 </section>
 
 <section title="Additional Changes from v2">
 
-<t><list style="symbols">
+<ul>
 
-<t>Allow non-ASCII characters in the format; the characters that are actually allowed will
-be determined by the RFC Series Editor.</t>
+<li>Allow non-ASCII characters in the format; the characters that are actually allowed will
+be determined by the RFC Series Editor.</li>
 
-<t>Allow &lt;<x:ref>artwork</x:ref>&gt; and &lt;<x:ref>sourcecode</x:ref>&gt; to be used on
+<li>Allow &lt;<x:ref>artwork</x:ref>&gt; and &lt;<x:ref>sourcecode</x:ref>&gt; to be used on
 their own in &lt;<x:ref>section</x:ref>&gt;
-(no longer confine them to a figure).</t>
+(no longer confine them to a figure).</li>
 
-<t>Give more specifics of handling the "type" attribute in &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Give more specifics of handling the "type" attribute in &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Allow &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
+<li>Allow &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
 &lt;<x:ref>tt</x:ref>&gt;, &lt;<x:ref>eref</x:ref>&gt;, and
-&lt;<x:ref>xref</x:ref>&gt; in &lt;<x:ref>cref</x:ref>&gt;.</t>
+&lt;<x:ref>xref</x:ref>&gt; in &lt;<x:ref>cref</x:ref>&gt;.</li>
 
-<t>Allow the sub-elements inside a &lt;<x:ref>reference</x:ref>&gt; to be in any order.</t>
+<li>Allow the sub-elements inside a &lt;<x:ref>reference</x:ref>&gt; to be in any order.</li>
 
-<t>Turn off the autogeneration of anchors in &lt;<x:ref>cref</x:ref>&gt; because there is
-no use case for them that cannot be achieved in other ways.</t>
+<li>Turn off the autogeneration of anchors in &lt;<x:ref>cref</x:ref>&gt; because there is
+no use case for them that cannot be achieved in other ways.</li>
 
-<t>Allow more than one &lt;<x:ref>artwork</x:ref>&gt;, or more than one
-&lt;<x:ref>sourcecode</x:ref>&gt;, in &lt;<x:ref>figure</x:ref>&gt;.</t>
+<li>Allow more than one &lt;<x:ref>artwork</x:ref>&gt;, or more than one
+&lt;<x:ref>sourcecode</x:ref>&gt;, in &lt;<x:ref>figure</x:ref>&gt;.</li>
 
-<t>In &lt;<x:ref>front</x:ref>&gt;, make &lt;<x:ref>date</x:ref>&gt; optional.</t>
+<li>In &lt;<x:ref>front</x:ref>&gt;, make &lt;<x:ref>date</x:ref>&gt; optional.</li>
 
-<t>In &lt;<x:ref>date</x:ref>&gt;, add restrictions to the "date" and "year" attributes
-when used in the &lt;<x:ref>front</x:ref>&gt; for the document's boilerplate text.</t>
+<li>In &lt;<x:ref>date</x:ref>&gt;, add restrictions to the "date" and "year" attributes
+when used in the &lt;<x:ref>front</x:ref>&gt; for the document's boilerplate text.</li>
 
-<t>In &lt;<x:ref>postal</x:ref>&gt;, allow the sub-elements to be in any order. Also allow the inclusion
-of the new &lt;<x:ref>postalLine</x:ref>&gt; instead of the older elements.</t>
+<li>In &lt;<x:ref>postal</x:ref>&gt;, allow the sub-elements to be in any order. Also allow the inclusion
+of the new &lt;<x:ref>postalLine</x:ref>&gt; instead of the older elements.</li>
 
-<t>In &lt;<x:ref>section</x:ref>&gt;, restrict the names of the anchors that can be used on
-some types of sections.</t>
+<li>In &lt;<x:ref>section</x:ref>&gt;, restrict the names of the anchors that can be used on
+some types of sections.</li>
 
-<t>Make &lt;<x:ref>seriesInfo</x:ref>&gt; a child of &lt;<x:ref>front</x:ref>&gt;,
+<li>Make &lt;<x:ref>seriesInfo</x:ref>&gt; a child of &lt;<x:ref>front</x:ref>&gt;,
 and deprecated it as a child of &lt;<x:ref>reference</x:ref>&gt;. This also
 deprecates some of the attributes from &lt;<x:ref>rfc</x:ref>&gt; and moves
-them into &lt;<x:ref>seriesInfo</x:ref>&gt;.</t>
+them into &lt;<x:ref>seriesInfo</x:ref>&gt;.</li>
 
-<t>&lt;<x:ref>t</x:ref>&gt; now only contains non-block elements, so it no longer contains
-&lt;<x:ref>figure</x:ref>&gt; elements.</t>
+<li>&lt;<x:ref>t</x:ref>&gt; now only contains non-block elements, so it no longer contains
+&lt;<x:ref>figure</x:ref>&gt; elements.</li>
 
-<t>Do not generate the grammar from a DTD, but instead get it directly from the RELAX Next Generation (RNG) grammar
-<xref target="RNG"/>.</t>
+<li>Do not generate the grammar from a DTD, but instead get it directly from the RELAX Next Generation (RNG) grammar
+<xref target="RNG"/>.</li>
 
-</list></t>
+</ul>
 
 </section>
 
