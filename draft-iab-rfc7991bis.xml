@@ -4363,29 +4363,31 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
       <t>
             The preferred values for &lt;sourcecode&gt; types are:
-            <list style="symbols">
-            <t>abnf</t>
-            <t>asn.1</t>
-            <t>bash</t>
-            <t>c++</t>
-            <t>c</t>
-            <t>cbor</t>
-            <t>dtd</t>
-            <t>java</t>
-            <t>javascript</t>
-            <t>json</t>
-            <t>mib</t>
-            <t>perl</t>
-            <t>pseudocode</t>
-            <t>python</t>
-            <t>rnc</t>
-            <t>xml</t>
-            <t>yang</t>
-         </list>
+      </t>
+      <ul>
+            <li>abnf</li>
+            <li>asn.1</li>
+            <li>bash</li>
+            <li>c++</li>
+            <li>c</li>
+            <li>cbor</li>
+            <li>dtd</li>
+            <li>java</li>
+            <li>javascript</li>
+            <li>json</li>
+            <li>mib</li>
+            <li>perl</li>
+            <li>pseudocode</li>
+            <li>python</li>
+            <li>rnc</li>
+            <li>xml</li>
+            <li>yang</li>
+      </ul>
+      <t>
             The RFC Series Editor will maintain a complete list of the preferred values on the RFC Editor
             web site, and that list is expected to be updated over time. Thus, a consumer
             of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified. 
-         </t>
+      </t>
    </section>
 </section>
 
