@@ -6741,43 +6741,40 @@ Note that there is some
 discussion of tools in the main body of the document as well. For example, some elements
 have descriptions of how a processing tool might create output from the element.</t>
 
-<t>The expected design of the tools that will be used with v3 documents includes:
+<t>The expected design of the tools that will be used with v3 documents includes:</t>
 
-
-<list style="symbols">
-
-<x:lt><t>A "prep tool" that takes a v3 document, makes many checks, adds and changes many attribute
-values, and creates a file that is a "prepared document". The prepared document is a valid v3
-document. The prep tool is described in <xref target="RFC7998"/>.</t>
-
-<t>The prep tool is expected to have many modes:
-
-<list>
-
-<t>RFC mode -- The mode used by the RFC Editor to process the input from one of
-the RFC streams and to process XML produced during the RFC editing process.
-The restrictions on the canonical XML for RFCs, as well as how the non-canonical formats
-will look, are described at
-&lt;https://www.rfc-editor.org/rse/wiki/doku.php?id=design:format-and-content-rfcs&gt;.</t>
-
-<t>Draft mode -- The mode used by the Internet-Draft submission tool. The restrictions
-for the XML from this mode will be described later.</t>
-
-<t>Diagnostic mode -- A mode that can be used by document authors to look for errors
-or warnings before they submit their documents for publication.</t>
-
-<t>Consolidation mode -- Produces output where no external resources are required to render the file
-output. This includes expanding the XInclude entities and DTD entities in place, and changing all
-elements that have "src" attributes with external links into either "data:" URI or
-content for the element, as specified in <xref target="RFC7998"/>.</t>
-
-</list></t></x:lt>
-
-<x:lt><t>Formatting tools that will create HTML, PDF, plain text, and possibly other output formats.
-These formatters will be created by the IETF, but others can create such tools as well.
-The IETF tools are expected to take prepared documents as input.</t></x:lt>
-
-</list></t>
+<ul>
+  <li>
+    <t>A "prep tool" that takes a v3 document, makes many checks, adds and changes many attribute
+    values, and creates a file that is a "prepared document". The prepared document is a valid v3
+    document. The prep tool is described in <xref target="RFC7998"/>.</t>
+    
+    <t>The prep tool is expected to have many modes:</t>
+    <ul>
+      <li>RFC mode -- The mode used by the RFC Editor to process the input from one of
+      the RFC streams and to process XML produced during the RFC editing process.
+      The restrictions on the canonical XML for RFCs, as well as how the non-canonical formats
+      will look, are described at
+      &lt;https://www.rfc-editor.org/rse/wiki/doku.php?id=design:format-and-content-rfcs&gt;.</li>
+      
+      <li>Draft mode -- The mode used by the Internet-Draft submission tool. The restrictions
+      for the XML from this mode will be described later.</li>
+      
+      <li>Diagnostic mode -- A mode that can be used by document authors to look for errors
+      or warnings before they submit their documents for publication.</li>
+      
+      <li>Consolidation mode -- Produces output where no external resources are required to render the file
+      output. This includes expanding the XInclude entities and DTD entities in place, and changing all
+      elements that have "src" attributes with external links into either "data:" URI or
+      content for the element, as specified in <xref target="RFC7998"/>.</li>
+    </ul>
+  </li>
+  <li>
+    Formatting tools that will create HTML, PDF, plain text, and possibly other output formats.
+    These formatters will be created by the IETF, but others can create such tools as well.
+    The IETF tools are expected to take prepared documents as input.
+  </li>
+</ul>
 
 <t>There may also be processing tools that are meant to run on the computers of
 authors. These tools may be used to produce interim versions of the non-canonical representations
