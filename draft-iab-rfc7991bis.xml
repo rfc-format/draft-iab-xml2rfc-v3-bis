@@ -4172,22 +4172,20 @@ in the same &lt;front&gt; element.
       <t>
             Some of the values for "name" interact as follows:
       </t>
-      <t>
-         <list style="symbols">
-            <t>
-         A &lt;<x:ref>front</x:ref>&gt; element that has a &lt;<x:ref>seriesInfo</x:ref>&gt; element
-         that has the name "Internet-Draft" cannot also have a &lt;<x:ref>seriesInfo</x:ref>&gt;
-         element that has the name "RFC". 
-      </t>
-            <t>
-         The &lt;<x:ref>seriesInfo</x:ref>&gt; element can contain the DOI for the referenced document.
-         This cannot be used when the &lt;<x:ref>seriesInfo</x:ref>&gt;
-         element is an eventual child element of an &lt;<x:ref>rfc</x:ref>&gt; element --
-         only as an eventual child of a &lt;<x:ref>reference</x:ref>&gt; element.
-         The "value" attribute should use the form specified in <xref target="RFC7669"/>.
-      </t>
-         </list>
-      </t>
+      <ul>
+        <li>
+           A &lt;<x:ref>front</x:ref>&gt; element that has a &lt;<x:ref>seriesInfo</x:ref>&gt; element
+           that has the name "Internet-Draft" cannot also have a &lt;<x:ref>seriesInfo</x:ref>&gt;
+           element that has the name "RFC". 
+        </li>
+        <li>
+           The &lt;<x:ref>seriesInfo</x:ref>&gt; element can contain the DOI for the referenced document.
+           This cannot be used when the &lt;<x:ref>seriesInfo</x:ref>&gt;
+           element is an eventual child element of an &lt;<x:ref>rfc</x:ref>&gt; element --
+           only as an eventual child of a &lt;<x:ref>reference</x:ref>&gt; element.
+           The "value" attribute should use the form specified in <xref target="RFC7669"/>.
+        </li>
+      </ul>
    </section>
 
    <!--seriesInfo/@status-->
