@@ -6690,23 +6690,23 @@ are believed to be the current values in use.</t>
 <t>
   For current documents, setting the "submissionType" attribute will
   have the following effect:
-  <list style="symbols">
-    <t>
-      For RFCs, the stream name appears in the upper left corner of the 
-      first page (in Internet-Drafts, this is either "Network Working Group"
-      or the value of the &lt;<x:ref>workgroup</x:ref>&gt; element).
-    </t>
-    <t>
-      For RFCs, it affects the whole "Status of This Memo" section (see
-      <xref x:sec="3.2" x:fmt="of" target="RFC7841"/>).
-    </t>
-    <t>
-      For all RFCs and Internet-Drafts, it determines whether the "Copyright
-      Notice" section mentions the Copyright on Code Components (see Section 6 of the TLP
-    ("Text to Be Included in IETF Documents")).
-    </t>
-  </list>
 </t>
+<ul>
+  <li>
+    For RFCs, the stream name appears in the upper left corner of the 
+    first page (in Internet-Drafts, this is either "Network Working Group"
+    or the value of the &lt;<x:ref>workgroup</x:ref>&gt; element).
+  </li>
+  <li>
+    For RFCs, it affects the whole "Status of This Memo" section (see
+    <xref x:sec="3.2" x:fmt="of" target="RFC7841"/>).
+  </li>
+  <li>
+    For all RFCs and Internet-Drafts, it determines whether the "Copyright
+    Notice" section mentions the Copyright on Code Components (see Section 6 of the TLP
+    ("Text to Be Included in IETF Documents")).
+  </li>
+</ul>
 </section>
 
 <section title="The &quot;consensus&quot; Attribute" anchor="attribute-consensus">
