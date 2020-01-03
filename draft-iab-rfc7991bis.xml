@@ -2895,17 +2895,25 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         item number as a decimal number.
       </t>
       <t>
-         The following formats are supported:
-         <list style="hanging">
-            <t hangText="%c">Lowercase letters (a, b, c, ...)</t>
-            <t hangText="%C">Uppercase letters (A, B, C, ...)</t>
-            <t hangText="%d">Decimal numbers (1, 2, 3, ...)</t>
-            <t hangText="%i">Lowercase Roman numerals (i, ii, iii, ...)</t>
-            <t hangText="%I">Uppercase Roman numerals (I, II, III, ...)</t>
-            <t hangText="%%">Represents a percent sign</t>
-         </list>
-         Other formats are reserved for future use. Only one percent encoding other than "%%" is allowed in a type string.
-       </t>
+        The following formats are supported:
+      </t>
+      <dl>
+          <dt>%c</dt>
+          <dd>Lowercase letters (a, b, c, ...)</dd>
+          <dt>%C</dt>
+          <dd>Uppercase letters (A, B, C, ...)</dd>
+          <dt>%d</dt>
+          <dd>Decimal numbers (1, 2, 3, ...)</dd>
+          <dt>%i</dt>
+          <dd>Lowercase Roman numerals (i, ii, iii, ...)</dd>
+          <dt>%I</dt>
+          <dd>Uppercase Roman numerals (I, II, III, ...)</dd>
+          <dt>%%</dt>
+          <dd>Represents a percent sign</dd>
+      </dl>
+      <t>
+        Other formats are reserved for future use. Only one percent encoding other than "%%" is allowed in a type string.
+      </t>
       <t>
         It is an error for the type string to be empty.
         For bulleted lists, use the &lt;<x:ref>ul</x:ref>&gt; element.
