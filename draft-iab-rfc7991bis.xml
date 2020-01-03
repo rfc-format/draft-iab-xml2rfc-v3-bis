@@ -2574,30 +2574,30 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       The following are the supported types of external documents that can be pointed to in
       a &lt;link&gt; element:
-         <list style="symbols">
-         <t>
-               The current International Standard Serial Number (ISSN) for the RFC Series.
-               The value for the "rel" attribute is "item".
-               The link should use the form "urn:issn:".
-            </t>
-         <t>
-               The Digital Object Identifier (DOI) for this document.
-               The value for the "rel" attribute is "describedBy".
-               The link should use the form specified in <xref target="RFC7669"/>;
-               this is expected to change in the future.
-            </t>
-         <t>
-               The Internet-Draft that was submitted to the RFC Editor to become the published RFC.
-               The value for the "rel" attribute is "convertedFrom".
-               The link should be to an IETF-controlled web site that retains copies of Internet-Drafts.
-            </t>
-         <t>
-               A representation of the document offered by the document author.
-               The value for the "rel" attribute is "alternate".
-               The link can be to a personally run web site.
-            </t>
-      </list>
    </t>
+   <ul>
+       <li>
+             The current International Standard Serial Number (ISSN) for the RFC Series.
+             The value for the "rel" attribute is "item".
+             The link should use the form "urn:issn:".
+       </li>
+       <li>
+             The Digital Object Identifier (DOI) for this document.
+             The value for the "rel" attribute is "describedBy".
+             The link should use the form specified in <xref target="RFC7669"/>;
+             this is expected to change in the future.
+       </li>
+       <li>
+             The Internet-Draft that was submitted to the RFC Editor to become the published RFC.
+             The value for the "rel" attribute is "convertedFrom".
+             The link should be to an IETF-controlled web site that retains copies of Internet-Drafts.
+       </li>
+       <li>
+             A representation of the document offered by the document author.
+             The value for the "rel" attribute is "alternate".
+             The link can be to a personally run web site.
+       </li>
+   </ul> 
    <t>
         In RFC production mode, the prep tool needs to check the values for &lt;link&gt; before an RFC is published.
         In draft production mode, the prep tool might remove some &lt;link&gt; elements during the draft submission process.
@@ -2869,13 +2869,20 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          The type of the labels on list items. If the length of the type value is 1, the
          meaning is the same as it is for HTML:
-         <list style="hanging">
-            <t hangText="a">Lowercase letters (a, b, c, ...)</t>
-            <t hangText="A">Uppercase letters (A, B, C, ...)</t>
-            <t hangText="1">Decimal numbers (1, 2, 3, ...)</t>
-            <t hangText="i">Lowercase Roman numerals (i, ii, iii, ...)</t>
-            <t hangText="I">Uppercase Roman numerals (I, II, III, ...)</t>
-         </list>
+      </t>
+      <dl>
+          <dt>a</dt>
+          <dd>Lowercase letters (a, b, c, ...)</dd>
+          <dt>A</dt>
+          <dd>Uppercase letters (A, B, C, ...)</dd>
+          <dt>1</dt>
+          <dd>Decimal numbers (1, 2, 3, ...)</dd>
+          <dt>i</dt>
+          <dd>Lowercase Roman numerals (i, ii, iii, ...)</dd>
+          <dt>I</dt>
+          <dd>Uppercase Roman numerals (I, II, III, ...)</dd>
+      </dl>
+      <t>
          For types "a" and "A", after the 26th entry, the numbering starts at "aa"/"AA", then
          "ab"/"AB", and so on.
       </t>
