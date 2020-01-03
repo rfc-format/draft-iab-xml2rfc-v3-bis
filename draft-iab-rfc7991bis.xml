@@ -5438,90 +5438,72 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This attribute signals to formatters what the desired format of the reference should be.
         Formatters for document types that have linking capability should wrap the displayed text in hyperlinks.
       </t>
-      <t>
-         <iref item="xref formats" subitem="counter" primary="true"/>
-        "counter"
-        <list style="empty">
-            <t>
+      <dl newline="true">
+        <dt><iref item="xref formats" subitem="counter" primary="true"/>"counter"</dt>
+        <dd>
+          <t>
             The "derivedContent" attribute will contain just a counter.
             This is used for targets that are
             &lt;<x:ref>section</x:ref>&gt;, &lt;<x:ref>figure</x:ref>&gt;, &lt;<x:ref>table</x:ref>&gt;, or items in an ordered list.
             Using "format='counter'" where the target is any other type of element is an error.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
       . . .
       See Section &lt;xref target="overview" format="counter"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-            </t>
-            <t>
-              See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
-            </t>
-         </list>
-      </t>
-      <t>
-         <iref item="xref formats" subitem="default" primary="true"/>
-        "default"
-        <list style="empty">
-            <t>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <t>
+            See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
+          </t>
+        </dd>
+        <dt><iref item="xref formats" subitem="default" primary="true"/>"default"</dt>
+        <dd>
+          <t>
             If the element has no content, the "derivedContent" attribute will contain a text fragment that describes the referenced part 
             completely, such as "XML" for a target that is a &lt;<x:ref>reference</x:ref>&gt;,
             or "Section 2" or "Table 4" for a target to a non-reference.
             (If the element has content, the "derivedContent" attribute is filled with the content.)
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
       . . .
       See &lt;xref target="overview"/&gt; for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-            </t>
-            <t>
-              See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
-            </t>
-         </list>
-      </t>
-      <t>
-         <iref item="xref formats" subitem="none" primary="true"/>
-        "none"
-        <list style="empty">
-            <t>
-            Deprecated.
+          <t>
+             An HTML formatter might generate:
           </t>
-         </list>
-      </t>
-      <t>
-         <iref item="xref formats" subitem="title" primary="true"/>
-        "title"
-        <list style="empty">
-            <t>
-            If the target is a &lt;<x:ref>reference</x:ref>&gt; element, the "derivedContent" attribute will contain the name of
-            the reference, extracted from the &lt;<x:ref>title</x:ref>&gt; child of the
-            &lt;<x:ref>front</x:ref>&gt; child of the reference.
-            Or, if the target element has a &lt;<x:ref>name</x:ref>&gt; child element, the "derivedContent" attribute will contain the
-            text content of that &lt;<x:ref>name</x:ref>&gt; element concatenated with the text content of
-            each descendant node of &lt;<x:ref>name</x:ref>&gt; (that is, stripping out all of the
-            XML markup, leaving only the text).
-            Or, if the target element does not contain a &lt;<x:ref>name</x:ref>&gt; child element,
-            the "derivedContent" attribute will contain the name of the "anchor" attribute of that element
-            with no other adornment.
+          <t>
+            See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
           </t>
-         </list>
-      </t>
+        </dd>
+        <dt><iref item="xref formats" subitem="none" primary="true"/>"none"</dt>
+        <dd>
+          Deprecated.
+        </dd>
+        <dt><iref item="xref formats" subitem="title" primary="true"/>"title"</dt>
+        <dd>
+          If the target is a &lt;<x:ref>reference</x:ref>&gt; element, the "derivedContent" attribute will contain the name of
+          the reference, extracted from the &lt;<x:ref>title</x:ref>&gt; child of the
+          &lt;<x:ref>front</x:ref>&gt; child of the reference.
+          Or, if the target element has a &lt;<x:ref>name</x:ref>&gt; child element, the "derivedContent" attribute will contain the
+          text content of that &lt;<x:ref>name</x:ref>&gt; element concatenated with the text content of
+          each descendant node of &lt;<x:ref>name</x:ref>&gt; (that is, stripping out all of the
+          XML markup, leaving only the text).
+          Or, if the target element does not contain a &lt;<x:ref>name</x:ref>&gt; child element,
+          the "derivedContent" attribute will contain the name of the "anchor" attribute of that element
+          with no other adornment.
+        </dd>
+      </dl>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"default" (default)</li>
