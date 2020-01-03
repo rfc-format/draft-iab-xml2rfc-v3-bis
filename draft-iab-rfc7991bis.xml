@@ -6932,49 +6932,48 @@ prep tool; however, any of these attributes might be added, removed, or changed 
 prep tool. Thus, it is explicitly unsafe for a document author to include these attributes
 and expect that their values will survive processing by the prep tool.</t>
 
-<t>The attributes that are controlled by the prep tool are:
-<list style="symbols">
-
-<t>The "pn" attribute in any element -- The number for this item within the section.  The numbering
+<t>The attributes that are controlled by the prep tool are:</t>
+<ul>
+<li>The "pn" attribute in any element -- The number for this item within the section.  The numbering
 is shared with other elements of a section. The "pn" attribute is added to many block-level elements
-inside sections.</t>
+inside sections.</li>
 
-<t>&lt;artwork&gt; originalSrc -- This attribute is filled with the original value of the "src"
-attribute if that attribute is removed by the prep tool.</t>
+<li>&lt;artwork&gt; originalSrc -- This attribute is filled with the original value of the "src"
+attribute if that attribute is removed by the prep tool.</li>
 
-<t>&lt;figure&gt; originalSrc -- This attribute is filled with the original value of the "src"
-attribute if that attribute is removed by the prep tool.</t>
+<li>&lt;figure&gt; originalSrc -- This attribute is filled with the original value of the "src"
+attribute if that attribute is removed by the prep tool.</li>
 
-<t>&lt;name&gt; "slugifiedName" attribute -- This attribute is filled with a "slugified" version of
+<li>&lt;name&gt; "slugifiedName" attribute -- This attribute is filled with a "slugified" version of
 the text in the element.  This attribute can be used in the output formats for elements that have
-both names and numbers.</t>
+both names and numbers.</li>
 
-<t>&lt;relref&gt; "derivedLink" attribute -- This attribute is filled with the link that is derived
+<li>&lt;relref&gt; "derivedLink" attribute -- This attribute is filled with the link that is derived
 from combining the URI from the reference and the relative part that is either a copy of the
-"relative" attribute or a section number derived from the "section" attribute.</t>
+"relative" attribute or a section number derived from the "section" attribute.</li>
 
-<t>&lt;rfc&gt; "expiresDate" attribute -- This attribute is filled with the date that an Internet-Draft
-expires. The date is in the format yyyy-mm-dd.</t>
+<li>&lt;rfc&gt; "expiresDate" attribute -- This attribute is filled with the date that an Internet-Draft
+expires. The date is in the format yyyy-mm-dd.</li>
 
-<t>&lt;rfc&gt; "mode" attribute -- This attribute is filled with a string that indicates what
+<li>&lt;rfc&gt; "mode" attribute -- This attribute is filled with a string that indicates what
 mode the prep tool was in when it processed the XML, such as whether it was processing a file
-to become an Internet-Draft or an RFC.</t>
+to become an Internet-Draft or an RFC.</li>
 
-<t>&lt;rfc&gt; "scripts" attribute -- This attribute is filled with a list of scripts needed to
+<li>&lt;rfc&gt; "scripts" attribute -- This attribute is filled with a list of scripts needed to
 render this document.  The list is comma-separated, with no spaces allowed.  The order is
 unimportant.  The names come from <xref target="UAX24"/>.  For example, if the document has Chinese
-characters in it, the value might be "Common,Latin,Han". </t>
+characters in it, the value might be "Common,Latin,Han". </li>
 
-<t>&lt;sourcecode&gt; "originalSrc" attribute -- This attribute is filled with the original value of
-the "src" attribute if that attribute is removed by the prep tool.</t>
+<li>&lt;sourcecode&gt; "originalSrc" attribute -- This attribute is filled with the original value of
+the "src" attribute if that attribute is removed by the prep tool.</li>
 
-<t>&lt;xref&gt; "derivedContent" attribute -- This attribute is filled in if there is no content in
+<li>&lt;xref&gt; "derivedContent" attribute -- This attribute is filled in if there is no content in
 the &lt;xref&gt; element.  The value for this attribute is based on the value in the "displayFormat"
 attribute.
 Examples of how this value is filled can be found in <xref target="element.xref.attribute.format"/>.
-</t>
+</li>
+</ul>
 
-</list></t>
 
 <t>In addition, note that the contents of the &lt;boilerplate&gt; element
 are controlled by the prep tool.</t>
