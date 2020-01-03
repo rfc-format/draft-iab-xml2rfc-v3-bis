@@ -3497,125 +3497,105 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Formatters for document types that have linking capability should wrap each part of the displayed text in hyperlinks.
         If there is content in the &lt;relref&gt; element, formatters will ignore the value of this attribute.
       </t>
-      <t>
-        "of"
-        <list style="empty">
-            <t>
+      <dl newline="true">
+        <dt>"of"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the word "Section" followed by a space, the contents of the "section" attribute
             followed by a space, the word "of", another space, and the value from the "target" attribute enclosed in square brackets.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See
       &lt;relref section="2.3" target="RFC9999" displayFormat="of"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+            An HTML formatter might generate:
+          </t>
+          <artwork>
       See
       &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
       Section 2.3&lt;/a&gt; of
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
+          <t>
             Note that "displayFormat='of'" is the default for &lt;relref&gt;, so it does not need to be given in
             a &lt;relref&gt; element if that format is desired.
-            </t>
-         </list>
-      </t>
-      <t>
-        "comma"
-        <list style="empty">
-            <t>
+          </t>       
+        </dd>
+        <dt>"comma"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
             a comma, a space, the word "Section" followed by a space, and the "section" attribute.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See
       &lt;relref section="2.3" target="RFC9999" displayFormat="comma"/&gt;,
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <artwork>
       See
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;], 
       &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
       Section 2.3&lt;/a&gt;, for an overview.
 </artwork>
-               </figure>
-            </t>
-         </list>
-      </t>
-      <t>
-        "parens"
-        <list style="empty">
-            <t>
+        </dd>
+        <dt>"parens"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
             a space, a left parenthesis, the word "Section" followed by a space, the "section" attribute, and a right parenthesis.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See
       &lt;relref section="2.3" target="RFC9999" displayFormat="parens"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <artwork>
       See
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
       (&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt; 
       Section 2.3&lt;/a&gt;)
       for an overview.
 </artwork>
-               </figure>
-            </t>
-         </list>
-      </t>
-      <t>
-        "bare"
-        <list style="empty">
-            <t>
+        </dd>
+        <dt>"bare"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the contents of the "section" attribute
             and nothing else. This is useful when there are multiple relative references to a single base reference.
-            </t>
-            <t>
+          </t>
+          <t>
             For example:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See Sections
       &lt;relref section="2.3" target="RFC9999" displayFormat="bare"/&gt;
       and
       &lt;relref section="2.4" target="RFC9999" displayFormat="of"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <artwork>
       See Sections
       &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
       2.3&lt;/a&gt;
@@ -3625,10 +3605,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
       for an overview.
 </artwork>
-               </figure>
-            </t>
-         </list>
-      </t>
+        </dd>
+      </dl>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"of" (default)</li>
