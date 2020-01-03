@@ -6718,19 +6718,19 @@ are believed to be the current values in use.</t>
 <t>
   The consensus attribute
   can be used to supply this information. The acceptable values are "true" (the default) and "false";
-"yes" and "no" from v2 are deprecated.
+  "yes" and "no" from v2 are deprecated.
 </t>
 <t>
-The effect of this value for the various streams is:
-  <list style="symbols">
-    <t>"independent": none.</t>
-    <t>"IAB": mention that there was an IAB consensus.</t>
-    <t>"IETF": mention that there was an IETF consensus.</t>
-    <t>"IRTF": mention that there was a research group consensus (where
-      the name of the research group is extracted from the &lt;<x:ref>workgroup</x:ref>&gt;
-      element).</t>
-  </list>
+  The effect of this value for the various streams is:
 </t>
+<ul>
+  <li>"independent": none.</li>
+  <li>"IAB": mention that there was an IAB consensus.</li>
+  <li>"IETF": mention that there was an IETF consensus.</li>
+  <li>"IRTF": mention that there was a research group consensus (where
+    the name of the research group is extracted from the &lt;<x:ref>workgroup</x:ref>&gt;
+    element).</li>
+</ul>
 </section>
 
 </section>
