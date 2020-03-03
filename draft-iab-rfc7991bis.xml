@@ -171,20 +171,16 @@ those changes to remain backwards-compatible with the details described in this 
 
 <section title="Design Criteria for the Changes in v3">
 
-<t>The design criteria of the changes from v2 to v3 are as follows:
+<t>The design criteria of the changes from v2 to v3 are as follows:</t>
 
-<list style="symbols">
+<ul>
+<li>The intention is that starting and editing a v3 document will be easier than for a v2 document.</li>
+<li>There will be good v2-to-v3 conversion tools for when an author wants to change versions.</li>
+<li>There are no current plans to make v3 XML the required submission format for drafts or
+RFCs. That might happen eventually, but it is likely to be years away.</li>
+</ul>
 
-<t>The intention is that starting and editing a v3 document will be easier than for a v2 document.</t>
-
-<t>There will be good v2-to-v3 conversion tools for when an author wants to change versions.</t>
-
-<t>There are no current plans to make v3 XML the required submission format for drafts or
-RFCs. That might happen eventually, but it is likely to be years away.</t>
-
-</list>
-
-There is a desire to keep as much of the v2 grammar as makes sense within the above design
+<t>There is a desire to keep as much of the v2 grammar as makes sense within the above design
 criteria and not to make gratuitous changes to the v2 grammar. Another way to say this is
 "we would rather encourage backwards compatibility but not be constrained by it." Still, the
 goal of starting and editing a v3 document being easier than for a v2 document is more
@@ -206,31 +202,29 @@ This is a (hopefully) complete list of all the technical changes between <xref t
 and this document.
 </t>
 
-<t><list style="symbols">
+<ul>
+<li>Changed the text about what this draft obsoletes and updates.</li>
 
-<t>Changed the text about what this draft obsoletes and updates.</t>
+<li>Allow &lt;blockquote&gt; as a child of &lt;li&gt;.</li>
 
-<t>Allow &lt;blockquote&gt; as a child of &lt;li&gt;.</t>
+<li>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
+from <xref target="element.artwork.attribute.src"/>.</li>
 
-<t>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
-from <xref target="element.artwork.attribute.src"/>.</t>
+<li>Removed &lt;br&gt; from the vocabulary.</li>
 
-<t>Removed &lt;br&gt; from the vocabulary.</t>
+<li>Changed the "hanging" attribute of &lt;dl&gt; to "newline".</li>
 
-<t>Changed the "hanging" attribute of &lt;dl&gt; to "newline".</t>
+<li>Added the "indent" attribute to &lt;dl&gt;.</li>
 
-<t>Added the "indent" attribute to &lt;dl&gt;.</t>
+<li>Added the "align" attribute to &lt;table&gt;. Made the table title centered under the table.</li>
 
-<t>Added the "align" attribute to &lt;table&gt;. Made the table title centered under the table.</t>
+<li>The &lt;name&gt; element now allows many more elements inside of it.</li>
 
-<t>The &lt;name&gt; element now allows many more elements inside of it.</t>
-
-<t>Redefined &lt;references&gt; to allow &lt;references&gt; within it.
+<li>Redefined &lt;references&gt; to allow &lt;references&gt; within it.
 In the typical case, an outer &lt;references&gt; will be used to hold an
 inner &lt;references&gt; for normative references and an inner &lt;references&gt;
-to hold informative references.</t>
-
-</list></t>
+to hold informative references.</li>
+</ul>
 
 </section>
 
@@ -243,102 +237,102 @@ and this document.
 
 <section title="New Elements in v3">
 
-<t><list style="symbols">
+<ul>
 
-<t>Add &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;, and &lt;<x:ref>ol</x:ref>&gt;
+<li>Add &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;, and &lt;<x:ref>ol</x:ref>&gt;
 as new ways to make lists. This is a significant change from v2 in that the child under
 these elements is &lt;<x:ref>li</x:ref>&gt;, not &lt;<x:ref>t</x:ref>&gt;.
 &lt;<x:ref>li</x:ref>&gt; has a model of either containing one or more
 &lt;<x:ref>t</x:ref>&gt; elements, or containing the flowing text normally found in
 &lt;<x:ref>t</x:ref>&gt;. These lists are children of &lt;<x:ref>section</x:ref>&gt;s
 and other lists
-instead of &lt;<x:ref>t</x:ref>&gt;.</t>
+instead of &lt;<x:ref>t</x:ref>&gt;.</li>
 
-<t>Add &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
-&lt;<x:ref>tt</x:ref>&gt;, &lt;<x:ref>sub</x:ref>&gt;, and &lt;<x:ref>sup</x:ref>&gt; for character formatting.</t>
+<li>Add &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
+&lt;<x:ref>tt</x:ref>&gt;, &lt;<x:ref>sub</x:ref>&gt;, and &lt;<x:ref>sup</x:ref>&gt; for character formatting.</li>
 
-<t>Add &lt;<x:ref>aside</x:ref>&gt; for incidental text that will be indented when displayed.</t>
+<li>Add &lt;<x:ref>aside</x:ref>&gt; for incidental text that will be indented when displayed.</li>
 
-<t>Add &lt;<x:ref>sourcecode</x:ref>&gt; to differentiate from &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Add &lt;<x:ref>sourcecode</x:ref>&gt; to differentiate from &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Add &lt;<x:ref>table</x:ref>&gt;, &lt;<x:ref>thead</x:ref>&gt;, &lt;<x:ref>tbody</x:ref>&gt;, &lt;<x:ref>tfoot</x:ref>&gt;,
+<li>Add &lt;<x:ref>table</x:ref>&gt;, &lt;<x:ref>thead</x:ref>&gt;, &lt;<x:ref>tbody</x:ref>&gt;, &lt;<x:ref>tfoot</x:ref>&gt;,
 &lt;<x:ref>tr</x:ref>&gt;, &lt;<x:ref>td</x:ref>&gt;, and &lt;<x:ref>th</x:ref>&gt;
-to give table functionality like that in HTML.</t>
+to give table functionality like that in HTML.</li>
 
-<t>Add &lt;<x:ref>boilerplate</x:ref>&gt; to hold the automatically generated boilerplate text.</t>
+<li>Add &lt;<x:ref>boilerplate</x:ref>&gt; to hold the automatically generated boilerplate text.</li>
 
-<t>Add &lt;<x:ref>blockquote</x:ref>&gt; to indicate a quotation as in a paragraph-like format.</t>
+<li>Add &lt;<x:ref>blockquote</x:ref>&gt; to indicate a quotation as in a paragraph-like format.</li>
 
-<t>Add &lt;<x:ref>name</x:ref>&gt; to sections, notes, figures, and texttables to allow character formatting
-(fixed-width font) in their titles and to allow references in the names.</t>
+<li>Add &lt;<x:ref>name</x:ref>&gt; to sections, notes, figures, and texttables to allow character formatting
+(fixed-width font) in their titles and to allow references in the names.</li>
 
-<t>Add &lt;<x:ref>postalLine</x:ref>&gt;, free text that represents one line of the address.</t>
+<li>Add &lt;<x:ref>postalLine</x:ref>&gt;, free text that represents one line of the address.</li>
 
-<t>Add &lt;<x:ref>displayreference</x:ref>&gt; to allow display of more mnemonic anchor names
-for automatically included references.</t>
+<li>Add &lt;<x:ref>displayreference</x:ref>&gt; to allow display of more mnemonic anchor names
+for automatically included references.</li>
 
-<t>Add &lt;<x:ref>refcontent</x:ref>&gt; to allow better control of text in a reference.</t>
+<li>Add &lt;<x:ref>refcontent</x:ref>&gt; to allow better control of text in a reference.</li>
 
-<t>Add &lt;<x:ref>referencegroup</x:ref>&gt; to allow referencing multi-RFC documents such
-as STDs and BCPs.</t>
+<li>Add &lt;<x:ref>referencegroup</x:ref>&gt; to allow referencing multi-RFC documents such
+as STDs and BCPs.</li>
 
-<t>Add &lt;<x:ref>relref</x:ref>&gt; to allow referencing specific sections or anchors in references.</t>
+<li>Add &lt;<x:ref>relref</x:ref>&gt; to allow referencing specific sections or anchors in references.</li>
 
-<t>Add &lt;<x:ref>link</x:ref>&gt; to point to a resource related to the RFC.</t>
+<li>Add &lt;<x:ref>link</x:ref>&gt; to point to a resource related to the RFC.</li>
 
-<t>Add &lt;br&gt; to allow line breaks (but not blank lines) in the generated output
-for table cells.</t>
+<li>Add &lt;br&gt; to allow line breaks (but not blank lines) in the generated output
+for table cells.</li>
 
-<t>Add &lt;<x:ref>svg</x:ref>&gt; to allow easy inclusion of SVG drawings in &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Add &lt;<x:ref>svg</x:ref>&gt; to allow easy inclusion of SVG drawings in &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Add &lt;<x:ref>artset</x:ref>&gt; to allow support of alternative artwork formats.</t>
+<li>Add &lt;<x:ref>artset</x:ref>&gt; to allow support of alternative artwork formats.</li>
 
-</list></t>
+</ul>
 
 </section>
 
 <section title="New Attributes for Existing Elements">
 
-<t><list style="symbols">
+<ul>
 
-<t>Add "sortRefs", "symRefs", "tocDepth", and "tocInclude" attributes to &lt;<x:ref>rfc</x:ref>&gt;
+<li>Add "sortRefs", "symRefs", "tocDepth", and "tocInclude" attributes to &lt;<x:ref>rfc</x:ref>&gt;
 to cover Processing Instructions (PIs) that were in v2 that are still needed in the grammar.
 Add "prepTime" to indicate the time that the XML went through a preparation step.
 Add "version" to indicate the version of xml2rfc vocabulary used in the document.
 Add "scripts" to indicate which scripts are needed to render the document.
 Add "expiresDate" when an Internet-Draft expires.
-</t>
+</li>
 
-<t>Add "ascii" attributes to &lt;<x:ref>email</x:ref>&gt;,
+<li>Add "ascii" attributes to &lt;<x:ref>email</x:ref>&gt;,
 &lt;<x:ref>organization</x:ref>&gt;, &lt;<x:ref>street</x:ref>&gt;,
 &lt;<x:ref>city</x:ref>&gt;, &lt;<x:ref>region</x:ref>&gt;, &lt;<x:ref>country</x:ref>&gt;, and &lt;<x:ref>code</x:ref>&gt;.
 Also add "asciiFullname", "asciiInitials", and "asciiSurname" to &lt;<x:ref>author</x:ref>&gt;.
 This allows an author to specify their information in their native scripts as the primary
-entry and still allow the ASCII-equivalent values to appear in the processed documents.</t>
+entry and still allow the ASCII-equivalent values to appear in the processed documents.</li>
 
-<t>Add "anchor" attributes to many block elements to allow them to be linked with
-&lt;<x:ref>relref</x:ref>&gt; and &lt;<x:ref>xref</x:ref>&gt;.</t>
+<li>Add "anchor" attributes to many block elements to allow them to be linked with
+&lt;<x:ref>relref</x:ref>&gt; and &lt;<x:ref>xref</x:ref>&gt;.</li>
 
-<t>Add the "section", "relative", and "sectionFormat" attributes to &lt;<x:ref>xref</x:ref>&gt;.</t>
+<li>Add the "section", "relative", and "sectionFormat" attributes to &lt;<x:ref>xref</x:ref>&gt;.</li>
 
-<t>Add the "numbered" and "removeInRFC" attributes to &lt;<x:ref>section</x:ref>&gt;.</t>
+<li>Add the "numbered" and "removeInRFC" attributes to &lt;<x:ref>section</x:ref>&gt;.</li>
 
-<t>Add the "removeInRFC" attribute to &lt;<x:ref>note</x:ref>&gt;.</t>
+<li>Add the "removeInRFC" attribute to &lt;<x:ref>note</x:ref>&gt;.</li>
 
-<t>Add "pn" to &lt;<x:ref>artwork</x:ref>&gt;,
+<li>Add "pn" to &lt;<x:ref>artwork</x:ref>&gt;,
 &lt;<x:ref>aside</x:ref>&gt;, &lt;<x:ref>blockquote</x:ref>&gt;, &lt;<x:ref>boilerplate</x:ref>&gt;, &lt;<x:ref>dt</x:ref>&gt;,
 &lt;<x:ref>figure</x:ref>&gt;, &lt;<x:ref>iref</x:ref>&gt;, &lt;<x:ref>li</x:ref>&gt;, &lt;<x:ref>references</x:ref>&gt;, &lt;<x:ref>section</x:ref>&gt;,
 &lt;<x:ref>sourcecode</x:ref>&gt;, &lt;<x:ref>t</x:ref>&gt;,
 and &lt;<x:ref>table</x:ref>&gt; to hold automatically generated
-numbers for items in a section that don't have their own numbering (namely figures and tables).</t>
+numbers for items in a section that don't have their own numbering (namely figures and tables).</li>
 
-<t>Add "display" to &lt;<x:ref>cref</x:ref>&gt; to indicate to tools whether or not
-to display the comment.</t>
+<li>Add "display" to &lt;<x:ref>cref</x:ref>&gt; to indicate to tools whether or not
+to display the comment.</li>
 
-<t>Add "keepWithNext" and "keepWithPrevious" to &lt;<x:ref>t</x:ref>&gt; as a hint to tools that
-do pagination that they should try to keep the paragraph with the next/previous element.</t>
+<li>Add "keepWithNext" and "keepWithPrevious" to &lt;<x:ref>t</x:ref>&gt; as a hint to tools that
+do pagination that they should try to keep the paragraph with the next/previous element.</li>
 
-</list></t>
+</ul>
 
 </section>
 
@@ -350,99 +344,99 @@ Deprecated attributes are still listed in <xref target="elements"/>, and depreca
 See <xref target="tools"/> for more information on tools and how they will handle
 deprecated features.</t>
 
-<t><list style="symbols">
+<ul>
 
-<t>Deprecate &lt;<x:ref>list</x:ref>&gt; in favor of &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;,
-and &lt;<x:ref>ol</x:ref>&gt;.</t>
+<li>Deprecate &lt;<x:ref>list</x:ref>&gt; in favor of &lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>ul</x:ref>&gt;,
+and &lt;<x:ref>ol</x:ref>&gt;.</li>
 
-<t>Deprecate &lt;<x:ref>spanx</x:ref>&gt;; replace it with &lt;<x:ref>strong</x:ref>&gt;,
+<li>Deprecate &lt;<x:ref>spanx</x:ref>&gt;; replace it with &lt;<x:ref>strong</x:ref>&gt;,
 &lt;<x:ref>em</x:ref>&gt;,
-and &lt;<x:ref>tt</x:ref>&gt;.</t>
+and &lt;<x:ref>tt</x:ref>&gt;.</li>
 
-<t>Deprecate &lt;<x:ref>vspace</x:ref>&gt; because the major use for it,
-creating pseudo-paragraph-breaks in lists, is now handled properly.</t>
+<li>Deprecate &lt;<x:ref>vspace</x:ref>&gt; because the major use for it,
+creating pseudo-paragraph-breaks in lists, is now handled properly.</li>
 
-<t>Deprecate &lt;<x:ref>texttable</x:ref>&gt;, &lt;<x:ref>ttcol</x:ref>&gt;, and &lt;<x:ref>c</x:ref>&gt;;
+<li>Deprecate &lt;<x:ref>texttable</x:ref>&gt;, &lt;<x:ref>ttcol</x:ref>&gt;, and &lt;<x:ref>c</x:ref>&gt;;
 replace them with the new table elements (&lt;<x:ref>table</x:ref>&gt; and the elements that can be
-contained within it).</t>
+contained within it).</li>
 
-<t>Deprecate &lt;<x:ref>facsimile</x:ref>&gt; because it is rarely used.</t>
+<li>Deprecate &lt;<x:ref>facsimile</x:ref>&gt; because it is rarely used.</li>
 
-<t>Deprecate &lt;<x:ref>format</x:ref>&gt; because it is not useful and has caused surprise for authors in the past.
+<li>Deprecate &lt;<x:ref>format</x:ref>&gt; because it is not useful and has caused surprise for authors in the past.
 If the goal is to provide a single URI (Uniform Resource Identifier) for
-a reference, use the "target" attribute in &lt;<x:ref>reference</x:ref>&gt; instead.</t>
+a reference, use the "target" attribute in &lt;<x:ref>reference</x:ref>&gt; instead.</li>
 
-<t>Deprecate &lt;<x:ref>preamble</x:ref>&gt; and &lt;<x:ref>postamble</x:ref>&gt; in favor of 
+<li>Deprecate &lt;<x:ref>preamble</x:ref>&gt; and &lt;<x:ref>postamble</x:ref>&gt; in favor of 
 simply using &lt;<x:ref>t</x:ref>&gt; before or after the figure. This also deprecates the "align" attribute in
-&lt;<x:ref>figure</x:ref>&gt;.</t>
+&lt;<x:ref>figure</x:ref>&gt;.</li>
 
-<t>Deprecate the "title" attribute in &lt;<x:ref>section</x:ref>&gt;,  &lt;<x:ref>note</x:ref>&gt;,
+<li>Deprecate the "title" attribute in &lt;<x:ref>section</x:ref>&gt;,  &lt;<x:ref>note</x:ref>&gt;,
 &lt;<x:ref>figure</x:ref>&gt;, &lt;<x:ref>references</x:ref>&gt;, and 
-&lt;<x:ref>texttable</x:ref>&gt; in favor of the new &lt;<x:ref>name</x:ref>&gt;.</t>
+&lt;<x:ref>texttable</x:ref>&gt; in favor of the new &lt;<x:ref>name</x:ref>&gt;.</li>
 
-<t>Deprecate the "alt" and "src" attributes in &lt;<x:ref>figure</x:ref>&gt;
-because they overlap with the attributes in &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Deprecate the "alt" and "src" attributes in &lt;<x:ref>figure</x:ref>&gt;
+because they overlap with the attributes in &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Deprecate the "xml:space" attribute in &lt;<x:ref>artwork</x:ref>&gt; because there was only one useful value.
+<li>Deprecate the "xml:space" attribute in &lt;<x:ref>artwork</x:ref>&gt; because there was only one useful value.
 Deprecate the "height" and "width" attributes in both &lt;<x:ref>artwork</x:ref>&gt; and &lt;<x:ref>figure</x:ref>&gt;
-because they are not needed for the new output formats.</t>
+because they are not needed for the new output formats.</li>
 
-<t>Deprecate the "pageno" attribute in &lt;<x:ref>xref</x:ref>&gt; because it was unused in v2.
+<li>Deprecate the "pageno" attribute in &lt;<x:ref>xref</x:ref>&gt; because it was unused in v2.
 Deprecate the "none" values for the "format" attribute in &lt;<x:ref>xref</x:ref>&gt;
-because it makes no sense semantically.</t>
+because it makes no sense semantically.</li>
 
-</list></t>
+</ul>
 
 </section>
 
 <section title="Additional Changes from v2">
 
-<t><list style="symbols">
+<ul>
 
-<t>Allow non-ASCII characters in the format; the characters that are actually allowed will
-be determined by the RFC Series Editor.</t>
+<li>Allow non-ASCII characters in the format; the characters that are actually allowed will
+be determined by the RFC Series Editor.</li>
 
-<t>Allow &lt;<x:ref>artwork</x:ref>&gt; and &lt;<x:ref>sourcecode</x:ref>&gt; to be used on
+<li>Allow &lt;<x:ref>artwork</x:ref>&gt; and &lt;<x:ref>sourcecode</x:ref>&gt; to be used on
 their own in &lt;<x:ref>section</x:ref>&gt;
-(no longer confine them to a figure).</t>
+(no longer confine them to a figure).</li>
 
-<t>Give more specifics of handling the "type" attribute in &lt;<x:ref>artwork</x:ref>&gt;.</t>
+<li>Give more specifics of handling the "type" attribute in &lt;<x:ref>artwork</x:ref>&gt;.</li>
 
-<t>Allow &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
+<li>Allow &lt;<x:ref>strong</x:ref>&gt;, &lt;<x:ref>em</x:ref>&gt;,
 &lt;<x:ref>tt</x:ref>&gt;, &lt;<x:ref>eref</x:ref>&gt;, and
-&lt;<x:ref>xref</x:ref>&gt; in &lt;<x:ref>cref</x:ref>&gt;.</t>
+&lt;<x:ref>xref</x:ref>&gt; in &lt;<x:ref>cref</x:ref>&gt;.</li>
 
-<t>Allow the sub-elements inside a &lt;<x:ref>reference</x:ref>&gt; to be in any order.</t>
+<li>Allow the sub-elements inside a &lt;<x:ref>reference</x:ref>&gt; to be in any order.</li>
 
-<t>Turn off the autogeneration of anchors in &lt;<x:ref>cref</x:ref>&gt; because there is
-no use case for them that cannot be achieved in other ways.</t>
+<li>Turn off the autogeneration of anchors in &lt;<x:ref>cref</x:ref>&gt; because there is
+no use case for them that cannot be achieved in other ways.</li>
 
-<t>Allow more than one &lt;<x:ref>artwork</x:ref>&gt;, or more than one
-&lt;<x:ref>sourcecode</x:ref>&gt;, in &lt;<x:ref>figure</x:ref>&gt;.</t>
+<li>Allow more than one &lt;<x:ref>artwork</x:ref>&gt;, or more than one
+&lt;<x:ref>sourcecode</x:ref>&gt;, in &lt;<x:ref>figure</x:ref>&gt;.</li>
 
-<t>In &lt;<x:ref>front</x:ref>&gt;, make &lt;<x:ref>date</x:ref>&gt; optional.</t>
+<li>In &lt;<x:ref>front</x:ref>&gt;, make &lt;<x:ref>date</x:ref>&gt; optional.</li>
 
-<t>In &lt;<x:ref>date</x:ref>&gt;, add restrictions to the "date" and "year" attributes
-when used in the &lt;<x:ref>front</x:ref>&gt; for the document's boilerplate text.</t>
+<li>In &lt;<x:ref>date</x:ref>&gt;, add restrictions to the "date" and "year" attributes
+when used in the &lt;<x:ref>front</x:ref>&gt; for the document's boilerplate text.</li>
 
-<t>In &lt;<x:ref>postal</x:ref>&gt;, allow the sub-elements to be in any order. Also allow the inclusion
-of the new &lt;<x:ref>postalLine</x:ref>&gt; instead of the older elements.</t>
+<li>In &lt;<x:ref>postal</x:ref>&gt;, allow the sub-elements to be in any order. Also allow the inclusion
+of the new &lt;<x:ref>postalLine</x:ref>&gt; instead of the older elements.</li>
 
-<t>In &lt;<x:ref>section</x:ref>&gt;, restrict the names of the anchors that can be used on
-some types of sections.</t>
+<li>In &lt;<x:ref>section</x:ref>&gt;, restrict the names of the anchors that can be used on
+some types of sections.</li>
 
-<t>Make &lt;<x:ref>seriesInfo</x:ref>&gt; a child of &lt;<x:ref>front</x:ref>&gt;,
+<li>Make &lt;<x:ref>seriesInfo</x:ref>&gt; a child of &lt;<x:ref>front</x:ref>&gt;,
 and deprecated it as a child of &lt;<x:ref>reference</x:ref>&gt;. This also
 deprecates some of the attributes from &lt;<x:ref>rfc</x:ref>&gt; and moves
-them into &lt;<x:ref>seriesInfo</x:ref>&gt;.</t>
+them into &lt;<x:ref>seriesInfo</x:ref>&gt;.</li>
 
-<t>&lt;<x:ref>t</x:ref>&gt; now only contains non-block elements, so it no longer contains
-&lt;<x:ref>figure</x:ref>&gt; elements.</t>
+<li>&lt;<x:ref>t</x:ref>&gt; now only contains non-block elements, so it no longer contains
+&lt;<x:ref>figure</x:ref>&gt; elements.</li>
 
-<t>Do not generate the grammar from a DTD, but instead get it directly from the RELAX Next Generation (RNG) grammar
-<xref target="RNG"/>.</t>
+<li>Do not generate the grammar from a DTD, but instead get it directly from the RELAX Next Generation (RNG) grammar
+<xref target="RNG"/>.</li>
 
-</list></t>
+</ul>
 
 </section>
 
@@ -736,16 +730,18 @@ the appendices for a complete description of these attributes.
    </t>
    <t>
       There are at least five ways to include SVG in artwork in Internet-Drafts:
-      <list style="symbols">
-         <t>Inline, by including all of the SVG in the content of the element, 
-            such as: &lt;artwork type="svg"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg..."&gt;</t>
-         <t>Inline, but using XInclude (see <xref target="includingexternal"/>),
-            such as: &lt;artwork type="svg"&gt;&lt;xi:include href=...&gt;</t>
-         <t>As a data: URI, such as: &lt;artwork type="svg"
-            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3..."&gt;</t>
-         <t>As a URI to an external entity, such as: &lt;artwork type="svg" src="http://www.example.com/..."&gt;</t>
-         <t>As a local file, such as: &lt;artwork type="svg" src="diagram12.svg"&gt;</t>
-      </list>
+   </t>
+   <ul>
+     <li>Inline, by including all of the SVG in the content of the element, 
+        such as: &lt;artwork type="svg"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg..."&gt;</li>
+     <li>Inline, but using XInclude (see <xref target="includingexternal"/>),
+        such as: &lt;artwork type="svg"&gt;&lt;xi:include href=...&gt;</li>
+     <li>As a data: URI, such as: &lt;artwork type="svg"
+        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3..."&gt;</li>
+     <li>As a URI to an external entity, such as: &lt;artwork type="svg" src="http://www.example.com/..."&gt;</li>
+     <li>As a local file, such as: &lt;artwork type="svg" src="diagram12.svg"&gt;</li>
+   </ul>     
+   <t>
       The use of SVG in Internet-Drafts and RFCs is covered in much more detail in
       <xref target="RFC7996"/>.
    </t>
@@ -893,13 +889,15 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
       <t>
             The preferred values for &lt;artwork&gt; types are:
-            <list style="symbols">
-            <t>ascii-art</t>
-            <t>binary-art</t>
-            <t>call-flow</t>
-            <t>hex-dump</t>
-            <t>svg</t>
-         </list>
+      </t>
+      <ul>
+          <li>ascii-art</li>
+          <li>binary-art</li>
+          <li>call-flow</li>
+          <li>hex-dump</li>
+          <li>svg</li>
+      </ul>
+      <t>
             The RFC Series Editor will maintain a complete list of the preferred values on the RFC Editor
             web site, and that list is expected to be updated over time. Thus, a consumer
             of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified.
@@ -1552,33 +1550,37 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       Provides information about the publication date.
       This element is used for two cases: the boilerplate of the document
       being produced, and inside bibliographic references that use the &lt;<x:ref>front</x:ref>&gt; element.
-   <list style="hanging">
-         <t hangText="Boilerplate for Internet-Drafts and RFCs:">
-      This element defines the date of publication for the current document (Internet-Draft or RFC).
-      When producing Internet-Drafts, the prep tool uses this date to compute the expiration date (see <xref target="IDGUIDE"/>).
-      When one or more of "year",
-      "month", or "day" are left out, the prep tool will attempt to use the
-      current system date if the attributes that are present are consistent with that
-      date.
    </t>
-         <t>
-      In dates in &lt;<x:ref>rfc</x:ref>&gt; elements, the month must be a number or a month in English. 
-      The prep tool will silently change text month names to numbers.
-      Similarly, the year must be a four-digit number.
-   </t>
-         <t>
-      When the prep tool is used to create Internet-Drafts, it will reject a submitted Internet-Draft that has a &lt;<x:ref>date</x:ref>&gt;
-      element in the boilerplate for itself that is anything other than today. That is, the tool
-      will not allow a submitter to specify a date other than the day of submission. To avoid this problem,
-      authors might simply not include a &lt;<x:ref>date</x:ref>&gt; element in the boilerplate.
-   </t>
-         <t hangText="Bibliographic references:">
+   <dl>
+    <dt>Boilerplate for Internet-Drafts and RFCs:</dt>
+    <dd>
+      <t>
+        This element defines the date of publication for the current document (Internet-Draft or RFC).
+        When producing Internet-Drafts, the prep tool uses this date to compute the expiration date (see <xref target="IDGUIDE"/>).
+        When one or more of "year",
+        "month", or "day" are left out, the prep tool will attempt to use the
+        current system date if the attributes that are present are consistent with that
+        date.
+      </t>
+      <t>
+        In dates in &lt;<x:ref>rfc</x:ref>&gt; elements, the month must be a number or a month in English. 
+        The prep tool will silently change text month names to numbers.
+        Similarly, the year must be a four-digit number.
+      </t>
+      <t>
+        When the prep tool is used to create Internet-Drafts, it will reject a submitted Internet-Draft that has a &lt;<x:ref>date</x:ref>&gt;
+        element in the boilerplate for itself that is anything other than today. That is, the tool
+        will not allow a submitter to specify a date other than the day of submission. To avoid this problem,
+        authors might simply not include a &lt;<x:ref>date</x:ref>&gt; element in the boilerplate.
+      </t>
+    </dd>
+    <dt>Bibliographic references:</dt>
+    <dd>
       In dates in &lt;<x:ref>reference</x:ref>&gt; elements, the date information can have prose text for the month or year.
       For example, vague dates (year="ca. 2000"), date ranges (year="2012-2013"),
       non-specific months (month="Second quarter"), and so on are allowed.
-   </t>
-      </list>
-   </t>
+    </dd>
+   </dl>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.date.contents"><!--AG-->
       <xref format="none" target="grammar.date">Content model</xref>: this element does not have any contents.</t>
@@ -2576,30 +2578,30 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       The following are the supported types of external documents that can be pointed to in
       a &lt;link&gt; element:
-         <list style="symbols">
-         <t>
-               The current International Standard Serial Number (ISSN) for the RFC Series.
-               The value for the "rel" attribute is "item".
-               The link should use the form "urn:issn:".
-            </t>
-         <t>
-               The Digital Object Identifier (DOI) for this document.
-               The value for the "rel" attribute is "describedBy".
-               The link should use the form specified in <xref target="RFC7669"/>;
-               this is expected to change in the future.
-            </t>
-         <t>
-               The Internet-Draft that was submitted to the RFC Editor to become the published RFC.
-               The value for the "rel" attribute is "convertedFrom".
-               The link should be to an IETF-controlled web site that retains copies of Internet-Drafts.
-            </t>
-         <t>
-               A representation of the document offered by the document author.
-               The value for the "rel" attribute is "alternate".
-               The link can be to a personally run web site.
-            </t>
-      </list>
    </t>
+   <ul>
+       <li>
+             The current International Standard Serial Number (ISSN) for the RFC Series.
+             The value for the "rel" attribute is "item".
+             The link should use the form "urn:issn:".
+       </li>
+       <li>
+             The Digital Object Identifier (DOI) for this document.
+             The value for the "rel" attribute is "describedBy".
+             The link should use the form specified in <xref target="RFC7669"/>;
+             this is expected to change in the future.
+       </li>
+       <li>
+             The Internet-Draft that was submitted to the RFC Editor to become the published RFC.
+             The value for the "rel" attribute is "convertedFrom".
+             The link should be to an IETF-controlled web site that retains copies of Internet-Drafts.
+       </li>
+       <li>
+             A representation of the document offered by the document author.
+             The value for the "rel" attribute is "alternate".
+             The link can be to a personally run web site.
+       </li>
+   </ul> 
    <t>
         In RFC production mode, the prep tool needs to check the values for &lt;link&gt; before an RFC is published.
         In draft production mode, the prep tool might remove some &lt;link&gt; elements during the draft submission process.
@@ -2871,13 +2873,20 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          The type of the labels on list items. If the length of the type value is 1, the
          meaning is the same as it is for HTML:
-         <list style="hanging">
-            <t hangText="a">Lowercase letters (a, b, c, ...)</t>
-            <t hangText="A">Uppercase letters (A, B, C, ...)</t>
-            <t hangText="1">Decimal numbers (1, 2, 3, ...)</t>
-            <t hangText="i">Lowercase Roman numerals (i, ii, iii, ...)</t>
-            <t hangText="I">Uppercase Roman numerals (I, II, III, ...)</t>
-         </list>
+      </t>
+      <dl>
+          <dt>a</dt>
+          <dd>Lowercase letters (a, b, c, ...)</dd>
+          <dt>A</dt>
+          <dd>Uppercase letters (A, B, C, ...)</dd>
+          <dt>1</dt>
+          <dd>Decimal numbers (1, 2, 3, ...)</dd>
+          <dt>i</dt>
+          <dd>Lowercase Roman numerals (i, ii, iii, ...)</dd>
+          <dt>I</dt>
+          <dd>Uppercase Roman numerals (I, II, III, ...)</dd>
+      </dl>
+      <t>
          For types "a" and "A", after the 26th entry, the numbering starts at "aa"/"AA", then
          "ab"/"AB", and so on.
       </t>
@@ -2890,17 +2899,25 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         item number as a decimal number.
       </t>
       <t>
-         The following formats are supported:
-         <list style="hanging">
-            <t hangText="%c">Lowercase letters (a, b, c, ...)</t>
-            <t hangText="%C">Uppercase letters (A, B, C, ...)</t>
-            <t hangText="%d">Decimal numbers (1, 2, 3, ...)</t>
-            <t hangText="%i">Lowercase Roman numerals (i, ii, iii, ...)</t>
-            <t hangText="%I">Uppercase Roman numerals (I, II, III, ...)</t>
-            <t hangText="%%">Represents a percent sign</t>
-         </list>
-         Other formats are reserved for future use. Only one percent encoding other than "%%" is allowed in a type string.
-       </t>
+        The following formats are supported:
+      </t>
+      <dl>
+          <dt>%c</dt>
+          <dd>Lowercase letters (a, b, c, ...)</dd>
+          <dt>%C</dt>
+          <dd>Uppercase letters (A, B, C, ...)</dd>
+          <dt>%d</dt>
+          <dd>Decimal numbers (1, 2, 3, ...)</dd>
+          <dt>%i</dt>
+          <dd>Lowercase Roman numerals (i, ii, iii, ...)</dd>
+          <dt>%I</dt>
+          <dd>Uppercase Roman numerals (I, II, III, ...)</dd>
+          <dt>%%</dt>
+          <dd>Represents a percent sign</dd>
+      </dl>
+      <t>
+        Other formats are reserved for future use. Only one percent encoding other than "%%" is allowed in a type string.
+      </t>
       <t>
         It is an error for the type string to be empty.
         For bulleted lists, use the &lt;<x:ref>ul</x:ref>&gt; element.
@@ -3484,125 +3501,105 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Formatters for document types that have linking capability should wrap each part of the displayed text in hyperlinks.
         If there is content in the &lt;relref&gt; element, formatters will ignore the value of this attribute.
       </t>
-      <t>
-        "of"
-        <list style="empty">
-            <t>
+      <dl newline="true">
+        <dt>"of"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the word "Section" followed by a space, the contents of the "section" attribute
             followed by a space, the word "of", another space, and the value from the "target" attribute enclosed in square brackets.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See
       &lt;relref section="2.3" target="RFC9999" displayFormat="of"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+            An HTML formatter might generate:
+          </t>
+          <artwork>
       See
       &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
       Section 2.3&lt;/a&gt; of
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
+          <t>
             Note that "displayFormat='of'" is the default for &lt;relref&gt;, so it does not need to be given in
             a &lt;relref&gt; element if that format is desired.
-            </t>
-         </list>
-      </t>
-      <t>
-        "comma"
-        <list style="empty">
-            <t>
+          </t>       
+        </dd>
+        <dt>"comma"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
             a comma, a space, the word "Section" followed by a space, and the "section" attribute.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See
       &lt;relref section="2.3" target="RFC9999" displayFormat="comma"/&gt;,
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <artwork>
       See
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;], 
       &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
       Section 2.3&lt;/a&gt;, for an overview.
 </artwork>
-               </figure>
-            </t>
-         </list>
-      </t>
-      <t>
-        "parens"
-        <list style="empty">
-            <t>
+        </dd>
+        <dt>"parens"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
             a space, a left parenthesis, the word "Section" followed by a space, the "section" attribute, and a right parenthesis.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See
       &lt;relref section="2.3" target="RFC9999" displayFormat="parens"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <artwork>
       See
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
       (&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt; 
       Section 2.3&lt;/a&gt;)
       for an overview.
 </artwork>
-               </figure>
-            </t>
-         </list>
-      </t>
-      <t>
-        "bare"
-        <list style="empty">
-            <t>
+        </dd>
+        <dt>"bare"</dt>
+        <dd>
+          <t>
             A formatter should display the relative reference as the contents of the "section" attribute
             and nothing else. This is useful when there are multiple relative references to a single base reference.
-            </t>
-            <t>
+          </t>
+          <t>
             For example:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       See Sections
       &lt;relref section="2.3" target="RFC9999" displayFormat="bare"/&gt;
       and
       &lt;relref section="2.4" target="RFC9999" displayFormat="of"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-<figure>
-                  <artwork>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <artwork>
       See Sections
       &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
       2.3&lt;/a&gt;
@@ -3612,10 +3609,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
       for an overview.
 </artwork>
-               </figure>
-            </t>
-         </list>
-      </t>
+        </dd>
+      </dl>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"of" (default)</li>
@@ -4177,22 +4172,20 @@ in the same &lt;front&gt; element.
       <t>
             Some of the values for "name" interact as follows:
       </t>
-      <t>
-         <list style="symbols">
-            <t>
-         A &lt;<x:ref>front</x:ref>&gt; element that has a &lt;<x:ref>seriesInfo</x:ref>&gt; element
-         that has the name "Internet-Draft" cannot also have a &lt;<x:ref>seriesInfo</x:ref>&gt;
-         element that has the name "RFC". 
-      </t>
-            <t>
-         The &lt;<x:ref>seriesInfo</x:ref>&gt; element can contain the DOI for the referenced document.
-         This cannot be used when the &lt;<x:ref>seriesInfo</x:ref>&gt;
-         element is an eventual child element of an &lt;<x:ref>rfc</x:ref>&gt; element --
-         only as an eventual child of a &lt;<x:ref>reference</x:ref>&gt; element.
-         The "value" attribute should use the form specified in <xref target="RFC7669"/>.
-      </t>
-         </list>
-      </t>
+      <ul>
+        <li>
+           A &lt;<x:ref>front</x:ref>&gt; element that has a &lt;<x:ref>seriesInfo</x:ref>&gt; element
+           that has the name "Internet-Draft" cannot also have a &lt;<x:ref>seriesInfo</x:ref>&gt;
+           element that has the name "RFC". 
+        </li>
+        <li>
+           The &lt;<x:ref>seriesInfo</x:ref>&gt; element can contain the DOI for the referenced document.
+           This cannot be used when the &lt;<x:ref>seriesInfo</x:ref>&gt;
+           element is an eventual child element of an &lt;<x:ref>rfc</x:ref>&gt; element --
+           only as an eventual child of a &lt;<x:ref>reference</x:ref>&gt; element.
+           The "value" attribute should use the form specified in <xref target="RFC7669"/>.
+        </li>
+      </ul>
    </section>
 
    <!--seriesInfo/@status-->
@@ -4370,29 +4363,31 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
       <t>
             The preferred values for &lt;sourcecode&gt; types are:
-            <list style="symbols">
-            <t>abnf</t>
-            <t>asn.1</t>
-            <t>bash</t>
-            <t>c++</t>
-            <t>c</t>
-            <t>cbor</t>
-            <t>dtd</t>
-            <t>java</t>
-            <t>javascript</t>
-            <t>json</t>
-            <t>mib</t>
-            <t>perl</t>
-            <t>pseudocode</t>
-            <t>python</t>
-            <t>rnc</t>
-            <t>xml</t>
-            <t>yang</t>
-         </list>
+      </t>
+      <ul>
+            <li>abnf</li>
+            <li>asn.1</li>
+            <li>bash</li>
+            <li>c++</li>
+            <li>c</li>
+            <li>cbor</li>
+            <li>dtd</li>
+            <li>java</li>
+            <li>javascript</li>
+            <li>json</li>
+            <li>mib</li>
+            <li>perl</li>
+            <li>pseudocode</li>
+            <li>python</li>
+            <li>rnc</li>
+            <li>xml</li>
+            <li>yang</li>
+      </ul>
+      <t>
             The RFC Series Editor will maintain a complete list of the preferred values on the RFC Editor
             web site, and that list is expected to be updated over time. Thus, a consumer
             of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified. 
-         </t>
+      </t>
    </section>
 </section>
 
@@ -5443,90 +5438,72 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This attribute signals to formatters what the desired format of the reference should be.
         Formatters for document types that have linking capability should wrap the displayed text in hyperlinks.
       </t>
-      <t>
-         <iref item="xref formats" subitem="counter" primary="true"/>
-        "counter"
-        <list style="empty">
-            <t>
+      <dl newline="true">
+        <dt><iref item="xref formats" subitem="counter" primary="true"/>"counter"</dt>
+        <dd>
+          <t>
             The "derivedContent" attribute will contain just a counter.
             This is used for targets that are
             &lt;<x:ref>section</x:ref>&gt;, &lt;<x:ref>figure</x:ref>&gt;, &lt;<x:ref>table</x:ref>&gt;, or items in an ordered list.
             Using "format='counter'" where the target is any other type of element is an error.
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
       . . .
       See Section &lt;xref target="overview" format="counter"/&gt;
       for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-            </t>
-            <t>
-              See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
-            </t>
-         </list>
-      </t>
-      <t>
-         <iref item="xref formats" subitem="default" primary="true"/>
-        "default"
-        <list style="empty">
-            <t>
+          <t>
+             An HTML formatter might generate:
+          </t>
+          <t>
+            See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
+          </t>
+        </dd>
+        <dt><iref item="xref formats" subitem="default" primary="true"/>"default"</dt>
+        <dd>
+          <t>
             If the element has no content, the "derivedContent" attribute will contain a text fragment that describes the referenced part 
             completely, such as "XML" for a target that is a &lt;<x:ref>reference</x:ref>&gt;,
             or "Section 2" or "Table 4" for a target to a non-reference.
             (If the element has content, the "derivedContent" attribute is filled with the content.)
-            </t>
-            <t>
+          </t>
+          <t>
             For example, with an input of:
-<figure>
-                  <artwork>
+          </t>
+          <artwork>
       &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
       . . .
       See &lt;xref target="overview"/&gt; for an overview.
 </artwork>
-               </figure>
-            </t>
-            <t>
-               An HTML formatter might generate:
-            </t>
-            <t>
-              See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
-            </t>
-         </list>
-      </t>
-      <t>
-         <iref item="xref formats" subitem="none" primary="true"/>
-        "none"
-        <list style="empty">
-            <t>
-            Deprecated.
+          <t>
+             An HTML formatter might generate:
           </t>
-         </list>
-      </t>
-      <t>
-         <iref item="xref formats" subitem="title" primary="true"/>
-        "title"
-        <list style="empty">
-            <t>
-            If the target is a &lt;<x:ref>reference</x:ref>&gt; element, the "derivedContent" attribute will contain the name of
-            the reference, extracted from the &lt;<x:ref>title</x:ref>&gt; child of the
-            &lt;<x:ref>front</x:ref>&gt; child of the reference.
-            Or, if the target element has a &lt;<x:ref>name</x:ref>&gt; child element, the "derivedContent" attribute will contain the
-            text content of that &lt;<x:ref>name</x:ref>&gt; element concatenated with the text content of
-            each descendant node of &lt;<x:ref>name</x:ref>&gt; (that is, stripping out all of the
-            XML markup, leaving only the text).
-            Or, if the target element does not contain a &lt;<x:ref>name</x:ref>&gt; child element,
-            the "derivedContent" attribute will contain the name of the "anchor" attribute of that element
-            with no other adornment.
+          <t>
+            See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
           </t>
-         </list>
-      </t>
+        </dd>
+        <dt><iref item="xref formats" subitem="none" primary="true"/>"none"</dt>
+        <dd>
+          Deprecated.
+        </dd>
+        <dt><iref item="xref formats" subitem="title" primary="true"/>"title"</dt>
+        <dd>
+          If the target is a &lt;<x:ref>reference</x:ref>&gt; element, the "derivedContent" attribute will contain the name of
+          the reference, extracted from the &lt;<x:ref>title</x:ref>&gt; child of the
+          &lt;<x:ref>front</x:ref>&gt; child of the reference.
+          Or, if the target element has a &lt;<x:ref>name</x:ref>&gt; child element, the "derivedContent" attribute will contain the
+          text content of that &lt;<x:ref>name</x:ref>&gt; element concatenated with the text content of
+          each descendant node of &lt;<x:ref>name</x:ref>&gt; (that is, stripping out all of the
+          XML markup, leaving only the text).
+          Or, if the target element does not contain a &lt;<x:ref>name</x:ref>&gt; child element,
+          the "derivedContent" attribute will contain the name of the "anchor" attribute of that element
+          with no other adornment.
+        </dd>
+      </dl>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"default" (default)</li>
@@ -6713,23 +6690,23 @@ are believed to be the current values in use.</t>
 <t>
   For current documents, setting the "submissionType" attribute will
   have the following effect:
-  <list style="symbols">
-    <t>
-      For RFCs, the stream name appears in the upper left corner of the 
-      first page (in Internet-Drafts, this is either "Network Working Group"
-      or the value of the &lt;<x:ref>workgroup</x:ref>&gt; element).
-    </t>
-    <t>
-      For RFCs, it affects the whole "Status of This Memo" section (see
-      <xref x:sec="3.2" x:fmt="of" target="RFC7841"/>).
-    </t>
-    <t>
-      For all RFCs and Internet-Drafts, it determines whether the "Copyright
-      Notice" section mentions the Copyright on Code Components (see Section 6 of the TLP
-    ("Text to Be Included in IETF Documents")).
-    </t>
-  </list>
 </t>
+<ul>
+  <li>
+    For RFCs, the stream name appears in the upper left corner of the 
+    first page (in Internet-Drafts, this is either "Network Working Group"
+    or the value of the &lt;<x:ref>workgroup</x:ref>&gt; element).
+  </li>
+  <li>
+    For RFCs, it affects the whole "Status of This Memo" section (see
+    <xref x:sec="3.2" x:fmt="of" target="RFC7841"/>).
+  </li>
+  <li>
+    For all RFCs and Internet-Drafts, it determines whether the "Copyright
+    Notice" section mentions the Copyright on Code Components (see Section 6 of the TLP
+    ("Text to Be Included in IETF Documents")).
+  </li>
+</ul>
 </section>
 
 <section title="The &quot;consensus&quot; Attribute" anchor="attribute-consensus">
@@ -6741,19 +6718,19 @@ are believed to be the current values in use.</t>
 <t>
   The consensus attribute
   can be used to supply this information. The acceptable values are "true" (the default) and "false";
-"yes" and "no" from v2 are deprecated.
+  "yes" and "no" from v2 are deprecated.
 </t>
 <t>
-The effect of this value for the various streams is:
-  <list style="symbols">
-    <t>"independent": none.</t>
-    <t>"IAB": mention that there was an IAB consensus.</t>
-    <t>"IETF": mention that there was an IETF consensus.</t>
-    <t>"IRTF": mention that there was a research group consensus (where
-      the name of the research group is extracted from the &lt;<x:ref>workgroup</x:ref>&gt;
-      element).</t>
-  </list>
+  The effect of this value for the various streams is:
 </t>
+<ul>
+  <li>"independent": none.</li>
+  <li>"IAB": mention that there was an IAB consensus.</li>
+  <li>"IETF": mention that there was an IETF consensus.</li>
+  <li>"IRTF": mention that there was a research group consensus (where
+    the name of the research group is extracted from the &lt;<x:ref>workgroup</x:ref>&gt;
+    element).</li>
+</ul>
 </section>
 
 </section>
@@ -6764,43 +6741,40 @@ Note that there is some
 discussion of tools in the main body of the document as well. For example, some elements
 have descriptions of how a processing tool might create output from the element.</t>
 
-<t>The expected design of the tools that will be used with v3 documents includes:
+<t>The expected design of the tools that will be used with v3 documents includes:</t>
 
-
-<list style="symbols">
-
-<x:lt><t>A "prep tool" that takes a v3 document, makes many checks, adds and changes many attribute
-values, and creates a file that is a "prepared document". The prepared document is a valid v3
-document. The prep tool is described in <xref target="RFC7998"/>.</t>
-
-<t>The prep tool is expected to have many modes:
-
-<list>
-
-<t>RFC mode -- The mode used by the RFC Editor to process the input from one of
-the RFC streams and to process XML produced during the RFC editing process.
-The restrictions on the canonical XML for RFCs, as well as how the non-canonical formats
-will look, are described at
-&lt;https://www.rfc-editor.org/rse/wiki/doku.php?id=design:format-and-content-rfcs&gt;.</t>
-
-<t>Draft mode -- The mode used by the Internet-Draft submission tool. The restrictions
-for the XML from this mode will be described later.</t>
-
-<t>Diagnostic mode -- A mode that can be used by document authors to look for errors
-or warnings before they submit their documents for publication.</t>
-
-<t>Consolidation mode -- Produces output where no external resources are required to render the file
-output. This includes expanding the XInclude entities and DTD entities in place, and changing all
-elements that have "src" attributes with external links into either "data:" URI or
-content for the element, as specified in <xref target="RFC7998"/>.</t>
-
-</list></t></x:lt>
-
-<x:lt><t>Formatting tools that will create HTML, PDF, plain text, and possibly other output formats.
-These formatters will be created by the IETF, but others can create such tools as well.
-The IETF tools are expected to take prepared documents as input.</t></x:lt>
-
-</list></t>
+<ul>
+  <li>
+    <t>A "prep tool" that takes a v3 document, makes many checks, adds and changes many attribute
+    values, and creates a file that is a "prepared document". The prepared document is a valid v3
+    document. The prep tool is described in <xref target="RFC7998"/>.</t>
+    
+    <t>The prep tool is expected to have many modes:</t>
+    <ul>
+      <li>RFC mode -- The mode used by the RFC Editor to process the input from one of
+      the RFC streams and to process XML produced during the RFC editing process.
+      The restrictions on the canonical XML for RFCs, as well as how the non-canonical formats
+      will look, are described at
+      &lt;https://www.rfc-editor.org/rse/wiki/doku.php?id=design:format-and-content-rfcs&gt;.</li>
+      
+      <li>Draft mode -- The mode used by the Internet-Draft submission tool. The restrictions
+      for the XML from this mode will be described later.</li>
+      
+      <li>Diagnostic mode -- A mode that can be used by document authors to look for errors
+      or warnings before they submit their documents for publication.</li>
+      
+      <li>Consolidation mode -- Produces output where no external resources are required to render the file
+      output. This includes expanding the XInclude entities and DTD entities in place, and changing all
+      elements that have "src" attributes with external links into either "data:" URI or
+      content for the element, as specified in <xref target="RFC7998"/>.</li>
+    </ul>
+  </li>
+  <li>
+    Formatting tools that will create HTML, PDF, plain text, and possibly other output formats.
+    These formatters will be created by the IETF, but others can create such tools as well.
+    The IETF tools are expected to take prepared documents as input.
+  </li>
+</ul>
 
 <t>There may also be processing tools that are meant to run on the computers of
 authors. These tools may be used to produce interim versions of the non-canonical representations
@@ -6896,59 +6870,56 @@ in "anchor" attributes, in "slugifiedName" attributes, and those that are genera
 Also, there are some values for the "anchor" values that are reserved for sections, and those
 sections can only have those anchor values.</t>
 
-<t>The following rules prevent this overlap:
+<t>The following rules prevent this overlap:</t>
 
-<list style="symbols">
-
-<t>"pn" for regular sections always has the format "s-nnn", where "nnn" is the section number, or the appendix
+<ul>
+<li>"pn" for regular sections always has the format "s-nnn", where "nnn" is the section number, or the appendix
 identifier (which starts with a letter).
 For example, this would be "s-2.1.3" for Section 2.1.3 and "s-a" for Appendix A.
 For the &lt;<x:ref>abstract</x:ref>&gt; element, it is always "s-abstract".
 For the &lt;<x:ref>note</x:ref>&gt; element, it is always "s-note-nnn", where "nnn" is a sequential value.
 For sections in the &lt;<x:ref>boilerplate</x:ref>&gt; element, it is always "s-boilerplate-nnn", where "nnn" is a sequential value.
-</t>
+</li>
 
-<t>"pn" for &lt;<x:ref>references</x:ref>&gt; elements
+<li>"pn" for &lt;<x:ref>references</x:ref>&gt; elements
 has the format "s-nnn". It is important to note that "nnn" is a number, not letters,
 even though the &lt;<x:ref>references</x:ref>&gt; appear in the back.
 It is the number that is one higher than the highest top-level section number in &lt;<x:ref>middle</x:ref>&gt;.
 If there are two or more &lt;<x:ref>references</x:ref>&gt;, "nnn" will include a dot as if
 the &lt;<x:ref>references</x:ref>&gt; are a subsection of a section that is
-numbered one higher than the highest top-level section number in &lt;<x:ref>middle</x:ref>&gt;.</t>
+numbered one higher than the highest top-level section number in &lt;<x:ref>middle</x:ref>&gt;.</li>
 
-<t>"pn" for &lt;<x:ref>figure</x:ref>&gt; elements
+<li>"pn" for &lt;<x:ref>figure</x:ref>&gt; elements
 always has the format "f-nnn", where "nnn" is the figure number.
-For example, this would be "f-5" for Figure 5.</t>
+For example, this would be "f-5" for Figure 5.</li>
 
-<t>"pn" for &lt;<x:ref>iref</x:ref>&gt; elements
+<li>"pn" for &lt;<x:ref>iref</x:ref>&gt; elements
 always has the format "i-ttt-nnn", where "ttt" is the 
 slugified item (plus a hyphen and the slugified subitem if there is a subitem),
 and "nnn" is the instance of that item/subitem pair.
 For example, this would be
 "i-foo-1" for "&lt;iref item='foo'&gt;" and 
-"i-foo-bar-1" for "&lt;iref item='foo' subitem='bar'&gt;".</t>
+"i-foo-bar-1" for "&lt;iref item='foo' subitem='bar'&gt;".</li>
 
-<t>"pn" for &lt;<x:ref>table</x:ref>&gt; elements
+<li>"pn" for &lt;<x:ref>table</x:ref>&gt; elements
 always has the format "t-nnn", where "nnn" is the table number.
-For example, this would be "t-5" for Table 5.</t>
+For example, this would be "t-5" for Table 5.</li>
 
-<t>"pn" for all elements not listed above
+<li>"pn" for all elements not listed above
 always has the format "p-nnn-mmm", where "nnn" is the section number
 and "mmm" is the relative position in the section.
-For example, this would be "p-2.1.3-7" for the seventh part number in Section 2.1.3.</t>
+For example, this would be "p-2.1.3-7" for the seventh part number in Section 2.1.3.</li>
 
-<t>"slugifiedName" always has the format "n-ttt", where "ttt" is the text of the name after
+<li>"slugifiedName" always has the format "n-ttt", where "ttt" is the text of the name after
 slugification. For example, this would be "n-protocol-overview" for the name "Protocol Overview".
-The actual conversions done in slugification will be specified at a later time.</t>
+The actual conversions done in slugification will be specified at a later time.</li>
 
-<t>Anchors must never overlap with any of the above. The easiest way to assure that is to
+<li>Anchors must never overlap with any of the above. The easiest way to assure that is to
 not pick an anchor name that starts with a single letter followed by a hyphen. If an anchor
 does overlap with one of the types of names above, the processing tool will reject the
-document.</t>
+document.</li>
 
-</list>
-</t>
-
+</ul>
 </section>
 
 </section>
@@ -6961,49 +6932,48 @@ prep tool; however, any of these attributes might be added, removed, or changed 
 prep tool. Thus, it is explicitly unsafe for a document author to include these attributes
 and expect that their values will survive processing by the prep tool.</t>
 
-<t>The attributes that are controlled by the prep tool are:
-<list style="symbols">
-
-<t>The "pn" attribute in any element -- The number for this item within the section.  The numbering
+<t>The attributes that are controlled by the prep tool are:</t>
+<ul>
+<li>The "pn" attribute in any element -- The number for this item within the section.  The numbering
 is shared with other elements of a section. The "pn" attribute is added to many block-level elements
-inside sections.</t>
+inside sections.</li>
 
-<t>&lt;artwork&gt; originalSrc -- This attribute is filled with the original value of the "src"
-attribute if that attribute is removed by the prep tool.</t>
+<li>&lt;artwork&gt; originalSrc -- This attribute is filled with the original value of the "src"
+attribute if that attribute is removed by the prep tool.</li>
 
-<t>&lt;figure&gt; originalSrc -- This attribute is filled with the original value of the "src"
-attribute if that attribute is removed by the prep tool.</t>
+<li>&lt;figure&gt; originalSrc -- This attribute is filled with the original value of the "src"
+attribute if that attribute is removed by the prep tool.</li>
 
-<t>&lt;name&gt; "slugifiedName" attribute -- This attribute is filled with a "slugified" version of
+<li>&lt;name&gt; "slugifiedName" attribute -- This attribute is filled with a "slugified" version of
 the text in the element.  This attribute can be used in the output formats for elements that have
-both names and numbers.</t>
+both names and numbers.</li>
 
-<t>&lt;relref&gt; "derivedLink" attribute -- This attribute is filled with the link that is derived
+<li>&lt;relref&gt; "derivedLink" attribute -- This attribute is filled with the link that is derived
 from combining the URI from the reference and the relative part that is either a copy of the
-"relative" attribute or a section number derived from the "section" attribute.</t>
+"relative" attribute or a section number derived from the "section" attribute.</li>
 
-<t>&lt;rfc&gt; "expiresDate" attribute -- This attribute is filled with the date that an Internet-Draft
-expires. The date is in the format yyyy-mm-dd.</t>
+<li>&lt;rfc&gt; "expiresDate" attribute -- This attribute is filled with the date that an Internet-Draft
+expires. The date is in the format yyyy-mm-dd.</li>
 
-<t>&lt;rfc&gt; "mode" attribute -- This attribute is filled with a string that indicates what
+<li>&lt;rfc&gt; "mode" attribute -- This attribute is filled with a string that indicates what
 mode the prep tool was in when it processed the XML, such as whether it was processing a file
-to become an Internet-Draft or an RFC.</t>
+to become an Internet-Draft or an RFC.</li>
 
-<t>&lt;rfc&gt; "scripts" attribute -- This attribute is filled with a list of scripts needed to
+<li>&lt;rfc&gt; "scripts" attribute -- This attribute is filled with a list of scripts needed to
 render this document.  The list is comma-separated, with no spaces allowed.  The order is
 unimportant.  The names come from <xref target="UAX24"/>.  For example, if the document has Chinese
-characters in it, the value might be "Common,Latin,Han". </t>
+characters in it, the value might be "Common,Latin,Han". </li>
 
-<t>&lt;sourcecode&gt; "originalSrc" attribute -- This attribute is filled with the original value of
-the "src" attribute if that attribute is removed by the prep tool.</t>
+<li>&lt;sourcecode&gt; "originalSrc" attribute -- This attribute is filled with the original value of
+the "src" attribute if that attribute is removed by the prep tool.</li>
 
-<t>&lt;xref&gt; "derivedContent" attribute -- This attribute is filled in if there is no content in
+<li>&lt;xref&gt; "derivedContent" attribute -- This attribute is filled in if there is no content in
 the &lt;xref&gt; element.  The value for this attribute is based on the value in the "displayFormat"
 attribute.
 Examples of how this value is filled can be found in <xref target="element.xref.attribute.format"/>.
-</t>
+</li>
+</ul>
 
-</list></t>
 
 <t>In addition, note that the contents of the &lt;boilerplate&gt; element
 are controlled by the prep tool.</t>
