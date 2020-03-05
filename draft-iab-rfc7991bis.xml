@@ -96,8 +96,8 @@ Desired result has single references in back, and choice of references+  or (ref
 >
 	<front>
   <title>The "xml2rfc" version 3 Vocabulary</title>
-  <author initials="H." surname="Flanagan" fullname="Heather Flanagan" role="editor">
-    <organization>RFC Editor</organization>
+  <author initials="J." surname="Levine" fullname="John Levine" role="editor">
+    <organization>Temporary RFC Series Project Manager</organization>
 	<address><email>rse@rfc-editor.org</email></address>
   </author>
 
