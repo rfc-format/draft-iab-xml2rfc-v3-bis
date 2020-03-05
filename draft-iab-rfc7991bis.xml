@@ -1735,12 +1735,12 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       The mapping in this element only applies to &lt;<x:ref>xref</x:ref>&gt; elements whose format is "default".
       For example, if the reference uses the anchor "RFC6949", the following would cause that anchor in the body
       of displayed documents to be "RFC-dev":
+   </t>
 <figure>
          <artwork>
 &lt;displayreference target="RFC6949" to="RFC-dev"/&gt;
 </artwork>
       </figure>
-   </t>
    <t>
      If a reference section is sorted, this element changes the sort order.
    </t>
@@ -2044,15 +2044,16 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </t>
    <t>
       For example, with an input of:
+   </t>
 <figure>
          <artwork>
       This is described at
       &lt;eref target="http://www.example.com/reports/r12.html"/&gt;.
 </artwork>
       </figure>
-   </t>
    <t>
       An HTML formatter might generate:
+   </t>
 <figure>
          <artwork>
       This is described at
@@ -2060,9 +2061,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       http://www.example.com/reports/r12.html&lt;/a&gt;.
 </artwork>
       </figure>
-   </t>
    <t>
       With an input of:
+   </t>
 <figure>
          <artwork>
       This is described
@@ -2070,9 +2071,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       in this interesting report&lt;/eref&gt;.
 </artwork>
       </figure>
-   </t>
    <t>
       An HTML formatter might generate:
+   </t>
 <figure>
          <artwork>
       This is described
@@ -2080,7 +2081,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       in this interesting report&lt;/a&gt;.
 </artwork>
       </figure>
-   </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>ttcol</x:ref>&gt; (<xref target="element.ttcol"/>).</t>
    <t anchor="element.eref.contents"><!--AG-->
       <xref format="none" target="grammar.eref">Content model</xref>: only text content.</t>
@@ -3157,6 +3157,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </t>
    <t>
      For example:
+   </t>
 <figure>
          <artwork>
 &lt;reference anchor="April1"&gt;
@@ -3169,14 +3170,15 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
 &lt;/reference&gt;
 </artwork>
       </figure>
+   <t>
      would render as:
+   </t>
 <figure>
          <artwork>
    [April1]     Phunny, K., "On Being A Fool", Self-published
                 pamphlet, April 2000.
 </artwork>
       </figure>
-   </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.refcontent.contents"><!--AG-->
       <xref format="none" target="grammar.refcontent">Content model</xref>:
@@ -3464,6 +3466,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </t>
    <t>
       An example of the &lt;relref&gt; element with text content might be:
+   </t>
 <figure>
          <artwork>
       See
@@ -3472,9 +3475,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       for more information.
 </artwork>
       </figure>
-   </t>
    <t>
        An HTML formatter might generate:
+   </t>
 <figure>
          <artwork>
       See 
@@ -3483,6 +3486,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       for more information.
 </artwork>
       </figure>
+   <t>
    Note that the URL in the above example might be different when the RFC Editor deploys the v3 format.
    </t>
    <t/>
@@ -6788,15 +6792,18 @@ that is either on the Internet or local to the user's computer.</t>
 <t>
 In the v3 syntax, XInclude is expressed as the &lt;xi:include&gt; element. To use this
 element, you need to include the "xi" namespace in the &lt;<x:ref>rfc</x:ref>&gt; element; that is, you need to specify
+</t>
 <figure><artwork>
 xmlns:xi="http://www.w3.org/2001/XInclude"
 </artwork></figure>
+<t>
 as one of the attributes in the &lt;<x:ref>rfc</x:ref>&gt; element.</t>
 
 <t>The most common way to use &lt;xi:include&gt; is to pull in references
 that are already formed as XML. Currently, this can be done from xml2rfc.tools.ietf.org, but later this is
 expected to be from the RFC Editor. For example, if a document has three normative
 references, all RFCs, the document might contain:
+</t>
 <figure><artwork>
 &lt;references&gt;
     &lt;xi:include href="http://xml2rfc.tools.ietf.org/public/rfc/
@@ -6807,18 +6814,16 @@ references, all RFCs, the document might contain:
        bibxml/reference.RFC.7169.xml"/&gt;
 &lt;/references&gt;
 </artwork></figure>
-</t>
 
 <t>&lt;xi:include&gt; can be used anywhere an XML element could be used (but not where
 free text is used). For example, if three Internet-Drafts are all including a particular paragraph
 or section verbatim, that text can be kept either in a file or somewhere on the web and can be
 included with &lt;xi:include&gt;. An example of pulling something from the local disk would
 be:
+</t>
 <figure><artwork>
 &lt;x:include href="file://home/chris/ietf/drafts/commontext.xml"/&gt;
 </artwork></figure>
-</t>
-
 <t>
 In general, XInclude should be used instead of ENTITY references and XML Processing Instructions (PIs)
 that allow external inclusions.
