@@ -6121,72 +6121,59 @@ and should have only a localized impact on the document processing and rendering
   This document updates the specification for the Internet Media Type
   "application/rfc+xml" from the one in <xref target="RFC7749"/>. The following has been registered with IANA.
 </t>
-<t>
-  <list style="hanging" x:indent="12em">
-    <t hangText="Type name:">
-      application
-    </t>
-    <t hangText="Subtype name:">
-      rfc+xml
-    </t>
-    <t hangText="Required parameters:">
-      There are no required parameters.
-    </t>
-    <t hangText="Optional parameters:">
-      "charset": This parameter has identical semantics to the charset
-      parameter of the "application/xml" Media Type specified in <xref target="RFC7303" x:fmt="of" x:sec="9.1"/>.
-    </t>
-    <t hangText="Encoding considerations:">
-      Identical to those of "application/xml" as described in <xref target="RFC7303" x:fmt="of" x:sec="9.1"/>.
-    </t>
-    <t hangText="Security considerations:">
-      As defined in <xref target="security.considerations"/>. In addition, as
+<dl>
+  <dt>Type name:</dt>
+  <dd>application</dd>
+  <dt>Subtype name:</dt>
+  <dd>rfc+xml</dd>
+  <dt>Required parameters:</dt>
+  <dd>There are no required parameters.</dd>
+  <dt>Optional parameters:</dt>
+  <dd>"charset": This parameter has identical semantics to the charset
+      parameter of the "application/xml" Media Type specified in <xref target="RFC7303" x:fmt="of" x:sec="9.1"/>.</dd>
+  <dt>Encoding considerations:</dt>
+  <dd>Identical to those of "application/xml" as described in <xref target="RFC7303" x:fmt="of" x:sec="9.1"/>.</dd>
+  <dt>Security considerations:</dt>
+  <dd>As defined in <xref target="security.considerations"/>. In addition, as
       this Media Type uses the "+xml" convention, it inherits the security
-      considerations described in <xref target="RFC7303" x:fmt="of" x:sec="10"/>.
-    </t>
-    <t hangText="Interoperability considerations:">
-      Different implementations of this format have had interoperability issues.
+      considerations described in <xref target="RFC7303" x:fmt="of" x:sec="10"/>.</dd>
+  <dt>Interoperability considerations:</dt>
+  <dd>Different implementations of this format have had interoperability issues.
       It is not expected that publication of this application will cause those
-      implementations to be fixed.
-    </t>
-    <t hangText="Published specification:">
-      This specification.
-    </t>
-    <t hangText="Applications that use this Media Type:">
-      Applications that transform xml2rfc to output representations such
-      as plain text or HTML, plus additional analysis tools.
-    </t>
-    <t hangText="Fragment identifier considerations:">
-      The "anchor" attribute is used for assigning document-wide unique
+      implementations to be fixed.</dd>
+  <dt>Published specification:</dt>
+  <dd>This specification.</dd>
+  <dt>Applications that use this Media Type:</dt>
+  <dd>Applications that transform xml2rfc to output representations such
+      as plain text or HTML, plus additional analysis tools.</dd>
+  <dt>Fragment identifier considerations:</dt>
+  <dd>The "anchor" attribute is used for assigning document-wide unique
       identifiers that can be used as shorthand pointers, as described
-      in <xref target="XPOINTER"/>.
-    </t>
-    <t hangText="Additional information:">
-      <list style="hanging">
-        <t hangText="Deprecated alias names for this type:">None</t>
-        <t hangText="Magic number(s):">As specified for "application/xml" in <xref target="RFC7303"/>.</t>
-        <t hangText="File extension(s):">.xml or .rfcxml when disambiguation from other XML files is needed</t>
-        <t hangText="Macintosh file type code(s):">TEXT</t>
-      </list>
-    </t>
-    <t hangText="Person &amp; email address to contact for further information:">
-      See the Author's Address section of RFC 7991.
-    </t>
-    <t hangText="Intended usage:">
-      COMMON
-    </t>
-    <t hangText="Restrictions on usage:">
-      None
-    </t>
-    <t hangText="Author:">
-      See the Author's Address section of RFC 7991.
-    </t>
-    <t hangText="Change controller:">
-      RFC Series Editor (rse@rfc-editor.org)
-    </t>
-  </list>
-</t>
-
+      in <xref target="XPOINTER"/>.</dd>
+  <dt>Additional information:</dt>
+  <dd>
+    <dl>
+      <dt>Deprecated alias names for this type:</dt>
+      <dd>None</dd>
+      <dt>Magic number(s):</dt>
+      <dd>As specified for "application/xml" in <xref target="RFC7303"/>.</dd>
+      <dt>File extension(s):</dt>
+      <dd>.xml or .rfcxml when disambiguation from other XML files is needed</dd>
+      <dt>Macintosh file type code(s):</dt>
+      <dd>TEXT</dd>
+    </dl>
+  </dd>
+  <dt>Person &amp; email address to contact for further information:</dt>
+  <dd>See the Author's Address section of RFC 7991.</dd>
+  <dt>Intended usage:</dt>
+  <dd>COMMON</dd>
+  <dt>Restrictions on usage:</dt>
+  <dd>None</dd>
+  <dt>Author:</dt>
+  <dd>See the Author's Address section of RFC 7991.</dd>
+  <dt>Change controller:</dt>
+  <dd>RFC Series Editor (rse@rfc-editor.org)</dd>
+</dl>
 </section>
 
 <section title="Link Relation Registration">
