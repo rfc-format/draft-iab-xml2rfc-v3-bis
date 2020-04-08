@@ -6208,17 +6208,24 @@ are believed to be the current values in use.</t>
   The prep tool automatically produces the "correct" text, depending on the
   document's date information (see above):
 </t>
-<texttable align="left">
-  <ttcol>TLP</ttcol><ttcol>starting with publication date</ttcol>
-
-  <c><xref target="TLP3.0"/></c>
-  <c>2009-11-01</c>
-
-  <c><xref target="TLP4.0"/></c>
-  <c>2010-04-01</c>
-
-</texttable> 
-
+<table>
+  <thead>
+    <tr>
+      <th>TLP</th>
+      <th>starting with publication date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><xref target="TLP3.0"/></td>
+      <td>2009-11-01</td>
+    </tr>
+    <tr>
+      <td><xref target="TLP4.0"/></td>
+      <td>2010-04-01</td>
+    </tr>
+  </tbody>
+</table>
 <aside>
   <t>
     The TLP was again updated in March 2015 <xref target="TLP5.0"/>, but
