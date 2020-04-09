@@ -41,11 +41,11 @@ differences-from-v2.txt:	xml2rfcv3.rnc $(xml2rfcv2)
 xml2rfcv3-full.rng: xml2rfcv3.rng
 	./postprocess-rng.py
 
-%.redxml:	%.xml clean-for-DTD.xslt
-	saxon -l $< clean-for-DTD.xslt > $@
+%.redxml:	%.xml
+	saxon -l $< clean-for-xml2rfc-v3.xslt > $@
 
 %.txt:	%.redxml
-	xml2rfc --text $< -o $@
+	xml2rfc --v3 --text $< -o $@
 
 %.unpg.txt:	%.redxml
-	xml2rfc --raw $< -o $@
+	xml2rfc --v3  --no-pagination $< -o $@
