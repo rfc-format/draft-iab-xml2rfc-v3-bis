@@ -89,6 +89,7 @@ Desired result has single references in back, and choice of references+  or (ref
     obsoletes="7991"
     ipr="trust200902"
     docName="draft-iab-rfc7991bis-03"
+    submissionType="IAB"
     category="info"
     xml:lang="en"
     xmlns:x="http://purl.org/net/xml2rfc/ext"
