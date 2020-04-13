@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:x="http://purl.org/net/xml2rfc/ext" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:x="http://purl.org/net/xml2rfc/ext"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
    <define name="rfc">
       <element name="rfc">
          <a:annotation>This is the root element of the xml2rfc vocabulary.</a:annotation>
@@ -11,7 +15,7 @@
          </optional>
          <optional>
             <attribute name="number">
-               <a:annotation>Deprecated; instead, use the "value" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+               <a:annotation>The number of the RFC to be produced.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -26,7 +30,14 @@
          </optional>
          <optional>
             <attribute name="category">
-               <a:annotation>Deprecated; instead, use the "name" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+               <a:annotation>Document category (see Appendix "The "category" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+               <choice>
+                  <value>std</value>
+                  <value>bcp</value>
+                  <value>info</value>
+                  <value>exp</value>
+                  <value>historic</value>
+               </choice>
             </attribute>
          </optional>
          <optional>
@@ -45,12 +56,12 @@
          </optional>
          <optional>
             <attribute name="seriesNo">
-               <a:annotation>Deprecated; instead, use the "value" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+               <a:annotation>Deprecated; instead, use the "value" attribute in &lt;seriesInfo&gt;.</a:annotation>
             </attribute>
          </optional>
          <optional>
             <attribute name="ipr">
-               <a:annotation>Represents the Intellectual Property status of the document. See Appendix "The "ipr" Attribute" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest for details.</a:annotation>
+               <a:annotation>Represents the Intellectual Property status of the document. See Appendix "The "ipr" Attribute" of Internet-Draft draft-iab-rfc7991bis-03 for details.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -72,7 +83,7 @@
          </optional>
          <optional>
             <attribute name="docName">
-               <a:annotation>Deprecated; instead, use the "value" attribute in &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+               <a:annotation>For Internet-Drafts, this specifies the draft name (which appears below the title).</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -114,7 +125,7 @@
          </optional>
          <optional>
             <attribute name="indexInclude" a:defaultValue="true">
-               <a:annotation>Specifies whether or not a formatter is requested to include an index in generated files. If the source file has no &lt;Section "&lt;iref&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, an index is never generated. This option is useful for generating documents where the source document has &lt;Section "&lt;iref&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements but the author no longer wants an index.</a:annotation>
+               <a:annotation>Specifies whether or not a formatter is requested to include an index in generated files. If the source file has no &lt;iref&gt; elements, an index is never generated. This option is useful for generating documents where the source document has &lt;iref&gt; elements but the author no longer wants an index.</a:annotation>
                <choice>
                   <value>true</value>
                   <value>false</value>
@@ -296,6 +307,20 @@
                <a:annotation>The ASCII equivalent of the organization's name.</a:annotation>
             </attribute>
          </optional>
+         <optional>
+            <attribute name="asciiAbbrev">
+               <a:annotation>To support abbreviated organization names in both ASCII and non-ASCII contexts.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="showOnFrontPage" a:defaultValue="true">
+               <a:annotation>To support turning off listing organization with author name.</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
          <text/>
       </element>
    </define>
@@ -327,7 +352,7 @@
    </define>
    <define name="postal">
       <element name="postal">
-         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;Section "&lt;street&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;city&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;region&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;code&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, and &lt;Section "&lt;country&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, or only an ordered set of &lt;Section "&lt;postalLine&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, but not both.</a:annotation>
+         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, or only an ordered set of &lt;postalLine&gt; elements, but not both.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -338,9 +363,13 @@
             <zeroOrMore>
                <choice>
                   <ref name="city"/>
+                  <ref name="cityarea"/>
                   <ref name="code"/>
                   <ref name="country"/>
+                  <ref name="extaddr"/>
+                  <ref name="pobox"/>
                   <ref name="region"/>
+                  <ref name="sortingcode"/>
                   <ref name="street"/>
                </choice>
             </zeroOrMore>
@@ -348,6 +377,74 @@
                <ref name="postalLine"/>
             </oneOrMore>
          </choice>
+      </element>
+   </define>
+   <define name="cityarea">
+      <element name="cityarea">
+         <a:annotation>TBD</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the city area name.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="extaddr">
+      <element name="extaddr">
+         <a:annotation>TBD</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>ASCII equivalent for extaddr.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="pobox">
+      <element name="pobox">
+         <a:annotation>TBD</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>ASCII equivalent for pobox.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
+   <define name="sortingcode">
+      <element name="sortingcode">
+         <a:annotation>A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>ASCII equivalent for sortingcode.</a:annotation>
+            </attribute>
+         </optional>
+         <text/>
       </element>
    </define>
    <define name="street">
@@ -466,7 +563,7 @@
    </define>
    <define name="facsimile">
       <element name="facsimile">
-         <a:annotation>Deprecated. The &lt;Section "&lt;email&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element is a much more useful way to get in touch with authors.</a:annotation>
+         <a:annotation>Deprecated. The &lt;email&gt; element is a much more useful way to get in touch with authors.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -507,7 +604,7 @@
    </define>
    <define name="date">
       <element name="date">
-         <a:annotation>Provides information about the publication date. This element is used for two cases: the boilerplate of the document being produced, and inside bibliographic references that use the &lt;Section "&lt;front&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. This element defines the date of publication for the current document (Internet-Draft or RFC). When producing Internet-Drafts, the prep tool uses this date to compute the expiration date (see [IDGUIDE]). When one or more of "year", "month", or "day" are left out, the prep tool will attempt to use the current system date if the attributes that are present are consistent with that date. In dates in &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, the month must be a number or a month in English. The prep tool will silently change text month names to numbers. Similarly, the year must be a four-digit number. When the prep tool is used to create Internet-Drafts, it will reject a submitted Internet-Draft that has a &lt;Section "&lt;date&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element in the boilerplate for itself that is anything other than today. That is, the tool will not allow a submitter to specify a date other than the day of submission. To avoid this problem, authors might simply not include a &lt;Section "&lt;date&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element in the boilerplate. In dates in &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements, the date information can have prose text for the month or year. For example, vague dates (year="ca. 2000"), date ranges (year="2012-2013"), non-specific months (month="Second quarter"), and so on are allowed.</a:annotation>
+         <a:annotation>Provides information about the publication date. This element is used for two cases: the boilerplate of the document being produced, and inside bibliographic references that use the &lt;front&gt; element.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -607,7 +704,7 @@
          </optional>
          <optional>
             <attribute name="title">
-               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+               <a:annotation>Deprecated. Use &lt;name&gt; instead.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -683,12 +780,12 @@
          </optional>
          <optional>
             <attribute name="title">
-               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+               <a:annotation>Deprecated. Use &lt;name&gt; instead.</a:annotation>
             </attribute>
          </optional>
          <optional>
             <attribute name="numbered" a:defaultValue="true">
-               <a:annotation>If set to "false", the formatter is requested to not display a section number. The prep tool will verify that such a section is not followed by a numbered section in this part of the document and will verify that the section is a top-level section.</a:annotation>
+               <a:annotation>If set to "false", the formatter is requested to not display a section number. The prep tool will verify that such a section is not followed by a numbered section in this part of the document and will verify that the section is a top-level section. Descendant sections of unnumbered sections are unnumbered by definition.</a:annotation>
                <choice>
                   <value>true</value>
                   <value>false</value>
@@ -697,7 +794,7 @@
          </optional>
          <optional>
             <attribute name="toc" a:defaultValue="default">
-               <a:annotation>Indicates to a formatter whether or not the section is to be included in a table of contents, if such a table of contents is produced. This only takes effect if the level of the section would have appeared in the table of contents based on the "tocDepth" attribute of the &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, and of course only if the table of contents is being created based on the "tocInclude" attribute of the &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. If this is set to "exclude", any section below this one will be excluded as well. The "default" value indicates inclusion of the section if it would be included by the tocDepth attribute of the &lt;Section "&lt;rfc&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+               <a:annotation>Indicates to a formatter whether or not the section is to be included in a table of contents, if such a table of contents is produced. This only takes effect if the level of the section would have appeared in the table of contents based on the "tocDepth" attribute of the &lt;rfc&gt; element, and of course only if the table of contents is being created based on the "tocInclude" attribute of the &lt;rfc&gt; element. If this is set to "exclude", any section below this one will be excluded as well. The "default" value indicates inclusion of the section if it would be included by the tocDepth attribute of the &lt;rfc&gt; element.</a:annotation>
                <choice>
                   <value>include</value>
                   <value>exclude</value>
@@ -719,6 +816,7 @@
          </optional>
          <zeroOrMore>
             <choice>
+               <ref name="artset"/>
                <ref name="artwork"/>
                <ref name="aside"/>
                <ref name="blockquote"/>
@@ -753,9 +851,15 @@
          <zeroOrMore>
             <choice>
                <text/>
+               <ref name="bcp14"/>
                <ref name="cref"/>
+               <ref name="em"/>
                <ref name="eref"/>
+               <ref name="iref"/>
                <ref name="relref"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
                <ref name="tt"/>
                <ref name="xref"/>
             </choice>
@@ -782,7 +886,7 @@
          </optional>
          <optional>
             <attribute name="hangText">
-               <a:annotation>Deprecated. Instead, use &lt;Section "&lt;dd&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; inside of a definition list (&lt;Section "&lt;dl&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;).</a:annotation>
+               <a:annotation>Deprecated. Instead, use &lt;dd&gt; inside of a definition list (&lt;dl&gt;).</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -844,11 +948,11 @@
          </optional>
          <zeroOrMore>
             <choice>
+               <ref name="artset"/>
                <ref name="artwork"/>
                <ref name="dl"/>
                <ref name="figure"/>
                <ref name="iref"/>
-               <ref name="list"/>
                <ref name="ol"/>
                <ref name="t"/>
                <ref name="table"/>
@@ -888,12 +992,14 @@
          <choice>
             <oneOrMore>
                <choice>
+                  <ref name="artset"/>
                   <ref name="artwork"/>
                   <ref name="dl"/>
                   <ref name="figure"/>
                   <ref name="ol"/>
                   <ref name="sourcecode"/>
                   <ref name="t"/>
+                  <ref name="table"/>
                   <ref name="ul"/>
                </choice>
             </oneOrMore>
@@ -918,7 +1024,7 @@
    </define>
    <define name="list">
       <element name="list">
-         <a:annotation>Deprecated. Instead, use &lt;Section "&lt;dl&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; for list/@style "hanging"; &lt;Section "&lt;ul&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; for list/@style "empty" or "symbols"; and &lt;Section "&lt;ol&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; for list/@style "letters", "numbers", "counter", or "format".</a:annotation>
+         <a:annotation>Deprecated. Instead, use &lt;dl&gt; for list/@style "hanging"; &lt;ul&gt; for list/@style "empty" or "symbols"; and &lt;ol&gt; for list/@style "letters", "numbers", "counter", or "format".</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -932,12 +1038,12 @@
          </optional>
          <optional>
             <attribute name="hangIndent">
-               <a:annotation>Deprecated. Use &lt;Section "&lt;dl&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+               <a:annotation>Deprecated. Use &lt;dl&gt; instead.</a:annotation>
             </attribute>
          </optional>
          <optional>
             <attribute name="counter">
-               <a:annotation>Deprecated. The functionality of this attribute has been replaced with &lt;Section "&lt;ol&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;/@start.</a:annotation>
+               <a:annotation>Deprecated. The functionality of this attribute has been replaced with &lt;ol&gt;/@start.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -965,7 +1071,7 @@
          </optional>
          <optional>
             <attribute name="type" a:defaultValue="1">
-               <a:annotation>The type of the labels on list items. If the length of the type value is 1, the meaning is the same as it is for HTML: Lowercase letters (a, b, c, ...)Uppercase letters (A, B, C, ...)Decimal numbers (1, 2, 3, ...)Lowercase Roman numerals (i, ii, iii, ...)Uppercase Roman numerals (I, II, III, ...) For types "a" and "A", after the 26th entry, the numbering starts at "aa"/"AA", then "ab"/"AB", and so on.</a:annotation>
+               <a:annotation>The type of the labels on list items. If the length of the type value is 1, the meaning is the same as it is for HTML:</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -1038,7 +1144,7 @@
    </define>
    <define name="li">
       <element name="li">
-         <a:annotation>A list element, used in &lt;Section "&lt;ol&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; and &lt;Section "&lt;ul&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+         <a:annotation>A list element, used in &lt;ol&gt; and &lt;ul&gt;.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1057,7 +1163,9 @@
          <choice>
             <oneOrMore>
                <choice>
+                  <ref name="artset"/>
                   <ref name="artwork"/>
+                  <ref name="blockquote"/>
                   <ref name="dl"/>
                   <ref name="figure"/>
                   <ref name="ol"/>
@@ -1087,7 +1195,7 @@
    </define>
    <define name="dl">
       <element name="dl">
-         <a:annotation>A definition list. Each entry has a pair of elements: a term (&lt;Section "&lt;dt&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;) and a definition (&lt;Section "&lt;dd&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;). (This is slightly different and simpler than the model used in HTML, which allows for multiple terms for a single definition.)</a:annotation>
+         <a:annotation>A definition list. Each entry has a pair of elements: a term (&lt;dt&gt;) and a definition (&lt;dd&gt;). (This is slightly different and simpler than the model used in HTML, which allows for multiple terms for a single definition.)</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1110,12 +1218,17 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="hanging" a:defaultValue="true">
-               <a:annotation>The "hanging" attribute defines whether or not the term appears on the same line as the definition. hanging="true" indicates that the term is to the left of the definition, while hanging="false" indicates that the term will be on a separate line.</a:annotation>
+            <attribute name="newline" a:defaultValue="true">
+               <a:annotation>The "newline" attribute defines whether or not the term appears on the same line as the definition. newline="true" indicates that the term is to the left of the definition, while newline="false" indicates that the term will be on a separate line.</a:annotation>
                <choice>
                   <value>false</value>
                   <value>true</value>
                </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="indent" a:defaultValue="0">
+               <a:annotation>Indicates the indentation to be used for the rendering of the second and following lines of the item (the first line starts with the term, and is not indented). The indentation amount is interpreted as characters when rendering plain-text documents, and en-space units when rendering in formats that have richer typographic support such as HTML or PDF. One en-space is assumed to be the length of 0.5 em-space in CSS units.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -1184,6 +1297,7 @@
          <choice>
             <oneOrMore>
                <choice>
+                  <ref name="artset"/>
                   <ref name="artwork"/>
                   <ref name="dl"/>
                   <ref name="figure"/>
@@ -1253,7 +1367,7 @@
    </define>
    <define name="relref">
       <element name="relref">
-         <a:annotation>Represents a link to a specific part of a document that appears in a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. Formatters that have links (such as HTML and PDF) render &lt;relref&gt; elements as external hyperlinks to the specified part of the reference, creating the link target by combining the base URI from the &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element with the "relative" attribute from this element. The "target" attribute is required, and it must be the anchor of a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+         <a:annotation>Represents a link to a specific part of a document that appears in a &lt;reference&gt; element. Formatters that have links (such as HTML and PDF) render &lt;relref&gt; elements as external hyperlinks to the specified part of the reference, creating the link target by combining the base URI from the &lt;reference&gt; element with the "relative" attribute from this element. The "target" attribute is required, and it must be the anchor of a &lt;reference&gt; element.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1261,7 +1375,7 @@
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
          </optional>
          <attribute name="target">
-            <a:annotation>The anchor of the reference for this element. If this value is not an anchor to a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; or &lt;Section "&lt;referencegroup&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, it is an error. If the reference at the target has no URI, it is an error.</a:annotation>
+            <a:annotation>The anchor of the reference for this element. If this value is not an anchor to a &lt;reference&gt; or &lt;referencegroup&gt; element, it is an error. If the reference at the target has no URI, it is an error.</a:annotation>
             <data type="IDREF"/>
          </attribute>
          <optional>
@@ -1527,7 +1641,7 @@
          </optional>
          <optional>
             <attribute name="style" a:defaultValue="emph">
-               <a:annotation>Deprecated. Instead of &lt;spanx style="emph"&gt;, use &lt;Section "&lt;em&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;; instead of &lt;spanx style="strong"&gt;, use &lt;Section "&lt;strong&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;; instead of &lt;spanx style="verb"&gt;, use &lt;tt&gt;.</a:annotation>
+               <a:annotation>Deprecated. Instead of &lt;spanx style="emph"&gt;, use &lt;em&gt;; instead of &lt;spanx style="strong"&gt;, use &lt;strong&gt;; instead of &lt;spanx style="verb"&gt;, use &lt;tt&gt;.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -1535,7 +1649,7 @@
    </define>
    <define name="vspace">
       <element name="vspace">
-         <a:annotation>Deprecated. In earlier versions of this format, &lt;vspace&gt; was often used to get an extra blank line in a list element; in the v3 vocabulary, that can be done instead by using multiple &lt;Section "&lt;t&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements inside the &lt;Section "&lt;li&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. Other uses have no direct replacement.</a:annotation>
+         <a:annotation>Deprecated. In earlier versions of this format, &lt;vspace&gt; was often used to get an extra blank line in a list element; in the v3 vocabulary, that can be done instead by using multiple &lt;t&gt; elements inside the &lt;li&gt; element. Other uses have no direct replacement.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1552,7 +1666,7 @@
    </define>
    <define name="figure">
       <element name="figure">
-         <a:annotation>Contains a figure with a caption with the figure number. If the element contains a &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, the caption will also show that name.</a:annotation>
+         <a:annotation>Contains a figure with a caption with the figure number. If the element contains a &lt;name&gt; element, the caption will also show that name.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1570,7 +1684,7 @@
          </optional>
          <optional>
             <attribute name="title" a:defaultValue="">
-               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+               <a:annotation>Deprecated. Use &lt;name&gt; instead.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -1602,7 +1716,7 @@
          </optional>
          <optional>
             <attribute name="alt" a:defaultValue="">
-               <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+               <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;reference&gt; instead.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -1626,6 +1740,7 @@
          </optional>
          <oneOrMore>
             <choice>
+               <ref name="artset"/>
                <ref name="artwork"/>
                <ref name="sourcecode"/>
             </choice>
@@ -1637,12 +1752,22 @@
    </define>
    <define name="table">
       <element name="table">
-         <a:annotation>Contains a table with a caption with the table number. If the element contains a &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element, the caption will also show that name.</a:annotation>
+         <a:annotation>Contains a table with a caption with the table number. If the element contains a &lt;name&gt; element, the caption will also show that name.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
          <optional>
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="align" a:defaultValue="center">
+               <a:annotation>Controls whether the table appears left justified, centered (default), or right justified. The caption will be centered under the table, and the combined table and caption will be aligned according to the "align" attribute.</a:annotation>
+               <choice>
+                  <value>left</value>
+                  <value>center</value>
+                  <value>right</value>
+               </choice>
+            </attribute>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1656,9 +1781,6 @@
          <optional>
             <ref name="name"/>
          </optional>
-         <zeroOrMore>
-            <ref name="iref"/>
-         </zeroOrMore>
          <optional>
             <ref name="thead"/>
          </optional>
@@ -1698,6 +1820,29 @@
          </zeroOrMore>
       </element>
    </define>
+   <define name="artset">
+      <element name="artset">
+         <a:annotation>This element allows for the support of alternative artwork formats. This will allow the renderer to pick the most appropriate &lt;artwork&gt; instance for its format from the alternatives present within an &lt;artset&gt; element.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Same as for the &lt;artwork&gt; element (Section "&lt;artwork&gt;" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="artwork"/>
+         </oneOrMore>
+      </element>
+   </define>
    <define name="artwork">
       <element name="artwork">
          <a:annotation>This element allows the inclusion of "artwork" in the document. &lt;artwork&gt; provides full control of horizontal whitespace and line breaks; thus, it is used for a variety of things, such as diagrams ("line art") and protocol unit diagrams. Tab characters (U+0009) inside of this element are prohibited.</a:annotation>
@@ -1721,7 +1866,7 @@
          </optional>
          <optional>
             <attribute name="name" a:defaultValue="">
-               <a:annotation>A filename suitable for the contents (such as for extraction to a local file). This attribute can be helpful for other kinds of tools (such as automated syntax checkers, which work by extracting the artwork). Note that the "name" attribute does not need to be unique for &lt;artwork&gt; elements in a document. If multiple &lt;artwork&gt; elements have the same "name" attribute, a processing tool might assume that the elements are all fragments of a single file, and the tool can collect those fragments for later processing. See Section "Security Considerations" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest for a discussion of possible problems with the value of this attribute.</a:annotation>
+               <a:annotation>A filename suitable for the contents (such as for extraction to a local file). This attribute can be helpful for other kinds of tools (such as automated syntax checkers, which work by extracting the artwork). Note that the "name" attribute does not need to be unique for &lt;artwork&gt; elements in a document. If multiple &lt;artwork&gt; elements have the same "name" attribute, a processing tool might assume that the elements are all fragments of a single file, and the tool can collect those fragments for later processing. See Section "Security Considerations" of Internet-Draft draft-iab-rfc7991bis-03 for a discussion of possible problems with the value of this attribute.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -1769,7 +1914,8 @@
             <ref name="svg"/>
          </choice>
       </element>
-   </define><!-- TODO: replace with link to RSE site, or provide an inline version -->
+   </define>
+   <!-- TODO: replace with link to RSE site, or provide an inline version -->
    <include href="https://raw.githubusercontent.com/nevil-brownlee/draft-svg-rfc/master/svg.rng"/>
    <define name="sourcecode">
       <element name="sourcecode">
@@ -1931,6 +2077,7 @@
          <choice>
             <oneOrMore>
                <choice>
+                  <ref name="artset"/>
                   <ref name="artwork"/>
                   <ref name="dl"/>
                   <ref name="figure"/>
@@ -1944,7 +2091,6 @@
                <choice>
                   <text/>
                   <ref name="bcp14"/>
-                  <ref name="br"/>
                   <ref name="cref"/>
                   <ref name="em"/>
                   <ref name="eref"/>
@@ -1962,7 +2108,7 @@
    </define>
    <define name="th">
       <element name="th">
-         <a:annotation>A cell in a table row. When rendered, this will normally come out in boldface; other than that, there is no difference between this and the &lt;Section "&lt;td&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+         <a:annotation>A cell in a table row. When rendered, this will normally come out in boldface; other than that, there is no difference between this and the &lt;td&gt; element.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1998,6 +2144,7 @@
          <choice>
             <oneOrMore>
                <choice>
+                  <ref name="artset"/>
                   <ref name="artwork"/>
                   <ref name="dl"/>
                   <ref name="figure"/>
@@ -2011,7 +2158,6 @@
                <choice>
                   <text/>
                   <ref name="bcp14"/>
-                  <ref name="br"/>
                   <ref name="cref"/>
                   <ref name="em"/>
                   <ref name="eref"/>
@@ -2050,7 +2196,7 @@
    </define>
    <define name="texttable">
       <element name="texttable">
-         <a:annotation>Deprecated. Use &lt;Section "&lt;table&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+         <a:annotation>Deprecated. Use &lt;table&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -2117,7 +2263,7 @@
    </define>
    <define name="ttcol">
       <element name="ttcol">
-         <a:annotation>Deprecated. Instead, use &lt;Section "&lt;tr&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;td&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, and &lt;Section "&lt;th&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+         <a:annotation>Deprecated. Instead, use &lt;tr&gt;, &lt;td&gt;, and &lt;th&gt;.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -2152,7 +2298,7 @@
    </define>
    <define name="c">
       <element name="c">
-         <a:annotation>Deprecated. Instead, use &lt;Section "&lt;tr&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, &lt;Section "&lt;td&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;, and &lt;Section "&lt;th&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt;.</a:annotation>
+         <a:annotation>Deprecated. Instead, use &lt;tr&gt;, &lt;td&gt;, and &lt;th&gt;.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -2183,21 +2329,9 @@
          <text/>
       </element>
    </define>
-   <define name="br">
-      <element name="br">
-         <a:annotation>Indicates that a line break should be inserted in the generated output by a formatting tool. Multiple successive instances of this element are ignored.</a:annotation>
-         <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
-         </optional>
-         <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
    <define name="back">
       <element name="back">
-         <a:annotation>Contains the "back" part of the document: the references and appendices. In &lt;back&gt;, &lt;Section "&lt;section&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements indicate appendices.</a:annotation>
+         <a:annotation>Contains the "back" part of the document: the references and appendices. In &lt;back&gt;, &lt;section&gt; elements indicate appendices.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -2207,9 +2341,7 @@
          <zeroOrMore>
             <ref name="displayreference"/>
          </zeroOrMore>
-         <zeroOrMore>
-            <ref name="references"/>
-         </zeroOrMore>
+         <ref name="references"/>
          <zeroOrMore>
             <ref name="section"/>
          </zeroOrMore>
@@ -2217,7 +2349,7 @@
    </define>
    <define name="displayreference">
       <element name="displayreference">
-         <a:annotation>This element gives a mapping between the anchor of a reference and a name that will be displayed instead. This allows authors to display more mnemonic anchor names for automatically included references. The mapping in this element only applies to &lt;Section "&lt;xref&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; elements whose format is "default". For example, if the reference uses the anchor "RFC6949", the following would cause that anchor in the body of displayed documents to be "RFC-dev": &lt;displayreference target="RFC6949" to="RFC-dev"/&gt;</a:annotation>
+         <a:annotation>This element gives a mapping between the anchor of a reference and a name that will be displayed instead. This allows authors to display more mnemonic anchor names for automatically included references. The mapping in this element only applies to &lt;xref&gt; elements whose format is "default". For example, if the reference uses the anchor "RFC6949", the following would cause that anchor in the body of displayed documents to be "RFC-dev":</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -2225,11 +2357,11 @@
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
          </optional>
          <attribute name="target">
-            <a:annotation>This attribute must be the name of an anchor in a &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; or &lt;Section "&lt;referencegroup&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element.</a:annotation>
+            <a:annotation>This attribute must be the name of an anchor in a &lt;reference&gt; or &lt;referencegroup&gt; element.</a:annotation>
             <data type="IDREF"/>
          </attribute>
          <attribute name="to">
-            <a:annotation>This attribute is a name that will be displayed as the anchor instead of the anchor that is given in the &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; element. The string given must start with one of the following characters: 0-9, a-z, or A-Z. The other characters in the string must be 0-9, a-z, A-Z, "-", ".", or "_".</a:annotation>
+            <a:annotation>This attribute is a name that will be displayed as the anchor instead of the anchor that is given in the &lt;reference&gt; element. The string given must start with one of the following characters: 0-9, a-z, or A-Z. The other characters in the string must be 0-9, a-z, A-Z, "-", ".", or "_".</a:annotation>
          </attribute>
       </element>
    </define>
@@ -2253,18 +2385,23 @@
          </optional>
          <optional>
             <attribute name="title">
-               <a:annotation>Deprecated. Use &lt;Section "&lt;name&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+               <a:annotation>Deprecated. Use &lt;name&gt; instead.</a:annotation>
             </attribute>
          </optional>
          <optional>
             <ref name="name"/>
          </optional>
-         <zeroOrMore>
-            <choice>
-               <ref name="reference"/>
-               <ref name="referencegroup"/>
-            </choice>
-         </zeroOrMore>
+         <choice>
+            <oneOrMore>
+               <ref name="references"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="reference"/>
+                  <ref name="referencegroup"/>
+               </choice>
+            </zeroOrMore>
+         </choice>
       </element>
    </define>
    <define name="reference">
@@ -2286,7 +2423,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="quoteTitle" a:defaultValue="true">
+            <attribute name="quote-title" a:defaultValue="true">
                <a:annotation>Specifies whether or not the title in the reference should be quoted. This can be used to prevent quoting, such as on errata.</a:annotation>
                <choice>
                   <value>true</value>
@@ -2300,7 +2437,7 @@
                <ref name="annotation"/>
                <ref name="format"/>
                <ref name="refcontent"/>
-               <ref name="seriesInfo"><?deprecated?></ref>
+               <ref name="seriesInfo"/>
             </choice>
          </zeroOrMore>
       </element>
@@ -2310,6 +2447,11 @@
          <a:annotation>Represents a list of bibliographic references that will be represented as a single reference. This is most often used to reference STDs and BCPs, where a single reference (such as "BCP 9") may encompass more than one RFC.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="target">
+               <a:annotation>Holds the URI for the reference.</a:annotation>
+            </attribute>
          </optional>
          <optional>
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
@@ -2333,7 +2475,7 @@
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
          </optional>
          <attribute name="name">
-            <a:annotation>The name of the series. The currently known values are "RFC", "Internet-Draft", and "DOI". The RFC Series Editor may change this list in the future.</a:annotation>
+            <a:annotation>Some series names might trigger specific processing (such as for autogenerating links, inserting descriptions such as "work in progress", or additional functionality like reference diagnostics). Examples for IETF-related series names are "BCP", "FYI", "Internet-Draft", "RFC", and "STD".</a:annotation>
          </attribute>
          <attribute name="value">
             <a:annotation>The identifier within the series specified by the "name" attribute.</a:annotation>
@@ -2369,7 +2511,7 @@
    </define>
    <define name="format">
       <element name="format">
-         <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;Section "&lt;reference&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; instead.</a:annotation>
+         <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;reference&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -2422,7 +2564,7 @@
    </define>
    <define name="refcontent">
       <element name="refcontent">
-         <a:annotation>Text that should appear between the title and the date of a reference. The purpose of this element is to prevent the need to abuse &lt;Section "&lt;seriesInfo&gt;" of Internet-Draft draft-iab-xml2rfc-v3-bis-latest&gt; to get such text in a reference.</a:annotation>
+         <a:annotation>Text that should appear between the title and the date of a reference. The purpose of this element is to prevent the need to abuse &lt;seriesInfo&gt; to get such text in a reference.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>

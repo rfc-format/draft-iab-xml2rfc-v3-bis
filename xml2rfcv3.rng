@@ -19,7 +19,15 @@
         <attribute name="updates" a:defaultValue=""/>
       </optional>
       <optional>
-        <attribute name="category"/>
+        <attribute name="category">
+          <choice>
+            <value>std</value>
+            <value>bcp</value>
+            <value>info</value>
+            <value>exp</value>
+            <value>historic</value>
+          </choice>
+        </attribute>
       </optional>
       <optional>
         <attribute name="mode"><?hidden-in-prose?></attribute>
