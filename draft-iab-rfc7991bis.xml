@@ -114,11 +114,18 @@ Desired result has single references in back, and choice of references+  or (ref
     </t>
   </abstract>
 
-  <note title="Editorial Note (To be removed by RFC Editor)">
+  <note title="Editorial Note" removeInRFC="true">
     <t>
       Discussion of this draft takes place on the xml2rfc-dev@ietf.org
       mailing list, which has its home page at
       <eref target="https://www.ietf.org/mailman/listinfo/xml2rfc-dev"/>.
+    </t>
+    <t>
+      Source code and issues list for this draft can be found at
+      <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis"/>.
+    </t>
+    <t>
+      The changes in this draft are summarized in <xref target="changes.since.02"/>.
     </t>
   </note>
 
@@ -8754,6 +8761,15 @@ to the v3 schema.</t>
 + start |= rfc
 <?ENDINC differences-from-v2.txt ?>
 </artwork></figure>
+</section>
+
+<section title="Change Log" removeInRFC="true">
+
+<section title="Since draft-iab-rfc7991bis-02" anchor="changes.since.02">
+  <ul x:when-empty="None yet.">
+  </ul>
+</section>
+
 </section>
 
 <section title="IAB Members at the Time of Approval" numbered="false">
