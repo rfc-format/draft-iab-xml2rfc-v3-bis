@@ -8802,6 +8802,7 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-02" anchor="changes.since.02">
   <ul x:when-empty="None yet.">
+    <li>Undeprecated metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/122"/>)</li>
   </ul>
 </section>
 
