@@ -125,7 +125,7 @@ Desired result has single references in back, and choice of references+  or (ref
       <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis"/>.
     </t>
     <t>
-      The changes in this draft are summarized in <xref target="changes.since.02"/>.
+      The changes in this draft are summarized in <xref target="changes.since.03"/>.
     </t>
   </note>
 
@@ -8800,7 +8800,21 @@ to the v3 schema.</t>
 
 <section title="Change Log" removeInRFC="true">
 
+<!-- incomplete
+<section title="Since draft-iab-rfc7991bis-01" anchor="changes.since.01">
+  <ul x:when-empty="None yet.">
+    <li>Regenerate <xref target="deprecatedelements"/> based on current grammar (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/111"/>)</li>
+  </ul>
+</section>
+-->
+
 <section title="Since draft-iab-rfc7991bis-02" anchor="changes.since.02">
+  <ul x:when-empty="None yet.">
+    <li>Updated Acknowledgements.</li>
+  </ul>
+</section>
+
+<section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/77"/>)</li>
     <li>Undeprecated metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/122"/>)</li>
