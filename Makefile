@@ -4,7 +4,8 @@ XSLT=saxon
 all: \
 	draft-iab-rfc7991bis.redxml \
 	draft-iab-rfc7991bis.unpg.txt \
-	draft-iab-rfc7991bis.txt
+	draft-iab-rfc7991bis.txt \
+	xml2rfcv3-annotated.rng
 
 xml2rfc.all: \
 	draft-iab-rfc7991bis.xml xml2rfcv3-annotated.rng
