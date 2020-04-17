@@ -8800,13 +8800,22 @@ to the v3 schema.</t>
 
 <section title="Change Log" removeInRFC="true">
 
-<!-- incomplete
 <section title="Since draft-iab-rfc7991bis-01" anchor="changes.since.01">
+  <t>
+    This entries try to summarize the changes until the end of 2019; changes that
+    ought to be reviewed are labeled this way: <cref>TBR</cref>.
+  </t>
   <ul x:when-empty="None yet.">
+    <li>Renamed "quoteTitle" attribute to "quote-title" <cref>TBR</cref></li>
+    <li>Add target attribute to &lt;<x:ref>referencegroup</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/96"/>)</li>
+    <li>Introduce new child elements of &lt;<x:ref>postal</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/97"/>) <cref>TBR</cref></li>
+    <li>Undeprecate &lt;<x:ref>seriesInfo</x:ref>&gt; inside &lt;<x:ref>reference</x:ref>&gt;, and remove special cases related to it appearing inside &lt;<x:ref>front</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/108"/>)</li>
+    <li>State that descendants of unnumbered sections are unnumbered by default (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/108"/>)</li>
+    <li>Restore original definition of name attribute on &lt;<x:ref>seriesInfo</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/108"/>)</li>
     <li>Regenerate <xref target="deprecatedelements"/> based on current grammar (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/111"/>)</li>
+    <li>Author is now John Levine.</li>
   </ul>
 </section>
--->
 
 <section title="Since draft-iab-rfc7991bis-02" anchor="changes.since.02">
   <ul x:when-empty="None yet.">
