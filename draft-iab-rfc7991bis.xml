@@ -1772,13 +1772,13 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="newline attribute" subitem="in dl element"/>
       <t>
          The "newline" attribute defines whether or not the term appears on the same line as the definition.
-         newline="true" indicates that the term is to the left of the definition, while newline="false"
+         newline="false" indicates that the term is to the left of the definition, while newline="true"
          indicates that the term will be on a separate line.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
-         <li>"false"</li>
-         <li>"true" (default)</li>
+         <li>"false" (default)</li>
+         <li>"true"</li>
       </ul>
    </section>
    <!--dl/@spacing-->
@@ -7221,7 +7221,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute anchor { xsd:ID }?,
     [ a:defaultValue = "normal" ]
     attribute spacing { "normal" | "compact" }?,
-    [ a:defaultValue = "true" ]
+    [ a:defaultValue = "false" ]
     attribute newline { "false" | "true" }?,
     [ a:defaultValue = "0" ] attribute indent { text }?,
     attribute pn { text }?,
@@ -8277,7 +8277,7 @@ to the v3 schema.</t>
 +     attribute anchor { xsd:ID }?,
 +     [ a:defaultValue = "normal" ]
 +     attribute spacing { "normal" | "compact" }?,
-+     [ a:defaultValue = "true" ]
++     [ a:defaultValue = "false" ]
 +     attribute newline { "false" | "true" }?,
 +     [ a:defaultValue = "0" ] attribute indent { text }?,
 +     attribute pn { text }?,
@@ -8816,6 +8816,7 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
+    <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/77"/>)</li>
     <li>Undeprecated metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/122"/>)</li>
   </ul>
 </section>

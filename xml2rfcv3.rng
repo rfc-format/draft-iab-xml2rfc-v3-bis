@@ -1052,7 +1052,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="newline" a:defaultValue="true">
+        <attribute name="newline" a:defaultValue="false">
           <choice>
             <value>false</value>
             <value>true</value>
