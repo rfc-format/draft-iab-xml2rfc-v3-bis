@@ -6552,9 +6552,9 @@ that is either on the Internet or local to the user's computer.</t>
 In the v3 syntax, XInclude is expressed as the &lt;xi:include&gt; element. To use this
 element, you need to include the "xi" namespace in the &lt;<x:ref>rfc</x:ref>&gt; element; that is, you need to specify
 </t>
-<figure><artwork>
+<artwork type="example">
 xmlns:xi="http://www.w3.org/2001/XInclude"
-</artwork></figure>
+</artwork>
 <t>
 as one of the attributes in the &lt;<x:ref>rfc</x:ref>&gt; element.</t>
 
@@ -6563,7 +6563,7 @@ that are already formed as XML. Currently, this can be done from xml2rfc.tools.i
 expected to be from the RFC Editor. For example, if a document has three normative
 references, all RFCs, the document might contain:
 </t>
-<figure><artwork>
+<artwork type="example">
 &lt;references&gt;
     &lt;xi:include href="http://xml2rfc.tools.ietf.org/public/rfc/
        bibxml/reference.RFC.2119.xml"/&gt;
@@ -6572,17 +6572,17 @@ references, all RFCs, the document might contain:
     &lt;xi:include href="http://xml2rfc.tools.ietf.org/public/rfc/
        bibxml/reference.RFC.7169.xml"/&gt;
 &lt;/references&gt;
-</artwork></figure>
-
+</artwork>
+<t>(the line breaks in the example above have been added for readability and need to be removed in practice)</t>
 <t>&lt;xi:include&gt; can be used anywhere an XML element could be used (but not where
 free text is used). For example, if three Internet-Drafts are all including a particular paragraph
 or section verbatim, that text can be kept either in a file or somewhere on the web and can be
 included with &lt;xi:include&gt;. An example of pulling something from the local disk would
 be:
 </t>
-<figure><artwork>
-&lt;x:include href="file://home/chris/ietf/drafts/commontext.xml"/&gt;
-</artwork></figure>
+<artwork type="example">
+&lt;xi:include href="file://home/chris/ietf/drafts/commontext.xml"/&gt;
+</artwork>
 <t>
 In general, XInclude should be used instead of ENTITY references and XML Processing Instructions (PIs)
 that allow external inclusions.
