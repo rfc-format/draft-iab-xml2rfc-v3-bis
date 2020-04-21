@@ -7525,8 +7525,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute originalSrc { text }?,
     (text* | svg)
   }
-# TODO: replace with link to RSE site, or provide an inline version
-include "svg.rnc"
+a:documentation [ "svg element: see <xref target="RFC7996" x:fmt="of" x:sec="A"/>." ]
+include "SVG-1.2-RFC.rnc"
 
 <strong anchor="grammar.sourcecode">sourcecode</strong><iref item="sourcecode element"/> =
   element sourcecode {
@@ -8573,9 +8573,8 @@ to the v3 schema.</t>
 +     attribute originalSrc { text }?,
 +     (text* | svg)
 +   }
-+ # TODO: replace with link to RSE site, or provide an inline 
-+ version
-+ include "svg.rnc"
++ a:documentation [ "svg element: see Appendix A of [RFC7996]." ]
++ include "SVG-1.2-RFC.rnc"
 + sourcecode =
 +   element sourcecode {
 +     attribute xml:base { text }?,
@@ -8831,6 +8830,7 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
+    <li>Add mssing include directive for SVG grammar (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/11"/>)</li>
     <li>Undeprecate &lt;<x:ref>xref</x:ref>&gt; format "none" (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/17"/>)</li>
     <li>Editorial fixes in <xref target="includingexternal"/> (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/18"/>)</li>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/77"/>)</li>
