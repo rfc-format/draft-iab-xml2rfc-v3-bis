@@ -10,7 +10,7 @@ all: \
 xml2rfc.all: \
 	draft-iab-rfc7991bis.xml xml2rfcv3-annotated.rng
 
-xml2rfcv3.rnc: xml2rfcv3.rng
+xml2rfcv3.rnc: xml2rfcv3.rng SVG-1.2-RFC.rnc SVG-1.2-RFC.rng
 	java -jar trang.jar -o lineLength=69 $< $@
 
 #xml2rfcv3.dtd: xml2rfcv3.rng
@@ -53,3 +53,9 @@ xml2rfcv3-full.rng: xml2rfcv3.rng
 
 %.unpg.txt:	%.redxml
 	xml2rfc --v3  --no-pagination $< -o $@
+
+SVG-1.2-RFC.rnc:
+	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rnc
+
+SVG-1.2-RFC.rng:
+	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rng
