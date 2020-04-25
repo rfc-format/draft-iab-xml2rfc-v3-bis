@@ -8830,7 +8830,7 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
-    <li>Add mssing include directive for SVG grammar (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/11"/>)</li>
+    <li>Add missing include directive for SVG grammar (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/11"/>)</li>
     <li>Undeprecate &lt;<x:ref>xref</x:ref>&gt; format "none" (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/17"/>)</li>
     <li>Editorial fixes in <xref target="includingexternal"/> (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/18"/>)</li>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/77"/>)</li>
