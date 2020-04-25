@@ -1915,8 +1915,8 @@
          </choice>
       </element>
    </define>
-   <!-- TODO: replace with link to RSE site, or provide an inline version -->
-   <include href="https://raw.githubusercontent.com/nevil-brownlee/draft-svg-rfc/master/svg.rng"/>
+   <a:documentation>svg element: see Appendix A of [RFC7996].</a:documentation>
+   <include href="SVG-1.2-RFC.rng"/>
    <define name="sourcecode">
       <element name="sourcecode">
          <a:annotation>This element allows the inclusion of source code into the document.</a:annotation>
