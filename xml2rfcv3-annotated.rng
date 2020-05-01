@@ -1716,7 +1716,7 @@
          </optional>
          <optional>
             <attribute name="alt" a:defaultValue="">
-               <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;reference&gt; instead.</a:annotation>
+               <a:annotation>Deprecated.</a:annotation>
             </attribute>
          </optional>
          <optional>
