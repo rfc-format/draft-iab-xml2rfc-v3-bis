@@ -8814,13 +8814,31 @@ to the v3 schema.</t>
 
 <section title="Change Log" removeInRFC="true">
 
-<section title="Since draft-iab-rfc7991bis-01" anchor="changes.since.01">
-  <t>
-    This entries try to summarize the changes until the end of 2019; changes that
-    ought to be reviewed are labeled this way: <cref>TBR</cref>.
-  </t>
+<t>
+  The entries for -01 and -02 try to summarize the changes until the end of 2019; changes that
+  ought to be reviewed are labeled this way: <cref>TBR</cref>.
+</t>
+
+<section title="Since draft-iab-rfc7991bis-00" anchor="changes.since.00">
   <ul x:when-empty="None yet.">
-    <li>Renamed "quoteTitle" attribute to "quote-title" <cref>TBR</cref></li>
+    <li>Allow both "src" attribute and content on &lt;<x:ref>artwork</x:ref>&gt; again (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/50"/>)</li>
+    <li>Allow &lt;<x:ref>blockquote</x:ref>&gt; in &lt;<x:ref>li</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/51"/>)</li>
+    <li>Removed &lt;<x:ref>br</x:ref>&gt; element (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/56"/>)</li>
+    <li>Replaced "hanging" attribute on &lt;<x:ref>dl</x:ref>&gt; by "newline" (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/62"/>)</li>
+    <li>Add "indent" attribute to &lt;<x:ref>dl</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/63"/>)</li>
+    <li>Revise &lt;<x:ref>table</x:ref>&gt; and &lt;<x:ref>caption</x:ref>&gt; alignment (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/40"/>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/68"/>)</li>
+  </ul>
+</section>
+
+<section title="Since draft-iab-rfc7991bis-01" anchor="changes.since.01">
+  <ul x:when-empty="None yet.">
+    <li>Extended the list of allowed child elements of &lt;<x:ref>name</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/69"/>)</li>
+    <li>Allow &lt;<x:ref>references</x:ref>&gt;s to be nested (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/70"/>)</li>
+    <li>Added &lt;<x:ref>artset</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/89"/>)</li>
+    <li>Removed &lt;<x:ref>list</x:ref>&gt; from &lt;<x:ref>aside</x:ref>&gt;, added &lt;<x:ref>table</x:ref>&gt; to &lt;<x:ref>blockquote</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/92"/>)</li>
+    <li>Removed &lt;<x:ref>iref</x:ref>&gt; from &lt;<x:ref>table</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/92"/>) <cref>TBR</cref></li>
+    <li>Add attributes "asciiAbbrev" and "showOnFrontPage" to  &lt;<x:ref>organization</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/93"/>)</li>
+    <li>Renamed "quoteTitle" attribute to "quote-title" (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/95"/>)<cref>TBR</cref></li>
     <li>Add target attribute to &lt;<x:ref>referencegroup</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/96"/>)</li>
     <li>Introduce new child elements of &lt;<x:ref>postal</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/97"/>) <cref>TBR</cref></li>
     <li>Undeprecate &lt;<x:ref>seriesInfo</x:ref>&gt; inside &lt;<x:ref>reference</x:ref>&gt;, and remove special cases related to it appearing inside &lt;<x:ref>front</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/108"/>)</li>
