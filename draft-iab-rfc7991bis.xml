@@ -2088,7 +2088,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="figure element" subitem="align attribute"/>
       <iref item="align attribute" subitem="in figure element"/>
       <t>
-          Deprecated.
+         Deprecated.
       </t>
       <t> 
           Note: does not affect title or &lt;<x:ref>artwork</x:ref>&gt; alignment.
@@ -2107,9 +2107,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="figure element" subitem="alt attribute"/>
       <iref item="alt attribute" subitem="in figure element"/>
       <t>
-         Deprecated. If the goal is to provide a single URI for
-         a reference, use the "target" attribute in &lt;<x:ref>reference</x:ref>&gt; instead.
-       </t>
+         Deprecated - use "alt" attribute on &lt;<x:ref>artwork</x:ref>&gt;
+         element instead (<xref target="element.artwork.attribute.alt"/>).
+      </t>
    </section>
    <!--figure/@anchor-->
    <section anchor="element.figure.attribute.anchor" toc="exclude">
@@ -2128,6 +2128,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="figure element" subitem="height attribute"/>
       <iref item="height attribute" subitem="in figure element"/>
       <t>
+         Deprecated - use "height" attribute on &lt;<x:ref>artwork</x:ref>&gt;
+         element instead (<xref target="element.artwork.attribute.height"/>).
          Deprecated.
        </t>
    </section>
@@ -2138,6 +2140,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="figure element" subitem="src attribute"/>
       <iref item="src attribute" subitem="in figure element"/>
       <t>
+         Deprecated - use "src" attribute on &lt;<x:ref>artwork</x:ref>&gt;
+         element instead (<xref target="element.artwork.attribute.src"/>).
          Deprecated.
        </t>
    </section>
@@ -2173,6 +2177,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="figure element" subitem="width attribute"/>
       <iref item="width attribute" subitem="in figure element"/>
       <t>
+         Deprecated - use "width" attribute on &lt;<x:ref>artwork</x:ref>&gt;
+         element instead (<xref target="element.artwork.attribute.width"/>).
          Deprecated.
        </t>
    </section>
@@ -8858,6 +8864,7 @@ to the v3 schema.</t>
 <section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
     <li>Add missing include directive for SVG grammar (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/11"/>)</li>
+    <li>Remove incorrect text about deprecation of "alt" attribute on &lt;<x:ref>artwork</x:ref>&gt;, added more prose for several other deprecations on this element (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/12"/>)</li>
     <li>Undeprecate &lt;<x:ref>xref</x:ref>&gt; format "none" (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/17"/>)</li>
     <li>Editorial fixes in <xref target="includingexternal"/> (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/18"/>)</li>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/77"/>)</li>
