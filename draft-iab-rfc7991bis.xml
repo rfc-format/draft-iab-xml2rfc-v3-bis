@@ -2130,8 +2130,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          Deprecated - use "height" attribute on &lt;<x:ref>artwork</x:ref>&gt;
          element instead (<xref target="element.artwork.attribute.height"/>).
-         Deprecated.
-       </t>
+      </t>
    </section>
    <!--figure/@src-->
    <section anchor="element.figure.attribute.src" toc="exclude">
@@ -2142,8 +2141,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          Deprecated - use "src" attribute on &lt;<x:ref>artwork</x:ref>&gt;
          element instead (<xref target="element.artwork.attribute.src"/>).
-         Deprecated.
-       </t>
+      </t>
    </section>
    <!--figure/@suppress-title-->
    <section anchor="element.figure.attribute.suppress-title" toc="exclude">
@@ -2179,8 +2177,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          Deprecated - use "width" attribute on &lt;<x:ref>artwork</x:ref>&gt;
          element instead (<xref target="element.artwork.attribute.width"/>).
-         Deprecated.
-       </t>
+      </t>
    </section>
 </section>
 <!--front-->
