@@ -1698,7 +1698,7 @@
          </optional>
          <optional>
             <attribute name="src">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>Deprecated - use "src" attribute on &lt;artwork&gt; element instead (Section ""src" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -1716,17 +1716,17 @@
          </optional>
          <optional>
             <attribute name="alt" a:defaultValue="">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>Deprecated - use "alt" attribute on &lt;artwork&gt; element instead (Section ""alt" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
             </attribute>
          </optional>
          <optional>
             <attribute name="width" a:defaultValue="">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>Deprecated - use "width" attribute on &lt;artwork&gt; element instead (Section ""width" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
             </attribute>
          </optional>
          <optional>
             <attribute name="height" a:defaultValue="">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>Deprecated - use "height" attribute on &lt;artwork&gt; element instead (Section ""height" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
             </attribute>
          </optional>
          <optional>
