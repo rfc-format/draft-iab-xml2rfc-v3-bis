@@ -8855,9 +8855,9 @@ to the v3 schema.</t>
     <li>Renamed "quoteTitle" attribute to "quote-title" (<eref target="&GH;/pull/95">PR95</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.14"/>) <cref anchor="TBR48">see <eref target="&GH;/issues/48">#48</eref></cref></li>
     <li>Add target attribute to &lt;<x:ref>referencegroup</x:ref>&gt; (<eref target="&GH;/pull/96">PR96</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.15"/>)</li>
     <li>Introduce new child elements of &lt;<x:ref>postal</x:ref>&gt; (<eref target="&GH;/pull/97">PR97</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.13"/>) <cref anchor="TBR137">see <eref target="&GH;/issues/137">#137</eref></cref></li>
-    <li>Undeprecate &lt;<x:ref>seriesInfo</x:ref>&gt; inside &lt;<x:ref>reference</x:ref>&gt;, and remove special cases related to it appearing inside &lt;<x:ref>front</x:ref>&gt; (<eref target="&GH;/pull/108"/>)</li>
-    <li>State that descendants of unnumbered sections are unnumbered by default (<eref target="&GH;/pull/108"/>)</li>
-    <li>Restore original definition of name attribute on &lt;<x:ref>seriesInfo</x:ref>&gt; (<eref target="&GH;/pull/108"/>)</li>
+    <li>Undeprecate &lt;<x:ref>seriesInfo</x:ref>&gt; inside &lt;<x:ref>reference</x:ref>&gt;, and remove special cases related to it appearing inside &lt;<x:ref>front</x:ref>&gt; (<eref target="&GH;/pull/108">PR108</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.21.3"/>)</li>
+    <li>State that descendants of unnumbered sections are unnumbered by default (<eref target="&GH;/pull/108">PR108</eref>)</li>
+    <li>Restore original definition of name attribute on &lt;<x:ref>seriesInfo</x:ref>&gt; (<eref target="&GH;/pull/108">PR108</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.21.2"/>)</li>
     <li>Regenerate <xref target="deprecatedelements"/> based on current grammar (<eref target="&GH;/issues/111"/>)</li>
     <li>Author is now John Levine.</li>
   </ul>
