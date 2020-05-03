@@ -8851,8 +8851,8 @@ to the v3 schema.</t>
     <li>Added &lt;<x:ref>artset</x:ref>&gt; (<eref target="&GH;/issues/76">#76</eref>, <eref target="&GH;/pull/89">PR89</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.1"/>) <cref anchor="TBR136">see <eref target="&GH;/issues/136">#136</eref></cref></li>
     <li>Removed &lt;<x:ref>list</x:ref>&gt; from &lt;<x:ref>aside</x:ref>&gt;, added &lt;<x:ref>table</x:ref>&gt; to &lt;<x:ref>blockquote</x:ref>&gt; (<eref target="&GH;/issues/47">#47</eref>, <eref target="&GH;/pull/69">PR69</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.4"/>)</li>
     <li>Removed &lt;<x:ref>iref</x:ref>&gt; from &lt;<x:ref>table</x:ref>&gt; (<eref target="&GH;/pull/92">PR92</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.9"/>) <cref anchor="TBR94">see <eref target="&GH;/issues/94">#94</eref></cref></li>
-    <li>Add attributes "asciiAbbrev" and "showOnFrontPage" to  &lt;<x:ref>organization</x:ref>&gt; (<eref target="&GH;/pull/93"/>)</li>
-    <li>Renamed "quoteTitle" attribute to "quote-title" (<eref target="&GH;/pull/95"/>)<cref>TBR</cref></li>
+    <li>Add attributes "asciiAbbrev" and "showOnFrontPage" to  &lt;<x:ref>organization</x:ref>&gt; (<eref target="&GH;/pull/93">PR93</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.12"/>)</li>
+    <li>Renamed "quoteTitle" attribute to "quote-title" (<eref target="&GH;/pull/95">PR95</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.14"/>)<cref anchor="TBR48">see <eref target="&GH;/issues/48">#48</eref></cref></li>
     <li>Add target attribute to &lt;<x:ref>referencegroup</x:ref>&gt; (<eref target="&GH;/pull/96"/>)</li>
     <li>Introduce new child elements of &lt;<x:ref>postal</x:ref>&gt; (<eref target="&GH;/pull/97"/>) <cref>TBR</cref></li>
     <li>Undeprecate &lt;<x:ref>seriesInfo</x:ref>&gt; inside &lt;<x:ref>reference</x:ref>&gt;, and remove special cases related to it appearing inside &lt;<x:ref>front</x:ref>&gt; (<eref target="&GH;/pull/108"/>)</li>
