@@ -8830,7 +8830,7 @@ to the v3 schema.</t>
 
 <t>
   The entries for -01 and -02 try to summarize the changes until the end of 2019; changes that
-  ought to be reviewed are labeled this way: <cref>TBR</cref>.
+  ought to be reviewed are labeled this way: <cref anchor="TBRxxx">see ...</cref>.
 </t>
 
 <section title="Since draft-iab-rfc7991bis-00" anchor="changes.since.00">
@@ -8847,8 +8847,8 @@ to the v3 schema.</t>
 <section title="Since draft-iab-rfc7991bis-01" anchor="changes.since.01">
   <ul x:when-empty="None yet.">
     <li>Extended the list of allowed child elements of &lt;<x:ref>name</x:ref>&gt; (<eref target="&GH;/issues/32">#32</eref> and <eref target="&GH;/issues/40">#40</eref>, <eref target="&GH;/pull/69">PR69</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.11"/>)</li>
-    <li>Allow &lt;<x:ref>references</x:ref>&gt; elements to be nested (<eref target="&GH;/issues/47">#47</eref>, <eref target="&GH;/pull/70">PR70</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.6"/>) <cref>see <eref target="&GH;/issues/135">#135</eref></cref></li>
-    <li>Added &lt;<x:ref>artset</x:ref>&gt; (<eref target="&GH;/pull/89"/>)</li>
+    <li>Allow &lt;<x:ref>references</x:ref>&gt; elements to be nested (<eref target="&GH;/issues/47">#47</eref>, <eref target="&GH;/pull/70">PR70</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.6"/>) <cref anchor="TBR135">see <eref target="&GH;/issues/135">#135</eref></cref></li>
+    <li>Added &lt;<x:ref>artset</x:ref>&gt; (<eref target="&GH;/issues/76">#76</eref>, <eref target="&GH;/pull/89">PR89</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.1"/>) <cref anchor="TBR136">see <eref target="&GH;/issues/136">#136</eref></cref></li>
     <li>Removed &lt;<x:ref>list</x:ref>&gt; from &lt;<x:ref>aside</x:ref>&gt;, added &lt;<x:ref>table</x:ref>&gt; to &lt;<x:ref>blockquote</x:ref>&gt; (<eref target="&GH;/issues/47">#47</eref>, <eref target="&GH;/pull/69">PR69</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.11"/>)</li>
     <li>Removed &lt;<x:ref>iref</x:ref>&gt; from &lt;<x:ref>table</x:ref>&gt; (<eref target="&GH;/pull/92"/>) <cref>TBR</cref></li>
     <li>Add attributes "asciiAbbrev" and "showOnFrontPage" to  &lt;<x:ref>organization</x:ref>&gt; (<eref target="&GH;/pull/93"/>)</li>
