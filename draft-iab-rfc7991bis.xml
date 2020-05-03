@@ -2130,8 +2130,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          Deprecated - use "height" attribute on &lt;<x:ref>artwork</x:ref>&gt;
          element instead (<xref target="element.artwork.attribute.height"/>).
-         Deprecated.
-       </t>
+      </t>
    </section>
    <!--figure/@src-->
    <section anchor="element.figure.attribute.src" toc="exclude">
@@ -2142,8 +2141,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          Deprecated - use "src" attribute on &lt;<x:ref>artwork</x:ref>&gt;
          element instead (<xref target="element.artwork.attribute.src"/>).
-         Deprecated.
-       </t>
+      </t>
    </section>
    <!--figure/@suppress-title-->
    <section anchor="element.figure.attribute.suppress-title" toc="exclude">
@@ -2179,8 +2177,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          Deprecated - use "width" attribute on &lt;<x:ref>artwork</x:ref>&gt;
          element instead (<xref target="element.artwork.attribute.width"/>).
-         Deprecated.
-       </t>
+      </t>
    </section>
 </section>
 <!--front-->
@@ -6199,7 +6196,17 @@ Suzanne Woolf
       <eref target='http://www.w3.org/TR/xptr-framework/'/>.
     </annotation>
   </reference>
+</references>
 
+<references title="Editorial References">
+  <reference anchor='IMPNOTES'>
+    <front>
+      <title>Implementation notes for RFC7991, "The 'xml2rfc' Version 3 Vocabulary"</title>
+      <author initials='H.' surname='Levkowetz' fullname='Henrik Levkowetz'/>
+      <date month='October' year='2019' />
+    </front>
+    <seriesInfo name='Internet-Draft' value='draft-levkowetz-xml2rfc-v3-implementation-notes-10'/>
+  </reference>
 </references>
 
 <section title="Front-Page (&quot;Boilerplate&quot;) Generation" anchor="front.page">
@@ -8827,12 +8834,12 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-00" anchor="changes.since.00">
   <ul x:when-empty="None yet.">
-    <li>Allow both "src" attribute and content on &lt;<x:ref>artwork</x:ref>&gt; again (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/50"/>)</li>
-    <li>Allow &lt;<x:ref>blockquote</x:ref>&gt; in &lt;<x:ref>li</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/51"/>)</li>
-    <li>Removed &lt;<x:ref>br</x:ref>&gt; element (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/56"/>)</li>
-    <li>Replaced "hanging" attribute on &lt;<x:ref>dl</x:ref>&gt; by "newline" (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/62"/>)</li>
-    <li>Add "indent" attribute to &lt;<x:ref>dl</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/63"/>)</li>
-    <li>Revise &lt;<x:ref>table</x:ref>&gt; and &lt;<x:ref>caption</x:ref>&gt; alignment (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/40"/>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/68"/>)</li>
+    <li>Allow both "src" attribute and content on &lt;<x:ref>artwork</x:ref>&gt; again (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/34">#34</eref>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/50">PR50</eref>)</li>
+    <li>Allow &lt;<x:ref>blockquote</x:ref>&gt; in &lt;<x:ref>li</x:ref>&gt; (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/35">#35</eref>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/51">PR51</eref>)</li>
+    <li>Removed &lt;<x:ref>br</x:ref>&gt; element (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/37">#37</eref>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/56">PR56</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.5"/>)</li>
+    <li>Replaced "hanging" attribute on &lt;<x:ref>dl</x:ref>&gt; by "newline" (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/38">#38</eref>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/62">PR62</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.6"/>)</li>
+    <li>Add "indent" attribute to &lt;<x:ref>dl</x:ref>&gt; <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/39">#39</eref>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/63">PR63</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.7"/>)</li>
+    <li>Revise &lt;<x:ref>table</x:ref>&gt; and &lt;<x:ref>caption</x:ref>&gt; alignment (<eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/9">#9</eref> and <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/issues/40">#40</eref>, <eref target="https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis/pull/68">PR68</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.8"/>)</li>
   </ul>
 </section>
 
