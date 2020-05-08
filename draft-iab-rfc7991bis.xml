@@ -5174,9 +5174,9 @@ for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-            <t>
-            See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
-          </t>
+          <artwork>
+See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
+</artwork>
          </dd>
          <dt>
             <iref item="xref formats" subitem="default" primary="true"/>"default"</dt>
@@ -5198,9 +5198,9 @@ See &lt;xref target="overview"/&gt; for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-            <t>
-            See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
-          </t>
+          <artwork>
+See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
+</artwork>
          </dd>
          <dt>
             <iref item="xref formats" subitem="none" primary="true"/>"none"</dt>
@@ -5215,14 +5215,15 @@ See &lt;xref target="overview"/&gt; for an overview.
           <artwork>
 &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
 . . .
-See &lt;xref target="overview" format="none"&gt;section above&lt;/xref&gt; for an overview.
+See &lt;xref target="overview" format="none"&gt;section above&lt;/xref&gt;
+for an overview.
 </artwork>
             <t>
              An HTML formatter might generate:
           </t>
-            <t>
-            See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
-          </t>
+          <artwork>
+See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
+</artwork>
          </dd>
          <dt>
             <iref item="xref formats" subitem="title" primary="true"/>"title"</dt>
