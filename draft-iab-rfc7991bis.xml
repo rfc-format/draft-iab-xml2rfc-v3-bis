@@ -1961,42 +1961,34 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       For example, with an input of:
    </t>
-   <figure>
-      <artwork>
-      This is described at
-      &lt;eref target="http://www.example.com/reports/r12.html"/&gt;.
+   <artwork>
+This is described at
+&lt;eref target="http://www.example.com/reports/r12.html"/&gt;.
 </artwork>
-   </figure>
    <t>
       An HTML formatter might generate:
    </t>
-   <figure>
-      <artwork>
-      This is described at
-      &lt;a href="http://www.example.com/reports/r12.html"&gt;
-      http://www.example.com/reports/r12.html&lt;/a&gt;.
+   <artwork>
+This is described at
+&lt;a href="http://www.example.com/reports/r12.html"&gt;
+http://www.example.com/reports/r12.html&lt;/a&gt;.
 </artwork>
-   </figure>
    <t>
       With an input of:
    </t>
-   <figure>
-      <artwork>
-      This is described
-      &lt;eref target="http://www.example.com/reports/r12.html"&gt;
-      in this interesting report&lt;/eref&gt;.
+   <artwork>
+This is described
+&lt;eref target="http://www.example.com/reports/r12.html"&gt;
+in this interesting report&lt;/eref&gt;.
 </artwork>
-   </figure>
    <t>
       An HTML formatter might generate:
    </t>
-   <figure>
-      <artwork>
-      This is described
-      &lt;a href="http://www.example.com/reports/r12.html"&gt;
-      in this interesting report&lt;/a&gt;.
+   <artwork>
+This is described
+&lt;a href="http://www.example.com/reports/r12.html"&gt;
+in this interesting report&lt;/a&gt;.
 </artwork>
-   </figure>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>ttcol</x:ref>&gt; (<xref target="element.ttcol"/>).</t>
    <t anchor="element.eref.contents"><!--AG-->
       <xref format="none" target="grammar.eref">Content model</xref>: only text content.</t>
@@ -2986,8 +2978,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
      For example:
    </t>
-   <figure>
-      <artwork>
+   <artwork>
 &lt;reference anchor="April1"&gt;
   &lt;front&gt;
     &lt;title&gt;On Being A Fool&lt;/title&gt;
@@ -2997,16 +2988,13 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
   &lt;refcontent&gt;Self-published pamphlet&lt;/refcontent&gt;
 &lt;/reference&gt;
 </artwork>
-   </figure>
    <t>
      would render as:
    </t>
-   <figure>
-      <artwork>
-   [April1]     Phunny, K., "On Being A Fool", Self-published
-                pamphlet, April 2000.
+   <artwork>
+[April1]     Phunny, K., "On Being A Fool", Self-published
+             pamphlet, April 2000.
 </artwork>
-   </figure>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.refcontent.contents"><!--AG-->
       <xref format="none" target="grammar.refcontent">Content model</xref>:
@@ -3276,25 +3264,21 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       An example of the &lt;relref&gt; element with text content might be:
    </t>
-   <figure>
-      <artwork>
-      See
-      &lt;relref section="2.3" target="RFC9999" displayFormat="bare"&gt;
-      the protocol overview&lt;/relref&gt;
-      for more information.
+   <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="bare"&gt;
+the protocol overview&lt;/relref&gt;
+for more information.
 </artwork>
-   </figure>
    <t>
        An HTML formatter might generate:
    </t>
-   <figure>
-      <artwork>
-      See 
-      &lt;a href="http://www.rfc-editor.org/rfc/rfc9999.html#s-2.3"&gt;
-      the protocol overview&lt;/a&gt;
-      for more information.
+   <artwork>
+See 
+&lt;a href="http://www.rfc-editor.org/rfc/rfc9999.html#s-2.3"&gt;
+the protocol overview&lt;/a&gt;
+for more information.
 </artwork>
-   </figure>
    <t>
    Note that the URL in the above example might be different when the RFC Editor deploys the v3 format.
    </t>
@@ -3323,20 +3307,20 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example, with an input of:
           </t>
-            <artwork>
-      See
-      &lt;relref section="2.3" target="RFC9999" displayFormat="of"/&gt;
-      for an overview.
+          <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="of"/&gt;
+for an overview.
 </artwork>
             <t>
             An HTML formatter might generate:
           </t>
-            <artwork>
-      See
-      &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
-      Section 2.3&lt;/a&gt; of
-      [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
-      for an overview.
+          <artwork>
+See
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
+Section 2.3&lt;/a&gt; of
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
+for an overview.
 </artwork>
             <t>
             Note that "displayFormat='of'" is the default for &lt;relref&gt;, so it does not need to be given in
@@ -3352,19 +3336,19 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example, with an input of:
           </t>
-            <artwork>
-      See
-      &lt;relref section="2.3" target="RFC9999" displayFormat="comma"/&gt;,
-      for an overview.
+          <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="comma"/&gt;,
+for an overview.
 </artwork>
             <t>
              An HTML formatter might generate:
           </t>
-            <artwork>
-      See
-      [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;], 
-      &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
-      Section 2.3&lt;/a&gt;, for an overview.
+          <artwork>
+See
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;], 
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
+Section 2.3&lt;/a&gt;, for an overview.
 </artwork>
          </dd>
          <dt>"parens"</dt>
@@ -3376,20 +3360,20 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example, with an input of:
           </t>
-            <artwork>
-      See
-      &lt;relref section="2.3" target="RFC9999" displayFormat="parens"/&gt;
-      for an overview.
+          <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="parens"/&gt;
+for an overview.
 </artwork>
             <t>
              An HTML formatter might generate:
           </t>
-            <artwork>
-      See
-      [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
-      (&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt; 
-      Section 2.3&lt;/a&gt;)
-      for an overview.
+          <artwork>
+See
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
+(&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt; 
+Section 2.3&lt;/a&gt;)
+for an overview.
 </artwork>
          </dd>
          <dt>"bare"</dt>
@@ -3401,25 +3385,25 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example:
           </t>
-            <artwork>
-      See Sections
-      &lt;relref section="2.3" target="RFC9999" displayFormat="bare"/&gt;
-      and
-      &lt;relref section="2.4" target="RFC9999" displayFormat="of"/&gt;
-      for an overview.
+          <artwork>
+See Sections
+&lt;relref section="2.3" target="RFC9999" displayFormat="bare"/&gt;
+and
+&lt;relref section="2.4" target="RFC9999" displayFormat="of"/&gt;
+for an overview.
 </artwork>
             <t>
              An HTML formatter might generate:
           </t>
-            <artwork>
-      See Sections
-      &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
-      2.3&lt;/a&gt;
-      and
-      &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.4"&gt;
-      Section 2.4&lt;/a&gt; of
-      [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
-      for an overview.
+          <artwork>
+See Sections
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
+2.3&lt;/a&gt;
+and
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.4"&gt;
+Section 2.4&lt;/a&gt; of
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
+for an overview.
 </artwork>
          </dd>
       </dl>
@@ -5181,11 +5165,11 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example, with an input of:
           </t>
-            <artwork>
-      &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
-      . . .
-      See Section &lt;xref target="overview" format="counter"/&gt;
-      for an overview.
+          <artwork>
+&lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
+. . .
+See Section &lt;xref target="overview" format="counter"/&gt;
+for an overview.
 </artwork>
             <t>
              An HTML formatter might generate:
@@ -5206,10 +5190,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example, with an input of:
           </t>
-            <artwork>
-      &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
-      . . .
-      See &lt;xref target="overview"/&gt; for an overview.
+          <artwork>
+&lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
+. . .
+See &lt;xref target="overview"/&gt; for an overview.
 </artwork>
             <t>
              An HTML formatter might generate:
@@ -5228,10 +5212,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example, with an input of:
           </t>
-            <artwork>
-      &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
-      . . .
-      See &lt;xref target="overview" format="none"&gt;section above&lt;/xref&gt; for an overview.
+          <artwork>
+&lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
+. . .
+See &lt;xref target="overview" format="none"&gt;section above&lt;/xref&gt; for an overview.
 </artwork>
             <t>
              An HTML formatter might generate:
@@ -5798,21 +5782,28 @@ To avoid these problems, the "&amp;" and "&lt;" characters may be escaped using 
 "&amp;amp;" and "&amp;lt;", respectively; the "]]&gt;" string can be represented as "]]&amp;gt;".
 Alternatively, they may be surrounded in a CDATA structure: "&lt;![CDATA[]]&gt;".  For example:
 </t>
-<figure><artwork>
+<t>
 Desired output:
+</t>
+<artwork>
    allowed-chars = "." | "," | "&amp;" | "&lt;" | "&gt;" | "|"
-
+</artwork>
+<t>
 Using escaping:
+</t>
+<artwork>
 &lt;sourcecode&gt;
    allowed-chars = "." | "," | "&amp;amp;" | "&amp;lt;" | "&amp;gt;" | "|"
 &lt;/sourcecode&gt;
-
+</artwork>
+<t>
 Using CDATA:
+</t>
+<artwork>
 &lt;sourcecode&gt;
 &lt;![CDATA[   allowed-chars = "." | "," | "&amp;" | "&lt;" | "&gt;" | "|"]]&gt;
 &lt;/sourcecode&gt;
-
-</artwork></figure>
+</artwork>
 <t>
 Using CDATA is not a panacea, but it does help prevent having to use escapes in places where
 using escapes can cause other problems, such as difficulty of inclusion from other documents.
@@ -6751,7 +6742,7 @@ are controlled by the prep tool.</t>
 
 <t>The following is the RELAX NG schema for the v3 format.</t>
 
-<figure><artwork type="application/relax-ng-compact-syntax">
+<artwork type="application/relax-ng-compact-syntax">
 <?BEGININC xml2rfcv3.rnc.folded ?>
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 
@@ -7785,7 +7776,7 @@ include "SVG-1.2-RFC.rnc"
   }
 start |= rfc
 <?ENDINC xml2rfcv3.rnc.folded ?>
-</artwork></figure>
+</artwork>
 </section>
 
 <section title="Schema Differences from v2">
@@ -7794,7 +7785,7 @@ start |= rfc
 A "-" indicates lines removed from the v2 schema, and a "+" indicates lines added
 to the v3 schema.</t>
 
-<figure><artwork type="inline">
+<artwork type="inline">
 <?BEGININC differences-from-v2.txt ?>
   namespace a = 
   "http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -8823,7 +8814,7 @@ to the v3 schema.</t>
 +   }
 + start |= rfc
 <?ENDINC differences-from-v2.txt ?>
-</artwork></figure>
+</artwork>
 </section>
 
 <section title="Change Log" removeInRFC="true">
