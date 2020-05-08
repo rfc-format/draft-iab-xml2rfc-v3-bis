@@ -69,7 +69,7 @@
 
 <xsl:variable name="appearsin" select="//rng:element[.//rng:ref/@name=current()/@name]"/>
 <xsl:variable name="t" select="$spec/rfc/middle/section/section[@anchor=$anchor]"/>
-<xsl:variable name="elemdoc" select="$t/t[not(comment()='AG')] | $t/figure[not(comment()='AG')] | $t/texttable[not(comment()='AG')] | $t/dl[not(comment()='AG')] | $t/ul[not(comment()='AG')] | $t/ol[not(comment()='AG')]"/>
+<xsl:variable name="elemdoc" select="$t/t[not(comment()='AG')] | $t/figure[not(comment()='AG')] | $t/artwork[not(comment()='AG')] | $t/sourcecode[not(comment()='AG')] | $t/texttable[not(comment()='AG')] | $t/dl[not(comment()='AG')] | $t/ul[not(comment()='AG')] | $t/ol[not(comment()='AG')]"/>
 <xsl:if test="not($elemdoc)">
   <t>
     <xsl:comment>AG</xsl:comment>
