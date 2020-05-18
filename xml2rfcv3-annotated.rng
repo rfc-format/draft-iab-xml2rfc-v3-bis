@@ -72,7 +72,7 @@
          </optional>
          <optional>
             <attribute name="submissionType" a:defaultValue="IETF">
-               <a:annotation>The document stream, as described in [RFC7841]. (The RFC Series Editor may change the list of allowed values in the future.)</a:annotation>
+               <a:annotation>The document stream, as described in ???. (The RFC Series Editor may change the list of allowed values in the future.)</a:annotation>
                <choice>
                   <value>IETF</value>
                   <value>IAB</value>
@@ -120,7 +120,7 @@
          </optional>
          <optional>
             <attribute name="prepTime">
-               <a:annotation>The date that the XML was processed by a prep tool. This is included in the XML file just before it is saved to disk. The value is formatted using the "date-time" format defined in Section 5.6 of [RFC3339]. The "time-offset" should be "Z".</a:annotation>
+               <a:annotation>The date that the XML was processed by a prep tool. This is included in the XML file just before it is saved to disk. The value is formatted using the "date-time" format defined in ???. The "time-offset" should be "Z".</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -290,7 +290,7 @@
    </define>
    <define name="organization">
       <element name="organization">
-         <a:annotation>Specifies the affiliation [RFC7322] of an author.</a:annotation>
+         <a:annotation>Specifies the affiliation ??? of an author.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -667,7 +667,7 @@
    </define>
    <define name="abstract">
       <element name="abstract">
-         <a:annotation>Contains the Abstract of the document. See [RFC7322] for more information on restrictions for the Abstract.</a:annotation>
+         <a:annotation>Contains the Abstract of the document. See ??? for more information on restrictions for the Abstract.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1413,7 +1413,7 @@
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
          </optional>
          <attribute name="target">
-            <a:annotation>URI of the link target [RFC3986]. This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.</a:annotation>
+            <a:annotation>URI of the link target ???. This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.</a:annotation>
          </attribute>
          <text/>
       </element>
@@ -1876,7 +1876,7 @@
          </optional>
          <optional>
             <attribute name="src">
-               <a:annotation>The URI reference of a graphics file [RFC3986], or the name of a file on the local disk. This can be a "data" URI [RFC2397] that contains the contents of the graphics file. Note that the inclusion of art with the "src" attribute depends on the capabilities of the processing tool reading the XML document. Tools need to be able to handle the file: URI, and they should be able to handle http: and https: URIs as well. The prep tool will be able to handle reading the "src" attribute.</a:annotation>
+               <a:annotation>The URI reference of a graphics file ???, or the name of a file on the local disk. This can be a "data" URI ??? that contains the contents of the graphics file. Note that the inclusion of art with the "src" attribute depends on the capabilities of the processing tool reading the XML document. Tools need to be able to handle the file: URI, and they should be able to handle http: and https: URIs as well. The prep tool will be able to handle reading the "src" attribute.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -1947,7 +1947,7 @@
          </optional>
          <optional>
             <attribute name="src">
-               <a:annotation>The URI reference of a source file [RFC3986].</a:annotation>
+               <a:annotation>The URI reference of a source file ???.</a:annotation>
             </attribute>
          </optional>
          <optional>
@@ -2497,7 +2497,7 @@
          </optional>
          <optional>
             <attribute name="stream" a:defaultValue="IETF">
-               <a:annotation>The stream (as described in [RFC7841]) that originated the document. (The RFC Series Editor may change this list in the future.)</a:annotation>
+               <a:annotation>The stream (as described in ???) that originated the document. (The RFC Series Editor may change this list in the future.)</a:annotation>
                <choice>
                   <value>IETF</value>
                   <value>IAB</value>
