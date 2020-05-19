@@ -233,6 +233,40 @@
       </optional>
     </element>
   </define>
+  <define name="contact">
+    <element name="contact">
+      <optional>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="initials"/>
+      </optional>
+      <optional>
+        <attribute name="asciiInitials"/>
+      </optional>
+      <optional>
+        <attribute name="surname"/>
+      </optional>
+      <optional>
+        <attribute name="asciiSurname"/>
+      </optional>
+      <optional>
+        <attribute name="fullname"/>
+      </optional>
+      <optional>
+        <attribute name="asciiFullname"/>
+      </optional>
+      <optional>
+        <ref name="organization"/>
+      </optional>
+      <optional>
+        <ref name="address"/>
+      </optional>
+    </element>
+  </define>
   <define name="organization">
     <element name="organization">
       <optional>
@@ -694,6 +728,7 @@
           <ref name="artwork"/>
           <ref name="aside"/>
           <ref name="blockquote"/>
+          <ref name="contact"/>
           <ref name="dl"/>
           <ref name="figure"/>
           <ref name="iref"/>
