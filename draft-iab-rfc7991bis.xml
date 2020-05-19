@@ -237,6 +237,8 @@ to hold informative references.</li>
 <li>Un-deprecated metadata attributes on the &lt;<x:ref>rfc</x:ref>&gt; element
 (with the intent to restore v2 semantics of &lt;<x:ref>seriesInfo</x:ref>&gt;
 as well).</li>
+
+<li>Added &lt;contact&gt; element.</li>
 </ul>
 
 </section>
@@ -559,7 +561,7 @@ the appendices for a complete description of these attributes.
    <t>
      Provides address information for the author.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>author</x:ref>&gt; (<xref target="element.author"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>author</x:ref>&gt; (<xref target="element.author"/>) and &lt;<x:ref>contact</x:ref>&gt; (<xref target="element.contact"/>).</t>
    <t anchor="element.address.contents"><!--AG-->
       <xref format="none" target="grammar.address">Content model</xref>:</t>
    <t><!--AG-->In this order:</t>
@@ -1361,6 +1363,96 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="ascii attribute" subitem="in code element"/>
       <t>
          The ASCII equivalent of the postal code.
+      </t>
+   </section>
+</section>
+<!--contact-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.contact">
+   <name>
+      <tt>&lt;contact&gt;</tt>
+   </name>
+   <x:anchor-alias value="contact"/>
+   <iref item="Elements" subitem="contact" primary="true"/>
+   <iref item="contact element" primary="true"/>
+   <t><!--AG-->
+      <cref anchor="element.contact.missing">element description missing</cref>
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t anchor="element.contact.contents"><!--AG-->
+      <xref format="none" target="grammar.contact">Content model</xref>:</t>
+   <t><!--AG-->In this order:</t>
+   <ol><!--AG-->
+      <li><!--AG-->
+         <iref item="Elements" subitem="organization"/>
+         <iref item="organization element" subitem="inside contact"/>One optional &lt;<x:ref>organization</x:ref>&gt; element (<xref target="element.organization"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="address"/>
+         <iref item="address element" subitem="inside contact"/>One optional &lt;<x:ref>address</x:ref>&gt; element (<xref target="element.address"/>)</li>
+   </ol>
+   <!--contact/@asciiFullname-->
+   <section anchor="element.contact.attribute.asciiFullname" toc="exclude">
+      <name>"asciiFullname" Attribute</name>
+      <iref item="Attributes" subitem="asciiFullname"/>
+      <iref item="contact element" subitem="asciiFullname attribute"/>
+      <iref item="asciiFullname attribute" subitem="in contact element"/>
+      <t>
+         See the corresponding attribute on &lt;<x:ref>author</x:ref>&gt; element
+         (<xref target="element.author.attribute.asciiFullname"/>).
+      </t>
+   </section>
+   <!--contact/@asciiInitials-->
+   <section anchor="element.contact.attribute.asciiInitials" toc="exclude">
+      <name>"asciiInitials" Attribute</name>
+      <iref item="Attributes" subitem="asciiInitials"/>
+      <iref item="contact element" subitem="asciiInitials attribute"/>
+      <iref item="asciiInitials attribute" subitem="in contact element"/>
+      <t>
+         See the corresponding attribute on &lt;<x:ref>author</x:ref>&gt; element
+         (<xref target="element.author.attribute.asciiInitials"/>).
+      </t>
+   </section>
+   <!--contact/@asciiSurname-->
+   <section anchor="element.contact.attribute.asciiSurname" toc="exclude">
+      <name>"asciiSurname" Attribute</name>
+      <iref item="Attributes" subitem="asciiSurname"/>
+      <iref item="contact element" subitem="asciiSurname attribute"/>
+      <iref item="asciiSurname attribute" subitem="in contact element"/>
+      <t>
+         See the corresponding attribute on &lt;<x:ref>author</x:ref>&gt; element
+         (<xref target="element.author.attribute.asciiSurname"/>).
+      </t>
+   </section>
+   <!--contact/@fullname-->
+   <section anchor="element.contact.attribute.fullname" toc="exclude">
+      <name>"fullname" Attribute</name>
+      <iref item="Attributes" subitem="fullname"/>
+      <iref item="contact element" subitem="fullname attribute"/>
+      <iref item="fullname attribute" subitem="in contact element"/>
+      <t>
+         See the corresponding attribute on &lt;<x:ref>author</x:ref>&gt; element
+         (<xref target="element.author.attribute.fullname"/>).
+      </t>
+   </section>
+   <!--contact/@initials-->
+   <section anchor="element.contact.attribute.initials" toc="exclude">
+      <name>"initials" Attribute</name>
+      <iref item="Attributes" subitem="initials"/>
+      <iref item="contact element" subitem="initials attribute"/>
+      <iref item="initials attribute" subitem="in contact element"/>
+      <t>
+         See the corresponding attribute on &lt;<x:ref>author</x:ref>&gt; element
+         (<xref target="element.author.attribute.initials"/>).
+      </t>
+   </section>
+   <!--contact/@surname-->
+   <section anchor="element.contact.attribute.surname" toc="exclude">
+      <name>"surname" Attribute</name>
+      <iref item="Attributes" subitem="surname"/>
+      <iref item="contact element" subitem="surname attribute"/>
+      <iref item="surname attribute" subitem="in contact element"/>
+      <t>
+         See the corresponding attribute on &lt;<x:ref>author</x:ref>&gt; element
+         (<xref target="element.author.attribute.surname"/>).
       </t>
    </section>
 </section>
@@ -2780,7 +2872,7 @@ in this interesting report&lt;/a&gt;.
       If the value is long, an abbreviated variant can be specified in the
       "abbrev" attribute.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>author</x:ref>&gt; (<xref target="element.author"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>author</x:ref>&gt; (<xref target="element.author"/>) and &lt;<x:ref>contact</x:ref>&gt; (<xref target="element.contact"/>).</t>
    <t anchor="element.organization.contents"><!--AG-->
       <xref format="none" target="grammar.organization">Content model</xref>: only text content.</t>
    <!--organization/@abbrev-->
@@ -3307,7 +3399,7 @@ for more information.
             <t>
             For example, with an input of:
           </t>
-          <artwork>
+            <artwork>
 See
 &lt;relref section="2.3" target="RFC9999" displayFormat="of"/&gt;
 for an overview.
@@ -3315,7 +3407,7 @@ for an overview.
             <t>
             An HTML formatter might generate:
           </t>
-          <artwork>
+            <artwork>
 See
 &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
 Section 2.3&lt;/a&gt; of
@@ -3336,7 +3428,7 @@ for an overview.
             <t>
             For example, with an input of:
           </t>
-          <artwork>
+            <artwork>
 See
 &lt;relref section="2.3" target="RFC9999" displayFormat="comma"/&gt;,
 for an overview.
@@ -3344,7 +3436,7 @@ for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-          <artwork>
+            <artwork>
 See
 [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;], 
 &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
@@ -3360,7 +3452,7 @@ Section 2.3&lt;/a&gt;, for an overview.
             <t>
             For example, with an input of:
           </t>
-          <artwork>
+            <artwork>
 See
 &lt;relref section="2.3" target="RFC9999" displayFormat="parens"/&gt;
 for an overview.
@@ -3368,7 +3460,7 @@ for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-          <artwork>
+            <artwork>
 See
 [&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
 (&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt; 
@@ -3385,7 +3477,7 @@ for an overview.
             <t>
             For example:
           </t>
-          <artwork>
+            <artwork>
 See Sections
 &lt;relref section="2.3" target="RFC9999" displayFormat="bare"/&gt;
 and
@@ -3395,7 +3487,7 @@ for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-          <artwork>
+            <artwork>
 See Sections
 &lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
 2.3&lt;/a&gt;
@@ -3791,6 +3883,9 @@ for an overview.
             <li><!--AG-->
                <iref item="Elements" subitem="blockquote"/>
                <iref item="blockquote element" subitem="inside section"/>&lt;<x:ref>blockquote</x:ref>&gt; elements (<xref target="element.blockquote"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="contact"/>
+               <iref item="contact element" subitem="inside section"/>&lt;<x:ref>contact</x:ref>&gt; elements (<xref target="element.contact"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="dl"/>
                <iref item="dl element" subitem="inside section"/>&lt;<x:ref>dl</x:ref>&gt; elements (<xref target="element.dl"/>)</li>
@@ -5165,7 +5260,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <t>
             For example, with an input of:
           </t>
-          <artwork>
+            <artwork>
 &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
 . . .
 See Section &lt;xref target="overview" format="counter"/&gt;
@@ -5174,7 +5269,7 @@ for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-          <artwork>
+            <artwork>
 See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
 </artwork>
          </dd>
@@ -5190,7 +5285,7 @@ See Section &lt;a href="#overview"&gt;1.7&lt;/a&gt; for an overview.
             <t>
             For example, with an input of:
           </t>
-          <artwork>
+            <artwork>
 &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
 . . .
 See &lt;xref target="overview"/&gt; for an overview.
@@ -5198,7 +5293,7 @@ See &lt;xref target="overview"/&gt; for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-          <artwork>
+            <artwork>
 See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
 </artwork>
          </dd>
@@ -5212,7 +5307,7 @@ See &lt;a href="#overview"&gt;Section 1.7&lt;/a&gt; for an overview.
             <t>
             For example, with an input of:
           </t>
-          <artwork>
+            <artwork>
 &lt;section anchor="overview"&gt;Protocol Overview&lt;/section&gt;
 . . .
 See &lt;xref target="overview" format="none"&gt;section above&lt;/xref&gt;
@@ -5221,7 +5316,7 @@ for an overview.
             <t>
              An HTML formatter might generate:
           </t>
-          <artwork>
+            <artwork>
 See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
 </artwork>
          </dd>
@@ -6837,6 +6932,20 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     address?
   }
 
+<strong anchor="grammar.contact">contact</strong><iref item="contact element"/> =
+  element contact {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    attribute initials { text }?,
+    attribute asciiInitials { text }?,
+    attribute surname { text }?,
+    attribute asciiSurname { text }?,
+    attribute fullname { text }?,
+    attribute asciiFullname { text }?,
+    organization?,
+    address?
+  }
+
 <strong anchor="grammar.organization">organization</strong><iref item="organization element"/> =
   element organization {
     attribute xml:base { text }?,
@@ -7069,6 +7178,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
      | artwork
      | aside
      | blockquote
+     | contact
      | dl
      | figure
      | iref
@@ -7897,6 +8007,19 @@ to the v3 schema.</t>
       attribute fullname { text }?,
       attribute role { "editor" }?,
 +     attribute asciiFullname { text }?,
++     organization?,
++     address?
++   }
++ contact =
++   element contact {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     attribute initials { text }?,
++     attribute asciiInitials { text }?,
++     attribute surname { text }?,
++     attribute asciiSurname { text }?,
++     attribute fullname { text }?,
++     attribute asciiFullname { text }?,
       organization?,
       address?
     }
@@ -8129,6 +8252,7 @@ to the v3 schema.</t>
 +      | artwork
 +      | aside
 +      | blockquote
++      | contact
 +      | dl
 +      | figure
 +      | iref
@@ -8355,7 +8479,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8366,7 +8490,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -8868,6 +8992,7 @@ to the v3 schema.</t>
     <li>Undeprecate &lt;<x:ref>xref</x:ref>&gt; format "none" (<eref target="&GH;/issues/17"/>)</li>
     <li>Editorial fixes in <xref target="includingexternal"/> (<eref target="&GH;/issues/18"/>)</li>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="&GH;/issues/77"/>)</li>
+    <li>Add &lt;<x:ref>contact</x:ref>&gt; as a block-level element for styling contributor information (<eref target="&GH;/issues/81"/>)</li>
     <li>Undeprecate metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="&GH;/issues/122"/>)</li>
   </ul>
 </section>
