@@ -1374,8 +1374,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <x:anchor-alias value="contact"/>
    <iref item="Elements" subitem="contact" primary="true"/>
    <iref item="contact element" primary="true"/>
-   <t><!--AG-->
-      <cref anchor="element.contact.missing">element description missing</cref>
+   <t>
+      Provides information about a contact, such as a contributor to be
+      mentioned in an "Acknowledgements" section.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.contact.contents"><!--AG-->
