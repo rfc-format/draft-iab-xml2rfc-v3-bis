@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns="http://relaxng.org/ns/structure/1.0"
-         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-         xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         xmlns:x="http://purl.org/net/xml2rfc/ext"
-         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:x="http://purl.org/net/xml2rfc/ext" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
    <define name="rfc">
       <element name="rfc">
          <a:annotation>This is the root element of the xml2rfc vocabulary.</a:annotation>
@@ -1984,6 +1980,7 @@
          </optional>
          <optional>
             <attribute name="markers" a:defaultValue="">
+               <a:annotation>Specifies whether or not the soure code should be displayed between "&lt;CODE BEGINS&gt;"/"&lt;CODE ENDS&gt;" markers, as described in . Note that adding markers is not needed for the languages listed under "Code Components" on .</a:annotation>
                <choice>
                   <value>true</value>
                   <value>false</value>
