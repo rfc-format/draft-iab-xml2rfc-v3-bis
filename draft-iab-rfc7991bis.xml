@@ -239,6 +239,8 @@ to hold informative references.</li>
 as well).</li>
 
 <li>Added &lt;contact&gt; element.</li>
+
+<li>Allowed multiple &lt;email&gt; elements in &lt;address&gt;.</li>
 </ul>
 
 </section>
@@ -1003,7 +1005,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="organization element" subitem="inside author"/>One optional &lt;<x:ref>organization</x:ref>&gt; element (<xref target="element.organization"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="address"/>
-         <iref item="address element" subitem="inside author"/>One optional &lt;<x:ref>address</x:ref>&gt; element (<xref target="element.address"/>)</li>
+         <iref item="address element" subitem="inside author"/>Optional &lt;<x:ref>address</x:ref>&gt; elements (<xref target="element.address"/>)</li>
    </ol>
    <!--author/@asciiFullname-->
    <section anchor="element.author.attribute.asciiFullname" toc="exclude">
@@ -6929,7 +6931,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute role { "editor" }?,
     attribute asciiFullname { text }?,
     organization?,
-    address?
+    address*
   }
 
 <strong anchor="grammar.contact">contact</strong><iref item="contact element"/> =
@@ -8008,7 +8010,7 @@ to the v3 schema.</t>
       attribute role { "editor" }?,
 +     attribute asciiFullname { text }?,
 +     organization?,
-+     address?
++     address*
 +   }
 + contact =
 +   element contact {
@@ -8987,6 +8989,7 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
+    <li>Allowed multiple &lt;<x:ref>email</x:ref>&gt; elements inside &lt;<x:ref>address</x:ref>&gt; (<eref target="&GH;/issues/4"/>)</li>
     <li>Add missing include directive for SVG grammar (<eref target="&GH;/issues/11"/>)</li>
     <li>Remove incorrect text about deprecation of "alt" attribute on &lt;<x:ref>artwork</x:ref>&gt;, add more prose for several other deprecations on this element (<eref target="&GH;/issues/12"/>)</li>
     <li>Undeprecate &lt;<x:ref>xref</x:ref>&gt; format "none" (<eref target="&GH;/issues/17"/>)</li>
