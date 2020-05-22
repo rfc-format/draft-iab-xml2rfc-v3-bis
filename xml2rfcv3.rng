@@ -1725,6 +1725,14 @@
         <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
+        <attribute name="markers" a:defaultValue="">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
         <attribute name="name" a:defaultValue=""/>
       </optional>
       <optional>

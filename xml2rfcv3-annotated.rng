@@ -288,6 +288,52 @@
          </optional>
       </element>
    </define>
+   <define name="contact">
+      <element name="contact">
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="initials">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""initials" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiInitials">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""asciiInitials" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="surname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""surname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiSurname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""asciiSurname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fullname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""fullname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiFullname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""asciiFullname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="organization"/>
+         </optional>
+         <optional>
+            <ref name="address"/>
+         </optional>
+      </element>
+   </define>
    <define name="organization">
       <element name="organization">
          <a:annotation>Specifies the affiliation [RFC7322] of an author.</a:annotation>
@@ -820,6 +866,7 @@
                <ref name="artwork"/>
                <ref name="aside"/>
                <ref name="blockquote"/>
+               <ref name="contact"/>
                <ref name="dl"/>
                <ref name="figure"/>
                <ref name="iref"/>
@@ -1934,6 +1981,14 @@
          </optional>
          <optional>
             <attribute name="pn"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="markers" a:defaultValue="">
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
          </optional>
          <optional>
             <attribute name="name" a:defaultValue="">

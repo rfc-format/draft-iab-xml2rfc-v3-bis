@@ -4189,6 +4189,21 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for this source code.
       </t>
    </section>
+   <!--sourcecode/@markers-->
+   <section anchor="element.sourcecode.attribute.markers" toc="exclude">
+      <name>"markers" Attribute</name>
+      <iref item="Attributes" subitem="markers"/>
+      <iref item="sourcecode element" subitem="markers attribute"/>
+      <iref item="markers attribute" subitem="in sourcecode element"/>
+      <t><!--AG-->
+         <cref anchor="element.sourcecode.attribute.markers.missing">attribute description missing</cref>
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"true"</li>
+         <li>"false"</li>
+      </ul>
+   </section>
    <!--sourcecode/@name-->
    <section anchor="element.sourcecode.attribute.name" toc="exclude">
       <name>"name" Attribute</name>
@@ -7650,6 +7665,7 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
+    [ a:defaultValue = "" ] attribute markers { "true" | "false" }?,
     [ a:defaultValue = "" ] attribute name { text }?,
     [ a:defaultValue = "" ] attribute type { text }?,
     attribute src { text }?,
@@ -8711,6 +8727,8 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
++     [ a:defaultValue = "" ] attribute markers { "true" | "false" 
++ }?,
 +     [ a:defaultValue = "" ] attribute name { text }?,
 +     [ a:defaultValue = "" ] attribute type { text }?,
 +     attribute src { text }?,
