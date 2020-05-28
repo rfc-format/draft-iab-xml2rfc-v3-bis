@@ -59,30 +59,6 @@ Desired result has single references in back, and choice of references+  or (ref
 -->
 
 <!DOCTYPE rfc [
-<!ENTITY rfc2026 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml">
-<!ENTITY rfc2397 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2397.xml">
-<!ENTITY rfc2629 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml">
-<!ENTITY rfc3339 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3339.xml">
-<!ENTITY rfc3470 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3470.xml">
-<!ENTITY rfc3667 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3667.xml">
-<!ENTITY rfc3966 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3966.xml">
-<!ENTITY rfc3978 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3978.xml">
-<!ENTITY rfc3986 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3986.xml">
-<!ENTITY rfc5234 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5234.xml">
-<!ENTITY rfc5378 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5378.xml">
-<!ENTITY rfc6068 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6068.xml">
-<!ENTITY rfc6266 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6266.xml">
-<!ENTITY rfc6838 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6838.xml">
-<!ENTITY rfc6949 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6949.xml">
-<!ENTITY rfc7303 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7303.xml">
-<!ENTITY rfc7322 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7322.xml">
-<!ENTITY rfc7669 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7669.xml">
-<!ENTITY rfc7749 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7749.xml">
-<!ENTITY rfc7841 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7841.xml">
-<!ENTITY rfc7991 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7991.xml">
-<!ENTITY rfc7996 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7996.xml">
-<!ENTITY rfc7997 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7997.xml">
-<!ENTITY rfc7998 PUBLIC "" "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7998.xml">
 <!ENTITY GH "https://github.com/rfc-format/draft-iab-xml2rfc-v3-bis">
 ]>
 
@@ -95,6 +71,7 @@ Desired result has single references in back, and choice of references+  or (ref
     xml:lang="en"
     xmlns:x="http://purl.org/net/xml2rfc/ext"
     xmlns:ed="http://greenbytes.de/2002/rfcedit"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
 >
 	<front>
   <title>The "xml2rfc" version 3 Vocabulary</title>
@@ -6079,7 +6056,7 @@ Suzanne Woolf
     <seriesInfo name='RFC' value='2119'/>
   </reference>
 
-&rfc7991;
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7991.xml"/>
 
   <reference anchor='XML' target='https://www.w3.org/TR/2008/REC-xml-20081126/'>
     <front>
@@ -6120,29 +6097,29 @@ Suzanne Woolf
     </front>
   </reference>
 
-&rfc2026;
-&rfc2397;
-&rfc2629;
-&rfc3339;
-&rfc3470;
-&rfc3667;
-&rfc3966;
-&rfc3978;
-&rfc3986;
-&rfc5234;
-&rfc5378;
-&rfc6068;
-&rfc6266;
-&rfc6838;
-&rfc6949;
-&rfc7303;
-&rfc7322;
-&rfc7669;
-&rfc7749;
-&rfc7841;
-&rfc7996;
-&rfc7997;
-&rfc7998;
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2026.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2397.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.2629.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3339.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3470.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3667.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3966.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3978.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.3986.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5234.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.5378.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6068.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6266.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6838.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.6949.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7303.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7322.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7669.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7749.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7841.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7996.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7997.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7998.xml"/>
 
   <reference anchor="RNC" target="https://www.oasis-open.org/committees/relax-ng/compact-20021121.html">
     <front>
