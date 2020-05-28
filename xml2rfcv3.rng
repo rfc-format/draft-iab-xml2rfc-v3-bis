@@ -228,9 +228,9 @@
       <optional>
         <ref name="organization"/>
       </optional>
-      <optional>
+      <zeroOrMore>
         <ref name="address"/>
-      </optional>
+      </zeroOrMore>
     </element>
   </define>
   <define name="contact">

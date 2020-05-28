@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns="http://relaxng.org/ns/structure/1.0"
-         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-         xmlns:rng="http://relaxng.org/ns/structure/1.0"
-         xmlns:x="http://purl.org/net/xml2rfc/ext"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:x="http://purl.org/net/xml2rfc/ext" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
    <define name="rfc">
       <element name="rfc">
          <a:annotation>This is the root element of the xml2rfc vocabulary.</a:annotation>
@@ -279,6 +274,52 @@
          <optional>
             <attribute name="asciiFullname">
                <a:annotation>The ASCII equivalent of the author's full name.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <ref name="organization"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="address"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="contact">
+      <element name="contact">
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="initials">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""initials" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiInitials">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""asciiInitials" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="surname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""surname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiSurname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""asciiSurname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="fullname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""fullname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="asciiFullname">
+               <a:annotation>See the corresponding attribute on &lt;author&gt; element (Section ""asciiFullname" Attribute" of Internet-Draft draft-iab-rfc7991bis-03).</a:annotation>
             </attribute>
          </optional>
          <optional>
