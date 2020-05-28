@@ -228,9 +228,9 @@
       <optional>
         <ref name="organization"/>
       </optional>
-      <zeroOrMore>
+      <optional>
         <ref name="address"/>
-      </zeroOrMore>
+      </optional>
     </element>
   </define>
   <define name="contact">
@@ -312,9 +312,9 @@
       <optional>
         <ref name="facsimile"/>
       </optional>
-      <optional>
+      <zeroOrMore>
         <ref name="email"/>
-      </optional>
+      </zeroOrMore>
       <optional>
         <ref name="uri"/>
       </optional>
