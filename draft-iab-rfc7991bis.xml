@@ -556,7 +556,7 @@ the appendices for a complete description of these attributes.
          <iref item="facsimile element" subitem="inside address"/>One optional &lt;<x:ref>facsimile</x:ref>&gt; element (<xref target="element.facsimile"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="email"/>
-         <iref item="email element" subitem="inside address"/>One optional &lt;<x:ref>email</x:ref>&gt; element (<xref target="element.email"/>)</li>
+         <iref item="email element" subitem="inside address"/>Optional &lt;<x:ref>email</x:ref>&gt; elements (<xref target="element.email"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="uri"/>
          <iref item="uri element" subitem="inside address"/>One optional &lt;<x:ref>uri</x:ref>&gt; element (<xref target="element.uri"/>)</li>
@@ -982,7 +982,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="organization element" subitem="inside author"/>One optional &lt;<x:ref>organization</x:ref>&gt; element (<xref target="element.organization"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="address"/>
-         <iref item="address element" subitem="inside author"/>Optional &lt;<x:ref>address</x:ref>&gt; elements (<xref target="element.address"/>)</li>
+         <iref item="address element" subitem="inside author"/>One optional &lt;<x:ref>address</x:ref>&gt; element (<xref target="element.address"/>)</li>
    </ol>
    <!--author/@asciiFullname-->
    <section anchor="element.author.attribute.asciiFullname" toc="exclude">
@@ -6909,7 +6909,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute role { "editor" }?,
     attribute asciiFullname { text }?,
     organization?,
-    address*
+    address?
   }
 
 <strong anchor="grammar.contact">contact</strong><iref item="contact element"/> =
@@ -6945,7 +6945,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     postal?,
     phone?,
     facsimile?,
-    email?,
+    email*,
     uri?
   }
 
@@ -7988,7 +7988,7 @@ to the v3 schema.</t>
       attribute role { "editor" }?,
 +     attribute asciiFullname { text }?,
 +     organization?,
-+     address*
++     address?
 +   }
 + contact =
 +   element contact {
@@ -8021,7 +8021,7 @@ to the v3 schema.</t>
 +     postal?,
 +     phone?,
 +     facsimile?,
-+     email?,
++     email*,
 +     uri?
 +   }
 + postal =
