@@ -1985,6 +1985,15 @@
             <attribute name="pn"><?hidden-in-prose?></attribute>
          </optional>
          <optional>
+            <attribute name="markers" a:defaultValue="">
+               <a:annotation>Specifies whether or not the soure code should be displayed between "&lt;CODE BEGINS&gt;"/"&lt;CODE ENDS&gt;" markers, as described in . Note that adding markers is not needed for the languages listed under "Code Components" on .</a:annotation>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
             <attribute name="name" a:defaultValue="">
                <a:annotation>A filename suitable for the contents (such as for extraction to a local file). This attribute can be helpful for other kinds of tools (such as automated syntax checkers, which work by extracting the source code). Note that the "name" attribute does not need to be unique for &lt;artwork&gt; elements in a document. If multiple &lt;sourcecode&gt; elements have the same "name" attribute, a formatter might assume that the elements are all fragments of a single file, and such a formatter can collect those fragments for later processing.</a:annotation>
             </attribute>

@@ -218,6 +218,9 @@ as well).</li>
 <li>Added &lt;contact&gt; element.</li>
 
 <li>Allowed multiple &lt;email&gt; elements in &lt;address&gt;.</li>
+
+<li>Added "markers" attribute to &lt;sourcecode&gt; element.</li>
+
 </ul>
 
 </section>
@@ -4169,6 +4172,29 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for this source code.
       </t>
    </section>
+   <!--sourcecode/@markers-->
+   <section anchor="element.sourcecode.attribute.markers" toc="exclude">
+      <name>"markers" Attribute</name>
+      <iref item="Attributes" subitem="markers"/>
+      <iref item="sourcecode element" subitem="markers attribute"/>
+      <iref item="markers attribute" subitem="in sourcecode element"/>
+      <t>
+        Specifies whether or not the soure code should be displayed between
+        "&lt;CODE BEGINS&gt;"/"&lt;CODE ENDS&gt;" markers, as described in 
+        <eref target="https://www.ietf.org/about/groups/iesg/statements/copyright-2009-09-08/"/>.
+        Note that adding markers is not needed for the languages listed
+        under "Code Components" on <eref target="https://trustee.ietf.org/trust-legal-provisions.html"/>.
+      </t>
+      <t>
+        Additionally, if the "name" attribute is present, if will be displayed
+        after "&lt;CODE BEGINS&gt;", as described in <xref target="RFC8407" x:sec="3.2" x:fmt="of"/>.
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"true"</li>
+         <li>"false"</li>
+      </ul>
+   </section>
    <!--sourcecode/@name-->
    <section anchor="element.sourcecode.attribute.name" toc="exclude">
       <name>"name" Attribute</name>
@@ -6123,6 +6149,7 @@ Suzanne Woolf
   <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7996.xml"/>
   <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7997.xml"/>
   <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.7998.xml"/>
+  <xi:include href="https://xml2rfc.tools.ietf.org/public/rfc/bibxml/reference.RFC.8407.xml"/>
 
   <reference anchor="RNC" target="https://www.oasis-open.org/committees/relax-ng/compact-20021121.html">
     <front>
@@ -7630,6 +7657,7 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
+    [ a:defaultValue = "" ] attribute markers { "true" | "false" }?,
     [ a:defaultValue = "" ] attribute name { text }?,
     [ a:defaultValue = "" ] attribute type { text }?,
     attribute src { text }?,
@@ -8691,6 +8719,8 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
++     [ a:defaultValue = "" ] attribute markers { "true" | "false" 
++ }?,
 +     [ a:defaultValue = "" ] attribute name { text }?,
 +     [ a:defaultValue = "" ] attribute type { text }?,
 +     attribute src { text }?,
@@ -8968,6 +8998,7 @@ to the v3 schema.</t>
 <section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
     <li>Allowed multiple &lt;<x:ref>email</x:ref>&gt; elements inside &lt;<x:ref>address</x:ref>&gt; (<eref target="&GH;/issues/4"/>)</li>
+    <li>Add "markers" attribute to &lt;<x:ref>sourcecode</x:ref>&gt; element (<eref target="&GH;/issues/8"/>)</li>
     <li>Add missing include directive for SVG grammar (<eref target="&GH;/issues/11"/>)</li>
     <li>Remove incorrect text about deprecation of "alt" attribute on &lt;<x:ref>artwork</x:ref>&gt;, add more prose for several other deprecations on this element (<eref target="&GH;/issues/12"/>)</li>
     <li>Undeprecate &lt;<x:ref>xref</x:ref>&gt; format "none" (<eref target="&GH;/issues/17"/>)</li>
