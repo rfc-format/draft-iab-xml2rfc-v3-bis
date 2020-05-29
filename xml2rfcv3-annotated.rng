@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:x="http://purl.org/net/xml2rfc/ext" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+         xmlns:rng="http://relaxng.org/ns/structure/1.0"
+         xmlns:x="http://purl.org/net/xml2rfc/ext"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"><!-- xml2rfc Version 3 grammar -->
    <define name="rfc">
       <element name="rfc">
          <a:annotation>This is the root element of the xml2rfc vocabulary.</a:annotation>
@@ -286,6 +291,7 @@
    </define>
    <define name="contact">
       <element name="contact">
+         <a:annotation>Provides information about a contact, such as a contributor to be mentioned in an "Acknowledgements" section.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -384,9 +390,9 @@
          <optional>
             <ref name="facsimile"/>
          </optional>
-         <optional>
+         <zeroOrMore>
             <ref name="email"/>
-         </optional>
+         </zeroOrMore>
          <optional>
             <ref name="uri"/>
          </optional>
