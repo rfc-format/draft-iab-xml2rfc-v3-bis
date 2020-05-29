@@ -1,5 +1,5 @@
 # XSLT processor of choice
-XSLT=saxon
+XSLT=saxon -now:$(shell date -r $< -u +%Y-%m-%dT%H:%M:%SZ)
 
 all: \
 	draft-iab-rfc7991bis.redxml \

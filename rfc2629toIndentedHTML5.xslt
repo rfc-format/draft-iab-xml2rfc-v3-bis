@@ -1,8 +1,8 @@
 <!--
-    Strip rfc2629.xslt extensions, generating XML input for xml2rfc v3
-    as defined by RFC 7991bis
+    XSLT transformation from RFC2629 XML format to HTML
+    (XSLT3 version for HTML5 output)
 
-    Copyright (c) 2019, Julian Reschke (julian.reschke@greenbytes.de)
+    Copyright (c) 2020, Julian Reschke (julian.reschke@greenbytes.de)
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
@@ -30,22 +30,10 @@
     POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                version="1.0"
-                xmlns:exslt="http://exslt.org/common"
-                xmlns:ed="http://greenbytes.de/2002/rfcedit"
-                xmlns:grddl="http://www.w3.org/2003/g/data-view#"
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlns:svg="http://www.w3.org/2000/svg"
-                xmlns:x="http://purl.org/net/xml2rfc/ext"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns:xhtml="http://www.w3.org/1999/xhtml"
-                exclude-result-prefixes="ed exslt grddl rdf svg x xi xhtml"
->
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<xsl:import href="clean-for-DTD.xslt"/>
-<xsl:strip-space elements="abstract aside author address back dl front list middle note ol postal references reference rfc section table tbody thead tr ul"/>                                
-<xsl:output doctype-system="" doctype-public="" method="xml" version="1.0" encoding="UTF-8" cdata-section-elements="artwork sourcecode" indent="yes"/>
-<xsl:param name="xml2rfc-ext-xml2rfc-voc">3</xsl:param>
+<xsl:import href="rfc2629.xslt" />
+
+<xsl:output method="html" encoding="utf-8" html-version="5.0" doctype-system="" indent="yes"/>
 
 </xsl:transform>

@@ -1460,7 +1460,7 @@
       <xsl:when test="starts-with(@type,'message/http') and contains(@type,'msgtype=&quot;request&quot;')">text2</xsl:when>
       <xsl:when test="starts-with(@type,'message/http')">text</xsl:when>
       <xsl:when test="@type='drawing' or @type='pdu'">drawing</xsl:when>
-      <xsl:when test="@type='text/plain' or @type='example' or @type='code' or @type='xml' or @type='application/xml-dtd' or @type='application/json'">text</xsl:when>
+      <xsl:when test="self::sourcecode or @type='text/plain' or @type='example' or @type='code' or @type='xml' or @type='application/xml-dtd' or @type='application/json'">text</xsl:when>
       <xsl:otherwise/>
     </xsl:choose>
     <xsl:if test="@x:lang and $prettyprint-class!=''">
@@ -1480,13 +1480,30 @@
 
 <xsl:template name="insert-begin-code">
   <xsl:if test="(self::artwork and @x:is-code-component='yes') or (self::sourcecode and @markers='true')">
-    <pre class="ccmarker cct"><span>&lt;CODE BEGINS></span></pre>
+    <pre class="ccmarker cct">
+      <xsl:text>&lt;CODE BEGINS></xsl:text>
+      <xsl:if test="self::sourcecode and @name">
+        <xsl:variable name="offending" select="translate(@name,concat($alnum,'-+.,;_~#'),'')"/>
+        <xsl:choose>
+          <xsl:when test="$offending!=''">
+            <xsl:call-template name="error">
+              <xsl:with-param name="msg">illegal characters in @name attribute '<xsl:value-of select="@name"/>': '<xsl:value-of select="$offending"/>'</xsl:with-param>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text> file "</xsl:text>
+            <xsl:value-of select="@name"/>
+            <xsl:text>"</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
+    </pre>
   </xsl:if>
 </xsl:template>
 
 <xsl:template name="insert-end-code">
   <xsl:if test="(self::artwork and @x:is-code-component='yes') or (self::sourcecode and @markers='true')">
-    <pre class="ccmarker ccb"><span>&lt;CODE ENDS></span></pre>
+    <pre class="ccmarker ccb">&lt;CODE ENDS></pre>
   </xsl:if>
 </xsl:template>
 
@@ -1808,13 +1825,27 @@
 <xsl:template name="emit-postal-line">
   <xsl:param name="prefix"/>
   <xsl:param name="value"/>
+  <xsl:param name="values"/>
   <xsl:param name="link"/>
   <xsl:param name="annotation"/>
 
-  <xsl:if test="normalize-space($value)!=''">
+  <xsl:if test="normalize-space($value)!='' or $values">
     <br/>
     <xsl:if test="$prefix!=''"><xsl:value-of select="$prefix"/>: </xsl:if>
     <xsl:choose>
+      <xsl:when test="$values">
+        <xsl:for-each select="exslt:node-set($values)/*">
+          <xsl:choose>
+            <xsl:when test="@href">
+              <a href="{@href}"><xsl:value-of select="normalize-space(.)"/></a>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="normalize-space(.)"/>
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:if test="position()!=last()">, </xsl:if>
+        </xsl:for-each>
+      </xsl:when>
       <xsl:when test="$link!=''">
         <a href="{$link}"><xsl:value-of select="normalize-space($value)"/></a>
       </xsl:when>
@@ -1998,7 +2029,7 @@
         <xsl:if test="$city!=''">
           <xsl:text>, </xsl:text>
         </xsl:if>
-        <xsl:value-of select="$region-and-code"/>
+        <xsl:value-of select="normalize-space($region-and-code)"/>
       </xsl:if>
     </xsl:with-param>
   </xsl:call-template>
@@ -2533,10 +2564,7 @@
       <xsl:with-param name="link" select="concat('fax:',translate($facsimile,' ',''))"/>
     </xsl:call-template>
   </xsl:if>
-  <xsl:for-each select="email">
-    <xsl:variable name="email">
-      <xsl:call-template name="extract-email"/>
-    </xsl:variable>
+  <xsl:if test="email">
     <xsl:call-template name="emit-postal-line">
       <xsl:with-param name="prefix">
         <xsl:choose>
@@ -2544,14 +2572,23 @@
           <xsl:otherwise>EMail</xsl:otherwise>
         </xsl:choose>
       </xsl:with-param>
-      <xsl:with-param name="value" select="$email"/>
-      <xsl:with-param name="link">
-        <xsl:if test="$xml2rfc-linkmailto!='no'">
-          <xsl:value-of select="concat('mailto:',$email)"/>
-        </xsl:if>
+      <xsl:with-param name="values">
+        <xsl:for-each select="email">
+          <xsl:variable name="e">
+            <xsl:call-template name="extract-email"/>
+          </xsl:variable>
+          <v>
+            <xsl:if test="$xml2rfc-linkmailto!='no'">
+              <xsl:attribute name="href">
+                <xsl:value-of select="concat('mailto:',normalize-space($e))"/>
+              </xsl:attribute>
+            </xsl:if>
+            <xsl:value-of select="normalize-space($e)"/>
+          </v>
+        </xsl:for-each>
       </xsl:with-param>
     </xsl:call-template>
-  </xsl:for-each>
+  </xsl:if>
   <xsl:for-each select="uri">
     <xsl:variable name="uri">
       <xsl:call-template name="extract-uri"/>
@@ -11674,11 +11711,11 @@ dd, li, p {
   <xsl:variable name="gen">
     <xsl:text>http://greenbytes.de/tech/webdav/rfc2629.xslt, </xsl:text>
     <!-- when RCS keyword substitution in place, add version info -->
-    <xsl:if test="contains('$Revision: 1.1279 $',':')">
-      <xsl:value-of select="concat('Revision ',normalize-space(translate(substring-after('$Revision: 1.1279 $', 'Revision: '),'$','')),', ')" />
+    <xsl:if test="contains('$Revision: 1.1284 $',':')">
+      <xsl:value-of select="concat('Revision ',normalize-space(translate(substring-after('$Revision: 1.1284 $', 'Revision: '),'$','')),', ')" />
     </xsl:if>
-    <xsl:if test="contains('$Date: 2020/05/07 08:03:42 $',':')">
-      <xsl:value-of select="concat(normalize-space(translate(substring-after('$Date: 2020/05/07 08:03:42 $', 'Date: '),'$','')),', ')" />
+    <xsl:if test="contains('$Date: 2020/05/28 17:28:37 $',':')">
+      <xsl:value-of select="concat(normalize-space(translate(substring-after('$Date: 2020/05/28 17:28:37 $', 'Date: '),'$','')),', ')" />
     </xsl:if>
     <xsl:variable name="product" select="normalize-space(concat(system-property('xsl:product-name'),' ',system-property('xsl:product-version')))"/>
     <xsl:if test="$product!=''">
