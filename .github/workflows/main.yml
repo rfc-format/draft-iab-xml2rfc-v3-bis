@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Get Saxon
+      run: make saxon
+
+    - name: Make HTML
+      run: build/draft-iab-rfc7991bis.html
+
+    - name: Push HTML
+      if: ${{ github.event_name == 'push' }}
+      run: |
+        git status --short build/draft-iab-rfc7991bis.html | fgrep -s " M " || exit 0
+        git config --global user.name "Julian's HTML Bot"
+        git config --global user.email "julian.reschke@gmx.de"
+        git commit -m "generated HTML" build/draft-iab-rfc7991bis.html
+        git push
