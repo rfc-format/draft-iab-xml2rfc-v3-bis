@@ -17,7 +17,7 @@ jobs:
       run: make saxon
 
     - name: Make HTML
-      run: build/draft-iab-rfc7991bis.html
+      run: make build/draft-iab-rfc7991bis.html
 
     - name: Push HTML
       if: ${{ github.event_name == 'push' }}
