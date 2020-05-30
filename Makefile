@@ -66,7 +66,7 @@ SVG-1.2-RFC.rng:
 saxon:
 	[ -f build/saxon.jar ] || curl https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/10.1/Saxon-HE-10.1.jar -o build/saxon.jar
 
-build/draft-iab-rfc7991bis.html:	draft-iab-rfc7991bis.xml
-	java -jar build/saxon.jar -now:$(shell date -r $< -u +%Y-%m-%dT%H:%M:%SZ) $< rfc2629toIndentedHTML5.xslt xml2rfc-ext-styles="ff-noto ffb-sans-serif fft-sans-serif header-bw" > $@
+build/draft-iab-rfc7991bis.html:
+	java -jar build/saxon.jar -now:$(shell date -r draft-iab-rfc7991bis.xml -u +%Y-%m-%dT%H:%M:%SZ) $< rfc2629toIndentedHTML5.xslt xml2rfc-ext-styles="ff-noto ffb-sans-serif fft-sans-serif header-bw" > $@
 
 	
