@@ -1262,6 +1262,14 @@
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
+      <optional> 
+        <attribute name="brackets" a:defaultValue="none"> 
+          <choice> 
+            <value>none</value> 
+            <value>angle</value> 
+          </choice> 
+        </attribute> 
+      </optional> 
       <attribute name="target"/>
       <text/>
     </element>
