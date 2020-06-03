@@ -2067,6 +2067,21 @@ in this interesting report&lt;/a&gt;.
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>ttcol</x:ref>&gt; (<xref target="element.ttcol"/>).</t>
    <t anchor="element.eref.contents"><!--AG-->
       <xref format="none" target="grammar.eref">Content model</xref>: only text content.</t>
+   <!--eref/@brackets-->
+   <section anchor="element.eref.attribute.brackets" toc="exclude">
+      <name>"brackets" Attribute</name>
+      <iref item="Attributes" subitem="brackets"/>
+      <iref item="eref element" subitem="brackets attribute"/>
+      <iref item="brackets attribute" subitem="in eref element"/>
+      <t><!--AG-->
+         <cref anchor="element.eref.attribute.brackets.missing">attribute description missing</cref>
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"none" (default)</li>
+         <li>"angle"</li>
+      </ul>
+   </section>
    <!--eref/@target-->
    <section anchor="element.eref.attribute.target" toc="exclude">
       <name>"target" Attribute <em> (Mandatory)</em>
@@ -7437,6 +7452,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element eref {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
+    [ a:defaultValue = "none" ]
+    attribute brackets { "none" | "angle" }?,
     attribute target { text },
     text
   }
@@ -8487,7 +8504,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-  }?,
++ }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8498,7 +8515,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-+ }?,
+  }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -8508,6 +8525,8 @@ to the v3 schema.</t>
     element eref {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
++     [ a:defaultValue = "none" ]
++     attribute brackets { "none" | "angle" }?,
       attribute target { text },
       text
     }

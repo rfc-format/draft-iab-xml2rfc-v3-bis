@@ -1461,6 +1461,14 @@
          <optional>
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
          </optional>
+         <optional>
+            <attribute name="brackets" a:defaultValue="none">
+               <choice>
+                  <value>none</value>
+                  <value>angle</value>
+               </choice>
+            </attribute>
+         </optional>
          <attribute name="target">
             <a:annotation>URI of the link target [RFC3986]. This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.</a:annotation>
          </attribute>
