@@ -1463,6 +1463,7 @@
          </optional>
          <optional>
             <attribute name="brackets" a:defaultValue="none">
+               <a:annotation>Determines whether the formatter should automatically enclose the URI in angle brackets ("angle") or not (default of "none").</a:annotation>
                <choice>
                   <value>none</value>
                   <value>angle</value>

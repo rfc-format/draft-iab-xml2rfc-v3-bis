@@ -221,6 +221,7 @@ as well).</li>
 
 <li>Added "markers" attribute to &lt;sourcecode&gt; element.</li>
 
+<li>Added "brackets" attribute to &lt;eref&gt; element.</li>
 </ul>
 
 </section>
@@ -2073,8 +2074,9 @@ in this interesting report&lt;/a&gt;.
       <iref item="Attributes" subitem="brackets"/>
       <iref item="eref element" subitem="brackets attribute"/>
       <iref item="brackets attribute" subitem="in eref element"/>
-      <t><!--AG-->
-         <cref anchor="element.eref.attribute.brackets.missing">attribute description missing</cref>
+      <t>
+        Determines whether the formatter should automatically enclose the URI
+        in angle brackets ("angle") or not (default of "none"). 
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -9016,7 +9018,7 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-03" anchor="changes.since.03">
   <ul x:when-empty="None yet.">
-    <li>Allowed multiple &lt;<x:ref>email</x:ref>&gt; elements inside &lt;<x:ref>address</x:ref>&gt; (<eref target="&GH;/issues/4"/>)</li>
+    <li>Allow multiple &lt;<x:ref>email</x:ref>&gt; elements inside &lt;<x:ref>address</x:ref>&gt; (<eref target="&GH;/issues/4"/>)</li>
     <li>Add "markers" attribute to &lt;<x:ref>sourcecode</x:ref>&gt; element (<eref target="&GH;/issues/8"/>)</li>
     <li>Add missing include directive for SVG grammar (<eref target="&GH;/issues/11"/>)</li>
     <li>Remove incorrect text about deprecation of "alt" attribute on &lt;<x:ref>artwork</x:ref>&gt;, add more prose for several other deprecations on this element (<eref target="&GH;/issues/12"/>)</li>
@@ -9025,6 +9027,7 @@ to the v3 schema.</t>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="&GH;/issues/77"/>)</li>
     <li>Add &lt;<x:ref>contact</x:ref>&gt; as a block-level element for styling contributor information (<eref target="&GH;/issues/81"/>)</li>
     <li>Undeprecate metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="&GH;/issues/122"/>)</li>
+    <li>Add "brackets" attribute on &lt;<x:ref>eref</x:ref>&gt; (<eref target="&GH;/issues/146"/>)</li>
   </ul>
 </section>
 
