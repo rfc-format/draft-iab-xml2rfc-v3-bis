@@ -191,7 +191,7 @@ and this document.
 <ul>
 <li>Changed the text about what this draft obsoletes and updates.</li>
 
-<li>Allow &lt;blockquote&gt; as a child of &lt;li&gt;.</li>
+<li>Allow &lt;blockquote&gt; as a child of &lt;aside&gt; and &lt;li&gt;.</li>
 
 <li>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
 from <xref target="element.artwork.attribute.src"/>.</li>
@@ -915,6 +915,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="artwork"/>
          <iref item="artwork element" subitem="inside aside"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
       <li><!--AG-->
+         <iref item="Elements" subitem="blockquote"/>
+         <iref item="blockquote element" subitem="inside aside"/>&lt;<x:ref>blockquote</x:ref>&gt; elements (<xref target="element.blockquote"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="dl"/>
          <iref item="dl element" subitem="inside aside"/>&lt;<x:ref>dl</x:ref>&gt; elements (<xref target="element.dl"/>)</li>
       <li><!--AG-->
@@ -1137,7 +1140,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       Specifies that a block of text is a quotation.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>) and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.blockquote.contents"><!--AG-->
       <xref format="none" target="grammar.blockquote">Content model</xref>:
     </t>
@@ -7272,7 +7275,16 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
     attribute pn { text }?,
-    (artset | artwork | dl | figure | iref | ol | t | table | ul)*
+    (artset
+     | artwork
+     | blockquote
+     | dl
+     | figure
+     | iref
+     | ol
+     | t
+     | table
+     | ul)*
   }
 
 <strong anchor="grammar.blockquote">blockquote</strong><iref item="blockquote element"/> =
@@ -8346,7 +8358,18 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute pn { text }?,
-+     (artset | artwork | dl | figure | iref | ol | t | table | ul)*
++     (artset
++      | artwork
++      | blockquote
++      | dl
+       | figure
+-      | xref
+-      | eref
+       | iref
++      | ol
++      | t
++      | table
++      | ul)*
 +   }
 + blockquote =
 +   element blockquote {
@@ -8359,8 +8382,7 @@ to the v3 schema.</t>
 +     ((artset
 +       | artwork
 +       | dl
-       | figure
--      | xref
++       | figure
 +       | ol
 +       | sourcecode
 +       | t
@@ -8368,13 +8390,12 @@ to the v3 schema.</t>
 +       | ul)+
 +      | (text
 +         | bcp14
-+         | cref
-+         | em
-       | eref
-       | iref
--      | cref
+       | cref
 -      | spanx
 -      | vspace)*
++         | em
++         | eref
++         | iref
 +         | relref
 +         | strong
 +         | sub
@@ -9031,6 +9052,7 @@ to the v3 schema.</t>
     <li>State that xreffing a hidden &lt;<x:ref>cref</x:ref>&gt; is an error (<eref target="&GH;/issues/74"/>)</li>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="&GH;/issues/77"/>)</li>
     <li>Add &lt;<x:ref>contact</x:ref>&gt; as a block-level element for styling contributor information (<eref target="&GH;/issues/81"/>)</li>
+    <li>Allow &lt;<x:ref>blockquote</x:ref>&gt; inside &lt;<x:ref>aside</x:ref>&gt; (<eref target="&GH;/issues/84"/>)</li>
     <li>In &lt;<x:ref>rfc</x:ref>&gt;'s description of the "consensus" attribute, link to <xref target="attribute-consensus"/> (<eref target="&GH;/issues/88"/>)</li>
     <li>Undeprecate metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="&GH;/issues/122"/>)</li>
     <li>Add "brackets" attribute on &lt;<x:ref>eref</x:ref>&gt; (<eref target="&GH;/issues/146"/>)</li>
