@@ -3616,7 +3616,7 @@ for an overview.
             replaced by "false" (the default) and "true".
       </t>
       <t>
-            See <xref target="RFC7841"/> for more information.
+            See <xref target="RFC7841"/> and <xref target="attribute-consensus"/> for more information.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
@@ -9053,6 +9053,7 @@ to the v3 schema.</t>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="&GH;/issues/77"/>)</li>
     <li>Add &lt;<x:ref>contact</x:ref>&gt; as a block-level element for styling contributor information (<eref target="&GH;/issues/81"/>)</li>
     <li>Allow &lt;<x:ref>blockquote</x:ref>&gt; inside &lt;<x:ref>aside</x:ref>&gt; (<eref target="&GH;/issues/84"/>)</li>
+    <li>In &lt;<x:ref>rfc</x:ref>&gt;'s description of the "consensus" attribute, link to <xref target="attribute-consensus"/> (<eref target="&GH;/issues/88"/>)</li>
     <li>Undeprecate metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="&GH;/issues/122"/>)</li>
     <li>Add "brackets" attribute on &lt;<x:ref>eref</x:ref>&gt; (<eref target="&GH;/issues/146"/>)</li>
   </ul>
