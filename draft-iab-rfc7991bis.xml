@@ -8977,7 +8977,7 @@ to the v3 schema.</t>
 </artwork>
 </section>
 
-<section title="Change Log" removeInRFC="true">
+<section title="Change Log" removeInRFC="true" anchor="change.log">
 
 <t>
   The entries for -01 and -02 try to summarize the changes until the end of 2019; changes that
