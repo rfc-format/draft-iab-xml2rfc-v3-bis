@@ -8987,7 +8987,7 @@ to the v3 schema.</t>
     <li>Remove &lt;<x:ref>br</x:ref>&gt; element (<eref target="&GH;/issues/37">#37</eref>, <eref target="&GH;/pull/56">PR56</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.5"/>)</li>
     <li>Replace "hanging" attribute on &lt;<x:ref>dl</x:ref>&gt; by "newline" (<eref target="&GH;/issues/38">#38</eref>, <eref target="&GH;/pull/62">PR62</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.6"/>)</li>
     <li>Add "indent" attribute to &lt;<x:ref>dl</x:ref>&gt; <eref target="&GH;/issues/39">#39</eref>, <eref target="&GH;/pull/63">PR63</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.7"/>)</li>
-    <li>Revise &lt;<x:ref>table</x:ref>&gt; and &lt;<x:ref>caption</x:ref>&gt; alignment (<eref target="&GH;/issues/9">#9</eref> and <eref target="&GH;/issues/40">#40</eref>, <eref target="&GH;/pull/68">PR68</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.8"/>)</li>
+    <li>Revise &lt;<x:ref>table</x:ref>&gt; and caption alignment (<eref target="&GH;/issues/9">#9</eref> and <eref target="&GH;/issues/40">#40</eref>, <eref target="&GH;/pull/68">PR68</eref>, <xref target="IMPNOTES" x:fmt="of" x:sec="3.1.8"/>)</li>
   </ul>
 </section>
 
