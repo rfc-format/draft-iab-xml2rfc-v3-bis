@@ -1534,6 +1534,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          set to "false" if you want to keep a comment in a document after the contents of the comment
          have already been dealt with.
       </t>
+      <t>
+         Cross-referencing (<xref target="element.xref"/>) a comment with
+         "display" set to "false" is an error.
+      </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"true" (default)</li>
@@ -9024,6 +9028,7 @@ to the v3 schema.</t>
     <li>Remove incorrect text about deprecation of "alt" attribute on &lt;<x:ref>artwork</x:ref>&gt;, add more prose for several other deprecations on this element (<eref target="&GH;/issues/12"/>)</li>
     <li>Undeprecate &lt;<x:ref>xref</x:ref>&gt; format "none" (<eref target="&GH;/issues/17"/>)</li>
     <li>Editorial fixes in <xref target="includingexternal"/> (<eref target="&GH;/issues/18"/>)</li>
+    <li>State that xreffing a hidden &lt;<x:ref>cref</x:ref>&gt; is an error (<eref target="&GH;/issues/74"/>)</li>
     <li>Fix prose and default value for &lt;<x:ref>dl</x:ref>&gt; element's "newline" attribute (<eref target="&GH;/issues/77"/>)</li>
     <li>Add &lt;<x:ref>contact</x:ref>&gt; as a block-level element for styling contributor information (<eref target="&GH;/issues/81"/>)</li>
     <li>Undeprecate metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="&GH;/issues/122"/>)</li>
