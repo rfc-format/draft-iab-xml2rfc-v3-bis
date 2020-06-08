@@ -42,9 +42,6 @@ differences-from-v2.txt:	xml2rfcv3.rnc $(xml2rfcv2)
 	| sed "s/\&/\&amp;/g" | tr -d "\\015" > $@
 	rm -f $@.v2 $@.v3
 
-xml2rfcv3-full.rng: xml2rfcv3.rng
-	./postprocess-rng.py
-
 %.redxml:	%.xml
 	$(XSLT) -l $< clean-for-xml2rfc-v3.xslt > $@
 
