@@ -5,6 +5,7 @@ all: \
 	draft-iab-rfc7991bis.redxml \
 	draft-iab-rfc7991bis.unpg.txt \
 	draft-iab-rfc7991bis.txt \
+	draft-iab-rfc7991bis.html \
 	xml2rfcv3-annotated.rng
 
 xml2rfc.all: \
@@ -46,10 +47,13 @@ differences-from-v2.txt:	xml2rfcv3.rnc $(xml2rfcv2)
 	$(XSLT) -l $< clean-for-xml2rfc-v3.xslt > $@
 
 %.txt:	%.redxml
-	xml2rfc --v3 --text $< -o $@
+	xml2rfc  --text $< -o $@
+
+%.html:	%.redxml
+	xml2rfc --html $< -o $@
 
 %.unpg.txt:	%.redxml
-	xml2rfc --v3  --no-pagination $< -o $@
+	xml2rfc --no-pagination $< -o $@
 
 SVG-1.2-RFC.rnc:
 	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rnc
