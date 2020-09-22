@@ -1,14 +1,61 @@
 Structure
 
-Note that the main section ("Elements") of draft-iab-rfc7991bis.xml is
-auto-generated based on:
+Note that the subsections of the main sections "Elements" and "Elements from
+v2 That Have Been Deprecated" of draft-iab-rfc7991bis.xml are auto-generated
+based on:
 
-1) xml2rfcv3.rng (which in turn is derived from the DTD), and
+1) xml2rfcv3.rng, and
 2) draft-iab-rfc7991bis.xml itself.
+
+To change the (RNG) *grammar*, edit xml2rfcv3.rng and run "make":
+
+xml2rfcv3-spec.xml: xml2rfcv3.rng rng2xml2rfc.xslt
+        $(XSLT) $< rng2xml2rfc.xslt voc=v3 specsrc=draft-iab-rfc7991bis.xml > $@
+
+xml2rfcv3-spec-deprecated.xml: xml2rfcv3.rng rng2xml2rfc.xslt
+        $(XSLT) $< rng2xml2rfc.xslt specsrc=draft-iab-rfc7991bis.xml deprecated=yes > $@
+
+This will generate xml2rfcv3-spec.xml and xml2rfcv3-spec-deprecated.xml, based
+on the grammar and the prose already present in draft-iab-rfc7991bis.xml.
+
+Example source for <workgroup>:
+
+--- snip ---
+<!--workgroup-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.workgroup">
+   <name>
+      <tt>&lt;workgroup&gt;</tt>
+   </name>
+   <x:anchor-alias value="workgroup"/>
+   <iref item="Elements" subitem="workgroup" primary="true"/>
+   <iref item="workgroup element" primary="true"/>
+   <t>
+      This element is used to specify the Working Group (IETF) or Research Group (IRTF) from which the document originates,
+      if any. The recommended format is the official name of the Working Group
+      (with some capitalization).
+   </t>
+   <t>
+      In Internet-Drafts, this is used in the upper left corner of the boilerplate,
+      replacing the "Network Working Group" string. Formatting software can
+      append the words "Working Group" or "Research Group", depending on
+      the "submissionType" property of the &lt;<x:ref>rfc</x:ref>&gt; element
+      (<xref target="element.rfc.attribute.submissionType"/>).
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
+   <t anchor="element.workgroup.contents"><!--AG-->
+      <xref format="none" target="grammar.workgroup">Content model</xref>: only text content.</t>
+</section>
+--- snip ---
 
 Within this section, <t> elements can be added to the element and attribute
 descriptions and are supposed to round-trip through the re-generation
 process.
+
+xml2rfcv3-spec.xml and xml2rfcv3-spec-deprecated.xml are re-inserted into the
+source file using refresh-inclusions.sh (documented at 
+<https://greenbytes.de/tech/webdav/rfc2629xslt/rfc2629xslt.html#refreshing.inclusions>).
+Note that this approach was chosen so that the source file remains
+self-contained.
 
 
 Building
@@ -17,7 +64,8 @@ Building the spec requires:
 
 1) java
 2) xml2rfc
-3) an XSLT 1.0 processor that support exslt:node-set, such as xsltproc or Saxon 6.5.5 (http://sourceforge.net/projects/saxon/files/saxon6/6.5.5/)
+3) Saxon10he (<https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE/10.2>)
+4) Trang (checked in)
 
-(the XSLT process currently is started by using whatever "saxon" does on the local system)
+
 
