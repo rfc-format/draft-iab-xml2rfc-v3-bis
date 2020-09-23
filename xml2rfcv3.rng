@@ -4,10 +4,10 @@
   <define name="rfc">
     <element name="rfc">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="number"/>
@@ -126,10 +126,10 @@
   <define name="link">
     <element name="link">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="href"/>
       <optional>
@@ -140,10 +140,10 @@
   <define name="front">
     <element name="front">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <ref name="title"/>
       <zeroOrMore>
@@ -181,10 +181,10 @@
   <define name="title">
     <element name="title">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="abbrev"/>
@@ -203,10 +203,10 @@
   <define name="author">
     <element name="author">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -247,10 +247,10 @@
   <define name="contact">
     <element name="contact">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -286,10 +286,10 @@
   <define name="organization">
     <element name="organization">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="abbrev"/>
@@ -314,10 +314,10 @@
   <define name="address">
     <element name="address">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <ref name="postal"/>
@@ -339,10 +339,10 @@
   <define name="postal">
     <element name="postal">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <choice>
         <zeroOrMore>
@@ -367,10 +367,10 @@
   <define name="extaddr">
     <element name="extaddr">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -381,10 +381,10 @@
   <define name="pobox">
     <element name="pobox">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -395,10 +395,10 @@
   <define name="street">
     <element name="street">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -409,10 +409,10 @@
   <define name="cityarea">
     <element name="cityarea">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -423,10 +423,10 @@
   <define name="city">
     <element name="city">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -437,10 +437,10 @@
   <define name="region">
     <element name="region">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -451,10 +451,10 @@
   <define name="code">
     <element name="code">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -465,10 +465,10 @@
   <define name="sortingcode">
     <element name="sortingcode">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -479,10 +479,10 @@
   <define name="country">
     <element name="country">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -493,10 +493,10 @@
   <define name="postalLine">
     <element name="postalLine">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -507,10 +507,10 @@
   <define name="phone">
     <element name="phone">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -518,10 +518,10 @@
   <define name="facsimile">
     <element name="facsimile">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -529,10 +529,10 @@
   <define name="email">
     <element name="email">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="ascii"/>
@@ -543,10 +543,10 @@
   <define name="uri">
     <element name="uri">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -554,10 +554,10 @@
   <define name="date">
     <element name="date">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="day"/>
@@ -574,10 +574,10 @@
   <define name="area">
     <element name="area">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -585,10 +585,10 @@
   <define name="workgroup">
     <element name="workgroup">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -596,10 +596,10 @@
   <define name="keyword">
     <element name="keyword">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -607,18 +607,18 @@
   <define name="abstract">
     <element name="abstract">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
-          <data type="ID"/>
-        </attribute>
+	   <data type="ID"/>
+	</attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -635,16 +635,16 @@
   <define name="note">
     <element name="note">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="title"/>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -672,10 +672,10 @@
   <define name="boilerplate">
     <element name="boilerplate">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
         <ref name="section"/>
@@ -685,10 +685,10 @@
   <define name="toc">
     <element name="toc">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <ref name="section"/>
@@ -698,10 +698,10 @@
   <define name="middle">
     <element name="middle">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
         <ref name="section"/>
@@ -711,10 +711,10 @@
   <define name="section">
     <element name="section">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -722,7 +722,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -784,10 +784,10 @@
   <define name="name">
     <element name="name">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="slugifiedName">
@@ -816,10 +816,10 @@
   <define name="br">
     <element name="br">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <empty/>
     </element>
@@ -827,10 +827,10 @@
   <define name="t">
     <element name="t">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -838,7 +838,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -891,10 +891,10 @@
   <define name="aside">
     <element name="aside">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -902,7 +902,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -925,10 +925,10 @@
   <define name="blockquote">
     <element name="blockquote">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -936,7 +936,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -983,10 +983,10 @@
   <define name="list">
     <element name="list">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="style" a:defaultValue="empty"/>
@@ -998,7 +998,7 @@
         <attribute name="counter"/>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1010,10 +1010,10 @@
   <define name="ol">
     <element name="ol">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1046,7 +1046,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1058,10 +1058,10 @@
   <define name="ul">
     <element name="ul">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1096,7 +1096,7 @@
         <attribute name="indent" a:defaultValue="3"/>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1108,10 +1108,10 @@
   <define name="li">
     <element name="li">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1122,7 +1122,7 @@
         <attribute name="derivedCounter"/>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1165,10 +1165,10 @@
   <define name="dl">
     <element name="dl">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1195,7 +1195,7 @@
         <attribute name="indent" a:defaultValue="3"/>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1208,10 +1208,10 @@
   <define name="dt">
     <element name="dt">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1219,7 +1219,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1245,10 +1245,10 @@
   <define name="dd">
     <element name="dd">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1256,7 +1256,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1299,10 +1299,10 @@
   <define name="xref">
     <element name="xref">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="target">
         <data type="IDREF"/>
@@ -1362,10 +1362,10 @@
   <define name="relref">
     <element name="relref">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="target">
         <data type="IDREF"/>
@@ -1396,10 +1396,10 @@
   <define name="eref">
     <element name="eref">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="brackets" a:defaultValue="none">
@@ -1416,10 +1416,10 @@
   <define name="iref">
     <element name="iref">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="item"/>
       <optional>
@@ -1434,7 +1434,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1444,10 +1444,10 @@
   <define name="cref">
     <element name="cref">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1484,10 +1484,10 @@
   <define name="tt">
     <element name="tt">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1510,10 +1510,10 @@
   <define name="strong">
     <element name="strong">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1536,10 +1536,10 @@
   <define name="em">
     <element name="em">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1562,10 +1562,10 @@
   <define name="sub">
     <element name="sub">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1588,10 +1588,10 @@
   <define name="sup">
     <element name="sup">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1614,10 +1614,10 @@
   <define name="spanx">
     <element name="spanx">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="xml:space" a:defaultValue="preserve">
@@ -1636,10 +1636,10 @@
   <define name="vspace">
     <element name="vspace">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="blankLines" a:defaultValue="0"/>
@@ -1650,10 +1650,10 @@
   <define name="figure">
     <element name="figure">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1661,7 +1661,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1724,10 +1724,10 @@
   <define name="table">
     <element name="table">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="align" a:defaultValue="center">
@@ -1744,7 +1744,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1768,10 +1768,10 @@
   <define name="preamble">
     <element name="preamble">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1796,10 +1796,10 @@
   <define name="artset">
     <element name="artset">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1807,7 +1807,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1819,10 +1819,10 @@
   <define name="artwork">
     <element name="artwork">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1830,7 +1830,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1879,10 +1879,10 @@
   <define name="sourcecode">
     <element name="sourcecode">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1890,7 +1890,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -1920,10 +1920,10 @@
   <define name="thead">
     <element name="thead">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1938,10 +1938,10 @@
   <define name="tbody">
     <element name="tbody">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1956,10 +1956,10 @@
   <define name="tfoot">
     <element name="tfoot">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1974,10 +1974,10 @@
   <define name="tr">
     <element name="tr">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -1995,10 +1995,10 @@
   <define name="td">
     <element name="td">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -2057,10 +2057,10 @@
   <define name="th">
     <element name="th">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -2119,10 +2119,10 @@
   <define name="postamble">
     <element name="postamble">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -2139,10 +2139,10 @@
   <define name="texttable">
     <element name="texttable">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -2199,10 +2199,10 @@
   <define name="ttcol">
     <element name="ttcol">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="width"/>
@@ -2230,10 +2230,10 @@
   <define name="c">
     <element name="c">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -2250,10 +2250,10 @@
   <define name="bcp14">
     <element name="bcp14">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -2261,10 +2261,10 @@
   <define name="back">
     <element name="back">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <ref name="displayreference"/>
@@ -2280,10 +2280,10 @@
   <define name="displayreference">
     <element name="displayreference">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="target">
         <data type="IDREF"/>
@@ -2294,13 +2294,13 @@
   <define name="references">
     <element name="references">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>
@@ -2331,10 +2331,10 @@
   <define name="reference">
     <element name="reference">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="anchor">
         <data type="ID"/>
@@ -2390,10 +2390,10 @@
   <define name="referencegroup">
     <element name="referencegroup">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="anchor">
         <data type="ID"/>
@@ -2412,10 +2412,10 @@
   <define name="seriesInfo">
     <element name="seriesInfo">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="name"/>
       <attribute name="value"/>
@@ -2444,10 +2444,10 @@
   <define name="format">
     <element name="format">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="target"/>
@@ -2462,10 +2462,10 @@
   <define name="annotation">
     <element name="annotation">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -2490,10 +2490,10 @@
   <define name="refcontent">
     <element name="refcontent">
       <optional>
-        <attribute name="xml:base"/>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="xml:lang"/>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -2522,7 +2522,7 @@
         <attribute name="format" a:defaultValue="lit-name-num"/>
       </optional>
       <optional>
-        <attribute name="pn">
+        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
       </optional>

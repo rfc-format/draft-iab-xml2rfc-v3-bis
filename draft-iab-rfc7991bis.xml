@@ -532,36 +532,6 @@ the appendices for a complete description of these attributes.
         Document-wide unique identifier for the Abstract.
       </t>
    </section>
-   <!--abstract/@pn-->
-   <section anchor="element.abstract.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="abstract element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in abstract element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number
-      </t>
-   </section>
-   <!--abstract/@xml:base-->
-   <section anchor="element.abstract.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="abstract element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in abstract element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--abstract/@xml:lang-->
-   <section anchor="element.abstract.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="abstract element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in abstract element"/>
-      <t>
-         Language used in the element.
-      </t>
-   </section>
 </section>
 <!--address-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.address">
@@ -595,26 +565,6 @@ the appendices for a complete description of these attributes.
          <iref item="Elements" subitem="uri"/>
          <iref item="uri element" subitem="inside address"/>One optional &lt;<x:ref>uri</x:ref>&gt; element (<xref target="element.uri"/>)</li>
    </ol>
-   <!--address/@xml:base-->
-   <section anchor="element.address.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="address element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in address element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--address/@xml:lang-->
-   <section anchor="element.address.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="address element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in address element"/>
-      <t><!--AG-->
-         Language used in the element.
-      </t>
-   </section>
 </section>
 <!--annotation-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.annotation">
@@ -675,26 +625,6 @@ the appendices for a complete description of these attributes.
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside annotation"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--annotation/@xml:base-->
-   <section anchor="element.annotation.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="annotation element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in annotation element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--annotation/@xml:lang-->
-   <section anchor="element.annotation.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="annotation element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in annotation element"/>
-      <t><!--AG-->
-         Language used in the element.
-      </t>
-   </section>
 </section>
 <!--area-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.area">
@@ -716,26 +646,6 @@ the appendices for a complete description of these attributes.
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.area.contents"><!--AG-->
       <xref format="none" target="grammar.area">Content model</xref>: only text content.</t>
-   <!--area/@xml:base-->
-   <section anchor="element.area.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="area element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in area element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--area/@xml:lang-->
-   <section anchor="element.area.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="area element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in area element"/>
-      <t><!--AG-->
-         Language used in the element.
-      </t>
-   </section>
 </section>
 <!--artset-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.artset">
@@ -766,36 +676,6 @@ the appendices for a complete description of these attributes.
       <iref item="anchor attribute" subitem="in artset element"/>
       <t>
          Same as for the &lt;<x:ref>artwork</x:ref>&gt; element (<xref target="element.artwork"/>).
-      </t>
-   </section>
-   <!--artset/@pn-->
-   <section anchor="element.artset.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="artset element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in artset element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
-   <!--artset/@xml:base-->
-   <section anchor="element.artset.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="artset element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in artset element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--artset/@xml:lang-->
-   <section anchor="element.artset.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="artset element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in artset element"/>
-      <t><!--AG-->
-         Language used in the element.
       </t>
    </section>
 </section>
@@ -946,17 +826,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="artwork element" subitem="originalSrc attribute"/>
       <iref item="originalSrc attribute" subitem="in artwork element"/>
       <t><!--AG-->
-	 Previous value of src attribute.
-      </t>
-   </section>
-   <!--artwork/@pn-->
-   <section anchor="element.artwork.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="artwork element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in artwork element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
+         <cref anchor="element.artwork.attribute.originalSrc.missing">attribute description missing</cref>
       </t>
    </section>
    <!--artwork/@src-->
@@ -1020,26 +890,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="width attribute" subitem="in artwork element"/>
       <t>
             Deprecated.
-      </t>
-   </section>
-   <!--artwork/@xml:base-->
-   <section anchor="element.artwork.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="artwork element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in artwork element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--artwork/@xml:lang-->
-   <section anchor="element.artwork.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="artwork element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in artwork element"/>
-      <t><!--AG-->
-         Language used in the element.
       </t>
    </section>
    <!--artwork/@xml:space-->
@@ -1112,36 +962,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for this aside.
       </t>
    </section>
-   <!--aside/@pn-->
-   <section anchor="element.aside.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="aside element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in aside element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
-   <!--aside/@xml:base-->
-   <section anchor="element.aside.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="aside element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in aside element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--aside/@xml:lang-->
-   <section anchor="element.aside.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="aside element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in aside element"/>
-      <t><!--AG-->
-	 Language used in the element.
-      </t>
-   </section>
 </section>
 <!--author-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.author">
@@ -1191,7 +1011,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="author element" subitem="anchor attribute"/>
       <iref item="anchor attribute" subitem="in author element"/>
       <t><!--AG-->
-	 Anchor value for cross-references.
+         <cref anchor="element.author.attribute.anchor.missing">attribute description missing</cref>
       </t>
    </section>
    <!--author/@asciiFullname-->
@@ -1276,26 +1096,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          footers, and in references.
       </t>
    </section>
-   <!--author/@xml:base-->
-   <section anchor="element.author.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="author element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in author element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--author/@xml:lang-->
-   <section anchor="element.author.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="author element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in author element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--back-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.back">
@@ -1324,26 +1124,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="section"/>
          <iref item="section element" subitem="inside back"/>Optional &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</li>
    </ol>
-   <!--back/@xml:base-->
-   <section anchor="element.back.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="back element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in back element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--back/@xml:lang-->
-   <section anchor="element.back.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="back element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in back element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--bcp14-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.bcp14">
@@ -1367,26 +1147,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
    <t anchor="element.bcp14.contents"><!--AG-->
       <xref format="none" target="grammar.bcp14">Content model</xref>: only text content.</t>
-   <!--bcp14/@xml:base-->
-   <section anchor="element.bcp14.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="bcp14 element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in bcp14 element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--bcp14/@xml:lang-->
-   <section anchor="element.bcp14.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="bcp14 element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in bcp14 element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--blockquote-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.blockquote">
@@ -1504,16 +1264,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          used by processing tools as the link for the text of that attribute.
       </t>
    </section>
-   <!--blockquote/@pn-->
-   <section anchor="element.blockquote.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="blockquote element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in blockquote element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
    <!--blockquote/@quotedFrom-->
    <section anchor="element.blockquote.attribute.quotedFrom" toc="exclude">
       <name>"quotedFrom" Attribute</name>
@@ -1523,26 +1273,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          Name of person or document the text in this element is quoted from. A formatter should render this
          as visible text at the end of the quotation.
-      </t>
-   </section>
-   <!--blockquote/@xml:base-->
-   <section anchor="element.blockquote.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="blockquote element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in blockquote element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--blockquote/@xml:lang-->
-   <section anchor="element.blockquote.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="blockquote element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in blockquote element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -1568,26 +1298,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t><!--AG-->
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside boilerplate"/>One or more &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
-   <!--boilerplate/@xml:base-->
-   <section anchor="element.boilerplate.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="boilerplate element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in boilerplate element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--boilerplate/@xml:lang-->
-   <section anchor="element.boilerplate.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="boilerplate element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in boilerplate element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--br-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.br">
@@ -1598,33 +1308,11 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <iref item="Elements" subitem="br" primary="true"/>
    <iref item="br element" primary="true"/>
    <t><!--AG-->
-   Indicates that a line break should be inserted in the generated
-   output by a formatting tool.  Multiple successive instances of this
-   element are ignored.
+      <cref anchor="element.br.missing">element description missing</cref>
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>title</x:ref>&gt; (<xref target="element.title"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
    <t anchor="element.br.contents"><!--AG-->
       <xref format="none" target="grammar.br">Content model</xref>: this element does not have any contents.</t>
-   <!--br/@xml:base-->
-   <section anchor="element.br.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="br element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in br element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--br/@xml:lang-->
-   <section anchor="element.br.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="br element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in br element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--city-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.city">
@@ -1648,26 +1336,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="ascii attribute" subitem="in city element"/>
       <t>
          The ASCII equivalent of the city name.
-      </t>
-   </section>
-   <!--city/@xml:base-->
-   <section anchor="element.city.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="city element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in city element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--city/@xml:lang-->
-   <section anchor="element.city.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="city element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in city element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -1695,26 +1363,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
 	      The ASCII equivalent of the city area name.
       </t>
    </section>
-   <!--cityarea/@xml:base-->
-   <section anchor="element.cityarea.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="cityarea element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in cityarea element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--cityarea/@xml:lang-->
-   <section anchor="element.cityarea.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="cityarea element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in cityarea element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--code-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.code">
@@ -1738,26 +1386,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="ascii attribute" subitem="in code element"/>
       <t>
          The ASCII equivalent of the postal code.
-      </t>
-   </section>
-   <!--code/@xml:base-->
-   <section anchor="element.code.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="code element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in code element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--code/@xml:lang-->
-   <section anchor="element.code.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="code element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in code element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -1792,7 +1420,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="contact element" subitem="anchor attribute"/>
       <iref item="anchor attribute" subitem="in contact element"/>
       <t><!--AG-->
-	 Anchor value for cross-references.
+         <cref anchor="element.contact.attribute.anchor.missing">attribute description missing</cref>
       </t>
    </section>
    <!--contact/@asciiFullname-->
@@ -1861,26 +1489,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          (<xref target="element.author.attribute.surname"/>).
       </t>
    </section>
-   <!--contact/@xml:base-->
-   <section anchor="element.contact.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="contact element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in contact element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--contact/@xml:lang-->
-   <section anchor="element.contact.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="contact element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in contact element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--country-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.country">
@@ -1904,26 +1512,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="ascii attribute" subitem="in country element"/>
       <t>
          The ASCII equivalent of the country name.
-      </t>
-   </section>
-   <!--country/@xml:base-->
-   <section anchor="element.country.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="country element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in country element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--country/@xml:lang-->
-   <section anchor="element.country.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="country element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in country element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -2020,26 +1608,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             of the person who made the comment.
          </t>
    </section>
-   <!--cref/@xml:base-->
-   <section anchor="element.cref.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="cref element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in cref element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--cref/@xml:lang-->
-   <section anchor="element.cref.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="cref element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in cref element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--date-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.date">
@@ -2106,26 +1674,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
           The month or months of publication.
        </t>
-   </section>
-   <!--date/@xml:base-->
-   <section anchor="element.date.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="date element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in date element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--date/@xml:lang-->
-   <section anchor="element.date.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="date element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in date element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
    </section>
    <!--date/@year-->
    <section anchor="element.date.attribute.year" toc="exclude">
@@ -2249,36 +1797,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for this definition.
       </t>
    </section>
-   <!--dd/@pn-->
-   <section anchor="element.dd.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="dd element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in dd element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
-   <!--dd/@xml:base-->
-   <section anchor="element.dd.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="dd element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in dd element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--dd/@xml:lang-->
-   <section anchor="element.dd.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="dd element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in dd element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--displayreference-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.displayreference">
@@ -2333,26 +1851,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This attribute is a name that will be displayed as the anchor instead of the anchor that is given
         in the &lt;<x:ref>reference</x:ref>&gt; element. The string given must start with one of the following
         characters: 0-9, a-z, or A-Z. The other characters in the string must be 0-9, a-z, A-Z, "-", ".", or "_".
-      </t>
-   </section>
-   <!--displayreference/@xml:base-->
-   <section anchor="element.displayreference.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="displayreference element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in displayreference element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--displayreference/@xml:lang-->
-   <section anchor="element.displayreference.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="displayreference element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in displayreference element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -2427,16 +1925,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>"false" (default)</li>
       </ul>
    </section>
-   <!--dl/@pn-->
-   <section anchor="element.dl.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="dl element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in dl element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
    <!--dl/@spacing-->
    <section anchor="element.dl.attribute.spacing" toc="exclude">
       <name>"spacing" Attribute</name>
@@ -2452,26 +1940,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>"normal" (default)</li>
          <li>"compact"</li>
       </ul>
-   </section>
-   <!--dl/@xml:base-->
-   <section anchor="element.dl.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="dl element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in dl element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--dl/@xml:lang-->
-   <section anchor="element.dl.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="dl element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in dl element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
    </section>
 </section>
 <!--dt-->
@@ -2539,36 +2007,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for this term.
       </t>
    </section>
-   <!--dt/@pn-->
-   <section anchor="element.dt.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="dt element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in dt element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
-   <!--dt/@xml:base-->
-   <section anchor="element.dt.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="dt element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in dt element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--dt/@xml:lang-->
-   <section anchor="element.dt.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="dt element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in dt element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--em-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.em">
@@ -2624,26 +2062,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside em"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--em/@xml:base-->
-   <section anchor="element.em.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="em element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in em element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--em/@xml:lang-->
-   <section anchor="element.em.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="em element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in em element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--email-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.email">
@@ -2671,26 +2089,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
          The ASCII equivalent of the author's email address. This is only used if the email address has
          any internationalized components.
-      </t>
-   </section>
-   <!--email/@xml:base-->
-   <section anchor="element.email.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="email element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in email element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--email/@xml:lang-->
-   <section anchor="element.email.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="email element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in email element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -2773,26 +2171,6 @@ in this interesting report&lt;/a&gt;.
          This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.
          </t>
    </section>
-   <!--eref/@xml:base-->
-   <section anchor="element.eref.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="eref element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in eref element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--eref/@xml:lang-->
-   <section anchor="element.eref.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="eref element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in eref element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--extaddr-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.extaddr">
@@ -2816,26 +2194,6 @@ in this interesting report&lt;/a&gt;.
       <iref item="ascii attribute" subitem="in extaddr element"/>
       <t>
          ASCII equivalent for extaddr.
-      </t>
-   </section>
-   <!--extaddr/@xml:base-->
-   <section anchor="element.extaddr.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="extaddr element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in extaddr element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--extaddr/@xml:lang-->
-   <section anchor="element.extaddr.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="extaddr element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in extaddr element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -2941,17 +2299,7 @@ in this interesting report&lt;/a&gt;.
       <iref item="figure element" subitem="originalSrc attribute"/>
       <iref item="originalSrc attribute" subitem="in figure element"/>
       <t><!--AG-->
-	 Previous value of src attribute.
-      </t>
-   </section>
-   <!--figure/@pn-->
-   <section anchor="element.figure.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="figure element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in figure element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
+         <cref anchor="element.figure.attribute.originalSrc.missing">attribute description missing</cref>
       </t>
    </section>
    <!--figure/@src-->
@@ -2999,26 +2347,6 @@ in this interesting report&lt;/a&gt;.
       <t>
          Deprecated - use "width" attribute on &lt;<x:ref>artwork</x:ref>&gt;
          element instead (<xref target="element.artwork.attribute.width"/>).
-      </t>
-   </section>
-   <!--figure/@xml:base-->
-   <section anchor="element.figure.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="figure element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in figure element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--figure/@xml:lang-->
-   <section anchor="element.figure.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="figure element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in figure element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -3073,26 +2401,6 @@ in this interesting report&lt;/a&gt;.
          <iref item="Elements" subitem="toc"/>
          <iref item="toc element" subitem="inside front"/>One optional &lt;<x:ref>toc</x:ref>&gt; element (<xref target="element.toc"/>)</li>
    </ol>
-   <!--front/@xml:base-->
-   <section anchor="element.front.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="front element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in front element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--front/@xml:lang-->
-   <section anchor="element.front.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="front element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in front element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--iref-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.iref">
@@ -3135,16 +2443,6 @@ in this interesting report&lt;/a&gt;.
             The item to include.
          </t>
    </section>
-   <!--iref/@pn-->
-   <section anchor="element.iref.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="iref element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in iref element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
    <!--iref/@primary-->
    <section anchor="element.iref.attribute.primary" toc="exclude">
       <name>"primary" Attribute</name>
@@ -3172,26 +2470,6 @@ in this interesting report&lt;/a&gt;.
             The subitem to include.
          </t>
    </section>
-   <!--iref/@xml:base-->
-   <section anchor="element.iref.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="iref element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in iref element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--iref/@xml:lang-->
-   <section anchor="element.iref.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="iref element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in iref element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--keyword-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.keyword">
@@ -3215,26 +2493,6 @@ in this interesting report&lt;/a&gt;.
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.keyword.contents"><!--AG-->
       <xref format="none" target="grammar.keyword">Content model</xref>: only text content.</t>
-   <!--keyword/@xml:base-->
-   <section anchor="element.keyword.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="keyword element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in keyword element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--keyword/@xml:lang-->
-   <section anchor="element.keyword.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="keyword element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in keyword element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--li-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.li">
@@ -3354,37 +2612,7 @@ in this interesting report&lt;/a&gt;.
       <iref item="li element" subitem="derivedCounter attribute"/>
       <iref item="derivedCounter attribute" subitem="in li element"/>
       <t><!--AG-->
-	 Automatically generated part of the list counter.
-      </t>
-   </section>
-   <!--li/@pn-->
-   <section anchor="element.li.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="li element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in li element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
-   <!--li/@xml:base-->
-   <section anchor="element.li.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="li element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in li element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--li/@xml:lang-->
-   <section anchor="element.li.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="li element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in li element"/>
-      <t><!--AG-->
-	 Language of the element.
+         <cref anchor="element.li.attribute.derivedCounter.missing">attribute description missing</cref>
       </t>
    </section>
 </section>
@@ -3455,26 +2683,6 @@ in this interesting report&lt;/a&gt;.
          the "Link Relations" registry maintained by IANA <xref target="LINKRELATIONS"/>.
        </t>
    </section>
-   <!--link/@xml:base-->
-   <section anchor="element.link.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="link element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in link element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--link/@xml:lang-->
-   <section anchor="element.link.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="link element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in link element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--middle-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.middle">
@@ -3494,26 +2702,6 @@ in this interesting report&lt;/a&gt;.
    <t><!--AG-->
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside middle"/>One or more &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
-   <!--middle/@xml:base-->
-   <section anchor="element.middle.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="middle element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in middle element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--middle/@xml:lang-->
-   <section anchor="element.middle.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="middle element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in middle element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--name-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.name">
@@ -3579,27 +2767,7 @@ in this interesting report&lt;/a&gt;.
       <iref item="name element" subitem="slugifiedName attribute"/>
       <iref item="slugifiedName attribute" subitem="in name element"/>
       <t><!--AG-->
-	 "Slugified" version of the element created by the prep tool.
-      </t>
-   </section>
-   <!--name/@xml:base-->
-   <section anchor="element.name.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="name element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in name element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--name/@xml:lang-->
-   <section anchor="element.name.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="name element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in name element"/>
-      <t><!--AG-->
-	 Language of the element.
+         <cref anchor="element.name.attribute.slugifiedName.missing">attribute description missing</cref>
       </t>
    </section>
 </section>
@@ -3645,16 +2813,6 @@ in this interesting report&lt;/a&gt;.
          </ul>
       </li>
    </ol>
-   <!--note/@pn-->
-   <section anchor="element.note.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="note element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in note element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
    <!--note/@removeInRFC-->
    <section anchor="element.note.attribute.removeInRFC" toc="exclude">
       <name>"removeInRFC" Attribute</name>
@@ -3681,26 +2839,6 @@ in this interesting report&lt;/a&gt;.
       <t>
             Deprecated. Use &lt;<x:ref>name</x:ref>&gt; instead.
          </t>
-   </section>
-   <!--note/@xml:base-->
-   <section anchor="element.note.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="note element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in note element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--note/@xml:lang-->
-   <section anchor="element.note.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="note element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in note element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
    </section>
 </section>
 <!--ol-->
@@ -3753,26 +2891,12 @@ in this interesting report&lt;/a&gt;.
       <iref item="ol element" subitem="indent attribute"/>
       <iref item="indent attribute" subitem="in ol element"/>
       <t><!--AG-->
-         Indicates the indentation to be used for the rendering of the item.
-         The indentation amount is interpreted as characters when rendering
-         plain-text documents, and en-space units when rendering in formats that have
-         richer typographic support such as HTML or PDF.
-         One en-space is assumed to be the length of 0.5 em-space in CSS units.
+         <cref anchor="element.ol.attribute.indent.missing">attribute description missing</cref>
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"adaptive" (default)</li>
       </ul>
-   </section>
-   <!--ol/@pn-->
-   <section anchor="element.ol.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="ol element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in ol element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
    </section>
    <!--ol/@spacing-->
    <section anchor="element.ol.attribute.spacing" toc="exclude">
@@ -3864,26 +2988,6 @@ in this interesting report&lt;/a&gt;.
         If no type attribute is given, the default type is the same as "type='%d.'".
       </t>
    </section>
-   <!--ol/@xml:base-->
-   <section anchor="element.ol.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="ol element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in ol element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--ol/@xml:lang-->
-   <section anchor="element.ol.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="ol element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in ol element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--organization-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.organization">
@@ -3950,26 +3054,6 @@ in this interesting report&lt;/a&gt;.
          <li>"false"</li>
       </ul>
    </section>
-   <!--organization/@xml:base-->
-   <section anchor="element.organization.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="organization element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in organization element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--organization/@xml:lang-->
-   <section anchor="element.organization.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="organization element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in organization element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--phone-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.phone">
@@ -3991,26 +3075,6 @@ in this interesting report&lt;/a&gt;.
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>address</x:ref>&gt; (<xref target="element.address"/>).</t>
    <t anchor="element.phone.contents"><!--AG-->
       <xref format="none" target="grammar.phone">Content model</xref>: only text content.</t>
-   <!--phone/@xml:base-->
-   <section anchor="element.phone.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="phone element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in phone element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--phone/@xml:lang-->
-   <section anchor="element.phone.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="phone element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in phone element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--pobox-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.pobox">
@@ -4034,26 +3098,6 @@ in this interesting report&lt;/a&gt;.
       <iref item="ascii attribute" subitem="in pobox element"/>
       <t>
 	      ASCII equivalent for pobox. 
-      </t>
-   </section>
-   <!--pobox/@xml:base-->
-   <section anchor="element.pobox.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="pobox element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in pobox element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--pobox/@xml:lang-->
-   <section anchor="element.pobox.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="pobox element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in pobox element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -4117,26 +3161,6 @@ in this interesting report&lt;/a&gt;.
          <iref item="Elements" subitem="postalLine"/>
          <iref item="postalLine element" subitem="inside postal"/>One or more &lt;<x:ref>postalLine</x:ref>&gt; elements (<xref target="element.postalLine"/>)</li>
    </ul>
-   <!--postal/@xml:base-->
-   <section anchor="element.postal.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="postal element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in postal element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--postal/@xml:lang-->
-   <section anchor="element.postal.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="postal element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in postal element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--postalLine-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.postalLine">
@@ -4161,26 +3185,6 @@ in this interesting report&lt;/a&gt;.
       <iref item="ascii attribute" subitem="in postalLine element"/>
       <t>
          The ASCII equivalent of the text in the address line.
-      </t>
-   </section>
-   <!--postalLine/@xml:base-->
-   <section anchor="element.postalLine.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="postalLine element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in postalLine element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--postalLine/@xml:lang-->
-   <section anchor="element.postalLine.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="postalLine element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in postalLine element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -4243,26 +3247,6 @@ in this interesting report&lt;/a&gt;.
          <iref item="Elements" subitem="tt"/>
          <iref item="tt element" subitem="inside refcontent"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
    </ul>
-   <!--refcontent/@xml:base-->
-   <section anchor="element.refcontent.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="refcontent element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in refcontent element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--refcontent/@xml:lang-->
-   <section anchor="element.refcontent.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="refcontent element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in refcontent element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--reference-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.reference">
@@ -4324,8 +3308,23 @@ in this interesting report&lt;/a&gt;.
       <iref item="reference element" subitem="derivedAnchor attribute"/>
       <iref item="derivedAnchor attribute" subitem="in reference element"/>
       <t><!--AG-->
-	 Anchor value for cross-references.
+         <cref anchor="element.reference.attribute.derivedAnchor.missing">attribute description missing</cref>
       </t>
+   </section>
+   <!--reference/@quote-title-->
+   <section anchor="element.reference.attribute.quote-title" toc="exclude">
+      <name>"quote-title" Attribute</name>
+      <iref item="Attributes" subitem="quote-title"/>
+      <iref item="reference element" subitem="quote-title attribute"/>
+      <iref item="quote-title attribute" subitem="in reference element"/>
+      <t><!--AG-->
+         <cref anchor="element.reference.attribute.quote-title.missing">attribute description missing</cref>
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"true"</li>
+         <li>"false"</li>
+      </ul>
    </section>
    <!--reference/@quoteTitle-->
    <section anchor="element.reference.attribute.quoteTitle" toc="exclude">
@@ -4352,26 +3351,6 @@ in this interesting report&lt;/a&gt;.
       <t>
             Holds the URI for the reference.
          </t>
-   </section>
-   <!--reference/@xml:base-->
-   <section anchor="element.reference.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="reference element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in reference element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--reference/@xml:lang-->
-   <section anchor="element.reference.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="reference element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in reference element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
    </section>
 </section>
 <!--referencegroup-->
@@ -4414,7 +3393,7 @@ in this interesting report&lt;/a&gt;.
       <iref item="referencegroup element" subitem="derivedAnchor attribute"/>
       <iref item="derivedAnchor attribute" subitem="in referencegroup element"/>
       <t><!--AG-->
-	 Anchor value for cross-references.
+         <cref anchor="element.referencegroup.attribute.derivedAnchor.missing">attribute description missing</cref>
       </t>
    </section>
    <!--referencegroup/@target-->
@@ -4428,26 +3407,6 @@ in this interesting report&lt;/a&gt;.
       </t>
       <t>
         Holds the URI for the reference.
-      </t>
-   </section>
-   <!--referencegroup/@xml:base-->
-   <section anchor="element.referencegroup.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="referencegroup element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in referencegroup element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--referencegroup/@xml:lang-->
-   <section anchor="element.referencegroup.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="referencegroup element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in referencegroup element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -4510,16 +3469,6 @@ in this interesting report&lt;/a&gt;.
          An optional user-supplied identifier for this set of references.
       </t>
    </section>
-   <!--references/@pn-->
-   <section anchor="element.references.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="references element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in references element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
    <!--references/@title-->
    <section anchor="element.references.attribute.title" toc="exclude">
       <name>"title" Attribute</name>
@@ -4528,26 +3477,6 @@ in this interesting report&lt;/a&gt;.
       <iref item="title attribute" subitem="in references element"/>
       <t>
          Deprecated. Use &lt;<x:ref>name</x:ref>&gt; instead.
-      </t>
-   </section>
-   <!--references/@xml:base-->
-   <section anchor="element.references.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="references element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in references element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--references/@xml:lang-->
-   <section anchor="element.references.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="references element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in references element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -4573,26 +3502,6 @@ in this interesting report&lt;/a&gt;.
       <iref item="ascii attribute" subitem="in region element"/>
       <t>
          The ASCII equivalent of the region name.
-      </t>
-   </section>
-   <!--region/@xml:base-->
-   <section anchor="element.region.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="region element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in region element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--region/@xml:lang-->
-   <section anchor="element.region.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="region element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in region element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -4648,9 +3557,7 @@ for more information.
       <iref item="relref element" subitem="derivedContent attribute"/>
       <iref item="derivedContent attribute" subitem="in relref element"/>
       <t><!--AG-->
-	 This attribute is filled in
-      if there is no content in the &lt;relref&gt; element.  The value for this
-      attribute is based on the value in the "displayFormat" attribute.
+         <cref anchor="element.relref.attribute.derivedContent.missing">attribute description missing</cref>
       </t>
    </section>
    <!--relref/@derivedLink-->
@@ -4660,9 +3567,7 @@ for more information.
       <iref item="relref element" subitem="derivedLink attribute"/>
       <iref item="derivedLink attribute" subitem="in relref element"/>
       <t><!--AG-->
-	 This attribute is filled with the link that is derived
-	 from combining the URI from the reference and the relative part that is either a copy of the
-	 "relative" attribute or a section number derived from the "section" attribute.
+         <cref anchor="element.relref.attribute.derivedLink.missing">attribute description missing</cref>
       </t>
    </section>
    <!--relref/@displayFormat-->
@@ -4831,26 +3736,6 @@ for an overview.
         If the reference at the target has no URI, it is an error.
       </t>
    </section>
-   <!--relref/@xml:base-->
-   <section anchor="element.relref.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="relref element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in relref element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--relref/@xml:lang-->
-   <section anchor="element.relref.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="relref element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in relref element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--rfc-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.rfc">
@@ -4963,9 +3848,7 @@ for an overview.
       <iref item="rfc element" subitem="expiresDate attribute"/>
       <iref item="expiresDate attribute" subitem="in rfc element"/>
       <t><!--AG-->
-	 This attribute is filled with the
-      date that an Internet-Draft expires.  The date is in the format
-      yyyy-mm-dd.
+         <cref anchor="element.rfc.attribute.expiresDate.missing">attribute description missing</cref>
       </t>
    </section>
    <!--rfc/@indexInclude-->
@@ -5017,10 +3900,7 @@ for an overview.
       <iref item="rfc element" subitem="mode attribute"/>
       <iref item="mode attribute" subitem="in rfc element"/>
       <t><!--AG-->
-	 This attribute is filled with a string
-      that indicates what mode the prep tool was in when it processed
-      the XML, such as whether it was processing a file to become an
-      Internet-Draft or an RFC.
+         <cref anchor="element.rfc.attribute.mode.missing">attribute description missing</cref>
       </t>
    </section>
    <!--rfc/@number-->
@@ -5068,11 +3948,7 @@ for an overview.
       <iref item="rfc element" subitem="scripts attribute"/>
       <iref item="scripts attribute" subitem="in rfc element"/>
       <t><!--AG-->
-	 This attribute is filled with a list
-      of scripts needed to render this document.  The list is comma-
-      separated, with no spaces allowed.  The order is unimportant.  The
-      names come from <xref target="UAX24" />.  For example, if the document has Chinese
-      characters in it, the value might be "Common,Latin,Han".
+         <cref anchor="element.rfc.attribute.scripts.missing">attribute description missing</cref>
       </t>
    </section>
    <!--rfc/@seriesNo-->
@@ -5189,26 +4065,6 @@ for an overview.
          Specifies the version of xml2rfc syntax used in this document. The only expected value (for now) is "3".
       </t>
    </section>
-   <!--rfc/@xml:base-->
-   <section anchor="element.rfc.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="rfc element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in rfc element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--rfc/@xml:lang-->
-   <section anchor="element.rfc.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="rfc element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in rfc element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--section-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.section">
@@ -5315,16 +4171,6 @@ for an overview.
          <li>"false"</li>
       </ul>
    </section>
-   <!--section/@pn-->
-   <section anchor="element.section.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="section element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in section element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
    <!--section/@removeInRFC-->
    <section anchor="element.section.attribute.removeInRFC" toc="exclude">
       <name>"removeInRFC" Attribute</name>
@@ -5375,26 +4221,6 @@ for an overview.
          <li>"exclude"</li>
          <li>"default" (default)</li>
       </ul>
-   </section>
-   <!--section/@xml:base-->
-   <section anchor="element.section.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="section element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in section element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--section/@xml:lang-->
-   <section anchor="element.section.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="section element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in section element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
    </section>
 </section>
 <!--seriesInfo-->
@@ -5516,26 +4342,6 @@ for an overview.
             "draft-ietf-somewg-someprotocol-07.txt".
       </t>
    </section>
-   <!--seriesInfo/@xml:base-->
-   <section anchor="element.seriesInfo.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="seriesInfo element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in seriesInfo element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--seriesInfo/@xml:lang-->
-   <section anchor="element.seriesInfo.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="seriesInfo element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in seriesInfo element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--sortingcode-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sortingcode">
@@ -5559,26 +4365,6 @@ for an overview.
       <iref item="ascii attribute" subitem="in sortingcode element"/>
       <t>
 	      ASCII equivalent for sortingcode.
-      </t>
-   </section>
-   <!--sortingcode/@xml:base-->
-   <section anchor="element.sortingcode.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="sortingcode element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in sortingcode element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--sortingcode/@xml:lang-->
-   <section anchor="element.sortingcode.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="sortingcode element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in sortingcode element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -5675,17 +4461,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="sourcecode element" subitem="originalSrc attribute"/>
       <iref item="originalSrc attribute" subitem="in sourcecode element"/>
       <t><!--AG-->
-	 Previous value of src attribute.
-      </t>
-   </section>
-   <!--sourcecode/@pn-->
-   <section anchor="element.sourcecode.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="sourcecode element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in sourcecode element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
+         <cref anchor="element.sourcecode.attribute.originalSrc.missing">attribute description missing</cref>
       </t>
    </section>
    <!--sourcecode/@src-->
@@ -5739,26 +4515,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified. 
       </t>
    </section>
-   <!--sourcecode/@xml:base-->
-   <section anchor="element.sourcecode.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="sourcecode element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in sourcecode element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--sourcecode/@xml:lang-->
-   <section anchor="element.sourcecode.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="sourcecode element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in sourcecode element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--stream-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.stream">
@@ -5769,17 +4525,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <iref item="Elements" subitem="stream" primary="true"/>
    <iref item="stream element" primary="true"/>
    <t><!--AG-->
-      <t>
-            The document stream, as described in <xref target="RFC7841"/>.
-            (The RFC Series Editor may change the list of allowed values in the future.)
-      </t>
-      <t><!--AG-->Allowed values:</t>
-      <ul><!--AG-->
-         <li>"IETF" (default)</li>
-         <li>"IAB"</li>
-         <li>"IRTF"</li>
-         <li>"independent"</li>
-      </ul>
+      <cref anchor="element.stream.missing">element description missing</cref>
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.stream.contents"><!--AG-->
@@ -5813,26 +4559,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="ascii attribute" subitem="in street element"/>
       <t>
          The ASCII equivalent of the street address.
-      </t>
-   </section>
-   <!--street/@xml:base-->
-   <section anchor="element.street.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="street element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in street element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--street/@xml:lang-->
-   <section anchor="element.street.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="street element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in street element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -5890,26 +4616,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside strong"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--strong/@xml:base-->
-   <section anchor="element.strong.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="strong element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in strong element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--strong/@xml:lang-->
-   <section anchor="element.strong.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="strong element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in strong element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--sub-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sub">
@@ -5965,26 +4671,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside sub"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--sub/@xml:base-->
-   <section anchor="element.sub.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="sub element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in sub element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--sub/@xml:lang-->
-   <section anchor="element.sub.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="sub element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in sub element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--sup-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sup">
@@ -6040,26 +4726,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside sup"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--sup/@xml:base-->
-   <section anchor="element.sup.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="sup element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in sup element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--sup/@xml:lang-->
-   <section anchor="element.sup.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="sup element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in sup element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--t-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.t">
@@ -6158,11 +4824,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="t element" subitem="indent attribute"/>
       <iref item="indent attribute" subitem="in t element"/>
       <t><!--AG-->
-         Indicates the indentation to be used for the rendering of the item.
-         The indentation amount is interpreted as characters when rendering
-         plain-text documents, and en-space units when rendering in formats that have
-         richer typographic support such as HTML or PDF.
-         One en-space is assumed to be the length of 0.5 em-space in CSS units.
+         <cref anchor="element.t.attribute.indent.missing">attribute description missing</cref>
       </t>
    </section>
    <!--t/@keepWithNext-->
@@ -6202,36 +4864,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>"true"</li>
          <li>"false" (default)</li>
       </ul>
-   </section>
-   <!--t/@pn-->
-   <section anchor="element.t.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="t element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in t element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
-   <!--t/@xml:base-->
-   <section anchor="element.t.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="t element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in t element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--t/@xml:lang-->
-   <section anchor="element.t.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="t element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in t element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
    </section>
 </section>
 <!--table-->
@@ -6302,36 +4934,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for this table.
       </t>
    </section>
-   <!--table/@pn-->
-   <section anchor="element.table.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="table element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in table element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
-   <!--table/@xml:base-->
-   <section anchor="element.table.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="table element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in table element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--table/@xml:lang-->
-   <section anchor="element.table.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="table element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in table element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--tbody-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.tbody">
@@ -6359,26 +4961,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="anchor attribute" subitem="in tbody element"/>
       <t>
         Document-wide unique identifier for the tbody.
-      </t>
-   </section>
-   <!--tbody/@xml:base-->
-   <section anchor="element.tbody.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="tbody element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in tbody element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--tbody/@xml:lang-->
-   <section anchor="element.tbody.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="tbody element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in tbody element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -6528,26 +5110,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          indicates that the cell occupies the same vertical space as three rows.
       </t>
    </section>
-   <!--td/@xml:base-->
-   <section anchor="element.td.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="td element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in td element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--td/@xml:lang-->
-   <section anchor="element.td.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="td element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in td element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--tfoot-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.tfoot">
@@ -6575,26 +5137,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="anchor attribute" subitem="in tfoot element"/>
       <t>
         Document-wide unique identifier for the tfoot.
-      </t>
-   </section>
-   <!--tfoot/@xml:base-->
-   <section anchor="element.tfoot.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="tfoot element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in tfoot element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--tfoot/@xml:lang-->
-   <section anchor="element.tfoot.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="tfoot element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in tfoot element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -6745,26 +5287,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          indicates that the cell occupies the same vertical space as three rows.
       </t>
    </section>
-   <!--th/@xml:base-->
-   <section anchor="element.th.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="th element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in th element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--th/@xml:lang-->
-   <section anchor="element.th.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="th element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in th element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--thead-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.thead">
@@ -6792,26 +5314,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="anchor attribute" subitem="in thead element"/>
       <t>
         Document-wide unique identifier for the thead.
-      </t>
-   </section>
-   <!--thead/@xml:base-->
-   <section anchor="element.thead.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="thead element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in thead element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--thead/@xml:lang-->
-   <section anchor="element.thead.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="thead element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in thead element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -6863,26 +5365,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          The ASCII equivalent of the title.
       </t>
    </section>
-   <!--title/@xml:base-->
-   <section anchor="element.title.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="title element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in title element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--title/@xml:lang-->
-   <section anchor="element.title.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="title element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in title element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--toc-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.toc">
@@ -6893,7 +5375,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <iref item="Elements" subitem="toc" primary="true"/>
    <iref item="toc element" primary="true"/>
    <t><!--AG-->
-      The table of contents.
+      <cref anchor="element.toc.missing">element description missing</cref>
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.toc.contents"><!--AG-->
@@ -6902,26 +5384,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t><!--AG-->
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside toc"/>Optional &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
-   <!--toc/@xml:base-->
-   <section anchor="element.toc.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="toc element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in toc element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--toc/@xml:lang-->
-   <section anchor="element.toc.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="toc element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in toc element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--tr-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.tr">
@@ -6955,26 +5417,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="anchor attribute" subitem="in tr element"/>
       <t>
         Document-wide unique identifier for the row.
-      </t>
-   </section>
-   <!--tr/@xml:base-->
-   <section anchor="element.tr.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="tr element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in tr element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--tr/@xml:lang-->
-   <section anchor="element.tr.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="tr element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in tr element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -7032,26 +5474,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside tt"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--tt/@xml:base-->
-   <section anchor="element.tt.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="tt element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in tt element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--tt/@xml:lang-->
-   <section anchor="element.tt.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="tt element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in tt element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--u-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.u">
@@ -7074,7 +5496,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="u element" subitem="anchor attribute"/>
       <iref item="anchor attribute" subitem="in u element"/>
       <t><!--AG-->
-	 Anchor value for cross-references.
+         <cref anchor="element.u.attribute.anchor.missing">attribute description missing</cref>
       </t>
    </section>
    <!--u/@ascii-->
@@ -7095,16 +5517,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="format attribute" subitem="in u element"/>
       <t><!--AG-->
          <cref anchor="element.u.attribute.format.missing">attribute description missing</cref>
-      </t>
-   </section>
-   <!--u/@pn-->
-   <section anchor="element.u.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="u element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in u element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
       </t>
    </section>
 </section>
@@ -7173,21 +5585,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="ul element" subitem="indent attribute"/>
       <iref item="indent attribute" subitem="in ul element"/>
       <t><!--AG-->
-         Indicates the indentation to be used for the rendering of the item.
-         The indentation amount is interpreted as characters when rendering
-         plain-text documents, and en-space units when rendering in formats that have
-         richer typographic support such as HTML or PDF.
-         One en-space is assumed to be the length of 0.5 em-space in CSS units.
-      </t>
-   </section>
-   <!--ul/@pn-->
-   <section anchor="element.ul.attribute.pn" toc="exclude">
-      <name>"pn" Attribute</name>
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="ul element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in ul element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
+         <cref anchor="element.ul.attribute.indent.missing">attribute description missing</cref>
       </t>
    </section>
    <!--ul/@spacing-->
@@ -7205,26 +5603,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>"normal" (default)</li>
          <li>"compact"</li>
       </ul>
-   </section>
-   <!--ul/@xml:base-->
-   <section anchor="element.ul.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="ul element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in ul element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--ul/@xml:lang-->
-   <section anchor="element.ul.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="ul element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in ul element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
    </section>
 </section>
 <!--uri-->
@@ -7244,26 +5622,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>address</x:ref>&gt; (<xref target="element.address"/>).</t>
    <t anchor="element.uri.contents"><!--AG-->
       <xref format="none" target="grammar.uri">Content model</xref>: only text content.</t>
-   <!--uri/@xml:base-->
-   <section anchor="element.uri.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="uri element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in uri element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--uri/@xml:lang-->
-   <section anchor="element.uri.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="uri element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in uri element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--workgroup-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.workgroup">
@@ -7288,26 +5646,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.workgroup.contents"><!--AG-->
       <xref format="none" target="grammar.workgroup">Content model</xref>: only text content.</t>
-   <!--workgroup/@xml:base-->
-   <section anchor="element.workgroup.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="workgroup element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in workgroup element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--workgroup/@xml:lang-->
-   <section anchor="element.workgroup.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="workgroup element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in workgroup element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--xref-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.xref">
@@ -7354,9 +5692,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="xref element" subitem="derivedContent attribute"/>
       <iref item="derivedContent attribute" subitem="in xref element"/>
       <t><!--AG-->
-	 This attribute is filled in
-      if there is no content in the &lt;xref&gt; element.  The value for this
-      attribute is based on the value in the "displayFormat" attribute.
+         <cref anchor="element.xref.attribute.derivedContent.missing">attribute description missing</cref>
       </t>
    </section>
    <!--xref/@derivedLink-->
@@ -7366,9 +5702,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="xref element" subitem="derivedLink attribute"/>
       <iref item="derivedLink attribute" subitem="in xref element"/>
       <t><!--AG-->
-	 This attribute is filled with the link that is derived
-	 from combining the URI from the reference and the relative part that is either a copy of the
-	 "relative" attribute or a section number derived from the "section" attribute.
+         <cref anchor="element.xref.attribute.derivedLink.missing">attribute description missing</cref>
       </t>
    </section>
    <!--xref/@format-->
@@ -7542,26 +5876,6 @@ See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
         element in the document; otherwise, it is an error.
       </t>
    </section>
-   <!--xref/@xml:base-->
-   <section anchor="element.xref.attribute.xml-base" toc="exclude">
-      <name>"xml:base" Attribute</name>
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="xref element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in xref element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--xref/@xml:lang-->
-   <section anchor="element.xref.attribute.xml-lang" toc="exclude">
-      <name>"xml:lang" Attribute</name>
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="xref element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in xref element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <?ENDINC xml2rfcv3-spec.xml ?>
 </section>
@@ -7606,28 +5920,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside c"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--c/@xml:base-->
-   <section anchor="element.c.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="c element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in c element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--c/@xml:lang-->
-   <section anchor="element.c.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="c element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in c element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--facsimile-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -7642,28 +5934,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>address</x:ref>&gt; (<xref target="element.address"/>).</t>
    <t anchor="element.facsimile.contents"><!--AG-->
       <xref format="none" target="grammar.facsimile">Content model</xref>: only text content.</t>
-   <!--facsimile/@xml:base-->
-   <section anchor="element.facsimile.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="facsimile element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in facsimile element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--facsimile/@xml:lang-->
-   <section anchor="element.facsimile.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="facsimile element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in facsimile element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--format-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -7712,28 +5982,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
         Deprecated.
        </t>
    </section>
-   <!--format/@xml:base-->
-   <section anchor="element.format.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="format element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in format element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--format/@xml:lang-->
-   <section anchor="element.format.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="format element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in format element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--list-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -7777,17 +6025,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          Deprecated. Use &lt;<x:ref>dl</x:ref>&gt; instead.
       </t>
    </section>
-   <!--list/@pn-->
-   <section anchor="element.list.attribute.pn"
-            toc="exclude"
-            title="&#34;pn&#34; attribute">
-      <iref item="Attributes" subitem="pn"/>
-      <iref item="list element" subitem="pn attribute"/>
-      <iref item="pn attribute" subitem="in list element"/>
-      <t><!--AG-->
-	 Automatically generated paragraph number.
-      </t>
-   </section>
    <!--list/@style-->
    <section anchor="element.list.attribute.style"
             toc="exclude"
@@ -7797,28 +6034,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="style attribute" subitem="in list element"/>
       <t>
         Deprecated.
-      </t>
-   </section>
-   <!--list/@xml:base-->
-   <section anchor="element.list.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="list element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in list element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--list/@xml:lang-->
-   <section anchor="element.list.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="list element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in list element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
@@ -7855,28 +6070,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside postamble"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--postamble/@xml:base-->
-   <section anchor="element.postamble.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="postamble element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in postamble element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--postamble/@xml:lang-->
-   <section anchor="element.postamble.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="postamble element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in postamble element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--preamble-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -7935,28 +6128,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside preamble"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
-   <!--preamble/@xml:base-->
-   <section anchor="element.preamble.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="preamble element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in preamble element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--preamble/@xml:lang-->
-   <section anchor="element.preamble.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="preamble element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in preamble element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--spanx-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -7982,28 +6153,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          Deprecated. Instead of &lt;spanx style="emph"&gt;, use &lt;<x:ref>em</x:ref>&gt;;
       instead of &lt;spanx style="strong"&gt;, use &lt;<x:ref>strong</x:ref>&gt;;
       instead of &lt;spanx style="verb"&gt;, use &lt;tt&gt;.
-      </t>
-   </section>
-   <!--spanx/@xml:base-->
-   <section anchor="element.spanx.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="spanx element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in spanx element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--spanx/@xml:lang-->
-   <section anchor="element.spanx.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="spanx element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in spanx element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
    <!--spanx/@xml:space-->
@@ -8127,28 +6276,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
             Deprecated.
       </t>
    </section>
-   <!--texttable/@xml:base-->
-   <section anchor="element.texttable.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="texttable element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in texttable element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--texttable/@xml:lang-->
-   <section anchor="element.texttable.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="texttable element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in texttable element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--ttcol-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -8208,28 +6335,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          Deprecated.
       </t>
    </section>
-   <!--ttcol/@xml:base-->
-   <section anchor="element.ttcol.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="ttcol element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in ttcol element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--ttcol/@xml:lang-->
-   <section anchor="element.ttcol.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="ttcol element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in ttcol element"/>
-      <t><!--AG-->
-	 Language of the element.
-      </t>
-   </section>
 </section>
 <!--vspace-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -8256,28 +6361,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="blankLines attribute" subitem="in vspace element"/>
       <t>
          Deprecated.
-      </t>
-   </section>
-   <!--vspace/@xml:base-->
-   <section anchor="element.vspace.attribute.xml-base"
-            toc="exclude"
-            title="&#34;xml:base&#34; attribute">
-      <iref item="Attributes" subitem="xml:base"/>
-      <iref item="vspace element" subitem="xml:base attribute"/>
-      <iref item="xml:base attribute" subitem="in vspace element"/>
-      <t><!--AG-->
-	 Base URI for included material.
-      </t>
-   </section>
-   <!--vspace/@xml:lang-->
-   <section anchor="element.vspace.attribute.xml-lang"
-            toc="exclude"
-            title="&#34;xml:lang&#34; attribute">
-      <iref item="Attributes" subitem="xml:lang"/>
-      <iref item="vspace element" subitem="xml:lang attribute"/>
-      <iref item="xml:lang attribute" subitem="in vspace element"/>
-      <t><!--AG-->
-	 Language of the element.
       </t>
    </section>
 </section>
