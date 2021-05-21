@@ -9,10 +9,10 @@
       <element name="rfc">
          <a:annotation>This is the root element of the xml2rfc vocabulary.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="number">
@@ -158,10 +158,10 @@
       <element name="link">
          <a:annotation>A link to an external document that is related to the RFC.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="href">
             <a:annotation>The URI of the external document.</a:annotation>
@@ -177,10 +177,10 @@
       <element name="front">
          <a:annotation>Represents the "front matter": metadata (such as author information), the Abstract, and additional notes.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <ref name="title"/>
          <zeroOrMore>
@@ -219,10 +219,10 @@
       <element name="title">
          <a:annotation>Represents the document title.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="abbrev">
@@ -246,10 +246,10 @@
       <element name="author">
          <a:annotation>Provides information about a document's author. This is used both for the document itself (at the beginning of the document) and for referenced documents.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -304,10 +304,10 @@
       <element name="contact">
          <a:annotation>Provides information about a contact, such as a contributor to be mentioned in an "Acknowledgements" section.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -356,10 +356,10 @@
       <element name="organization">
          <a:annotation>Specifies the affiliation [RFC7322] of an author.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="abbrev">
@@ -392,10 +392,10 @@
       <element name="address">
          <a:annotation>Provides address information for the author.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <ref name="postal"/>
@@ -418,10 +418,10 @@
       <element name="postal">
          <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, or only an ordered set of &lt;postalLine&gt; elements, but not both.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <choice>
             <zeroOrMore>
@@ -447,10 +447,10 @@
       <element name="extaddr">
          <a:annotation>TBD</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -464,10 +464,10 @@
       <element name="pobox">
          <a:annotation>TBD</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -481,10 +481,10 @@
       <element name="street">
          <a:annotation>Provides a street address.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -498,10 +498,10 @@
       <element name="cityarea">
          <a:annotation>TBD</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -515,10 +515,10 @@
       <element name="city">
          <a:annotation>Gives the city name in a postal address.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -532,10 +532,10 @@
       <element name="region">
          <a:annotation>Provides the region name in a postal address.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -549,10 +549,10 @@
       <element name="code">
          <a:annotation>Gives the postal region code.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -566,10 +566,10 @@
       <element name="sortingcode">
          <a:annotation>A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -583,10 +583,10 @@
       <element name="country">
          <a:annotation>Gives the country name or code in a postal address.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -600,10 +600,10 @@
       <element name="postalLine">
          <a:annotation>Represents one line of a postal address. When more than one &lt;postalLine&gt; is given, the prep tool emits them in the order given.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -617,10 +617,10 @@
       <element name="phone">
          <a:annotation>Represents a phone number.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <text/>
       </element>
@@ -629,10 +629,10 @@
       <element name="facsimile">
          <a:annotation>Deprecated. The &lt;email&gt; element is a much more useful way to get in touch with authors.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <text/>
       </element>
@@ -641,10 +641,10 @@
       <element name="email">
          <a:annotation>Provides an email address.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="ascii">
@@ -658,10 +658,10 @@
       <element name="uri">
          <a:annotation>Contains a web address associated with the author.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <text/>
       </element>
@@ -670,10 +670,10 @@
       <element name="date">
          <a:annotation>Provides information about the publication date. This element is used for two cases: the boilerplate of the document being produced, and inside bibliographic references that use the &lt;front&gt; element.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="day">
@@ -697,10 +697,10 @@
       <element name="area">
          <a:annotation>Provides information about the IETF area to which this document relates (currently not used when generating documents).</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <text/>
       </element>
@@ -709,10 +709,10 @@
       <element name="workgroup">
          <a:annotation>This element is used to specify the Working Group (IETF) or Research Group (IRTF) from which the document originates, if any. The recommended format is the official name of the Working Group (with some capitalization).</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <text/>
       </element>
@@ -721,10 +721,10 @@
       <element name="keyword">
          <a:annotation>Specifies a keyword applicable to the document.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <text/>
       </element>
@@ -733,10 +733,10 @@
       <element name="abstract">
          <a:annotation>Contains the Abstract of the document. See [RFC7322] for more information on restrictions for the Abstract.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -745,7 +745,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -763,10 +763,10 @@
       <element name="note">
          <a:annotation>Creates an unnumbered, titled block of text that appears after the Abstract.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="title">
@@ -774,7 +774,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -804,10 +804,10 @@
       <element name="boilerplate">
          <a:annotation>Holds the boilerplate text for the document. This element is filled in by the prep tool.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <oneOrMore>
             <ref name="section"/>
@@ -817,10 +817,10 @@
    <define name="toc">
       <element name="toc">
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <ref name="section"/>
@@ -831,10 +831,10 @@
       <element name="middle">
          <a:annotation>Represents the main content of the document.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <oneOrMore>
             <ref name="section"/>
@@ -845,10 +845,10 @@
       <element name="section">
          <a:annotation>Represents a section (when inside a &lt;middle&gt; element) or an appendix (when inside a &lt;back&gt; element).</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -857,7 +857,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -925,10 +925,10 @@
       <element name="name">
          <a:annotation>The name of the section, note, figure, or texttable. This name can indicate markup of flowing text (for example, including references or making some characters use a fixed-width font).</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="slugifiedName">
@@ -957,10 +957,10 @@
    <define name="br">
       <element name="br">
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <empty/>
       </element>
@@ -969,10 +969,10 @@
       <element name="t">
          <a:annotation>Contains a paragraph of text.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -981,7 +981,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1039,10 +1039,10 @@
       <element name="aside">
          <a:annotation>This element is a container for content that is semantically less important or tangential to the content that surrounds it.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1051,7 +1051,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1075,10 +1075,10 @@
       <element name="blockquote">
          <a:annotation>Specifies that a block of text is a quotation.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1087,7 +1087,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1139,10 +1139,10 @@
       <element name="list">
          <a:annotation>Deprecated. Instead, use &lt;dl&gt; for list/@style "hanging"; &lt;ul&gt; for list/@style "empty" or "symbols"; and &lt;ol&gt; for list/@style "letters", "numbers", "counter", or "format".</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="style" a:defaultValue="empty">
@@ -1160,7 +1160,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1173,10 +1173,10 @@
       <element name="ol">
          <a:annotation>An ordered list. The labels on the items will be either a number or a letter, depending on the value of the style attribute.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1217,7 +1217,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1230,10 +1230,10 @@
       <element name="ul">
          <a:annotation>An unordered list. The labels on the items will be symbols picked by the formatter.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1271,7 +1271,7 @@
             <attribute name="indent" a:defaultValue="3"/>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1284,10 +1284,10 @@
       <element name="li">
          <a:annotation>A list element, used in &lt;ol&gt; and &lt;ul&gt;.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1299,7 +1299,7 @@
             <attribute name="derivedCounter"/>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1343,10 +1343,10 @@
       <element name="dl">
          <a:annotation>A definition list. Each entry has a pair of elements: a term (&lt;dt&gt;) and a definition (&lt;dd&gt;). (This is slightly different and simpler than the model used in HTML, which allows for multiple terms for a single definition.)</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1378,7 +1378,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1392,10 +1392,10 @@
       <element name="dt">
          <a:annotation>The term being defined in a definition list.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1404,7 +1404,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1431,10 +1431,10 @@
       <element name="dd">
          <a:annotation>The definition part of an entry in a definition list.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1443,7 +1443,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1487,10 +1487,10 @@
       <element name="xref">
          <a:annotation>A reference to an anchor in this document. Formatters that have links (such as HTML and PDF) are likely to render &lt;xref&gt; elements as internal hyperlinks. This element is useful for referring to references in the "References" section, to specific sections of this document, to specific figures, and so on. The "target" attribute is required.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="target">
             <a:annotation>Identifies the document component being referenced. The value needs to match the value of the "anchor" attribute of an element in the document; otherwise, it is an error.</a:annotation>
@@ -1554,10 +1554,10 @@
       <element name="relref">
          <a:annotation>Represents a link to a specific part of a document that appears in a &lt;reference&gt; element. Formatters that have links (such as HTML and PDF) render &lt;relref&gt; elements as external hyperlinks to the specified part of the reference, creating the link target by combining the base URI from the &lt;reference&gt; element with the "relative" attribute from this element. The "target" attribute is required, and it must be the anchor of a &lt;reference&gt; element.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="target">
             <a:annotation>The anchor of the reference for this element. If this value is not an anchor to a &lt;reference&gt; or &lt;referencegroup&gt; element, it is an error. If the reference at the target has no URI, it is an error.</a:annotation>
@@ -1595,10 +1595,10 @@
       <element name="eref">
          <a:annotation>Represents an "external" link (as specified in the "target" attribute). This is useful for embedding URIs in the body of a document.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="brackets" a:defaultValue="none">
@@ -1619,10 +1619,10 @@
       <element name="iref">
          <a:annotation>Provides terms for the document's index.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="item">
             <a:annotation>The item to include.</a:annotation>
@@ -1642,7 +1642,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1653,10 +1653,10 @@
       <element name="cref">
          <a:annotation>Represents a comment.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1698,10 +1698,10 @@
       <element name="tt">
          <a:annotation>Causes the text to be displayed in a constant-width font. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -1725,10 +1725,10 @@
       <element name="strong">
          <a:annotation>Indicates text that is semantically strong. Text enclosed within this element will be displayed as bold after processing. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -1752,10 +1752,10 @@
       <element name="em">
          <a:annotation>Indicates text that is semantically emphasized. Text enclosed within this element will be displayed as italic after processing. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -1779,10 +1779,10 @@
       <element name="sub">
          <a:annotation>Causes the text to be displayed as subscript, approximately half a letter-height lower than normal text. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -1806,10 +1806,10 @@
       <element name="sup">
          <a:annotation>Causes the text to be displayed as superscript, approximately half a letter-height higher than normal text. This element can be combined with other character formatting elements, and the formatting will be additive.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -1833,10 +1833,10 @@
       <element name="spanx">
          <a:annotation>Deprecated.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="xml:space" a:defaultValue="preserve">
@@ -1858,10 +1858,10 @@
       <element name="vspace">
          <a:annotation>Deprecated. In earlier versions of this format, &lt;vspace&gt; was often used to get an extra blank line in a list element; in the v3 vocabulary, that can be done instead by using multiple &lt;t&gt; elements inside the &lt;li&gt; element. Other uses have no direct replacement.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="blankLines" a:defaultValue="0">
@@ -1875,10 +1875,10 @@
       <element name="figure">
          <a:annotation>Contains a figure with a caption with the figure number. If the element contains a &lt;name&gt; element, the caption will also show that name.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -1887,7 +1887,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -1963,10 +1963,10 @@
       <element name="table">
          <a:annotation>Contains a table with a caption with the table number. If the element contains a &lt;name&gt; element, the caption will also show that name.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="align" a:defaultValue="center">
@@ -1985,7 +1985,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -2010,10 +2010,10 @@
       <element name="preamble">
          <a:annotation>Deprecated. Instead, use a regular paragraph before the figure or table.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -2039,10 +2039,10 @@
       <element name="artset">
          <a:annotation>This element allows for the support of alternative artwork formats. This will allow the renderer to pick the most appropriate &lt;artwork&gt; instance for its format from the alternatives present within an &lt;artset&gt; element.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2051,7 +2051,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -2064,10 +2064,10 @@
       <element name="artwork">
          <a:annotation>This element allows the inclusion of "artwork" in the document. &lt;artwork&gt; provides full control of horizontal whitespace and line breaks; thus, it is used for a variety of things, such as diagrams ("line art") and protocol unit diagrams. Tab characters (U+0009) inside of this element are prohibited.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2076,7 +2076,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -2139,10 +2139,10 @@
       <element name="sourcecode">
          <a:annotation>This element allows the inclusion of source code into the document.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2151,7 +2151,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -2189,10 +2189,10 @@
       <element name="thead">
          <a:annotation>A container for a set of header rows for a table.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2209,10 +2209,10 @@
       <element name="tbody">
          <a:annotation>A container for a set of body rows for a table.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2229,10 +2229,10 @@
       <element name="tfoot">
          <a:annotation>A container for a set of footer rows for a table.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2249,10 +2249,10 @@
       <element name="tr">
          <a:annotation>A row of a table.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2272,10 +2272,10 @@
       <element name="td">
          <a:annotation>A cell in a table row.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2341,10 +2341,10 @@
       <element name="th">
          <a:annotation>A cell in a table row. When rendered, this will normally come out in boldface; other than that, there is no difference between this and the &lt;td&gt; element.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2410,10 +2410,10 @@
       <element name="postamble">
          <a:annotation>Deprecated. Instead, use a regular paragraph after the figure or table.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -2431,10 +2431,10 @@
       <element name="texttable">
          <a:annotation>Deprecated. Use &lt;table&gt; instead.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="anchor">
@@ -2498,10 +2498,10 @@
       <element name="ttcol">
          <a:annotation>Deprecated. Instead, use &lt;tr&gt;, &lt;td&gt;, and &lt;th&gt;.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="width">
@@ -2533,10 +2533,10 @@
       <element name="c">
          <a:annotation>Deprecated. Instead, use &lt;tr&gt;, &lt;td&gt;, and &lt;th&gt;.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -2554,10 +2554,10 @@
       <element name="bcp14">
          <a:annotation>Marks text that are phrases defined in [BCP14] such as "MUST", "SHOULD NOT", and so on. When shown in some of the output representations, the text in this element might be highlighted. The use of this element is optional.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <text/>
       </element>
@@ -2566,10 +2566,10 @@
       <element name="back">
          <a:annotation>Contains the "back" part of the document: the references and appendices. In &lt;back&gt;, &lt;section&gt; elements indicate appendices.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <ref name="displayreference"/>
@@ -2586,10 +2586,10 @@
       <element name="displayreference">
          <a:annotation>This element gives a mapping between the anchor of a reference and a name that will be displayed instead. This allows authors to display more mnemonic anchor names for automatically included references. The mapping in this element only applies to &lt;xref&gt; elements whose format is "default". For example, if the reference uses the anchor "RFC6949", the following would cause that anchor in the body of displayed documents to be "RFC-dev":</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="target">
             <a:annotation>This attribute must be the name of an anchor in a &lt;reference&gt; or &lt;referencegroup&gt; element.</a:annotation>
@@ -2604,13 +2604,13 @@
       <element name="references">
          <a:annotation>Contains a set of bibliographic references.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
@@ -2645,10 +2645,10 @@
       <element name="reference">
          <a:annotation>Represents a bibliographic reference.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="anchor">
             <a:annotation>Document-wide unique identifier for this reference. Usually, this will be used both to "label" the reference in the "References" section and as an identifier in links to this reference entry.</a:annotation>
@@ -2709,10 +2709,10 @@
       <element name="referencegroup">
          <a:annotation>Represents a list of bibliographic references that will be represented as a single reference. This is most often used to reference STDs and BCPs, where a single reference (such as "BCP 9") may encompass more than one RFC.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="anchor">
             <a:annotation>Document-wide unique identifier for this reference group. Usually, this will be used both to "label" the reference group in the "References" section and as an identifier in links to this reference entry.</a:annotation>
@@ -2735,10 +2735,10 @@
       <element name="seriesInfo">
          <a:annotation>Specifies the document series in which this document appears, and also specifies an identifier within that series.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <attribute name="name">
             <a:annotation>Some series names might trigger specific processing (such as for autogenerating links, inserting descriptions such as "work in progress", or additional functionality like reference diagnostics). Examples for IETF-related series names are "BCP", "FYI", "Internet-Draft", "RFC", and "STD".</a:annotation>
@@ -2779,10 +2779,10 @@
       <element name="format">
          <a:annotation>Deprecated. If the goal is to provide a single URI for a reference, use the "target" attribute in &lt;reference&gt; instead.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <optional>
             <attribute name="target">
@@ -2804,10 +2804,10 @@
       <element name="annotation">
          <a:annotation>Provides additional prose augmenting a bibliographic reference. This text is intended to be shown after the rest of the generated reference text.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -2833,10 +2833,10 @@
       <element name="refcontent">
          <a:annotation>Text that should appear between the title and the date of a reference. The purpose of this element is to prevent the need to abuse &lt;seriesInfo&gt; to get such text in a reference.</a:annotation>
          <optional>
-            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+            <attribute name="xml:base"/>
          </optional>
          <optional>
-            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+            <attribute name="xml:lang"/>
          </optional>
          <zeroOrMore>
             <choice>
@@ -2865,7 +2865,7 @@
             <attribute name="format" a:defaultValue="lit-name-num"/>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?>
+            <attribute name="pn">
                <data type="ID"/>
             </attribute>
          </optional>
