@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"> 
   <!-- xml2rfc Version 3 grammar -->
   <define name="rfc">
     <element name="rfc">
@@ -23,14 +23,14 @@
           <choice>
             <value>std</value>
             <value>bcp</value>
-            <value>exp</value>
             <value>info</value>
+            <value>exp</value>
             <value>historic</value>
           </choice>
         </attribute>
       </optional>
       <optional>
-        <attribute name="mode"/>
+        <attribute name="mode"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="consensus" a:defaultValue="false">
@@ -46,7 +46,7 @@
         <attribute name="seriesNo"/>
       </optional>
       <optional>
-        <attribute name="ipr"/>
+        <attribute name="ipr" />
       </optional>
       <optional>
         <attribute name="iprExtract">
@@ -68,7 +68,7 @@
       </optional>
       <optional>
         <attribute name="sortRefs" a:defaultValue="false">
-          <choice>
+           <choice>
             <value>true</value>
             <value>false</value>
           </choice>
@@ -76,7 +76,7 @@
       </optional>
       <optional>
         <attribute name="symRefs" a:defaultValue="true">
-          <choice>
+           <choice>
             <value>true</value>
             <value>false</value>
           </choice>
@@ -84,7 +84,7 @@
       </optional>
       <optional>
         <attribute name="tocInclude" a:defaultValue="true">
-          <choice>
+           <choice>
             <value>true</value>
             <value>false</value>
           </choice>
@@ -98,7 +98,7 @@
       </optional>
       <optional>
         <attribute name="indexInclude" a:defaultValue="true">
-          <choice>
+           <choice>
             <value>true</value>
             <value>false</value>
           </choice>
@@ -108,10 +108,10 @@
         <attribute name="version"/>
       </optional>
       <optional>
-        <attribute name="scripts" a:defaultValue="Common,Latin"/>
+        <attribute name="scripts" a:defaultValue="Common,Latin"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="expiresDate"/>
+        <attribute name="expiresDate"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <ref name="link"/>
@@ -173,9 +173,6 @@
       <optional>
         <ref name="boilerplate"/>
       </optional>
-      <optional>
-        <ref name="toc"/>
-      </optional>
     </element>
   </define>
   <define name="title">
@@ -192,12 +189,7 @@
       <optional>
         <attribute name="ascii"/>
       </optional>
-      <zeroOrMore>
-        <choice>
-          <text/>
-          <ref name="br"/>
-        </choice>
-      </zeroOrMore>
+      <text/>
     </element>
   </define>
   <define name="author">
@@ -207,11 +199,6 @@
       </optional>
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="anchor">
-          <data type="ID"/>
-        </attribute>
       </optional>
       <optional>
         <attribute name="initials"/>
@@ -230,7 +217,9 @@
       </optional>
       <optional>
         <attribute name="role">
-          <value>editor</value>
+          <choice>
+            <value>editor</value>
+          </choice>
         </attribute>
       </optional>
       <optional>
@@ -251,11 +240,6 @@
       </optional>
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="anchor">
-          <data type="ID"/>
-        </attribute>
       </optional>
       <optional>
         <attribute name="initials"/>
@@ -298,7 +282,7 @@
         <attribute name="ascii"/>
       </optional>
       <optional>
-        <attribute name="asciiAbbrev"/>
+         <attribute name="asciiAbbrev"/>
       </optional>
       <optional>
         <attribute name="showOnFrontPage" a:defaultValue="true">
@@ -364,6 +348,20 @@
       </choice>
     </element>
   </define>
+  <define name="cityarea">
+    <element name="cityarea">
+      <optional>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="ascii"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
   <define name="extaddr">
     <element name="extaddr">
       <optional>
@@ -392,8 +390,8 @@
       <text/>
     </element>
   </define>
-  <define name="street">
-    <element name="street">
+  <define name="sortingcode">
+    <element name="sortingcode">
       <optional>
         <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
@@ -406,8 +404,8 @@
       <text/>
     </element>
   </define>
-  <define name="cityarea">
-    <element name="cityarea">
+  <define name="street">
+    <element name="street">
       <optional>
         <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
@@ -450,20 +448,6 @@
   </define>
   <define name="code">
     <element name="code">
-      <optional>
-        <attribute name="xml:base"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="ascii"/>
-      </optional>
-      <text/>
-    </element>
-  </define>
-  <define name="sortingcode">
-    <element name="sortingcode">
       <optional>
         <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
@@ -568,7 +552,7 @@
       <optional>
         <attribute name="year"/>
       </optional>
-      <text/>
+      <empty/>
     </element>
   </define>
   <define name="area">
@@ -614,13 +598,11 @@
       </optional>
       <optional>
         <attribute name="anchor">
-	   <data type="ID"/>
-	</attribute>
-      </optional>
-      <optional>
-        <attribute name="pn"><?hidden-in-prose?>
           <data type="ID"/>
         </attribute>
+      </optional>
+      <optional>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
         <choice>
@@ -644,9 +626,7 @@
         <attribute name="title"/>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="removeInRFC" a:defaultValue="false">
@@ -682,19 +662,6 @@
       </oneOrMore>
     </element>
   </define>
-  <define name="toc">
-    <element name="toc">
-      <optional>
-        <attribute name="xml:base"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
-      </optional>
-      <zeroOrMore>
-        <ref name="section"/>
-      </zeroOrMore>
-    </element>
-  </define>
   <define name="middle">
     <element name="middle">
       <optional>
@@ -722,9 +689,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="title"/>
@@ -762,7 +727,6 @@
           <ref name="artset"/>
           <ref name="artwork"/>
           <ref name="aside"/>
-          <ref name="author"/>
           <ref name="blockquote"/>
           <ref name="contact"/>
           <ref name="dl"/>
@@ -790,15 +754,12 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="slugifiedName">
-          <data type="ID"/>
-        </attribute>
+        <attribute name="slugifiedName"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
           <text/>
           <ref name="bcp14"/>
-          <ref name="br"/>
           <ref name="cref"/>
           <ref name="em"/>
           <ref name="eref"/>
@@ -811,17 +772,6 @@
           <ref name="xref"/>
         </choice>
       </zeroOrMore>
-    </element>
-  </define>
-  <define name="br">
-    <element name="br">
-      <optional>
-        <attribute name="xml:base"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
-      </optional>
-      <empty/>
     </element>
   </define>
   <define name="t">
@@ -838,38 +788,31 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="hangText"/>
       </optional>
       <optional>
-        <attribute name="indent" a:defaultValue="0"/>
-      </optional>
-      <optional>
         <attribute name="keepWithNext" a:defaultValue="false">
           <choice>
-            <value>true</value>
             <value>false</value>
+            <value>true</value>
           </choice>
         </attribute>
       </optional>
       <optional>
         <attribute name="keepWithPrevious" a:defaultValue="false">
           <choice>
-            <value>true</value>
             <value>false</value>
+            <value>true</value>
           </choice>
-        </attribute>
-      </optional>
+         </attribute>
+     </optional>
       <zeroOrMore>
         <choice>
           <text/>
           <ref name="bcp14"/>
-          <ref name="br"/>
-          <ref name="contact"/>
           <ref name="cref"/>
           <ref name="em"/>
           <ref name="eref"/>
@@ -881,7 +824,6 @@
           <ref name="sub"/>
           <ref name="sup"/>
           <ref name="tt"/>
-          <ref name="u"/>
           <ref name="vspace"/>
           <ref name="xref"/>
         </choice>
@@ -902,9 +844,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -936,9 +876,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="cite"/>
@@ -956,6 +894,7 @@
             <ref name="ol"/>
             <ref name="sourcecode"/>
             <ref name="t"/>
+            <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
@@ -963,7 +902,6 @@
           <choice>
             <text/>
             <ref name="bcp14"/>
-            <ref name="br"/>
             <ref name="cref"/>
             <ref name="em"/>
             <ref name="eref"/>
@@ -973,7 +911,6 @@
             <ref name="sub"/>
             <ref name="sup"/>
             <ref name="tt"/>
-            <ref name="u"/>
             <ref name="xref"/>
           </choice>
         </oneOrMore>
@@ -998,9 +935,7 @@
         <attribute name="counter"/>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
         <ref name="t"/>
@@ -1038,17 +973,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="indent" a:defaultValue="adaptive">
-          <choice>
-            <text/>
-            <value>adaptive</value>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
         <ref name="li"/>
@@ -1079,26 +1004,13 @@
       <optional>
         <attribute name="empty" a:defaultValue="false">
           <choice>
-            <value>true</value>
             <value>false</value>
+            <value>true</value>
           </choice>
         </attribute>
-        <optional>
-          <attribute name="bare" a:defaultValue="false">
-            <choice>
-              <value>true</value>
-              <value>false</value>
-            </choice>
-          </attribute>
-        </optional>
-      </optional>
       <optional>
-        <attribute name="indent" a:defaultValue="3"/>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
-      <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
       </optional>
       <oneOrMore>
         <ref name="li"/>
@@ -1119,12 +1031,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="derivedCounter"/>
-      </optional>
-      <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <choice>
         <oneOrMore>
@@ -1137,7 +1044,6 @@
             <ref name="ol"/>
             <ref name="sourcecode"/>
             <ref name="t"/>
-            <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
@@ -1145,7 +1051,6 @@
           <choice>
             <text/>
             <ref name="bcp14"/>
-            <ref name="br"/>
             <ref name="cref"/>
             <ref name="em"/>
             <ref name="eref"/>
@@ -1155,7 +1060,6 @@
             <ref name="sub"/>
             <ref name="sup"/>
             <ref name="tt"/>
-            <ref name="u"/>
             <ref name="xref"/>
           </choice>
         </oneOrMore>
@@ -1186,18 +1090,16 @@
       <optional>
         <attribute name="newline" a:defaultValue="false">
           <choice>
-            <value>true</value>
             <value>false</value>
+            <value>true</value>
           </choice>
         </attribute>
       </optional>
       <optional>
-        <attribute name="indent" a:defaultValue="3"/>
+        <attribute name="indent" a:defaultValue="0"/>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
         <ref name="dt"/>
@@ -1219,15 +1121,12 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <zeroOrMore>
         <choice>
           <text/>
           <ref name="bcp14"/>
-          <ref name="br"/>
           <ref name="cref"/>
           <ref name="em"/>
           <ref name="eref"/>
@@ -1256,22 +1155,18 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <choice>
         <oneOrMore>
           <choice>
             <ref name="artset"/>
             <ref name="artwork"/>
-            <ref name="aside"/>
             <ref name="dl"/>
             <ref name="figure"/>
             <ref name="ol"/>
             <ref name="sourcecode"/>
             <ref name="t"/>
-            <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
@@ -1279,7 +1174,6 @@
           <choice>
             <text/>
             <ref name="bcp14"/>
-            <ref name="br"/>
             <ref name="cref"/>
             <ref name="em"/>
             <ref name="eref"/>
@@ -1289,7 +1183,6 @@
             <ref name="sub"/>
             <ref name="sup"/>
             <ref name="tt"/>
-            <ref name="u"/>
             <ref name="xref"/>
           </choice>
         </oneOrMore>
@@ -1326,37 +1219,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="derivedContent"/>
+        <attribute name="derivedContent"><?hidden-in-prose?></attribute>
       </optional>
-      <optional>
-        <attribute name="sectionFormat" a:defaultValue="of">
-          <choice>
-            <value>of</value>
-            <value>comma</value>
-            <value>parens</value>
-            <value>bare</value>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="section"/>
-      </optional>
-      <optional>
-        <attribute name="relative"/>
-      </optional>
-      <optional>
-        <attribute name="derivedLink"/>
-      </optional>
-      <zeroOrMore>
-        <choice>
-          <text/>
-          <ref name="em"/>
-          <ref name="strong"/>
-          <ref name="sub"/>
-          <ref name="sup"/>
-          <ref name="tt"/>
-        </choice>
-      </zeroOrMore>
+      <text/>
     </element>
   </define>
   <define name="relref">
@@ -1380,15 +1245,12 @@
           </choice>
         </attribute>
       </optional>
-      <optional>
-        <attribute name="derivedContent"/>
-      </optional>
       <attribute name="section"/>
       <optional>
         <attribute name="relative"/>
       </optional>
       <optional>
-        <attribute name="derivedLink"/>
+        <attribute name="derivedLink"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -1401,14 +1263,14 @@
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
-      <optional>
-        <attribute name="brackets" a:defaultValue="none">
-          <choice>
-            <value>none</value>
-            <value>angle</value>
-          </choice>
-        </attribute>
-      </optional>
+      <optional> 
+        <attribute name="brackets" a:defaultValue="none"> 
+          <choice> 
+            <value>none</value> 
+            <value>angle</value> 
+          </choice> 
+        </attribute> 
+      </optional> 
       <attribute name="target"/>
       <text/>
     </element>
@@ -1434,9 +1296,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <empty/>
     </element>
@@ -1468,7 +1328,6 @@
       <zeroOrMore>
         <choice>
           <text/>
-          <ref name="br"/>
           <ref name="em"/>
           <ref name="eref"/>
           <ref name="relref"/>
@@ -1493,7 +1352,6 @@
         <choice>
           <text/>
           <ref name="bcp14"/>
-          <ref name="br"/>
           <ref name="cref"/>
           <ref name="em"/>
           <ref name="eref"/>
@@ -1519,7 +1377,6 @@
         <choice>
           <text/>
           <ref name="bcp14"/>
-          <ref name="br"/>
           <ref name="cref"/>
           <ref name="em"/>
           <ref name="eref"/>
@@ -1545,7 +1402,6 @@
         <choice>
           <text/>
           <ref name="bcp14"/>
-          <ref name="br"/>
           <ref name="cref"/>
           <ref name="eref"/>
           <ref name="iref"/>
@@ -1577,8 +1433,6 @@
           <ref name="iref"/>
           <ref name="relref"/>
           <ref name="strong"/>
-          <ref name="sub"/>
-          <ref name="sup"/>
           <ref name="tt"/>
           <ref name="xref"/>
         </choice>
@@ -1603,8 +1457,6 @@
           <ref name="iref"/>
           <ref name="relref"/>
           <ref name="strong"/>
-          <ref name="sub"/>
-          <ref name="sup"/>
           <ref name="tt"/>
           <ref name="xref"/>
         </choice>
@@ -1661,9 +1513,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="title" a:defaultValue=""/>
@@ -1680,7 +1530,7 @@
         <attribute name="src"/>
       </optional>
       <optional>
-        <attribute name="originalSrc"/>
+        <attribute name="originalSrc"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="align" a:defaultValue="left">
@@ -1744,16 +1594,11 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <ref name="name"/>
       </optional>
-      <zeroOrMore>
-        <ref name="iref"/>
-      </zeroOrMore>
       <optional>
         <ref name="thead"/>
       </optional>
@@ -1787,7 +1632,6 @@
           <ref name="sub"/>
           <ref name="sup"/>
           <ref name="tt"/>
-          <ref name="u"/>
           <ref name="xref"/>
         </choice>
       </zeroOrMore>
@@ -1807,9 +1651,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <oneOrMore>
         <ref name="artwork"/>
@@ -1824,17 +1666,15 @@
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
-      <optional>
+       <optional>
         <attribute name="anchor">
           <data type="ID"/>
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
-      <optional>
+     <optional>
         <attribute name="xml:space"/>
       </optional>
       <optional>
@@ -1865,7 +1705,7 @@
         <attribute name="height" a:defaultValue=""/>
       </optional>
       <optional>
-        <attribute name="originalSrc"/>
+        <attribute name="originalSrc"><?hidden-in-prose?></attribute>
       </optional>
       <choice>
         <zeroOrMore>
@@ -1875,7 +1715,8 @@
       </choice>
     </element>
   </define>
-  <include href="SVG-1.2-RFC.rng"/>
+  <a:documentation>svg element: see Appendix A of [RFC7996].</a:documentation>
+  <include href="SVG-1.2-RFC.rng"/>  
   <define name="sourcecode">
     <element name="sourcecode">
       <optional>
@@ -1890,8 +1731,14 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="markers" a:defaultValue="">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
         </attribute>
       </optional>
       <optional>
@@ -1901,18 +1748,10 @@
         <attribute name="type" a:defaultValue=""/>
       </optional>
       <optional>
-        <attribute name="markers" a:defaultValue="false">
-          <choice>
-            <value>true</value>
-            <value>false</value>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
         <attribute name="src"/>
       </optional>
       <optional>
-        <attribute name="originalSrc"/>
+        <attribute name="originalSrc"><?hidden-in-prose?></attribute>
       </optional>
       <text/>
     </element>
@@ -1961,12 +1800,12 @@
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
-      <optional>
+       <optional>
         <attribute name="anchor">
           <data type="ID"/>
         </attribute>
       </optional>
-      <oneOrMore>
+     <oneOrMore>
         <ref name="tr"/>
       </oneOrMore>
     </element>
@@ -2006,10 +1845,10 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="colspan" a:defaultValue="1"/>
+        <attribute name="colspan" a:defaultValue="0"/>
       </optional>
       <optional>
-        <attribute name="rowspan" a:defaultValue="1"/>
+        <attribute name="rowspan" a:defaultValue="0"/>
       </optional>
       <optional>
         <attribute name="align" a:defaultValue="left">
@@ -2037,7 +1876,6 @@
           <choice>
             <text/>
             <ref name="bcp14"/>
-            <ref name="br"/>
             <ref name="cref"/>
             <ref name="em"/>
             <ref name="eref"/>
@@ -2047,7 +1885,6 @@
             <ref name="sub"/>
             <ref name="sup"/>
             <ref name="tt"/>
-            <ref name="u"/>
             <ref name="xref"/>
           </choice>
         </zeroOrMore>
@@ -2068,10 +1905,10 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="colspan" a:defaultValue="1"/>
+        <attribute name="colspan" a:defaultValue="0"/>
       </optional>
       <optional>
-        <attribute name="rowspan" a:defaultValue="1"/>
+        <attribute name="rowspan" a:defaultValue="0"/>
       </optional>
       <optional>
         <attribute name="align" a:defaultValue="left">
@@ -2099,7 +1936,6 @@
           <choice>
             <text/>
             <ref name="bcp14"/>
-            <ref name="br"/>
             <ref name="cref"/>
             <ref name="em"/>
             <ref name="eref"/>
@@ -2109,7 +1945,6 @@
             <ref name="sub"/>
             <ref name="sup"/>
             <ref name="tt"/>
-            <ref name="u"/>
             <ref name="xref"/>
           </choice>
         </zeroOrMore>
@@ -2269,9 +2104,7 @@
       <zeroOrMore>
         <ref name="displayreference"/>
       </zeroOrMore>
-      <zeroOrMore>
-        <ref name="references"/>
-      </zeroOrMore>
+      <ref name="references"/>
       <zeroOrMore>
         <ref name="section"/>
       </zeroOrMore>
@@ -2286,7 +2119,7 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="target">
-        <data type="IDREF"/>
+          <data type="IDREF"/>
       </attribute>
       <attribute name="to"/>
     </element>
@@ -2300,9 +2133,7 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
+        <attribute name="pn"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
         <attribute name="anchor">
@@ -2340,29 +2171,15 @@
         <data type="ID"/>
       </attribute>
       <optional>
-        <attribute name="derivedAnchor"/>
-      </optional>
-      <optional>
         <attribute name="target"/>
       </optional>
       <optional>
-        <attribute name="quoteTitle" a:defaultValue="true">
+        <attribute name="quote-title" a:defaultValue="true">
           <choice>
             <value>true</value>
             <value>false</value>
           </choice>
         </attribute>
-      </optional>
-      <optional>
-        <attribute name="quote-title">
-          <choice>
-            <value>true</value>
-            <value>false</value>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <ref name="stream"/>
       </optional>
       <ref name="front"/>
       <zeroOrMore>
@@ -2370,21 +2187,9 @@
           <ref name="annotation"/>
           <ref name="format"/>
           <ref name="refcontent"/>
-          <ref name="seriesInfo"/>
+          <ref name="seriesInfo"></ref>
         </choice>
       </zeroOrMore>
-    </element>
-  </define>
-  <define name="stream">
-    <element name="stream">
-      <optional>
-        <choice>
-          <value>IETF</value>
-          <value>IAB</value>
-          <value>IRTF</value>
-          <value>independent</value>
-        </choice>
-      </optional>
     </element>
   </define>
   <define name="referencegroup">
@@ -2393,17 +2198,14 @@
         <attribute name="xml:base"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
+        <attribute name="target"/>
+      </optional>
+      <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="anchor">
         <data type="ID"/>
       </attribute>
-      <optional>
-        <attribute name="derivedAnchor"/>
-      </optional>
-      <optional>
-        <attribute name="target"/>
-      </optional>
       <oneOrMore>
         <ref name="reference"/>
       </oneOrMore>
@@ -2429,7 +2231,7 @@
         <attribute name="status"/>
       </optional>
       <optional>
-        <attribute name="stream">
+        <attribute name="stream" a:defaultValue="IETF">
           <choice>
             <value>IETF</value>
             <value>IAB</value>
@@ -2481,7 +2283,6 @@
           <ref name="sub"/>
           <ref name="sup"/>
           <ref name="tt"/>
-          <ref name="u"/>
           <ref name="xref"/>
         </choice>
       </zeroOrMore>
@@ -2508,28 +2309,9 @@
       </zeroOrMore>
     </element>
   </define>
-  <define name="u">
-    <element name="u">
-      <optional>
-        <attribute name="anchor">
-          <data type="ID"/>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="ascii"/>
-      </optional>
-      <optional>
-        <attribute name="format" a:defaultValue="lit-name-num"/>
-      </optional>
-      <optional>
-        <attribute name="pn"><?hidden-in-prose?>
-          <data type="ID"/>
-        </attribute>
-      </optional>
-      <text/>
-    </element>
-  </define>
   <start combine="choice">
-    <ref name="rfc"/>
+    <choice>
+      <ref name="rfc"/>
+    </choice>
   </start>
 </grammar>
