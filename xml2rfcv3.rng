@@ -329,6 +329,14 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <choice>
+        <group>
+          <oneOrMore>
+            <ref name="postalLine"/>
+          </oneOrMore>
+          <optional>
+            <ref name="country"/>
+          </optional>
+        </group>
         <zeroOrMore>
           <choice>
             <ref name="city"/>
@@ -342,14 +350,6 @@
             <ref name="street"/>
           </choice>
         </zeroOrMore>
-        <group>
-          <oneOrMore>
-            <ref name="postalLine"/>
-          </oneOrMore>
-          <optional>
-            <ref name="country"/>
-          </optional>
-        </group>
       </choice>
     </element>
   </define>
