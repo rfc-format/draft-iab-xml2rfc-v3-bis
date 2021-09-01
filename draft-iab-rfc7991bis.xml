@@ -5266,7 +5266,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="city" primary="true"/>
    <iref item="city element" primary="true"/>
    <t>
-      Gives the city name in a postal address.
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.city.contents"><!--AG-->
@@ -5278,7 +5278,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="city element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in city element"/>
       <t>
-         The ASCII equivalent of the city name.
+        Deprecated.
       </t>
    </section>
 </section>
@@ -5291,7 +5291,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="cityarea" primary="true"/>
    <iref item="cityarea element" primary="true"/>
    <t>
-     TBD
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.cityarea.contents"><!--AG-->
@@ -5303,7 +5303,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="cityarea element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in cityarea element"/>
       <t>
-	      The ASCII equivalent of the city area name.
+        Deprecated.
       </t>
    </section>
 </section>
@@ -5316,7 +5316,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="code" primary="true"/>
    <iref item="code element" primary="true"/>
    <t>
-      Gives the postal region code.
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.code.contents"><!--AG-->
@@ -5328,7 +5328,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="code element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in code element"/>
       <t>
-         The ASCII equivalent of the postal code.
+        Deprecated.
       </t>
    </section>
 </section>
@@ -5341,7 +5341,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="extaddr" primary="true"/>
    <iref item="extaddr element" primary="true"/>
    <t>
-     TBD 
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.extaddr.contents"><!--AG-->
@@ -5353,7 +5353,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="extaddr element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in extaddr element"/>
       <t>
-         ASCII equivalent for extaddr.
+        Deprecated.
       </t>
    </section>
 </section>
@@ -5482,7 +5482,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="pobox" primary="true"/>
    <iref item="pobox element" primary="true"/>
    <t>
-      TBD
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.pobox.contents"><!--AG-->
@@ -5494,7 +5494,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="pobox element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in pobox element"/>
       <t>
-	      ASCII equivalent for pobox. 
+        Deprecated.
       </t>
    </section>
 </section>
@@ -5596,7 +5596,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="region" primary="true"/>
    <iref item="region element" primary="true"/>
    <t>
-      Provides the region name in a postal address.
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.region.contents"><!--AG-->
@@ -5608,7 +5608,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="region element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in region element"/>
       <t>
-         The ASCII equivalent of the region name.
+        Deprecated.
       </t>
    </section>
 </section>
@@ -5621,7 +5621,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="sortingcode" primary="true"/>
    <iref item="sortingcode element" primary="true"/>
    <t>
-     A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.sortingcode.contents"><!--AG-->
@@ -5633,7 +5633,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="sortingcode element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in sortingcode element"/>
       <t>
-	      ASCII equivalent for sortingcode.
+        Deprecated.
       </t>
    </section>
 </section>
@@ -5646,7 +5646,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
    <iref item="Elements" subitem="street" primary="true"/>
    <iref item="street element" primary="true"/>
    <t>
-      Provides a street address.
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
    <t anchor="element.street.contents"><!--AG-->
@@ -5658,7 +5658,7 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <iref item="street element" subitem="ascii attribute"/>
       <iref item="ascii attribute" subitem="in street element"/>
       <t>
-         The ASCII equivalent of the street address.
+        Deprecated.
       </t>
    </section>
 </section>
