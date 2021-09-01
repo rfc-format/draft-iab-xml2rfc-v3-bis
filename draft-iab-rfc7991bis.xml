@@ -5637,31 +5637,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       </t>
    </section>
 </section>
-<!--street-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.street">
-   <name>
-      <tt>&lt;street&gt;</tt>
-   </name>
-   <x:anchor-alias value="street"/>
-   <iref item="Elements" subitem="street" primary="true"/>
-   <iref item="street element" primary="true"/>
-   <t>
-      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.street.contents"><!--AG-->
-      <xref format="none" target="grammar.street">Content model</xref>: only text content.</t>
-   <!--street/@ascii-->
-   <section anchor="element.street.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="street element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in street element"/>
-      <t>
-        Deprecated.
-      </t>
-   </section>
-</section>
 <!--spanx-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
          anchor="element.spanx"
@@ -5703,6 +5678,31 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <li>"default"</li>
          <li>"preserve" (default)</li>
       </ul>
+   </section>
+</section>
+<!--street-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.street">
+   <name>
+      <tt>&lt;street&gt;</tt>
+   </name>
+   <x:anchor-alias value="street"/>
+   <iref item="Elements" subitem="street" primary="true"/>
+   <iref item="street element" primary="true"/>
+   <t>
+      Deprecated. Instead, use &lt;<x:ref>postalLine</x:ref>&gt;.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.street.contents"><!--AG-->
+      <xref format="none" target="grammar.street">Content model</xref>: only text content.</t>
+   <!--street/@ascii-->
+   <section anchor="element.street.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="street element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in street element"/>
+      <t>
+        Deprecated.
+      </t>
    </section>
 </section>
 <!--texttable-->
