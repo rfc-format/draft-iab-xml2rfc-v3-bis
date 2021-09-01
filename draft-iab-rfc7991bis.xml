@@ -222,6 +222,8 @@ as well).</li>
 <li>Added "markers" attribute to &lt;sourcecode&gt; element.</li>
 
 <li>Added "brackets" attribute to &lt;eref&gt; element.</li>
+
+<li>Deprecated all child elements of &lt;postal&gt; other than &lt;postalLine&gt; and &lt;country&gt;.</li>
 </ul>
 
 </section>
