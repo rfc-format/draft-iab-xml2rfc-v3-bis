@@ -3030,12 +3030,17 @@ in this interesting report&lt;/a&gt;.
    </ul>
    <t><!--AG-->Or:</t>
    <ul empty="true"><!--AG-->
-      <li><!--AG-->
-         <iref item="Elements" subitem="postalLine"/>
-         <iref item="postalLine element" subitem="inside postal"/>One or more &lt;<x:ref>postalLine</x:ref>&gt; elements (<xref target="element.postalLine"/>)</li>
-      <li><!--AG-->
-         <iref item="Elements" subitem="country"/>
-         <iref item="country element" subitem="inside postal"/>One optional &lt;<x:ref>country</x:ref>&gt; element (<xref target="element.country"/>)</li>
+      <li>
+         <t><!--AG-->In this order:</t>
+         <ol>
+            <li><!--AG-->
+               <iref item="Elements" subitem="postalLine"/>
+               <iref item="postalLine element" subitem="inside postal"/>One or more &lt;<x:ref>postalLine</x:ref>&gt; elements (<xref target="element.postalLine"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="country"/>
+               <iref item="country element" subitem="inside postal"/>One optional &lt;<x:ref>country</x:ref>&gt; element (<xref target="element.country"/>)</li>
+         </ol>
+      </li>
    </ul>
 </section>
 <!--postalLine-->
