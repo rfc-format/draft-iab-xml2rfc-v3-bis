@@ -3033,6 +3033,9 @@ in this interesting report&lt;/a&gt;.
       <li><!--AG-->
          <iref item="Elements" subitem="postalLine"/>
          <iref item="postalLine element" subitem="inside postal"/>One or more &lt;<x:ref>postalLine</x:ref>&gt; elements (<xref target="element.postalLine"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="country"/>
+         <iref item="country element" subitem="inside postal"/>One optional &lt;<x:ref>country</x:ref>&gt; element (<xref target="element.country"/>)</li>
    </ul>
 </section>
 <!--postalLine-->
@@ -7013,7 +7016,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
       | region
       | sortingcode
       | street)*
-     | postalLine+)
+     | (postalLine+, country?))
   }
 
 <strong anchor="grammar.cityarea">cityarea</strong><iref item="cityarea element"/> =
@@ -8100,7 +8103,7 @@ to the v3 schema.</t>
 +       | region
 +       | sortingcode
 +       | street)*
-+      | postalLine+)
++      | (postalLine+, country?))
 +   }
 + cityarea =
 +   element cityarea {
