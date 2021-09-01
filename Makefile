@@ -52,7 +52,7 @@ differences-from-v2.txt:	xml2rfcv3.rnc $(xml2rfcv2)
 	xml2rfc --v3  --no-pagination $< -o $@
 
 SVG-1.2-RFC.rnc:
-	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rnc
+	wget https://svn.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rnc
 
 SVG-1.2-RFC.rng:
-	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rng
+	wget https://svn.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rng
