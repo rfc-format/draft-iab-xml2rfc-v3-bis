@@ -1277,81 +1277,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside boilerplate"/>One or more &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
 </section>
-<!--city-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.city">
-   <name>
-      <tt>&lt;city&gt;</tt>
-   </name>
-   <x:anchor-alias value="city"/>
-   <iref item="Elements" subitem="city" primary="true"/>
-   <iref item="city element" primary="true"/>
-   <t>
-      Gives the city name in a postal address.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.city.contents"><!--AG-->
-      <xref format="none" target="grammar.city">Content model</xref>: only text content.</t>
-   <!--city/@ascii-->
-   <section anchor="element.city.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="city element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in city element"/>
-      <t>
-         The ASCII equivalent of the city name.
-      </t>
-   </section>
-</section>
-<!--cityarea-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.cityarea">
-   <name>
-      <tt>&lt;cityarea&gt;</tt>
-   </name>
-   <x:anchor-alias value="cityarea"/>
-   <iref item="Elements" subitem="cityarea" primary="true"/>
-   <iref item="cityarea element" primary="true"/>
-   <t>
-     TBD
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.cityarea.contents"><!--AG-->
-      <xref format="none" target="grammar.cityarea">Content model</xref>: only text content.</t>
-   <!--cityarea/@ascii-->
-   <section anchor="element.cityarea.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="cityarea element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in cityarea element"/>
-      <t>
-	      The ASCII equivalent of the city area name.
-      </t>
-   </section>
-</section>
-<!--code-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.code">
-   <name>
-      <tt>&lt;code&gt;</tt>
-   </name>
-   <x:anchor-alias value="code"/>
-   <iref item="Elements" subitem="code" primary="true"/>
-   <iref item="code element" primary="true"/>
-   <t>
-      Gives the postal region code.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.code.contents"><!--AG-->
-      <xref format="none" target="grammar.code">Content model</xref>: only text content.</t>
-   <!--code/@ascii-->
-   <section anchor="element.code.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="code element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in code element"/>
-      <t>
-         The ASCII equivalent of the postal code.
-      </t>
-   </section>
-</section>
 <!--contact-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.contact">
    <name>
@@ -2102,31 +2027,6 @@ in this interesting report&lt;/a&gt;.
          URI of the link target <xref target="RFC3986"/>.
          This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.
          </t>
-   </section>
-</section>
-<!--extaddr-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.extaddr">
-   <name>
-      <tt>&lt;extaddr&gt;</tt>
-   </name>
-   <x:anchor-alias value="extaddr"/>
-   <iref item="Elements" subitem="extaddr" primary="true"/>
-   <iref item="extaddr element" primary="true"/>
-   <t>
-     TBD 
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.extaddr.contents"><!--AG-->
-      <xref format="none" target="grammar.extaddr">Content model</xref>: only text content.</t>
-   <!--extaddr/@ascii-->
-   <section anchor="element.extaddr.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="extaddr element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in extaddr element"/>
-      <t>
-         ASCII equivalent for extaddr.
-      </t>
    </section>
 </section>
 <!--figure-->
@@ -2949,31 +2849,6 @@ in this interesting report&lt;/a&gt;.
    <t anchor="element.phone.contents"><!--AG-->
       <xref format="none" target="grammar.phone">Content model</xref>: only text content.</t>
 </section>
-<!--pobox-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.pobox">
-   <name>
-      <tt>&lt;pobox&gt;</tt>
-   </name>
-   <x:anchor-alias value="pobox"/>
-   <iref item="Elements" subitem="pobox" primary="true"/>
-   <iref item="pobox element" primary="true"/>
-   <t>
-      TBD
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.pobox.contents"><!--AG-->
-      <xref format="none" target="grammar.pobox">Content model</xref>: only text content.</t>
-   <!--pobox/@ascii-->
-   <section anchor="element.pobox.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="pobox element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in pobox element"/>
-      <t>
-	      ASCII equivalent for pobox. 
-      </t>
-   </section>
-</section>
 <!--postal-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.postal">
    <name>
@@ -3321,31 +3196,6 @@ in this interesting report&lt;/a&gt;.
       <iref item="title attribute" subitem="in references element"/>
       <t>
          Deprecated. Use &lt;<x:ref>name</x:ref>&gt; instead.
-      </t>
-   </section>
-</section>
-<!--region-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.region">
-   <name>
-      <tt>&lt;region&gt;</tt>
-   </name>
-   <x:anchor-alias value="region"/>
-   <iref item="Elements" subitem="region" primary="true"/>
-   <iref item="region element" primary="true"/>
-   <t>
-      Provides the region name in a postal address.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.region.contents"><!--AG-->
-      <xref format="none" target="grammar.region">Content model</xref>: only text content.</t>
-   <!--region/@ascii-->
-   <section anchor="element.region.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="region element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in region element"/>
-      <t>
-         The ASCII equivalent of the region name.
       </t>
    </section>
 </section>
@@ -4134,31 +3984,6 @@ for an overview.
       </t>
    </section>
 </section>
-<!--sortingcode-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sortingcode">
-   <name>
-      <tt>&lt;sortingcode&gt;</tt>
-   </name>
-   <x:anchor-alias value="sortingcode"/>
-   <iref item="Elements" subitem="sortingcode" primary="true"/>
-   <iref item="sortingcode element" primary="true"/>
-   <t>
-     A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.sortingcode.contents"><!--AG-->
-      <xref format="none" target="grammar.sortingcode">Content model</xref>: only text content.</t>
-   <!--sortingcode/@ascii-->
-   <section anchor="element.sortingcode.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="sortingcode element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in sortingcode element"/>
-      <t>
-	      ASCII equivalent for sortingcode.
-      </t>
-   </section>
-</section>
 <!--sourcecode-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sourcecode">
    <name>
@@ -4294,31 +4119,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             The RFC Series Editor will maintain a complete list of the preferred values on the RFC Editor
             web site, and that list is expected to be updated over time. Thus, a consumer
             of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified. 
-      </t>
-   </section>
-</section>
-<!--street-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.street">
-   <name>
-      <tt>&lt;street&gt;</tt>
-   </name>
-   <x:anchor-alias value="street"/>
-   <iref item="Elements" subitem="street" primary="true"/>
-   <iref item="street element" primary="true"/>
-   <t>
-      Provides a street address.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.street.contents"><!--AG-->
-      <xref format="none" target="grammar.street">Content model</xref>: only text content.</t>
-   <!--street/@ascii-->
-   <section anchor="element.street.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="street element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in street element"/>
-      <t>
-         The ASCII equivalent of the street address.
       </t>
    </section>
 </section>
@@ -5455,6 +5255,106 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <iref item="xref element" subitem="inside c"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
 </section>
+<!--city-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.city">
+   <name>
+      <tt>&lt;city&gt;</tt>
+   </name>
+   <x:anchor-alias value="city"/>
+   <iref item="Elements" subitem="city" primary="true"/>
+   <iref item="city element" primary="true"/>
+   <t>
+      Gives the city name in a postal address.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.city.contents"><!--AG-->
+      <xref format="none" target="grammar.city">Content model</xref>: only text content.</t>
+   <!--city/@ascii-->
+   <section anchor="element.city.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="city element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in city element"/>
+      <t>
+         The ASCII equivalent of the city name.
+      </t>
+   </section>
+</section>
+<!--cityarea-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.cityarea">
+   <name>
+      <tt>&lt;cityarea&gt;</tt>
+   </name>
+   <x:anchor-alias value="cityarea"/>
+   <iref item="Elements" subitem="cityarea" primary="true"/>
+   <iref item="cityarea element" primary="true"/>
+   <t>
+     TBD
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.cityarea.contents"><!--AG-->
+      <xref format="none" target="grammar.cityarea">Content model</xref>: only text content.</t>
+   <!--cityarea/@ascii-->
+   <section anchor="element.cityarea.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="cityarea element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in cityarea element"/>
+      <t>
+	      The ASCII equivalent of the city area name.
+      </t>
+   </section>
+</section>
+<!--code-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.code">
+   <name>
+      <tt>&lt;code&gt;</tt>
+   </name>
+   <x:anchor-alias value="code"/>
+   <iref item="Elements" subitem="code" primary="true"/>
+   <iref item="code element" primary="true"/>
+   <t>
+      Gives the postal region code.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.code.contents"><!--AG-->
+      <xref format="none" target="grammar.code">Content model</xref>: only text content.</t>
+   <!--code/@ascii-->
+   <section anchor="element.code.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="code element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in code element"/>
+      <t>
+         The ASCII equivalent of the postal code.
+      </t>
+   </section>
+</section>
+<!--extaddr-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.extaddr">
+   <name>
+      <tt>&lt;extaddr&gt;</tt>
+   </name>
+   <x:anchor-alias value="extaddr"/>
+   <iref item="Elements" subitem="extaddr" primary="true"/>
+   <iref item="extaddr element" primary="true"/>
+   <t>
+     TBD 
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.extaddr.contents"><!--AG-->
+      <xref format="none" target="grammar.extaddr">Content model</xref>: only text content.</t>
+   <!--extaddr/@ascii-->
+   <section anchor="element.extaddr.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="extaddr element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in extaddr element"/>
+      <t>
+         ASCII equivalent for extaddr.
+      </t>
+   </section>
+</section>
 <!--facsimile-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
          anchor="element.facsimile"
@@ -5571,6 +5471,31 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       </t>
    </section>
 </section>
+<!--pobox-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.pobox">
+   <name>
+      <tt>&lt;pobox&gt;</tt>
+   </name>
+   <x:anchor-alias value="pobox"/>
+   <iref item="Elements" subitem="pobox" primary="true"/>
+   <iref item="pobox element" primary="true"/>
+   <t>
+      TBD
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.pobox.contents"><!--AG-->
+      <xref format="none" target="grammar.pobox">Content model</xref>: only text content.</t>
+   <!--pobox/@ascii-->
+   <section anchor="element.pobox.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="pobox element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in pobox element"/>
+      <t>
+	      ASCII equivalent for pobox. 
+      </t>
+   </section>
+</section>
 <!--postamble-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
          anchor="element.postamble"
@@ -5659,6 +5584,81 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside preamble"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
+</section>
+<!--region-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.region">
+   <name>
+      <tt>&lt;region&gt;</tt>
+   </name>
+   <x:anchor-alias value="region"/>
+   <iref item="Elements" subitem="region" primary="true"/>
+   <iref item="region element" primary="true"/>
+   <t>
+      Provides the region name in a postal address.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.region.contents"><!--AG-->
+      <xref format="none" target="grammar.region">Content model</xref>: only text content.</t>
+   <!--region/@ascii-->
+   <section anchor="element.region.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="region element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in region element"/>
+      <t>
+         The ASCII equivalent of the region name.
+      </t>
+   </section>
+</section>
+<!--sortingcode-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sortingcode">
+   <name>
+      <tt>&lt;sortingcode&gt;</tt>
+   </name>
+   <x:anchor-alias value="sortingcode"/>
+   <iref item="Elements" subitem="sortingcode" primary="true"/>
+   <iref item="sortingcode element" primary="true"/>
+   <t>
+     A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.sortingcode.contents"><!--AG-->
+      <xref format="none" target="grammar.sortingcode">Content model</xref>: only text content.</t>
+   <!--sortingcode/@ascii-->
+   <section anchor="element.sortingcode.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="sortingcode element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in sortingcode element"/>
+      <t>
+	      ASCII equivalent for sortingcode.
+      </t>
+   </section>
+</section>
+<!--street-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.street">
+   <name>
+      <tt>&lt;street&gt;</tt>
+   </name>
+   <x:anchor-alias value="street"/>
+   <iref item="Elements" subitem="street" primary="true"/>
+   <iref item="street element" primary="true"/>
+   <t>
+      Provides a street address.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.street.contents"><!--AG-->
+      <xref format="none" target="grammar.street">Content model</xref>: only text content.</t>
+   <!--street/@ascii-->
+   <section anchor="element.street.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="street element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in street element"/>
+      <t>
+         The ASCII equivalent of the street address.
+      </t>
+   </section>
 </section>
 <!--spanx-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
