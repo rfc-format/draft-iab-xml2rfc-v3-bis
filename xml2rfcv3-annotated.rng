@@ -400,7 +400,7 @@
    </define>
    <define name="postal">
       <element name="postal">
-         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, or only an ordered set of &lt;postalLine&gt; elements, but not both.</a:annotation>
+         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, or only an ordered set of &lt;postalLine&gt; elements, optionally followed by &lt;country&gt;, but not both.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
