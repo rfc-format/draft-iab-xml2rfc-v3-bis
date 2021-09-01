@@ -23,7 +23,7 @@ xml2rfcv3-spec.xml: xml2rfcv3.rng rng2xml2rfc.xslt
 	$(XSLT) $< rng2xml2rfc.xslt voc=v3 specsrc=draft-iab-rfc7991bis.xml > $@
 
 xml2rfcv3-spec-deprecated.xml: xml2rfcv3.rng rng2xml2rfc.xslt
-	$(XSLT) $< rng2xml2rfc.xslt specsrc=draft-iab-rfc7991bis.xml deprecated=yes > $@
+	$(XSLT) $< rng2xml2rfc.xslt voc=v3 specsrc=draft-iab-rfc7991bis.xml deprecated=yes > $@
 
 xml2rfcv3.rnc.folded: xml2rfcv3.rnc
 	./fold-rnc.sh $< | tr -d "\\015" > $@
