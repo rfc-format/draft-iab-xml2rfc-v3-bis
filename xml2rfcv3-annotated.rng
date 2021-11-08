@@ -2652,6 +2652,33 @@
          </zeroOrMore>
       </element>
    </define>
+   <define name="u">
+      <element name="u">
+         <a:annotation>In order to insert Unicode characters in contexts that don't explicitly allow Unicide, the Unicode string is enclosed within an &lt;u&gt; element. The element will be expanded inline based on the value of a "format" attribute. This provides a generalised means of generating the 6 methods of Unicode renderings listed in [RFC7997], Section 3.4, and also several others found in for instance the RFC Format Tools example rendering of RFC 7700.</a:annotation>
+         <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this &lt;u&gt; element.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ascii">
+               <a:annotation>The ASCII equivalent of the content, to be used if the "ascii" keyword is used in the "format" specification.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="format" a:defaultValue="lit-name-num">
+               <a:annotation>The "format" attribute accepts either a simplified format specification, or a full format string with placeholders for the various possible Unicode expansions.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <text/>
+      </element>
+   </define>
    <start combine="choice">
       <choice>
          <ref name="rfc"/>

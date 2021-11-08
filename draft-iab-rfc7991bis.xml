@@ -5147,6 +5147,107 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="xref element" subitem="inside tt"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
 </section>
+<!--u-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.u">
+   <name>
+      <tt>&lt;u&gt;</tt>
+   </name>
+   <x:anchor-alias value="u"/>
+   <iref item="Elements" subitem="u" primary="true"/>
+   <iref item="u element" primary="true"/>
+   <t>
+      In order to insert Unicode characters in contexts that don't explicitly allow Unicide, the Unicode string is enclosed within an &lt;u&gt; element.
+      The element will be expanded inline based on the value of a "format" attribute.
+      This provides a generalised means of generating the 6 methods of Unicode renderings listed in <xref target="RFC7997"/>, Section 3.4, and also several others found in for instance the RFC Format Tools example rendering of RFC 7700.
+   </t>
+   <t anchor="element.u.contents"><!--AG-->
+      <xref format="none" target="grammar.u">Content model</xref>: only text content.</t>
+   <!--u/@anchor-->
+   <section anchor="element.u.attribute.anchor" toc="exclude">
+      <name>"anchor" Attribute</name>
+      <iref item="Attributes" subitem="anchor"/>
+      <iref item="u element" subitem="anchor attribute"/>
+      <iref item="anchor attribute" subitem="in u element"/>
+      <t>Document-wide unique identifier for this &lt;u&gt; element.
+      </t>
+   </section>
+   <!--u/@ascii-->
+   <section anchor="element.u.attribute.ascii" toc="exclude">
+      <name>"ascii" Attribute</name>
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="u element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in u element"/>
+      <t>The ASCII equivalent of the content, to be used if the "ascii" keyword is used in the "format" specification.
+      </t>
+   </section>
+   <!--u/@format-->
+   <section anchor="element.u.attribute.format" toc="exclude">
+      <name>"format" Attribute</name>
+      <iref item="Attributes" subitem="format"/>
+      <iref item="u element" subitem="format attribute"/>
+      <iref item="format attribute" subitem="in u element"/>
+      <dl spacing="compact">
+	 <dt>Default value:</dt>  <dd>"lit-name-num"</dd>
+      </dl>
+
+      <t>
+       The "format" attribute accepts either a simplified format specification, or a full format string with placeholders for the various possible Unicode expansions.
+      </t>
+
+      <t>
+       The simplified format consists of dash-separated keywords, where each keyword represents a possible expansion of the Unicode character or string; use for example "&lt;u "lit-num-name"&gt;foo&lt;/u&gt;" to expand the text to its literal value, code point values, and code point names.
+      </t>
+
+      <t>
+       A combination of up to 3 of the following keywords may be used, separated by dashes: "num", "lit", "name", "ascii", "char".  The keywords are expanded as follows and combined, with the second and third enclosed in parentheses if present:
+      </t>
+
+      <dl newline="true">
+	 <dt>ascii</dt>
+	 <dd>
+            The value of the 'ascii' attribute on the &lt;u&gt; element
+       </dd>
+       <dt>char</dt>
+       <dd>
+            The literal element text, without quotes
+       </dd>
+       <dt>lit</dt>
+       <dd>
+            The literal element text, enclosed in quotes
+       </dd>
+       <dt>name</dt>
+       <dd>
+            The Unicode name(s) of the element text
+       </dd>
+       <dt>num</dt>
+       <dd>
+            The numeric value(s) of the element text, in U+1234 notation
+       </dd>
+      </dl>
+        <t>
+       In order to ensure that no specification mistakes can result for rendering methods that cannot render all Unicode code points, "num" MUST always be part of the specified format.
+     </t>
+   <t>
+      In order to provide for cases where the simplified format above is insufficient,
+      without relinquishing the requirement that the number of a code point always must
+      be rendered, the "format" attribute can also accept a full format string.  This
+      format uses placeholders which consist of any of the key words above enclosed in
+      curly braces; outside of this, any ascii text is permissible.  For example,
+   </t>
+   <artwork name="" type="" align="left" alt=""><![CDATA[   The <u format="{lit} character ({num})">Δ</u>.]]></artwork>
+   <t>
+      will be rendered as
+   </t>
+   <artwork name="" type="" align="left" alt=""><![CDATA[   The "Δ" character (U+0394).]]></artwork>
+   <t>
+      As for the simplified format, "num" MUST always be part of the
+      specified format in order to ensure that no specification
+      mistakes can result for rendering methods that cannot render all
+      Unicode code points, 
+   </t>
+
+   </section>
+</section>
 <!--ul-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.ul">
    <name>
@@ -7928,6 +8029,15 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:lang { text }?,
     (text | bcp14 | em | strong | sub | sup | tt)*
   }
+
+<strong anchor="grammar.u">u</strong><iref item="u element"/> =
+  element u {
+    attribute anchor { xsd:ID }?,
+    attribute ascii { text }?,
+    [ a:defaultValue = "lit-name-num" ] attribute format { text }?,
+    attribute pn { xsd:ID }?,
+    text
+  }
 start |= rfc
 <?ENDINC xml2rfcv3.rnc.folded ?>
 </artwork>
@@ -8531,7 +8641,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8542,7 +8652,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -8992,6 +9102,15 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     (text | bcp14 | em | strong | sub | sup | tt)*
++   }
++ u =
++   element u {
++     attribute anchor { xsd:ID }?,
++     attribute ascii { text }?,
++     [ a:defaultValue = "lit-name-num" ] attribute format { text 
++ }?,
++     attribute pn { xsd:ID }?,
++     text
 +   }
 + start |= rfc
 <?ENDINC differences-from-v2.txt ?>

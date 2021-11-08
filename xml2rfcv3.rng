@@ -2309,6 +2309,27 @@
       </zeroOrMore>
     </element>
   </define>
+  <define name="u">
+    <element name="u">
+      <optional>
+        <attribute name="anchor">
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ascii"/>
+      </optional>
+      <optional>
+        <attribute name="format" a:defaultValue="lit-name-num"/>
+      </optional>
+      <optional>
+        <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
   <start combine="choice">
     <choice>
       <ref name="rfc"/>
