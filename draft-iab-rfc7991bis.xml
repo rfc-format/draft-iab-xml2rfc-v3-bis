@@ -619,6 +619,9 @@ the appendices for a complete description of these attributes.
          <iref item="Elements" subitem="tt"/>
          <iref item="tt element" subitem="inside annotation"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
       <li><!--AG-->
+         <iref item="Elements" subitem="u"/>
+         <iref item="u element" subitem="inside annotation"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside annotation"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
@@ -2319,6 +2322,9 @@ in this interesting report&lt;/a&gt;.
       <li><!--AG-->
          <iref item="Elements" subitem="boilerplate"/>
          <iref item="boilerplate element" subitem="inside front"/>One optional &lt;<x:ref>boilerplate</x:ref>&gt; element (<xref target="element.boilerplate"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="toc"/>
+         <iref item="toc element" subitem="inside front"/>One optional &lt;<x:ref>toc</x:ref>&gt; element (<xref target="element.toc"/>)</li>
    </ol>
 </section>
 <!--iref-->
@@ -2345,8 +2351,9 @@ in this interesting report&lt;/a&gt;.
       entries of this type might be displayed as ranges.
    </t>
    <t>
-      When the prep tool is creating index content, it collects the items in a case-sensitive fashion
-      for both the item and subitem level.
+      When the prep tool is creating index content, it preserves the case of each item and subitem.
+      The index is sorted in conventional alphabetical order disregarding case.
+
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>ttcol</x:ref>&gt; (<xref target="element.ttcol"/>).</t>
    <t anchor="element.iref.contents"><!--AG-->
@@ -3138,6 +3145,9 @@ in this interesting report&lt;/a&gt;.
    <t><!--AG-->In this order:</t>
    <ol><!--AG-->
       <li><!--AG-->
+         <iref item="Elements" subitem="stream"/>
+         <iref item="stream element" subitem="inside reference"/>One optional &lt;<x:ref>stream</x:ref>&gt; element (<xref target="element.stream"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="front"/>
          <iref item="front element" subitem="inside reference"/>One &lt;<x:ref>front</x:ref>&gt; element (<xref target="element.front"/>)</li>
       <li><!--AG-->
@@ -3152,9 +3162,6 @@ in this interesting report&lt;/a&gt;.
             <li><!--AG-->
                <iref item="Elements" subitem="refcontent"/>
                <iref item="refcontent element" subitem="inside reference"/>&lt;<x:ref>refcontent</x:ref>&gt; elements (<xref target="element.refcontent"/>)</li>
-            <li><!--AG-->
-               <iref item="Elements" subitem="seriesInfo"/>
-               <iref item="seriesInfo element" subitem="inside reference"/>&lt;<x:ref>seriesInfo</x:ref>&gt; elements (<xref target="element.seriesInfo"/>)</li>
          </ul>
       </li>
    </ol>
@@ -3183,7 +3190,7 @@ in this interesting report&lt;/a&gt;.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
-         <li>"true" (default)</li>
+         <li>"true"</li>
          <li>"false"</li>
       </ul>
    </section>
@@ -3229,19 +3236,6 @@ in this interesting report&lt;/a&gt;.
         Document-wide unique identifier for this reference group. Usually, this will
         be used both to "label" the reference group in the "References" section and
         as an identifier in links to this reference entry.
-      </t>
-   </section>
-   <!--referencegroup/@target-->
-   <section anchor="element.referencegroup.attribute.target" toc="exclude">
-      <name>"target" Attribute</name>
-      <iref item="Attributes" subitem="target"/>
-      <iref item="referencegroup element" subitem="target attribute"/>
-      <iref item="target attribute" subitem="in referencegroup element"/>
-      <t>
-        Holds the URI for the reference.
-      </t>
-      <t>
-        Holds the URI for the reference.
       </t>
    </section>
 </section>
@@ -3600,8 +3594,8 @@ for an overview.
       <ul><!--AG-->
          <li>"std"</li>
          <li>"bcp"</li>
-         <li>"info"</li>
          <li>"exp"</li>
+         <li>"info"</li>
          <li>"historic"</li>
       </ul>
    </section>
@@ -3867,7 +3861,7 @@ for an overview.
       Subsections are created by nesting &lt;section&gt; elements inside &lt;section&gt; elements.
       Sections are allowed to be empty.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>back</x:ref>&gt; (<xref target="element.back"/>), &lt;<x:ref>boilerplate</x:ref>&gt; (<xref target="element.boilerplate"/>), &lt;<x:ref>middle</x:ref>&gt; (<xref target="element.middle"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>back</x:ref>&gt; (<xref target="element.back"/>), &lt;<x:ref>boilerplate</x:ref>&gt; (<xref target="element.boilerplate"/>), &lt;<x:ref>middle</x:ref>&gt; (<xref target="element.middle"/>), &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>), and &lt;<x:ref>toc</x:ref>&gt; (<xref target="element.toc"/>).</t>
    <t anchor="element.section.contents"><!--AG-->
       <xref format="none" target="grammar.section">Content model</xref>:</t>
    <t><!--AG-->In this order:</t>
@@ -4017,7 +4011,7 @@ for an overview.
       Specifies the document series in which this document appears, and also
       specifies an identifier within that series.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>) and &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.seriesInfo.contents"><!--AG-->
       <xref format="none" target="grammar.seriesInfo">Content model</xref>: this element does not have any contents.</t>
    <!--seriesInfo/@asciiName-->
@@ -4095,7 +4089,7 @@ for an overview.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
-         <li>"IETF" (default)</li>
+         <li>"IETF"</li>
          <li>"IAB"</li>
          <li>"IRTF"</li>
          <li>"independent"</li>
@@ -4287,6 +4281,28 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             of v3 XML should not cause a failure when it encounters an unexpected type or no type is specified. 
       </t>
    </section>
+</section>
+<!--stream-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.stream">
+   <name>
+      <tt>&lt;stream&gt;</tt>
+   </name>
+   <x:anchor-alias value="stream"/>
+   <iref item="Elements" subitem="stream" primary="true"/>
+   <iref item="stream element" primary="true"/>
+   <t>
+      <cref>The document stream, one of IETF, IAB, IRTF, or independent.</cref>
+   </t>
+   <t>This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
+   <t anchor="element.stream.contents"><!--AG-->
+      <xref format="none" target="grammar.stream">Content model</xref>:
+    </t>
+   <t><!--AG-->
+      <cref>
+      Missing template for optional.
+    </cref>
+   </t>
 </section>
 <!--street-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.street">
@@ -5060,6 +5076,28 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       </t>
    </section>
 </section>
+<!--toc-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.toc">
+   <name>
+      <tt>&lt;toc&gt;</tt>
+   </name>
+   <x:anchor-alias value="toc"/>
+   <iref item="Elements" subitem="toc" primary="true"/>
+   <iref item="toc element" primary="true"/>
+   <t><!--AG-->
+      <cref>
+	 This element contains the Table of Contents.
+	 It is generated automatically by the preptool based on the "tocInclude" and "tocDepth" attributes of the &lt;rfc&gt; element,
+      </cref>
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
+   <t anchor="element.toc.contents"><!--AG-->
+      <xref format="none" target="grammar.toc">Content model</xref>:
+    </t>
+   <t><!--AG-->
+      <iref item="Elements" subitem="section"/>
+      <iref item="section element" subitem="inside toc"/>Optional &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
+</section>
 <!--tr-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.tr">
    <name>
@@ -5160,6 +5198,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       The element will be expanded inline based on the value of a "format" attribute.
       This provides a generalised means of generating the 6 methods of Unicode renderings listed in <xref target="RFC7997"/>, Section 3.4, and also several others found in for instance the RFC Format Tools example rendering of RFC 7700.
    </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>).</t>
    <t anchor="element.u.contents"><!--AG-->
       <xref format="none" target="grammar.u">Content model</xref>: only text content.</t>
    <!--u/@anchor-->
@@ -5187,65 +5226,59 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="u element" subitem="format attribute"/>
       <iref item="format attribute" subitem="in u element"/>
       <dl spacing="compact">
-	 <dt>Default value:</dt>  <dd>"lit-name-num"</dd>
+         <dt>Default value:</dt>
+         <dd>"lit-name-num"</dd>
       </dl>
-
       <t>
        The "format" attribute accepts either a simplified format specification, or a full format string with placeholders for the various possible Unicode expansions.
       </t>
-
       <t>
        The simplified format consists of dash-separated keywords, where each keyword represents a possible expansion of the Unicode character or string; use for example "&lt;u "lit-num-name"&gt;foo&lt;/u&gt;" to expand the text to its literal value, code point values, and code point names.
       </t>
-
       <t>
        A combination of up to 3 of the following keywords may be used, separated by dashes: "num", "lit", "name", "ascii", "char".  The keywords are expanded as follows and combined, with the second and third enclosed in parentheses if present:
       </t>
-
       <dl newline="true">
-	 <dt>ascii</dt>
-	 <dd>
+         <dt>ascii</dt>
+         <dd>
             The value of the 'ascii' attribute on the &lt;u&gt; element
        </dd>
-       <dt>char</dt>
-       <dd>
+         <dt>char</dt>
+         <dd>
             The literal element text, without quotes
        </dd>
-       <dt>lit</dt>
-       <dd>
+         <dt>lit</dt>
+         <dd>
             The literal element text, enclosed in quotes
        </dd>
-       <dt>name</dt>
-       <dd>
+         <dt>name</dt>
+         <dd>
             The Unicode name(s) of the element text
        </dd>
-       <dt>num</dt>
-       <dd>
+         <dt>num</dt>
+         <dd>
             The numeric value(s) of the element text, in U+1234 notation
        </dd>
       </dl>
-        <t>
+      <t>
        In order to ensure that no specification mistakes can result for rendering methods that cannot render all Unicode code points, "num" MUST always be part of the specified format.
      </t>
-   <t>
+      <t>
       In order to provide for cases where the simplified format above is insufficient,
       without relinquishing the requirement that the number of a code point always must
       be rendered, the "format" attribute can also accept a full format string.  This
       format uses placeholders which consist of any of the key words above enclosed in
       curly braces; outside of this, any ascii text is permissible.  For example,
    </t>
-   <artwork name="" type="" align="left" alt=""><![CDATA[   The <u format="{lit} character ({num})">Δ</u>.]]></artwork>
-   <t>
+      <t>
       will be rendered as
    </t>
-   <artwork name="" type="" align="left" alt=""><![CDATA[   The "Δ" character (U+0394).]]></artwork>
-   <t>
+      <t>
       As for the simplified format, "num" MUST always be part of the
       specified format in order to ensure that no specification
       mistakes can result for rendering methods that cannot render all
       Unicode code points, 
    </t>
-
    </section>
 </section>
 <!--ul-->
@@ -6984,7 +7017,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "" ] attribute obsoletes { text }?,
     [ a:defaultValue = "" ] attribute updates { text }?,
     attribute category {
-      "std" | "bcp" | "info" | "exp" | "historic"
+      "std" | "bcp" | "exp" | "info" | "historic"
     }?,
     attribute mode { text }?,
     [ a:defaultValue = "false" ]
@@ -7037,7 +7070,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     keyword*,
     abstract?,
     note*,
-    boilerplate?
+    boilerplate?,
+    toc?
   }
 
 <strong anchor="grammar.title">title</strong><iref item="title element"/> =
@@ -7283,6 +7317,13 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     section+
+  }
+
+<strong anchor="grammar.toc">toc</strong><iref item="toc element"/> =
+  element toc {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    section*
   }
 
 <strong anchor="grammar.middle">middle</strong><iref item="middle element"/> =
@@ -7964,17 +8005,20 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
+    attribute derivedAnchor { text }?,
     attribute target { text }?,
-    [ a:defaultValue = "true" ]
     attribute quote-title { "true" | "false" }?,
+    stream?,
     front,
-    (annotation | format | refcontent | seriesInfo)*
+    (annotation | format | refcontent)*
   }
+
+<strong anchor="grammar.stream">stream</strong><iref item="stream element"/> =
+  element stream { ("IETF" | "IAB" | "IRTF" | "independent")? }
 
 <strong anchor="grammar.referencegroup">referencegroup</strong><iref item="referencegroup element"/> =
   element referencegroup {
     attribute xml:base { text }?,
-    attribute target { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
     reference+
@@ -7989,7 +8033,6 @@ include "SVG-1.2-RFC.rnc"
     attribute asciiName { text }?,
     attribute asciiValue { text }?,
     attribute status { text }?,
-    [ a:defaultValue = "IETF" ]
     attribute stream { "IETF" | "IAB" | "IRTF" | "independent" }?,
     empty
   }
@@ -8020,6 +8063,7 @@ include "SVG-1.2-RFC.rnc"
      | sub
      | sup
      | tt
+     | u
      | xref)*
   }
 
@@ -8084,7 +8128,7 @@ to the v3 schema.</t>
 -       | "noDerivativesTrust200902"
 -       | "pre5378Trust200902"
 +     attribute category {
-+       "std" | "bcp" | "info" | "exp" | "historic"
++       "std" | "bcp" | "exp" | "info" | "historic"
       }?,
 +     attribute mode { text }?,
 +     [ a:defaultValue = "false" ]
@@ -8139,7 +8183,8 @@ to the v3 schema.</t>
 +     keyword*,
 +     abstract?,
 +     note*,
-+     boilerplate?
++     boilerplate?,
++     toc?
     }
   title =
     element title {
@@ -8377,6 +8422,12 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     section+
++   }
++ toc =
++   element toc {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     section*
 +   }
 + middle =
 +   element middle {
@@ -9037,19 +9088,21 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
       attribute anchor { xsd:ID },
++     attribute derivedAnchor { text }?,
       attribute target { text }?,
-+     [ a:defaultValue = "true" ]
 +     attribute quote-title { "true" | "false" }?,
++     stream?,
       front,
 -     seriesInfo*,
 -     format*,
 -     annotation*
-+     (annotation | format | refcontent | seriesInfo)*
++     (annotation | format | refcontent)*
 +   }
++ stream =
++   element stream { ("IETF" | "IAB" | "IRTF" | "independent")? }
 + referencegroup =
 +   element referencegroup {
 +     attribute xml:base { text }?,
-+     attribute target { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID },
 +     reference+
@@ -9063,7 +9116,6 @@ to the v3 schema.</t>
 +     attribute asciiName { text }?,
 +     attribute asciiValue { text }?,
 +     attribute status { text }?,
-+     [ a:defaultValue = "IETF" ]
 +     attribute stream { "IETF" | "IAB" | "IRTF" | "independent" }?,
       empty
     }
@@ -9095,6 +9147,7 @@ to the v3 schema.</t>
 +      | sub
 +      | sup
 +      | tt
++      | u
 +      | xref)*
 +   }
 + refcontent =
@@ -9178,6 +9231,14 @@ to the v3 schema.</t>
   </ul>
 </section>
 
+<section title="Since draft-iab-rfc7991bis-04" anchor="changes.since.04">
+  <ul x:when-empty="None yet.">
+    <li>Add &lt;stream&gt; subelement</li>
+    <li>Add &lt;u&gt; element</li>
+    <li>Add &lt;toc&gt; element</li>
+    <li>Clarify &lt;iref&gt; preserves case in entries, but sorts in normal alphabetical order.</li>
+  </ul>
+</section>
 </section>
 
 <section title="IAB Members at the Time of Approval" numbered="false">
@@ -9198,7 +9259,7 @@ to the v3 schema.</t>
   and to those who provided feedback on that document. 
 </t>
 <t>
-  Most of the changes between this document and RFC 7991 came from the diligent
+  Many of the changes between this document and RFC 7991 came from the diligent
   work of Henrik Levkowetz.
 </t>
 <t>

@@ -35,8 +35,8 @@
                <choice>
                   <value>std</value>
                   <value>bcp</value>
-                  <value>info</value>
                   <value>exp</value>
+                  <value>info</value>
                   <value>historic</value>
                </choice>
             </attribute>
@@ -209,6 +209,9 @@
          </zeroOrMore>
          <optional>
             <ref name="boilerplate"/>
+         </optional>
+         <optional>
+            <ref name="toc"/>
          </optional>
       </element>
    </define>
@@ -792,6 +795,19 @@
          <oneOrMore>
             <ref name="section"/>
          </oneOrMore>
+      </element>
+   </define>
+   <define name="toc">
+      <element name="toc">
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <ref name="section"/>
+         </zeroOrMore>
       </element>
    </define>
    <define name="middle">
@@ -2486,12 +2502,15 @@
             <data type="ID"/>
          </attribute>
          <optional>
+            <attribute name="derivedAnchor"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
             <attribute name="target">
                <a:annotation>Holds the URI for the reference.</a:annotation>
             </attribute>
          </optional>
          <optional>
-            <attribute name="quote-title" a:defaultValue="true">
+            <attribute name="quote-title">
                <a:annotation>Specifies whether or not the title in the reference should be quoted. This can be used to prevent quoting, such as on errata.</a:annotation>
                <choice>
                   <value>true</value>
@@ -2499,15 +2518,30 @@
                </choice>
             </attribute>
          </optional>
+         <optional>
+            <ref name="stream"/>
+         </optional>
          <ref name="front"/>
          <zeroOrMore>
             <choice>
                <ref name="annotation"/>
                <ref name="format"/>
                <ref name="refcontent"/>
-               <ref name="seriesInfo"/>
             </choice>
          </zeroOrMore>
+      </element>
+   </define>
+   <define name="stream">
+      <element name="stream">
+         <a:annotation>The document stream, one of IETF, IAB, IRTF, or independent.</a:annotation>
+         <optional>
+            <choice>
+               <value>IETF</value>
+               <value>IAB</value>
+               <value>IRTF</value>
+               <value>independent</value>
+            </choice>
+         </optional>
       </element>
    </define>
    <define name="referencegroup">
@@ -2515,11 +2549,6 @@
          <a:annotation>Represents a list of bibliographic references that will be represented as a single reference. This is most often used to reference STDs and BCPs, where a single reference (such as "BCP 9") may encompass more than one RFC.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
-         </optional>
-         <optional>
-            <attribute name="target">
-               <a:annotation>Holds the URI for the reference.</a:annotation>
-            </attribute>
          </optional>
          <optional>
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
@@ -2564,7 +2593,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="stream" a:defaultValue="IETF">
+            <attribute name="stream">
                <a:annotation>The stream (as described in [RFC7841]) that originated the document. (The RFC Series Editor may change this list in the future.)</a:annotation>
                <choice>
                   <value>IETF</value>
@@ -2625,6 +2654,7 @@
                <ref name="sub"/>
                <ref name="sup"/>
                <ref name="tt"/>
+               <ref name="u"/>
                <ref name="xref"/>
             </choice>
          </zeroOrMore>
@@ -2680,8 +2710,6 @@
       </element>
    </define>
    <start combine="choice">
-      <choice>
-         <ref name="rfc"/>
-      </choice>
+      <ref name="rfc"/>
    </start>
 </grammar>

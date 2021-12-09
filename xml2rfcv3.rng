@@ -23,8 +23,8 @@
           <choice>
             <value>std</value>
             <value>bcp</value>
-            <value>info</value>
             <value>exp</value>
+            <value>info</value>
             <value>historic</value>
           </choice>
         </attribute>
@@ -173,6 +173,9 @@
       <optional>
         <ref name="boilerplate"/>
       </optional>
+       <optional>
+         <ref name="toc"/>
+       </optional>
     </element>
   </define>
   <define name="title">
@@ -661,6 +664,19 @@
         <ref name="section"/>
       </oneOrMore>
     </element>
+  </define>
+  <define name="toc">
+     <element name="toc">
+       <optional>
+        <attribute name="xml:base"><?hidden-in-prose?></attribute>
+       </optional>
+       <optional>
+        <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+       </optional>
+       <zeroOrMore>
+         <ref name="section"/>
+       </zeroOrMore>
+     </element>
   </define>
   <define name="middle">
     <element name="middle">
@@ -2170,35 +2186,49 @@
       <attribute name="anchor">
         <data type="ID"/>
       </attribute>
+        <optional>
+         <attribute name="derivedAnchor"><?hidden-in-prose?></attribute>
+       </optional>
       <optional>
         <attribute name="target"/>
       </optional>
       <optional>
-        <attribute name="quote-title" a:defaultValue="true">
+        <attribute name="quote-title">
           <choice>
             <value>true</value>
             <value>false</value>
           </choice>
         </attribute>
       </optional>
+       <optional>
+         <ref name="stream"/>
+       </optional>
       <ref name="front"/>
       <zeroOrMore>
         <choice>
           <ref name="annotation"/>
           <ref name="format"/>
           <ref name="refcontent"/>
-          <ref name="seriesInfo"></ref>
         </choice>
       </zeroOrMore>
     </element>
   </define>
+   <define name="stream">
+     <element name="stream">
+       <optional>
+         <choice>
+           <value>IETF</value>
+           <value>IAB</value>
+           <value>IRTF</value>
+           <value>independent</value>
+         </choice>
+       </optional>
+     </element>
+   </define>
   <define name="referencegroup">
     <element name="referencegroup">
       <optional>
         <attribute name="xml:base"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="target"/>
       </optional>
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
@@ -2231,7 +2261,7 @@
         <attribute name="status"/>
       </optional>
       <optional>
-        <attribute name="stream" a:defaultValue="IETF">
+        <attribute name="stream">
           <choice>
             <value>IETF</value>
             <value>IAB</value>
@@ -2283,6 +2313,7 @@
           <ref name="sub"/>
           <ref name="sup"/>
           <ref name="tt"/>
+          <ref name="u"/>
           <ref name="xref"/>
         </choice>
       </zeroOrMore>
@@ -2331,8 +2362,6 @@
     </element>
   </define>
   <start combine="choice">
-    <choice>
       <ref name="rfc"/>
-    </choice>
   </start>
 </grammar>
