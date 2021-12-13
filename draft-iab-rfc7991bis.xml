@@ -196,7 +196,7 @@ and this document.
 <li>Removed "It is an error to have both a "src" attribute and content in the &lt;artwork&gt; element."
 from <xref target="element.artwork.attribute.src"/>.</li>
 
-<li>Removed &lt;br&gt; from the vocabulary.</li>
+<li>Added &lt;toc&gt;, and &lt;u&gt; elements.</li>
 
 <li>Changed the "hanging" attribute of &lt;dl&gt; to "newline".</li>
 
@@ -1192,6 +1192,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside blockquote"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="br"/>
+               <iref item="br element" subitem="inside blockquote"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside blockquote"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
             <li><!--AG-->
@@ -1218,6 +1221,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="tt"/>
                <iref item="tt element" subitem="inside blockquote"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="u"/>
+               <iref item="u element" subitem="inside blockquote"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="xref"/>
                <iref item="xref element" subitem="inside blockquote"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
@@ -1279,6 +1285,25 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t><!--AG-->
       <iref item="Elements" subitem="section"/>
       <iref item="section element" subitem="inside boilerplate"/>One or more &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</t>
+</section>
+<!--br-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.br">
+   <name>
+      <tt>&lt;br&gt;</tt>
+   </name>
+   <x:anchor-alias value="br"/>
+   <iref item="Elements" subitem="br" primary="true"/>
+   <iref item="br element" primary="true"/>
+   <t>
+      <cref>Forces a line break. Since the layout and column widths of a document vary from
+	 one rendering to another, authors should use this element sparingly and consider its
+	 effect in all of the likely renderings.
+	 In some cases a U+200B, ZERO WIDTH SPACE character as a hint as a place where a block of
+	 text might be broken is a better choice.</cref>
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>title</x:ref>&gt; (<xref target="element.title"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
+   <t anchor="element.br.contents"><!--AG-->
+      <xref format="none" target="grammar.br">Content model</xref>: this element does not have any contents.</t>
 </section>
 <!--city-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.city">
@@ -1495,6 +1520,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <ul><!--AG-->
       <li><!--AG-->Text</li>
       <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside cref"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="em"/>
          <iref item="em element" subitem="inside cref"/>&lt;<x:ref>em</x:ref>&gt; elements (<xref target="element.em"/>)</li>
       <li><!--AG-->
@@ -1696,6 +1724,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside dd"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="br"/>
+               <iref item="br element" subitem="inside dd"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside dd"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
             <li><!--AG-->
@@ -1722,6 +1753,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="tt"/>
                <iref item="tt element" subitem="inside dd"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="u"/>
+               <iref item="u element" subitem="inside dd"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="xref"/>
                <iref item="xref element" subitem="inside dd"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
@@ -1905,6 +1939,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="bcp14"/>
          <iref item="bcp14 element" subitem="inside dt"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
       <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside dt"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="cref"/>
          <iref item="cref element" subitem="inside dt"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
       <li><!--AG-->
@@ -1969,6 +2006,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <iref item="Elements" subitem="bcp14"/>
          <iref item="bcp14 element" subitem="inside em"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside em"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="cref"/>
          <iref item="cref element" subitem="inside em"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
@@ -2480,6 +2520,9 @@ in this interesting report&lt;/a&gt;.
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside li"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="br"/>
+               <iref item="br element" subitem="inside li"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside li"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
             <li><!--AG-->
@@ -2506,6 +2549,9 @@ in this interesting report&lt;/a&gt;.
             <li><!--AG-->
                <iref item="Elements" subitem="tt"/>
                <iref item="tt element" subitem="inside li"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="u"/>
+               <iref item="u element" subitem="inside li"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="xref"/>
                <iref item="xref element" subitem="inside li"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
@@ -2633,6 +2679,9 @@ in this interesting report&lt;/a&gt;.
       <li><!--AG-->
          <iref item="Elements" subitem="bcp14"/>
          <iref item="bcp14 element" subitem="inside name"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside name"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="cref"/>
          <iref item="cref element" subitem="inside name"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
@@ -4353,6 +4402,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="bcp14"/>
          <iref item="bcp14 element" subitem="inside strong"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
       <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside strong"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="cref"/>
          <iref item="cref element" subitem="inside strong"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
       <li><!--AG-->
@@ -4501,6 +4553,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="bcp14"/>
          <iref item="bcp14 element" subitem="inside t"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
       <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside t"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="cref"/>
          <iref item="cref element" subitem="inside t"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
       <li><!--AG-->
@@ -4533,6 +4588,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <iref item="Elements" subitem="tt"/>
          <iref item="tt element" subitem="inside t"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="u"/>
+         <iref item="u element" subitem="inside t"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="vspace"/>
          <iref item="vspace element" subitem="inside t"/>&lt;<x:ref>vspace</x:ref>&gt; elements (<xref target="element.vspace"/>)</li>
@@ -4751,6 +4809,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside td"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="br"/>
+               <iref item="br element" subitem="inside td"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside td"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
             <li><!--AG-->
@@ -4777,6 +4838,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="tt"/>
                <iref item="tt element" subitem="inside td"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="u"/>
+               <iref item="u element" subitem="inside td"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="xref"/>
                <iref item="xref element" subitem="inside td"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
@@ -4922,6 +4986,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="bcp14"/>
                <iref item="bcp14 element" subitem="inside th"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="br"/>
+               <iref item="br element" subitem="inside th"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="cref"/>
                <iref item="cref element" subitem="inside th"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
             <li><!--AG-->
@@ -4948,6 +5015,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="tt"/>
                <iref item="tt element" subitem="inside th"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="u"/>
+               <iref item="u element" subitem="inside th"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="xref"/>
                <iref item="xref element" subitem="inside th"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
@@ -5054,7 +5124,15 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.title.contents"><!--AG-->
-      <xref format="none" target="grammar.title">Content model</xref>: only text content.</t>
+      <xref format="none" target="grammar.title">Content model</xref>:
+    </t>
+   <t><!--AG-->In any order:</t>
+   <ul><!--AG-->
+      <li><!--AG-->Text</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside title"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+   </ul>
    <!--title/@abbrev-->
    <section anchor="element.title.attribute.abbrev" toc="exclude">
       <name>"abbrev" Attribute</name>
@@ -5084,11 +5162,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <x:anchor-alias value="toc"/>
    <iref item="Elements" subitem="toc" primary="true"/>
    <iref item="toc element" primary="true"/>
-   <t><!--AG-->
-      <cref>
-	 This element contains the Table of Contents.
-	 It is generated automatically by the preptool based on the "tocInclude" and "tocDepth" attributes of the &lt;rfc&gt; element,
-      </cref>
+   <t>
+      <cref>This element contains the Table of Contents.
+	 It is created automatically by the preptool based on the "tocInclude" and "tocDepth" attributes of
+	 the &lt;rfc&gt; element. Document authors should create it.</cref>
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.toc.contents"><!--AG-->
@@ -5157,6 +5234,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="bcp14"/>
          <iref item="bcp14 element" subitem="inside tt"/>&lt;<x:ref>bcp14</x:ref>&gt; elements (<xref target="element.bcp14"/>)</li>
       <li><!--AG-->
+         <iref item="Elements" subitem="br"/>
+         <iref item="br element" subitem="inside tt"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+      <li><!--AG-->
          <iref item="Elements" subitem="cref"/>
          <iref item="cref element" subitem="inside tt"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
       <li><!--AG-->
@@ -5198,7 +5278,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       The element will be expanded inline based on the value of a "format" attribute.
       This provides a generalised means of generating the 6 methods of Unicode renderings listed in <xref target="RFC7997"/>, Section 3.4, and also several others found in for instance the RFC Format Tools example rendering of RFC 7700.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), and &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>).</t>
    <t anchor="element.u.contents"><!--AG-->
       <xref format="none" target="grammar.u">Content model</xref>: only text content.</t>
    <!--u/@anchor-->
@@ -5780,6 +5860,9 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       <li><!--AG-->
          <iref item="Elements" subitem="tt"/>
          <iref item="tt element" subitem="inside preamble"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="u"/>
+         <iref item="u element" subitem="inside preamble"/>&lt;<x:ref>u</x:ref>&gt; elements (<xref target="element.u"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside preamble"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
@@ -7080,7 +7163,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     attribute abbrev { text }?,
     attribute ascii { text }?,
-    text
+    (text | br)*
   }
 
 <strong anchor="grammar.author">author</strong><iref item="author element"/> =
@@ -7371,6 +7454,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute slugifiedName { text }?,
     (text
      | bcp14
+     | br
      | cref
      | em
      | eref
@@ -7381,6 +7465,13 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
      | sup
      | tt
      | xref)*
+  }
+
+<strong anchor="grammar.br">br</strong><iref item="br element"/> =
+  element br {
+    attribute xml:base { text }?,
+    attribute xml:lang { text }?,
+    empty
   }
 
 <strong anchor="grammar.t">t</strong><iref item="t element"/> =
@@ -7396,6 +7487,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute keepWithPrevious { "false" | "true" }?,
     (text
      | bcp14
+     | br
      | cref
      | em
      | eref
@@ -7407,6 +7499,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
      | sub
      | sup
      | tt
+     | u
      | vspace
      | xref)*
   }
@@ -7448,6 +7541,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
       | ul)+
      | (text
         | bcp14
+        | br
         | cref
         | em
         | eref
@@ -7457,6 +7551,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
         | sub
         | sup
         | tt
+        | u
         | xref)+)
   }
 
@@ -7515,6 +7610,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
       | ul)+
      | (text
         | bcp14
+        | br
         | cref
         | em
         | eref
@@ -7524,6 +7620,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
         | sub
         | sup
         | tt
+        | u
         | xref)+)
   }
 
@@ -7549,6 +7646,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute pn { text }?,
     (text
      | bcp14
+     | br
      | cref
      | em
      | eref
@@ -7570,6 +7668,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
+        | br
         | cref
         | em
         | eref
@@ -7579,6 +7678,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
         | sub
         | sup
         | tt
+        | u
         | xref)+)
   }
 
@@ -7638,7 +7738,16 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute source { text }?,
     [ a:defaultValue = "true" ]
     attribute display { "true" | "false" }?,
-    (text | em | eref | relref | strong | sub | sup | tt | xref)*
+    (text
+     | br
+     | em
+     | eref
+     | relref
+     | strong
+     | sub
+     | sup
+     | tt
+     | xref)*
   }
 
 <strong anchor="grammar.tt">tt</strong><iref item="tt element"/> =
@@ -7647,6 +7756,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     (text
      | bcp14
+     | br
      | cref
      | em
      | eref
@@ -7664,6 +7774,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     (text
      | bcp14
+     | br
      | cref
      | em
      | eref
@@ -7681,6 +7792,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:lang { text }?,
     (text
      | bcp14
+     | br
      | cref
      | eref
      | iref
@@ -7795,6 +7907,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
      | sub
      | sup
      | tt
+     | u
      | xref)*
   }
 
@@ -7886,6 +7999,7 @@ include "SVG-1.2-RFC.rnc"
     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
+        | br
         | cref
         | em
         | eref
@@ -7895,6 +8009,7 @@ include "SVG-1.2-RFC.rnc"
         | sub
         | sup
         | tt
+        | u
         | xref)*)
   }
 
@@ -7910,6 +8025,7 @@ include "SVG-1.2-RFC.rnc"
     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
+        | br
         | cref
         | em
         | eref
@@ -7919,6 +8035,7 @@ include "SVG-1.2-RFC.rnc"
         | sub
         | sup
         | tt
+        | u
         | xref)*)
   }
 
@@ -8191,8 +8308,9 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
       attribute abbrev { text }?,
+-     text
 +     attribute ascii { text }?,
-      text
++     (text | br)*
     }
   author =
     element author {
@@ -8475,6 +8593,7 @@ to the v3 schema.</t>
 +     attribute slugifiedName { text }?,
 +     (text
 +      | bcp14
++      | br
 +      | cref
 +      | em
 +      | eref
@@ -8485,6 +8604,12 @@ to the v3 schema.</t>
 +      | sup
 +      | tt
 +      | xref)*
++   }
++ br =
++   element br {
++     attribute xml:base { text }?,
++     attribute xml:lang { text }?,
++     empty
 +   }
   t =
     element t {
@@ -8499,6 +8624,7 @@ to the v3 schema.</t>
 +     attribute keepWithPrevious { "false" | "true" }?,
       (text
 +      | bcp14
++      | br
 +      | cref
 +      | em
 +      | eref
@@ -8510,6 +8636,7 @@ to the v3 schema.</t>
 +      | sub
 +      | sup
 +      | tt
++      | u
 +      | vspace
 +      | xref)*
 +   }
@@ -8551,6 +8678,7 @@ to the v3 schema.</t>
 +       | ul)+
 +      | (text
 +         | bcp14
++         | br
        | cref
 -      | spanx
 -      | vspace)*
@@ -8562,6 +8690,7 @@ to the v3 schema.</t>
 +         | sub
 +         | sup
 +         | tt
++         | u
 +         | xref)+)
     }
   \list =
@@ -8617,6 +8746,7 @@ to the v3 schema.</t>
 +       | ul)+
 +      | (text
 +         | bcp14
++         | br
 +         | cref
 +         | em
 +         | eref
@@ -8626,6 +8756,7 @@ to the v3 schema.</t>
 +         | sub
 +         | sup
 +         | tt
++         | u
 +         | xref)+)
 +   }
 + dl =
@@ -8649,6 +8780,7 @@ to the v3 schema.</t>
 +     attribute pn { text }?,
 +     (text
 +      | bcp14
++      | br
 +      | cref
 +      | em
 +      | eref
@@ -8669,6 +8801,7 @@ to the v3 schema.</t>
 +     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
++         | br
 +         | cref
 +         | em
 +         | eref
@@ -8678,6 +8811,7 @@ to the v3 schema.</t>
 +         | sub
 +         | sup
 +         | tt
++         | u
 +         | xref)+)
 +   }
   xref =
@@ -8738,7 +8872,16 @@ to the v3 schema.</t>
 -     text
 +     [ a:defaultValue = "true" ]
 +     attribute display { "true" | "false" }?,
-+     (text | em | eref | relref | strong | sub | sup | tt | xref)*
++     (text
++      | br
++      | em
++      | eref
++      | relref
++      | strong
++      | sub
++      | sup
++      | tt
++      | xref)*
 +   }
 + tt =
 +   element tt {
@@ -8746,6 +8889,7 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     (text
 +      | bcp14
++      | br
 +      | cref
 +      | em
 +      | eref
@@ -8762,6 +8906,7 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     (text
 +      | bcp14
++      | br
 +      | cref
 +      | em
 +      | eref
@@ -8778,6 +8923,7 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
 +     (text
 +      | bcp14
++      | br
 +      | cref
 +      | eref
 +      | iref
@@ -8887,6 +9033,7 @@ to the v3 schema.</t>
 +      | sub
 +      | sup
 +      | tt
++      | u
 +      | xref)*
 +   }
 + artset =
@@ -8974,6 +9121,7 @@ to the v3 schema.</t>
 +     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
++         | br
 +         | cref
 +         | em
 +         | eref
@@ -8983,6 +9131,7 @@ to the v3 schema.</t>
 +         | sub
 +         | sup
 +         | tt
++         | u
 +         | xref)*)
 +   }
 + th =
@@ -8997,6 +9146,7 @@ to the v3 schema.</t>
 +     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
++         | br
 +         | cref
 +         | em
 +         | eref
@@ -9006,6 +9156,7 @@ to the v3 schema.</t>
 +         | sub
 +         | sup
 +         | tt
++         | u
 +         | xref)*)
     }
   postamble =
@@ -9235,6 +9386,7 @@ to the v3 schema.</t>
   <ul x:when-empty="None yet.">
     <li>Add &lt;stream&gt; subelement</li>
     <li>Add &lt;u&gt; element</li>
+    <li>Add &lt;br&gt; element</li>
     <li>Add &lt;toc&gt; element</li>
     <li>Clarify &lt;iref&gt; preserves case in entries, but sorts in normal alphabetical order.</li>
   </ul>

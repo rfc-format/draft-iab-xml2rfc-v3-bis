@@ -234,7 +234,12 @@
                <a:annotation>The ASCII equivalent of the title.</a:annotation>
             </attribute>
          </optional>
-         <text/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="br"/>
+            </choice>
+         </zeroOrMore>
       </element>
    </define>
    <define name="author">
@@ -799,6 +804,7 @@
    </define>
    <define name="toc">
       <element name="toc">
+         <a:annotation>This element contains the Table of Contents. It is created automatically by the preptool based on the "tocInclude" and "tocDepth" attributes of the &lt;rfc&gt; element. Document authors should create it.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -917,6 +923,7 @@
             <choice>
                <text/>
                <ref name="bcp14"/>
+               <ref name="br"/>
                <ref name="cref"/>
                <ref name="em"/>
                <ref name="eref"/>
@@ -929,6 +936,18 @@
                <ref name="xref"/>
             </choice>
          </zeroOrMore>
+      </element>
+   </define>
+   <define name="br">
+      <element name="br">
+         <a:annotation>Forces a line break. Since the layout and column widths of a document vary from one rendering to another, authors should use this element sparingly and consider its effect in all of the likely renderings. In some cases a U+200B, ZERO WIDTH SPACE character as a hint as a place where a block of text might be broken is a better choice.</a:annotation>
+         <optional>
+            <attribute name="xml:base"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <empty/>
       </element>
    </define>
    <define name="t">
@@ -976,6 +995,7 @@
             <choice>
                <text/>
                <ref name="bcp14"/>
+               <ref name="br"/>
                <ref name="cref"/>
                <ref name="em"/>
                <ref name="eref"/>
@@ -987,6 +1007,7 @@
                <ref name="sub"/>
                <ref name="sup"/>
                <ref name="tt"/>
+               <ref name="u"/>
                <ref name="vspace"/>
                <ref name="xref"/>
             </choice>
@@ -1073,6 +1094,7 @@
                <choice>
                   <text/>
                   <ref name="bcp14"/>
+                  <ref name="br"/>
                   <ref name="cref"/>
                   <ref name="em"/>
                   <ref name="eref"/>
@@ -1082,6 +1104,7 @@
                   <ref name="sub"/>
                   <ref name="sup"/>
                   <ref name="tt"/>
+                  <ref name="u"/>
                   <ref name="xref"/>
                </choice>
             </oneOrMore>
@@ -1244,6 +1267,7 @@
                <choice>
                   <text/>
                   <ref name="bcp14"/>
+                  <ref name="br"/>
                   <ref name="cref"/>
                   <ref name="em"/>
                   <ref name="eref"/>
@@ -1253,6 +1277,7 @@
                   <ref name="sub"/>
                   <ref name="sup"/>
                   <ref name="tt"/>
+                  <ref name="u"/>
                   <ref name="xref"/>
                </choice>
             </oneOrMore>
@@ -1328,6 +1353,7 @@
             <choice>
                <text/>
                <ref name="bcp14"/>
+               <ref name="br"/>
                <ref name="cref"/>
                <ref name="em"/>
                <ref name="eref"/>
@@ -1377,6 +1403,7 @@
                <choice>
                   <text/>
                   <ref name="bcp14"/>
+                  <ref name="br"/>
                   <ref name="cref"/>
                   <ref name="em"/>
                   <ref name="eref"/>
@@ -1386,6 +1413,7 @@
                   <ref name="sub"/>
                   <ref name="sup"/>
                   <ref name="tt"/>
+                  <ref name="u"/>
                   <ref name="xref"/>
                </choice>
             </oneOrMore>
@@ -1557,6 +1585,7 @@
          <zeroOrMore>
             <choice>
                <text/>
+               <ref name="br"/>
                <ref name="em"/>
                <ref name="eref"/>
                <ref name="relref"/>
@@ -1582,6 +1611,7 @@
             <choice>
                <text/>
                <ref name="bcp14"/>
+               <ref name="br"/>
                <ref name="cref"/>
                <ref name="em"/>
                <ref name="eref"/>
@@ -1608,6 +1638,7 @@
             <choice>
                <text/>
                <ref name="bcp14"/>
+               <ref name="br"/>
                <ref name="cref"/>
                <ref name="em"/>
                <ref name="eref"/>
@@ -1634,6 +1665,7 @@
             <choice>
                <text/>
                <ref name="bcp14"/>
+               <ref name="br"/>
                <ref name="cref"/>
                <ref name="eref"/>
                <ref name="iref"/>
@@ -1890,6 +1922,7 @@
                <ref name="sub"/>
                <ref name="sup"/>
                <ref name="tt"/>
+               <ref name="u"/>
                <ref name="xref"/>
             </choice>
          </zeroOrMore>
@@ -2175,6 +2208,7 @@
                <choice>
                   <text/>
                   <ref name="bcp14"/>
+                  <ref name="br"/>
                   <ref name="cref"/>
                   <ref name="em"/>
                   <ref name="eref"/>
@@ -2184,6 +2218,7 @@
                   <ref name="sub"/>
                   <ref name="sup"/>
                   <ref name="tt"/>
+                  <ref name="u"/>
                   <ref name="xref"/>
                </choice>
             </zeroOrMore>
@@ -2242,6 +2277,7 @@
                <choice>
                   <text/>
                   <ref name="bcp14"/>
+                  <ref name="br"/>
                   <ref name="cref"/>
                   <ref name="em"/>
                   <ref name="eref"/>
@@ -2251,6 +2287,7 @@
                   <ref name="sub"/>
                   <ref name="sup"/>
                   <ref name="tt"/>
+                  <ref name="u"/>
                   <ref name="xref"/>
                </choice>
             </zeroOrMore>
