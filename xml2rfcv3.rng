@@ -209,6 +209,11 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
+        <attribute name="anchor">
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <optional>
         <attribute name="initials"/>
       </optional>
       <optional>
@@ -225,9 +230,7 @@
       </optional>
       <optional>
         <attribute name="role">
-          <choice>
             <value>editor</value>
-          </choice>
         </attribute>
       </optional>
       <optional>
@@ -248,6 +251,11 @@
       </optional>
       <optional>
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="anchor">
+          <data type="ID"/>
+        </attribute>
       </optional>
       <optional>
         <attribute name="initials"/>
@@ -350,9 +358,9 @@
             <ref name="street"/>
           </choice>
         </zeroOrMore>
-        <oneOrMore>
-          <ref name="postalLine"/>
-        </oneOrMore>
+	<oneOrMore>
+	   <ref name="postalLine"/>
+	</oneOrMore>
       </choice>
     </element>
   </define>
@@ -560,7 +568,7 @@
       <optional>
         <attribute name="year"/>
       </optional>
-      <empty/>
+      <text/>
     </element>
   </define>
   <define name="area">
@@ -610,7 +618,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+        </attribute>
       </optional>
       <oneOrMore>
         <choice>
@@ -634,7 +644,9 @@
         <attribute name="title"/>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	 <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <attribute name="removeInRFC" a:defaultValue="false">
@@ -710,7 +722,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	   <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <attribute name="title"/>
@@ -748,6 +762,7 @@
           <ref name="artset"/>
           <ref name="artwork"/>
           <ref name="aside"/>
+          <ref name="author"/>
           <ref name="blockquote"/>
           <ref name="contact"/>
           <ref name="dl"/>
@@ -775,7 +790,9 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="slugifiedName"><?hidden-in-prose?></attribute>
+	 <attribute name="slugifiedName"><?hidden-in-prose?>
+           <data type="ID"/>
+	 </attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -821,7 +838,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+           <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <attribute name="hangText"/>
@@ -2228,6 +2247,14 @@
         <attribute name="target"/>
       </optional>
       <optional>
+        <attribute name="quoteTitle" a:defaultValue="true"><?hidden-in-prose?>
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
         <attribute name="quote-title">
           <choice>
             <value>true</value>
@@ -2244,6 +2271,7 @@
           <ref name="annotation"/>
           <ref name="format"/>
           <ref name="refcontent"/>
+          <ref name="seriesInfo"/>
         </choice>
       </zeroOrMore>
     </element>
@@ -2271,6 +2299,12 @@
       <attribute name="anchor">
         <data type="ID"/>
       </attribute>
+      <optional>
+        <attribute name="derivedAnchor"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+        <attribute name="target"/>
+      </optional>
       <oneOrMore>
         <ref name="reference"/>
       </oneOrMore>

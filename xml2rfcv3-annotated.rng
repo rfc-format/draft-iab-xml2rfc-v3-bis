@@ -252,6 +252,12 @@
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
          </optional>
          <optional>
+            <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this &lt;author&gt; element.</a:annotation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <optional>
             <attribute name="initials">
                <a:annotation>An abbreviated variant of the given name(s), to be used in conjunction with the separately specified surname. It usually appears on the front page, in footers, and in references.</a:annotation>
             </attribute>
@@ -279,9 +285,7 @@
          <optional>
             <attribute name="role">
                <a:annotation>Specifies the role the author had in creating the document.</a:annotation>
-               <choice>
-                  <value>editor</value>
-               </choice>
+               <value>editor</value>
             </attribute>
          </optional>
          <optional>
@@ -305,6 +309,11 @@
          </optional>
          <optional>
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="anchor">
+               <data type="ID"/>
+            </attribute>
          </optional>
          <optional>
             <attribute name="initials">
@@ -682,7 +691,7 @@
                <a:annotation>The year or years of publication.</a:annotation>
             </attribute>
          </optional>
-         <empty/>
+         <text/>
       </element>
    </define>
    <define name="area">
@@ -737,7 +746,9 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <oneOrMore>
             <choice>
@@ -764,7 +775,9 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <optional>
             <attribute name="removeInRFC" a:defaultValue="false">
@@ -846,7 +859,9 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <optional>
             <attribute name="title">
@@ -889,6 +904,7 @@
                <ref name="artset"/>
                <ref name="artwork"/>
                <ref name="aside"/>
+               <ref name="author"/>
                <ref name="blockquote"/>
                <ref name="contact"/>
                <ref name="dl"/>
@@ -917,7 +933,9 @@
             <attribute name="xml:lang"><?hidden-in-prose?></attribute>
          </optional>
          <optional>
-            <attribute name="slugifiedName"><?hidden-in-prose?></attribute>
+            <attribute name="slugifiedName"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <zeroOrMore>
             <choice>
@@ -966,7 +984,9 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <optional>
             <attribute name="hangText">
@@ -2547,6 +2567,14 @@
             </attribute>
          </optional>
          <optional>
+            <attribute name="quoteTitle" a:defaultValue="true"><?hidden-in-prose?>
+               <choice>
+                  <value>true</value>
+                  <value>false</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
             <attribute name="quote-title">
                <a:annotation>Specifies whether or not the title in the reference should be quoted. This can be used to prevent quoting, such as on errata.</a:annotation>
                <choice>
@@ -2564,6 +2592,7 @@
                <ref name="annotation"/>
                <ref name="format"/>
                <ref name="refcontent"/>
+               <ref name="seriesInfo"/>
             </choice>
          </zeroOrMore>
       </element>
@@ -2594,6 +2623,14 @@
             <a:annotation>Document-wide unique identifier for this reference group. Usually, this will be used both to "label" the reference group in the "References" section and as an identifier in links to this reference entry.</a:annotation>
             <data type="ID"/>
          </attribute>
+         <optional>
+            <attribute name="derivedAnchor"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="target">
+               <a:annotation>Holds an URI for the reference group, analogous to the "target" attribute of &lt;reference&gt;. Typically used for a reference to a STD which consists of multiple RFCs with their own URLs, but also has its own unique URL.</a:annotation>
+            </attribute>
+         </optional>
          <oneOrMore>
             <ref name="reference"/>
          </oneOrMore>

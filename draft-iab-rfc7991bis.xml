@@ -982,7 +982,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       references. Note that this specification does not define a precise
       meaning for the term "editor".
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>) and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.author.contents"><!--AG-->
       <xref format="none" target="grammar.author">Content model</xref>:</t>
    <t><!--AG-->In this order:</t>
@@ -994,6 +994,16 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="address"/>
          <iref item="address element" subitem="inside author"/>One optional &lt;<x:ref>address</x:ref>&gt; element (<xref target="element.address"/>)</li>
    </ol>
+   <!--author/@anchor-->
+   <section anchor="element.author.attribute.anchor" toc="exclude">
+      <name>"anchor" Attribute</name>
+      <iref item="Attributes" subitem="anchor"/>
+      <iref item="author element" subitem="anchor attribute"/>
+      <iref item="anchor attribute" subitem="in author element"/>
+      <t>
+	 Document-wide unique identifier for this &lt;author&gt; element.
+      </t>
+   </section>
    <!--author/@asciiFullname-->
    <section anchor="element.author.attribute.asciiFullname" toc="exclude">
       <name>"asciiFullname" Attribute</name>
@@ -1063,10 +1073,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t>
             Specifies the role the author had in creating the document.
          </t>
-      <t><!--AG-->Allowed values:</t>
-      <ul><!--AG-->
-         <li>"editor"</li>
-      </ul>
    </section>
    <!--author/@surname-->
    <section anchor="element.author.attribute.surname" toc="exclude">
@@ -1404,6 +1410,16 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="address"/>
          <iref item="address element" subitem="inside contact"/>One optional &lt;<x:ref>address</x:ref>&gt; element (<xref target="element.address"/>)</li>
    </ol>
+   <!--contact/@anchor-->
+   <section anchor="element.contact.attribute.anchor" toc="exclude">
+      <name>"anchor" Attribute</name>
+      <iref item="Attributes" subitem="anchor"/>
+      <iref item="contact element" subitem="anchor attribute"/>
+      <iref item="anchor attribute" subitem="in contact element"/>
+      <t><!--AG-->
+         <cref anchor="element.contact.attribute.anchor.missing">attribute description missing</cref>
+      </t>
+   </section>
    <!--contact/@asciiFullname-->
    <section anchor="element.contact.attribute.asciiFullname" toc="exclude">
       <name>"asciiFullname" Attribute</name>
@@ -1635,7 +1651,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </dl>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
    <t anchor="element.date.contents"><!--AG-->
-      <xref format="none" target="grammar.date">Content model</xref>: this element does not have any contents.</t>
+      <xref format="none" target="grammar.date">Content model</xref>: only text content.</t>
    <!--date/@day-->
    <section anchor="element.date.attribute.day" toc="exclude">
       <name>"day" Attribute</name>
@@ -3045,6 +3061,9 @@ in this interesting report&lt;/a&gt;.
       &lt;<x:ref>region</x:ref>&gt;, &lt;<x:ref>code</x:ref>&gt;, and &lt;<x:ref>country</x:ref>&gt;
       elements, or only an ordered set of &lt;<x:ref>postalLine</x:ref>&gt; elements, but not both.
    </t>
+   <t>
+      The sub-elements other than &lt;<x:ref>postalLine</x:ref>&gt; have been deprecated and will likely be removed in a future version.
+   </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>address</x:ref>&gt; (<xref target="element.address"/>).</t>
    <t anchor="element.postal.contents"><!--AG-->
       <xref format="none" target="grammar.postal">Content model</xref>:
@@ -3211,6 +3230,9 @@ in this interesting report&lt;/a&gt;.
             <li><!--AG-->
                <iref item="Elements" subitem="refcontent"/>
                <iref item="refcontent element" subitem="inside reference"/>&lt;<x:ref>refcontent</x:ref>&gt; elements (<xref target="element.refcontent"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="seriesInfo"/>
+               <iref item="seriesInfo element" subitem="inside reference"/>&lt;<x:ref>seriesInfo</x:ref>&gt; elements (<xref target="element.seriesInfo"/>)</li>
          </ul>
       </li>
    </ol>
@@ -3285,6 +3307,17 @@ in this interesting report&lt;/a&gt;.
         Document-wide unique identifier for this reference group. Usually, this will
         be used both to "label" the reference group in the "References" section and
         as an identifier in links to this reference entry.
+      </t>
+   </section>
+   <!--referencegroup/@target-->
+   <section anchor="element.referencegroup.attribute.target" toc="exclude">
+      <name>"target" Attribute</name>
+      <iref item="Attributes" subitem="target"/>
+      <iref item="referencegroup element" subitem="target attribute"/>
+      <iref item="target attribute" subitem="in referencegroup element"/>
+      <t>
+	 Holds an URI for the reference group, analogous to the "target" attribute of &lt;reference&gt;.
+	 Typically used for a reference to a STD which consists of multiple RFCs with their own URLs, but also has its own unique URL.
       </t>
    </section>
 </section>
@@ -3931,6 +3964,9 @@ for an overview.
                <iref item="Elements" subitem="aside"/>
                <iref item="aside element" subitem="inside section"/>&lt;<x:ref>aside</x:ref>&gt; elements (<xref target="element.aside"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="author"/>
+               <iref item="author element" subitem="inside section"/>&lt;<x:ref>author</x:ref>&gt; elements (<xref target="element.author"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="blockquote"/>
                <iref item="blockquote element" subitem="inside section"/>&lt;<x:ref>blockquote</x:ref>&gt; elements (<xref target="element.blockquote"/>)</li>
             <li><!--AG-->
@@ -4060,7 +4096,7 @@ for an overview.
       Specifies the document series in which this document appears, and also
       specifies an identifier within that series.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>front</x:ref>&gt; (<xref target="element.front"/>) and &lt;<x:ref>reference</x:ref>&gt; (<xref target="element.reference"/>).</t>
    <t anchor="element.seriesInfo.contents"><!--AG-->
       <xref format="none" target="grammar.seriesInfo">Content model</xref>: this element does not have any contents.</t>
    <!--seriesInfo/@asciiName-->
@@ -7170,6 +7206,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element author {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
+    attribute anchor { xsd:ID }?,
     attribute initials { text }?,
     attribute asciiInitials { text }?,
     attribute surname { text }?,
@@ -7185,6 +7222,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element contact {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
+    attribute anchor { xsd:ID }?,
     attribute initials { text }?,
     attribute asciiInitials { text }?,
     attribute surname { text }?,
@@ -7350,7 +7388,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute day { text }?,
     attribute month { text }?,
     attribute year { text }?,
-    empty
+    text
   }
 
 <strong anchor="grammar.area">area</strong><iref item="area element"/> =
@@ -7379,7 +7417,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     (dl | ol | t | ul)+
   }
 
@@ -7388,7 +7426,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute title { text }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     [ a:defaultValue = "false" ]
     attribute removeInRFC { "true" | "false" }?,
     name?,
@@ -7421,7 +7459,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     attribute title { text }?,
     [ a:defaultValue = "true" ]
     attribute numbered { "true" | "false" }?,
@@ -7433,6 +7471,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     (artset
      | artwork
      | aside
+     | author
      | blockquote
      | contact
      | dl
@@ -7451,7 +7490,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
   element name {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
-    attribute slugifiedName { text }?,
+    attribute slugifiedName { xsd:ID }?,
     (text
      | bcp14
      | br
@@ -7479,7 +7518,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     attribute hangText { text }?,
     [ a:defaultValue = "false" ]
     attribute keepWithNext { "false" | "true" }?,
@@ -8124,10 +8163,12 @@ include "SVG-1.2-RFC.rnc"
     attribute anchor { xsd:ID },
     attribute derivedAnchor { text }?,
     attribute target { text }?,
+    [ a:defaultValue = "true" ]
+    attribute quoteTitle { "true" | "false" }?,
     attribute quote-title { "true" | "false" }?,
     stream?,
     front,
-    (annotation | format | refcontent)*
+    (annotation | format | refcontent | seriesInfo)*
   }
 
 <strong anchor="grammar.stream">stream</strong><iref item="stream element"/> =
@@ -8138,6 +8179,8 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID },
+    attribute derivedAnchor { text }?,
+    attribute target { text }?,
     reference+
   }
 
@@ -8316,6 +8359,7 @@ to the v3 schema.</t>
     element author {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
++     attribute anchor { xsd:ID }?,
       attribute initials { text }?,
 +     attribute asciiInitials { text }?,
       attribute surname { text }?,
@@ -8330,6 +8374,7 @@ to the v3 schema.</t>
 +   element contact {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
++     attribute anchor { xsd:ID }?,
 +     attribute initials { text }?,
 +     attribute asciiInitials { text }?,
 +     attribute surname { text }?,
@@ -8490,12 +8535,9 @@ to the v3 schema.</t>
       attribute day { text }?,
       attribute month { text }?,
       attribute year { text }?,
-      empty
-    }
-- area = element area { text }
-- workgroup = element workgroup { text }
-- keyword = element keyword { text }
-- abstract = element abstract { t+ }
+-     empty
++     text
++   }
 + area =
 +   element area {
 +     attribute xml:base { text }?,
@@ -8519,9 +8561,13 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     (dl | ol | t | ul)+
-+   }
+    }
+- area = element area { text }
+- workgroup = element workgroup { text }
+- keyword = element keyword { text }
+- abstract = element abstract { t+ }
   note =
     element note {
 -     attribute title { text },
@@ -8529,7 +8575,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute title { text }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     [ a:defaultValue = "false" ]
 +     attribute removeInRFC { "true" | "false" }?,
 +     name?,
@@ -8560,7 +8606,7 @@ to the v3 schema.</t>
 +     attribute xml:lang { text }?,
       attribute anchor { xsd:ID }?,
 -     attribute title { text },
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     attribute title { text }?,
 +     [ a:defaultValue = "true" ]
 +     attribute numbered { "true" | "false" }?,
@@ -8573,6 +8619,7 @@ to the v3 schema.</t>
 +     (artset
 +      | artwork
 +      | aside
++      | author
 +      | blockquote
 +      | contact
 +      | dl
@@ -8590,7 +8637,7 @@ to the v3 schema.</t>
 +   element name {
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
-+     attribute slugifiedName { text }?,
++     attribute slugifiedName { xsd:ID }?,
 +     (text
 +      | bcp14
 +      | br
@@ -8616,7 +8663,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
       attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
       attribute hangText { text }?,
 +     [ a:defaultValue = "false" ]
 +     attribute keepWithNext { "false" | "true" }?,
@@ -8826,7 +8873,7 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-  }?,
++ }?,
 +     attribute derivedContent { text }?,
 +     text
 +   }
@@ -8837,7 +8884,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-+ }?,
+  }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -9241,13 +9288,15 @@ to the v3 schema.</t>
       attribute anchor { xsd:ID },
 +     attribute derivedAnchor { text }?,
       attribute target { text }?,
++     [ a:defaultValue = "true" ]
++     attribute quoteTitle { "true" | "false" }?,
 +     attribute quote-title { "true" | "false" }?,
 +     stream?,
       front,
 -     seriesInfo*,
 -     format*,
 -     annotation*
-+     (annotation | format | refcontent)*
++     (annotation | format | refcontent | seriesInfo)*
 +   }
 + stream =
 +   element stream { ("IETF" | "IAB" | "IRTF" | "independent")? }
@@ -9256,6 +9305,8 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID },
++     attribute derivedAnchor { text }?,
++     attribute target { text }?,
 +     reference+
     }
   seriesInfo =
@@ -9360,7 +9411,7 @@ to the v3 schema.</t>
 
 <section title="Since draft-iab-rfc7991bis-02" anchor="changes.since.02">
   <ul x:when-empty="None yet.">
-    <li>Update Acknowledgements.</li>
+     <li>Update Acknowledgements.</li>
   </ul>
 </section>
 
@@ -9388,7 +9439,12 @@ to the v3 schema.</t>
     <li>Add &lt;u&gt; element</li>
     <li>Add &lt;br&gt; element</li>
     <li>Add &lt;toc&gt; element</li>
+    <li>Add &lt;anchor&gt; element to &lt;<x:ref>author</x:ref>&gt;</li>
+    <li>Add &lt;anchor&gt; element to &lt;<x:ref>contact</x:ref>&gt;</li>
+    <li>Add &lt;seriesInfo;gt; element to &lt;<x:ref>referencegroup</x:ref>&gt;</li>
     <li>Clarify &lt;iref&gt; preserves case in entries, but sorts in normal alphabetical order.</li>
+    <li>Allow text in &lt;<x:ref>date</x:ref>&gt; elements.</li>
+    <li>Alliw &lt;<x:ref>author</x:ref>&lt; in &lt;<x:ref>section</x:ref>&gt; elements.</li>
   </ul>
 </section>
 </section>
