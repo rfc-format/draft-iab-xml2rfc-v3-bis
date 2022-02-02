@@ -178,21 +178,6 @@
   </xsl:apply-templates>  
 </xsl:template>
 
-<xsl:template match="rng:group">
-  <xsl:param name="in-list" select="false()"/>
-  <li>
-    <t>
-      <xsl:comment>AG</xsl:comment>
-      <xsl:text>In this order:</xsl:text>
-    </t>
-    <ol>
-      <xsl:apply-templates>
-        <xsl:with-param name="in-list" select="$in-list"/>
-      </xsl:apply-templates>
-    </ol>
-  </li>
-</xsl:template>
-
 <xsl:template match="rng:oneOrMore[count(rng:ref) &gt; 1]">
   <t>
     <xsl:comment>AG</xsl:comment>

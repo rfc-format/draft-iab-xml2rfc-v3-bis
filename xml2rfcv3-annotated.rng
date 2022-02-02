@@ -417,7 +417,7 @@
    </define>
    <define name="postal">
       <element name="postal">
-         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, or only an ordered set of &lt;postalLine&gt; elements, optionally followed by &lt;country&gt;, but not both.</a:annotation>
+         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, or only an ordered set of &lt;postalLine&gt; elements, but not both.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -438,20 +438,15 @@
                   <ref name="street"/>
                </choice>
             </zeroOrMore>
-            <group>
-               <oneOrMore>
-                  <ref name="postalLine"/>
-               </oneOrMore>
-               <optional>
-                  <ref name="country"/>
-               </optional>
-            </group>
+            <oneOrMore>
+               <ref name="postalLine"/>
+            </oneOrMore>
          </choice>
       </element>
    </define>
    <define name="cityarea">
       <element name="cityarea">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>TBD</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -460,7 +455,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>The ASCII equivalent of the city area name.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -468,7 +463,7 @@
    </define>
    <define name="extaddr">
       <element name="extaddr">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>TBD</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -477,7 +472,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>ASCII equivalent for extaddr.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -485,7 +480,7 @@
    </define>
    <define name="pobox">
       <element name="pobox">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>TBD</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -494,7 +489,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>ASCII equivalent for pobox.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -502,7 +497,7 @@
    </define>
    <define name="sortingcode">
       <element name="sortingcode">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -511,7 +506,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>ASCII equivalent for sortingcode.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -519,7 +514,7 @@
    </define>
    <define name="street">
       <element name="street">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>Provides a street address.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -528,7 +523,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>The ASCII equivalent of the street address.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -536,7 +531,7 @@
    </define>
    <define name="city">
       <element name="city">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>Gives the city name in a postal address.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -545,7 +540,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>The ASCII equivalent of the city name.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -553,7 +548,7 @@
    </define>
    <define name="region">
       <element name="region">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>Provides the region name in a postal address.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -562,7 +557,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>The ASCII equivalent of the region name.</a:annotation>
             </attribute>
          </optional>
          <text/>
@@ -570,7 +565,7 @@
    </define>
    <define name="code">
       <element name="code">
-         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
+         <a:annotation>Gives the postal region code.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -579,7 +574,7 @@
          </optional>
          <optional>
             <attribute name="ascii">
-               <a:annotation>Deprecated.</a:annotation>
+               <a:annotation>The ASCII equivalent of the postal code.</a:annotation>
             </attribute>
          </optional>
          <text/>

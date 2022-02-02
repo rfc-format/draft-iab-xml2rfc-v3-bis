@@ -358,14 +358,9 @@
             <ref name="street"/>
           </choice>
         </zeroOrMore>
-	<group>
-	   <oneOrMore>
-	      <ref name="postalLine"/>
-	   </oneOrMore>
-	   <optional>
-	      <ref name="country"/>
-	   </optional>
-	</group>
+	<oneOrMore>
+	   <ref name="postalLine"/>
+	</oneOrMore>
       </choice>
     </element>
   </define>
