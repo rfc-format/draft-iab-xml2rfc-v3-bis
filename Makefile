@@ -3,9 +3,13 @@ XSLT=saxon -now:$(shell date -r $< -u +%Y-%m-%dT%H:%M:%SZ)
 
 all: \
 	draft-iab-rfc7991bis.redxml \
-	draft-iab-rfc7991bis.unpg.txt \
 	draft-iab-rfc7991bis.txt \
 	xml2rfcv3-annotated.rng
+#	draft-iab-rfc7991bis.unpg.txt \
+
+allhtml: \
+	all \
+	draft-iab-rfc7991bis.html
 
 xml2rfc.all: \
 	draft-iab-rfc7991bis.xml xml2rfcv3-annotated.rng
@@ -48,11 +52,16 @@ differences-from-v2.txt:	xml2rfcv3.rnc $(xml2rfcv2)
 %.txt:	%.redxml
 	xml2rfc --v3 --text $< -o $@
 
+%.html:	%.redxml
+	xml2rfc --v3 --html $< -o $@
+
 %.unpg.txt:	%.redxml
 	xml2rfc --v3  --no-pagination $< -o $@
 
 SVG-1.2-RFC.rnc:
-	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rnc
+	wget https://raw.githubusercontent.com/ietf-tools/xml2rfc/main/xml2rfc/data/SVG-1.2-RFC.rnc
+#	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rnc
 
 SVG-1.2-RFC.rng:
-	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rng
+	wget https://raw.githubusercontent.com/ietf-tools/xml2rfc/main/xml2rfc/data/SVG-1.2-RFC.rng
+#	wget https://svn.tools.ietf.org/svn/tools/xml2rfc/trunk/cli/xml2rfc/data/SVG-1.2-RFC.rng
