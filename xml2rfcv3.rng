@@ -907,7 +907,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+	 </attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1198,7 +1200,9 @@
         <attribute name="indent" a:defaultValue="3"/>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+	 </attribute>
       </optional>
       <oneOrMore>
         <ref name="dt"/>
@@ -1220,7 +1224,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <zeroOrMore>
         <choice>
@@ -1660,7 +1666,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <attribute name="title" a:defaultValue=""/>
@@ -1741,11 +1749,16 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <ref name="name"/>
       </optional>
+       <zeroOrMore>
+         <ref name="iref"/>
+       </zeroOrMore>
       <optional>
         <ref name="thead"/>
       </optional>
@@ -1799,7 +1812,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+	 </attribute>
       </optional>
       <oneOrMore>
         <ref name="artwork"/>
@@ -1820,7 +1835,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+	 </attribute>
       </optional>
      <optional>
         <attribute name="xml:space"/>
@@ -1879,21 +1896,23 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
-      </optional>
-      <optional>
-        <attribute name="markers" a:defaultValue="">
-          <choice>
-            <value>true</value>
-            <value>false</value>
-          </choice>
-        </attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <attribute name="name" a:defaultValue=""/>
       </optional>
       <optional>
         <attribute name="type" a:defaultValue=""/>
+      </optional>
+      <optional>
+        <attribute name="markers" a:defaultValue="false">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
       </optional>
       <optional>
         <attribute name="src"/>
@@ -1993,10 +2012,10 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="colspan" a:defaultValue="0"/>
+        <attribute name="colspan" a:defaultValue="1"/>
       </optional>
       <optional>
-        <attribute name="rowspan" a:defaultValue="0"/>
+        <attribute name="rowspan" a:defaultValue="1"/>
       </optional>
       <optional>
         <attribute name="align" a:defaultValue="left">
@@ -2055,10 +2074,10 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="colspan" a:defaultValue="0"/>
+        <attribute name="colspan" a:defaultValue="1"/>
       </optional>
       <optional>
-        <attribute name="rowspan" a:defaultValue="0"/>
+        <attribute name="rowspan" a:defaultValue="1"/>
       </optional>
       <optional>
         <attribute name="align" a:defaultValue="left">
@@ -2256,7 +2275,9 @@
       <zeroOrMore>
         <ref name="displayreference"/>
       </zeroOrMore>
-      <ref name="references"/>
+      <zeroOrMore>
+	 <ref name="references"/>
+      </zeroOrMore>
       <zeroOrMore>
         <ref name="section"/>
       </zeroOrMore>
@@ -2285,7 +2306,9 @@
         <attribute name="xml:lang"><?hidden-in-prose?></attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+          <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <attribute name="anchor">

@@ -1128,7 +1128,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="displayreference element" subitem="inside back"/>Optional &lt;<x:ref>displayreference</x:ref>&gt; elements (<xref target="element.displayreference"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="references"/>
-         <iref item="references element" subitem="inside back"/>One &lt;<x:ref>references</x:ref>&gt; element (<xref target="element.references"/>)</li>
+         <iref item="references element" subitem="inside back"/>Optional &lt;<x:ref>references</x:ref>&gt; elements (<xref target="element.references"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="section"/>
          <iref item="section element" subitem="inside back"/>Optional &lt;<x:ref>section</x:ref>&gt; elements (<xref target="element.section"/>)</li>
@@ -2337,7 +2337,7 @@ in this interesting report&lt;/a&gt;.
       The index is sorted in conventional alphabetical order disregarding case.
 
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>ttcol</x:ref>&gt; (<xref target="element.ttcol"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>figure</x:ref>&gt; (<xref target="element.figure"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>table</x:ref>&gt; (<xref target="element.table"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>ttcol</x:ref>&gt; (<xref target="element.ttcol"/>).</t>
    <t anchor="element.iref.contents"><!--AG-->
       <xref format="none" target="grammar.iref">Content model</xref>: this element does not have any contents.</t>
    <!--iref/@item-->
@@ -3962,7 +3962,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
          <li>"true"</li>
-         <li>"false"</li>
+         <li>"false" (default)</li>
       </ul>
    </section>
    <!--sourcecode/@name-->
@@ -4388,6 +4388,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <iref item="Elements" subitem="name"/>
          <iref item="name element" subitem="inside table"/>One optional &lt;<x:ref>name</x:ref>&gt; element (<xref target="element.name"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="iref"/>
+         <iref item="iref element" subitem="inside table"/>Optional &lt;<x:ref>iref</x:ref>&gt; elements (<xref target="element.iref"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="thead"/>
          <iref item="thead element" subitem="inside table"/>One optional &lt;<x:ref>thead</x:ref>&gt; element (<xref target="element.thead"/>)</li>
@@ -7773,7 +7776,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     (artset
      | artwork
      | blockquote
@@ -7897,7 +7900,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "false" ]
     attribute newline { "false" | "true" }?,
     [ a:defaultValue = "3" ] attribute indent { text }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     (dt, dd)+
   }
 
@@ -7906,7 +7909,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     (text
      | bcp14
      | br
@@ -8141,7 +8144,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     [ a:defaultValue = "" ] attribute title { text }?,
     [ a:defaultValue = "false" ]
     attribute suppress-title { "true" | "false" }?,
@@ -8166,8 +8169,9 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "center" ]
     attribute align { "left" | "center" | "right" }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     name?,
+    iref*,
     thead?,
     tbody+,
     tfoot?
@@ -8198,7 +8202,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     artwork+
   }
 
@@ -8207,7 +8211,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     attribute xml:space { text }?,
     [ a:defaultValue = "" ] attribute name { text }?,
     [ a:defaultValue = "" ] attribute type { text }?,
@@ -8228,10 +8232,11 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
-    [ a:defaultValue = "" ] attribute markers { "true" | "false" }?,
+    attribute pn { xsd:ID }?,
     [ a:defaultValue = "" ] attribute name { text }?,
     [ a:defaultValue = "" ] attribute type { text }?,
+    [ a:defaultValue = "false" ]
+    attribute markers { "true" | "false" }?,
     attribute src { text }?,
     attribute originalSrc { text }?,
     text
@@ -8274,8 +8279,8 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    [ a:defaultValue = "0" ] attribute colspan { text }?,
-    [ a:defaultValue = "0" ] attribute rowspan { text }?,
+    [ a:defaultValue = "1" ] attribute colspan { text }?,
+    [ a:defaultValue = "1" ] attribute rowspan { text }?,
     [ a:defaultValue = "left" ]
     attribute align { "left" | "center" | "right" }?,
     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
@@ -8300,8 +8305,8 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    [ a:defaultValue = "0" ] attribute colspan { text }?,
-    [ a:defaultValue = "0" ] attribute rowspan { text }?,
+    [ a:defaultValue = "1" ] attribute colspan { text }?,
+    [ a:defaultValue = "1" ] attribute rowspan { text }?,
     [ a:defaultValue = "left" ]
     attribute align { "left" | "center" | "right" }?,
     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
@@ -8376,7 +8381,7 @@ include "SVG-1.2-RFC.rnc"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     displayreference*,
-    references,
+    references*,
     section*
   }
 
@@ -8392,7 +8397,7 @@ include "SVG-1.2-RFC.rnc"
   element references {
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     attribute anchor { xsd:ID }?,
     attribute title { text }?,
     name?,
@@ -8937,7 +8942,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     (artset
 +      | artwork
 +      | blockquote
@@ -9060,7 +9065,7 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "false" ]
 +     attribute newline { "false" | "true" }?,
 +     [ a:defaultValue = "3" ] attribute indent { text }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     (dt, dd)+
 +   }
 + dt =
@@ -9068,7 +9073,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     (text
 +      | bcp14
 +      | br
@@ -9296,7 +9301,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
       attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
       [ a:defaultValue = "" ] attribute title { text }?,
       [ a:defaultValue = "false" ]
       attribute suppress-title { "true" | "false" }?,
@@ -9321,8 +9326,9 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "center" ]
 +     attribute align { "left" | "center" | "right" }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     name?,
++     iref*,
 +     thead?,
 +     tbody+,
 +     tfoot?
@@ -9352,7 +9358,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     artwork+
 +   }
   artwork =
@@ -9362,7 +9368,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     attribute xml:space { text }?,
       [ a:defaultValue = "" ] attribute name { text }?,
       [ a:defaultValue = "" ] attribute type { text }?,
@@ -9383,11 +9389,11 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
-+     [ a:defaultValue = "" ] attribute markers { "true" | "false" 
-+ }?,
++     attribute pn { xsd:ID }?,
 +     [ a:defaultValue = "" ] attribute name { text }?,
 +     [ a:defaultValue = "" ] attribute type { text }?,
++     [ a:defaultValue = "false" ]
++     attribute markers { "true" | "false" }?,
 +     attribute src { text }?,
 +     attribute originalSrc { text }?,
 +     text
@@ -9425,8 +9431,8 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     [ a:defaultValue = "0" ] attribute colspan { text }?,
-+     [ a:defaultValue = "0" ] attribute rowspan { text }?,
++     [ a:defaultValue = "1" ] attribute colspan { text }?,
++     [ a:defaultValue = "1" ] attribute rowspan { text }?,
 +     [ a:defaultValue = "left" ]
 +     attribute align { "left" | "center" | "right" }?,
 +     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
@@ -9450,8 +9456,8 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     [ a:defaultValue = "0" ] attribute colspan { text }?,
-+     [ a:defaultValue = "0" ] attribute rowspan { text }?,
++     [ a:defaultValue = "1" ] attribute colspan { text }?,
++     [ a:defaultValue = "1" ] attribute rowspan { text }?,
 +     [ a:defaultValue = "left" ]
 +     attribute align { "left" | "center" | "right" }?,
 +     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
@@ -9523,7 +9529,7 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     displayreference*,
-+     references,
++     references*,
 +     section*
 +   }
 + displayreference =
@@ -9539,7 +9545,7 @@ to the v3 schema.</t>
 -     reference+
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     attribute anchor { xsd:ID }?,
 +     attribute title { text }?,
 +     name?,
@@ -9722,6 +9728,9 @@ to the v3 schema.</t>
     <li>Add "section", "sectionFormat", and "relative" attributes to  &lt;<x:ref>xref</x:ref>&gt;.
        Allow formatting elements as well as text as children.</li>
     <li>Allow nested &lt;<x:ref>sub</x:ref>&gt; and &lt;<x:ref>sup</x:ref>&gt;.</li>
+    <li>Allow &lt;<x:ref>iref</x:ref>&gt; as child of &lt;<x:ref>table</x:ref>&gt;.</li>
+    <li>Change default "colspan" and "rowspan" from 0 to 1 in &lt;<x:ref>th</x:ref>&gt; and &lt;<x:ref>td</x:ref>&gt;.</li>
+    <li>In &lt;<x:ref>back</x:ref>&gt; allow zero or more &lt;<x:ref>references</x:ref>&gt; optional.</li>
   </ul>
 </section>
 </section>
