@@ -312,6 +312,7 @@
          </optional>
          <optional>
             <attribute name="anchor">
+               <a:annotation>Document-wide unique identifier for this comment.</a:annotation>
                <data type="ID"/>
             </attribute>
          </optional>
@@ -417,7 +418,7 @@
    </define>
    <define name="postal">
       <element name="postal">
-         <a:annotation>Contains optional child elements providing postal information. These elements will be displayed in an order that is specific to formatters. A postal address can contain only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, or only an ordered set of &lt;postalLine&gt; elements, but not both.</a:annotation>
+         <a:annotation>Contains optional child elements providing postal information. A postal address can contain only an ordered set of &lt;postalLine&gt; elements optionally followed by &lt;country&gt;, or only a set of &lt;street&gt;, &lt;city&gt;, &lt;region&gt;, &lt;code&gt;, and &lt;country&gt; elements, but not both.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -438,15 +439,20 @@
                   <ref name="street"/>
                </choice>
             </zeroOrMore>
-            <oneOrMore>
-               <ref name="postalLine"/>
-            </oneOrMore>
+            <group>
+               <oneOrMore>
+                  <ref name="postalLine"/>
+               </oneOrMore>
+               <optional>
+                  <ref name="country"/>
+               </optional>
+            </group>
          </choice>
       </element>
    </define>
    <define name="cityarea">
       <element name="cityarea">
-         <a:annotation>TBD</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -463,7 +469,7 @@
    </define>
    <define name="extaddr">
       <element name="extaddr">
-         <a:annotation>TBD</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -480,7 +486,7 @@
    </define>
    <define name="pobox">
       <element name="pobox">
-         <a:annotation>TBD</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -497,7 +503,7 @@
    </define>
    <define name="sortingcode">
       <element name="sortingcode">
-         <a:annotation>A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -514,7 +520,7 @@
    </define>
    <define name="street">
       <element name="street">
-         <a:annotation>Provides a street address.</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -531,7 +537,7 @@
    </define>
    <define name="city">
       <element name="city">
-         <a:annotation>Gives the city name in a postal address.</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -548,7 +554,7 @@
    </define>
    <define name="region">
       <element name="region">
-         <a:annotation>Provides the region name in a postal address.</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -565,7 +571,7 @@
    </define>
    <define name="code">
       <element name="code">
-         <a:annotation>Gives the postal region code.</a:annotation>
+         <a:annotation>Deprecated, use &lt;postalLine&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -994,6 +1000,11 @@
             </attribute>
          </optional>
          <optional>
+            <attribute name="indent" a:defaultValue="0">
+               <a:annotation>The indentation of the text element. A numeric value is interpreted as characters when rendering plain-text documents, and en-space units otherwise. Only non-negative integer indentation is allowed.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
             <attribute name="keepWithNext" a:defaultValue="false">
                <a:annotation>Acts as a hint to the output formatters that do pagination to do a best-effort attempt to keep the paragraph with the next element, whatever that happens to be. For example, the HTML output @media print CSS ("CSS" refers to Cascading Style Sheets) might translate this to page-break-after: avoid. For PDF, the paginator could attempt to keep the paragraph with the next element. Note: this attribute is strictly a hint and not always actionable.</a:annotation>
                <choice>
@@ -1016,6 +1027,7 @@
                <text/>
                <ref name="bcp14"/>
                <ref name="br"/>
+               <ref name="contact"/>
                <ref name="cref"/>
                <ref name="em"/>
                <ref name="eref"/>
@@ -1084,7 +1096,9 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <optional>
             <attribute name="cite">
@@ -1106,7 +1120,6 @@
                   <ref name="ol"/>
                   <ref name="sourcecode"/>
                   <ref name="t"/>
-                  <ref name="table"/>
                   <ref name="ul"/>
                </choice>
             </oneOrMore>
@@ -1156,7 +1169,9 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <oneOrMore>
             <ref name="t"/>
@@ -1203,7 +1218,18 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="indent" a:defaultValue="adaptive">
+               <a:annotation>The indentation of the list elements relative to the start of the list item number. With indent='adaptive', the widest list item number determines the indentation. A numeric value is interpreted as characters when rendering plain-text documents, and en-space units otherwise. Only non-negative integer indentation is allowed.</a:annotation>
+               <choice>
+                  <text/>
+                  <value>adaptive</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <oneOrMore>
             <ref name="li"/>
@@ -1243,8 +1269,24 @@
                </choice>
             </attribute>
             <optional>
-               <attribute name="pn"><?hidden-in-prose?></attribute>
+               <attribute name="bare" a:defaultValue="false">
+                  <a:annotation>Can only be used with empty="true" (see below). This attribute controls whether the blank bullet has an horizontal extension or not. With bare="false", the empty list bullet will still occupy the same space as for empty="false". With empty="true", there will be no bullet at all, i.e., the list items will have no indentation.</a:annotation>
+                  <choice>
+                     <value>true</value>
+                     <value>false</value>
+                  </choice>
+               </attribute>
             </optional>
+         </optional>
+         <optional>
+            <attribute name="indent" a:defaultValue="3">
+               <a:annotation>The indentation of the list elements relative to the start of the bullet or bullet text. A numeric value is interpreted as characters when rendering plain-text documents, and en-space units otherwise. Only non-negative integer indentation is allowed.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <oneOrMore>
             <ref name="li"/>
@@ -1267,7 +1309,12 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="derivedCounter"><?hidden-in-prose?></attribute>
+         </optional>
+         <optional>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <choice>
             <oneOrMore>
@@ -1280,6 +1327,7 @@
                   <ref name="ol"/>
                   <ref name="sourcecode"/>
                   <ref name="t"/>
+                  <ref name="table"/>
                   <ref name="ul"/>
                </choice>
             </oneOrMore>
@@ -1338,7 +1386,7 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="indent" a:defaultValue="0">
+            <attribute name="indent" a:defaultValue="3">
                <a:annotation>Indicates the indentation to be used for the rendering of the second and following lines of the item (the first line starts with the term, and is not indented). The indentation amount is interpreted as characters when rendering plain-text documents, and en-space units when rendering in formats that have richer typographic support such as HTML or PDF. One en-space is assumed to be the length of 0.5 em-space in CSS units.</a:annotation>
             </attribute>
          </optional>
@@ -1404,18 +1452,22 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <choice>
             <oneOrMore>
                <choice>
                   <ref name="artset"/>
                   <ref name="artwork"/>
+                  <ref name="aside"/>
                   <ref name="dl"/>
                   <ref name="figure"/>
                   <ref name="ol"/>
                   <ref name="sourcecode"/>
                   <ref name="t"/>
+                  <ref name="table"/>
                   <ref name="ul"/>
                </choice>
             </oneOrMore>
@@ -1476,12 +1528,45 @@
          <optional>
             <attribute name="derivedContent"><?hidden-in-prose?></attribute>
          </optional>
-         <text/>
+         <optional>
+            <attribute name="sectionFormat" a:defaultValue="of">
+               <a:annotation>This attribute tells formatters the desired format of the external reference. Formatters for document types that have linking capability should wrap each part of the displayed text in hyperlinks. If there is content in the &lt;xref&gt; element, that content will be used when rendering the internal link part of the &lt;xref&gt; rendering, but will not affect the external link.</a:annotation>
+               <choice>
+                  <value>of</value>
+                  <value>comma</value>
+                  <value>parens</value>
+                  <value>bare</value>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="section">
+               <a:annotation>Specifies a section of the target reference. If the reference is not an RFC or Internet-Draft in the v3 format, and no "relative" attribute has been provided, it is an error.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="relative">
+               <a:annotation>Specifies a relative reference from the URI in the target reference. This value must include whatever leading character is needed to create the relative reference; typically "#" for HTML documents.</a:annotation>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="derivedLink"><?hidden-in-prose?></attribute>
+         </optional>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="em"/>
+               <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
+               <ref name="tt"/>
+            </choice>
+         </zeroOrMore>
       </element>
    </define>
    <define name="relref">
       <element name="relref">
-         <a:annotation>Represents a link to a specific part of a document that appears in a &lt;reference&gt; element. Formatters that have links (such as HTML and PDF) render &lt;relref&gt; elements as external hyperlinks to the specified part of the reference, creating the link target by combining the base URI from the &lt;reference&gt; element with the "relative" attribute from this element. The "target" attribute is required, and it must be the anchor of a &lt;reference&gt; element.</a:annotation>
+         <a:annotation>Deprecated, use &lt;xref&gt; instead.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>

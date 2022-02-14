@@ -330,7 +330,26 @@ to display the comment.</li>
 <li>Add "keepWithNext" and "keepWithPrevious" to &lt;<x:ref>t</x:ref>&gt; as a hint to tools that
 do pagination that they should try to keep the paragraph with the next/previous element.</li>
 
+<li>Add "indent" to  &lt;<x:ref>t</x:ref>&gt; to allow for explicitly indented paragraphs.</li>
+
 </ul>
+
+</section>
+
+<section title="Elements and Attributes Deprecated from Original v3" anchor="deprecatedv3_features">
+   <t>These elements were present in the original vocabulary for v3 but have been deprecated.
+      They are likely to be removed from tools in the future.
+      Deprecated attributes are still listed in <xref target="elements"/>, and deprecated elements are listed in <xref target="deprecatedelements"/>.
+   </t>
+   <ul>
+      <li>Deprecate &lt;<x:ref>city</x:ref>&gt;,  &lt;<x:ref>cityarea</x:ref>&gt;,  &lt;<x:ref>code</x:ref>&gt;,
+	 &lt;<x:ref>extaddr</x:ref>&gt;, &lt;<x:ref>pobox</x:ref>&gt;,  &lt;<x:ref>region</x:ref>&gt;,
+	 &lt;<x:ref>sortingcode</x:ref>&gt;, and &lt;<x:ref>street</x:ref>&gt; in favor of &lt;<x:ref>postalLine</x:ref>&gt;.
+	 These elements require an unsupported external library to format.
+      </li>
+      <li>Deprecate &lt;<x:ref>relref</x:ref>&gt;, in favor of &lt;<x:ref>xref</x:ref>&gt;.
+      </li>
+   </ul>
 
 </section>
 
@@ -905,7 +924,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       This element is a container for content that is semantically less important or tangential
       to the content that surrounds it.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>) and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.aside.contents"><!--AG-->
       <xref format="none" target="grammar.aside">Content model</xref>:
     </t>
@@ -1180,9 +1199,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="t"/>
                <iref item="t element" subitem="inside blockquote"/>&lt;<x:ref>t</x:ref>&gt; elements (<xref target="element.t"/>)</li>
             <li><!--AG-->
-               <iref item="Elements" subitem="table"/>
-               <iref item="table element" subitem="inside blockquote"/>&lt;<x:ref>table</x:ref>&gt; elements (<xref target="element.table"/>)</li>
-            <li><!--AG-->
                <iref item="Elements" subitem="ul"/>
                <iref item="ul element" subitem="inside blockquote"/>&lt;<x:ref>ul</x:ref>&gt; elements (<xref target="element.ul"/>)</li>
          </ul>
@@ -1311,81 +1327,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t anchor="element.br.contents"><!--AG-->
       <xref format="none" target="grammar.br">Content model</xref>: this element does not have any contents.</t>
 </section>
-<!--city-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.city">
-   <name>
-      <tt>&lt;city&gt;</tt>
-   </name>
-   <x:anchor-alias value="city"/>
-   <iref item="Elements" subitem="city" primary="true"/>
-   <iref item="city element" primary="true"/>
-   <t>
-      Gives the city name in a postal address.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.city.contents"><!--AG-->
-      <xref format="none" target="grammar.city">Content model</xref>: only text content.</t>
-   <!--city/@ascii-->
-   <section anchor="element.city.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="city element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in city element"/>
-      <t>
-         The ASCII equivalent of the city name.
-      </t>
-   </section>
-</section>
-<!--cityarea-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.cityarea">
-   <name>
-      <tt>&lt;cityarea&gt;</tt>
-   </name>
-   <x:anchor-alias value="cityarea"/>
-   <iref item="Elements" subitem="cityarea" primary="true"/>
-   <iref item="cityarea element" primary="true"/>
-   <t>
-     TBD
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.cityarea.contents"><!--AG-->
-      <xref format="none" target="grammar.cityarea">Content model</xref>: only text content.</t>
-   <!--cityarea/@ascii-->
-   <section anchor="element.cityarea.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="cityarea element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in cityarea element"/>
-      <t>
-	      The ASCII equivalent of the city area name.
-      </t>
-   </section>
-</section>
-<!--code-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.code">
-   <name>
-      <tt>&lt;code&gt;</tt>
-   </name>
-   <x:anchor-alias value="code"/>
-   <iref item="Elements" subitem="code" primary="true"/>
-   <iref item="code element" primary="true"/>
-   <t>
-      Gives the postal region code.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.code.contents"><!--AG-->
-      <xref format="none" target="grammar.code">Content model</xref>: only text content.</t>
-   <!--code/@ascii-->
-   <section anchor="element.code.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="code element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in code element"/>
-      <t>
-         The ASCII equivalent of the postal code.
-      </t>
-   </section>
-</section>
 <!--contact-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.contact">
    <name>
@@ -1398,7 +1339,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       Provides information about a contact, such as a contributor to be
       mentioned in an "Acknowledgements" section.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>) and &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>).</t>
    <t anchor="element.contact.contents"><!--AG-->
       <xref format="none" target="grammar.contact">Content model</xref>:</t>
    <t><!--AG-->In this order:</t>
@@ -1416,8 +1357,8 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Attributes" subitem="anchor"/>
       <iref item="contact element" subitem="anchor attribute"/>
       <iref item="anchor attribute" subitem="in contact element"/>
-      <t><!--AG-->
-         <cref anchor="element.contact.attribute.anchor.missing">attribute description missing</cref>
+      <t>
+        Document-wide unique identifier for this comment.
       </t>
    </section>
    <!--contact/@asciiFullname-->
@@ -1710,6 +1651,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside dd"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="aside"/>
+               <iref item="aside element" subitem="inside dd"/>&lt;<x:ref>aside</x:ref>&gt; elements (<xref target="element.aside"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="dl"/>
                <iref item="dl element" subitem="inside dd"/>&lt;<x:ref>dl</x:ref>&gt; elements (<xref target="element.dl"/>)</li>
             <li><!--AG-->
@@ -1724,6 +1668,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
             <li><!--AG-->
                <iref item="Elements" subitem="t"/>
                <iref item="t element" subitem="inside dd"/>&lt;<x:ref>t</x:ref>&gt; elements (<xref target="element.t"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="table"/>
+               <iref item="table element" subitem="inside dd"/>&lt;<x:ref>table</x:ref>&gt; elements (<xref target="element.table"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="ul"/>
                <iref item="ul element" subitem="inside dd"/>&lt;<x:ref>ul</x:ref>&gt; elements (<xref target="element.ul"/>)</li>
@@ -1890,6 +1837,10 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <iref item="Attributes" subitem="indent"/>
       <iref item="dl element" subitem="indent attribute"/>
       <iref item="indent attribute" subitem="in dl element"/>
+      <dl spacing="compact">
+         <dt>Default value:</dt>
+         <dd>3</dd>
+      </dl>
       <t>
          Indicates the indentation to be used for the rendering of the second and
          following lines of the item (the first line starts with the term, and is not indented).
@@ -2012,7 +1963,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This element can be combined with other character formatting elements, and the
         formatting will be additive.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>xref</x:ref>&gt; (<xref target="element.xref"/>).</t>
    <t anchor="element.em.contents"><!--AG-->
       <xref format="none" target="grammar.em">Content model</xref>:
     </t>
@@ -2161,31 +2112,6 @@ in this interesting report&lt;/a&gt;.
          URI of the link target <xref target="RFC3986"/>.
          This must begin with a scheme name (such as "https://") and thus not be relative to the URL of the current document.
          </t>
-   </section>
-</section>
-<!--extaddr-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.extaddr">
-   <name>
-      <tt>&lt;extaddr&gt;</tt>
-   </name>
-   <x:anchor-alias value="extaddr"/>
-   <iref item="Elements" subitem="extaddr" primary="true"/>
-   <iref item="extaddr element" primary="true"/>
-   <t>
-     TBD 
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.extaddr.contents"><!--AG-->
-      <xref format="none" target="grammar.extaddr">Content model</xref>: only text content.</t>
-   <!--extaddr/@ascii-->
-   <section anchor="element.extaddr.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="extaddr element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in extaddr element"/>
-      <t>
-         ASCII equivalent for extaddr.
-      </t>
    </section>
 </section>
 <!--figure-->
@@ -2521,6 +2447,9 @@ in this interesting report&lt;/a&gt;.
                <iref item="Elements" subitem="t"/>
                <iref item="t element" subitem="inside li"/>&lt;<x:ref>t</x:ref>&gt; elements (<xref target="element.t"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="table"/>
+               <iref item="table element" subitem="inside li"/>&lt;<x:ref>table</x:ref>&gt; elements (<xref target="element.table"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="ul"/>
                <iref item="ul element" subitem="inside li"/>&lt;<x:ref>ul</x:ref>&gt; elements (<xref target="element.ul"/>)</li>
          </ul>
@@ -2843,6 +2772,28 @@ in this interesting report&lt;/a&gt;.
          numbering is reset to the given start value.
       </t>
    </section>
+   <!--ol/@indent-->
+   <section anchor="element.ol.attribute.indent" toc="exclude">
+      <name>"indent" Attribute</name>
+      <iref item="Attributes" subitem="indent"/>
+      <iref item="ol element" subitem="indent attribute"/>
+      <iref item="indent attribute" subitem="in ol element"/>
+      <t>
+	 The indentation of the list elements relative to the start of the list item number.
+	 With indent='adaptive', the widest list item number determines the indentation.
+	 A numeric value is interpreted as characters when rendering plain-text documents, and en-space units otherwise.
+	 Only non-negative integer indentation is allowed.
+      </t>
+      <t>Allowed values:</t>
+      <ul>
+         <li>text</li>
+         <li>"adaptive" (default)</li>
+      </ul>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"adaptive" (default)</li>
+      </ul>
+   </section>
    <!--ol/@spacing-->
    <section anchor="element.ol.attribute.spacing" toc="exclude">
       <name>"spacing" Attribute</name>
@@ -3021,31 +2972,6 @@ in this interesting report&lt;/a&gt;.
    <t anchor="element.phone.contents"><!--AG-->
       <xref format="none" target="grammar.phone">Content model</xref>: only text content.</t>
 </section>
-<!--pobox-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.pobox">
-   <name>
-      <tt>&lt;pobox&gt;</tt>
-   </name>
-   <x:anchor-alias value="pobox"/>
-   <iref item="Elements" subitem="pobox" primary="true"/>
-   <iref item="pobox element" primary="true"/>
-   <t>
-      TBD
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.pobox.contents"><!--AG-->
-      <xref format="none" target="grammar.pobox">Content model</xref>: only text content.</t>
-   <!--pobox/@ascii-->
-   <section anchor="element.pobox.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="pobox element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in pobox element"/>
-      <t>
-	      ASCII equivalent for pobox. 
-      </t>
-   </section>
-</section>
 <!--postal-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.postal">
    <name>
@@ -3055,14 +2981,14 @@ in this interesting report&lt;/a&gt;.
    <iref item="Elements" subitem="postal" primary="true"/>
    <iref item="postal element" primary="true"/>
    <t>
-      Contains optional child elements providing postal information. These elements will be
-      displayed in an order that is specific to formatters.
-      A postal address can contain only a set of &lt;<x:ref>street</x:ref>&gt;, &lt;<x:ref>city</x:ref>&gt;,
+      Contains optional child elements providing postal information.
+      A postal address can contain only an ordered set of &lt;<x:ref>postalLine</x:ref>&gt; elements optionally followed by &lt;<x:ref>country</x:ref>&gt;,
+      or only a set of &lt;<x:ref>street</x:ref>&gt;, &lt;<x:ref>city</x:ref>&gt;,
       &lt;<x:ref>region</x:ref>&gt;, &lt;<x:ref>code</x:ref>&gt;, and &lt;<x:ref>country</x:ref>&gt;
-      elements, or only an ordered set of &lt;<x:ref>postalLine</x:ref>&gt; elements, but not both.
+      elements, but not both.
    </t>
    <t>
-      The sub-elements other than &lt;<x:ref>postalLine</x:ref>&gt; have been deprecated and will likely be removed in a future version.
+      The sub-elements other than &lt;<x:ref>postalLine</x:ref>&gt; and &lt;<x:ref>country</x:ref>&gt; have been deprecated and will likely be removed in a future version.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>address</x:ref>&gt; (<xref target="element.address"/>).</t>
    <t anchor="element.postal.contents"><!--AG-->
@@ -3108,6 +3034,9 @@ in this interesting report&lt;/a&gt;.
       <li><!--AG-->
          <iref item="Elements" subitem="postalLine"/>
          <iref item="postalLine element" subitem="inside postal"/>One or more &lt;<x:ref>postalLine</x:ref>&gt; elements (<xref target="element.postalLine"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="country"/>
+         <iref item="country element" subitem="inside postal"/>One optional &lt;<x:ref>country</x:ref>&gt; element (<xref target="element.country"/>)</li>
    </ul>
 </section>
 <!--postalLine-->
@@ -3388,243 +3317,6 @@ in this interesting report&lt;/a&gt;.
       <iref item="title attribute" subitem="in references element"/>
       <t>
          Deprecated. Use &lt;<x:ref>name</x:ref>&gt; instead.
-      </t>
-   </section>
-</section>
-<!--region-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.region">
-   <name>
-      <tt>&lt;region&gt;</tt>
-   </name>
-   <x:anchor-alias value="region"/>
-   <iref item="Elements" subitem="region" primary="true"/>
-   <iref item="region element" primary="true"/>
-   <t>
-      Provides the region name in a postal address.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.region.contents"><!--AG-->
-      <xref format="none" target="grammar.region">Content model</xref>: only text content.</t>
-   <!--region/@ascii-->
-   <section anchor="element.region.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="region element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in region element"/>
-      <t>
-         The ASCII equivalent of the region name.
-      </t>
-   </section>
-</section>
-<!--relref-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.relref">
-   <name>
-      <tt>&lt;relref&gt;</tt>
-   </name>
-   <x:anchor-alias value="relref"/>
-   <iref item="Elements" subitem="relref" primary="true"/>
-   <iref item="relref element" primary="true"/>
-   <t>
-      Represents a link to a specific part of a document that appears in a &lt;<x:ref>reference</x:ref>&gt; element.
-      Formatters that have links (such as HTML and PDF) render &lt;relref&gt; elements as external hyperlinks
-      to the specified part of the reference, creating the link target by combining the base URI from the
-      &lt;<x:ref>reference</x:ref>&gt; element with the "relative" attribute from this element.
-      The "target" attribute is required, and it must be the anchor of a &lt;<x:ref>reference</x:ref>&gt; element.
-   </t>
-   <t>   
-      The "section" attribute is required, and the "relative" attribute is optional.
-      If the reference is not an RFC or Internet-Draft that is in the v3 format, the element needs to have a "relative" attribute;
-      in this case, the value of the "section" attribute is ignored.
-   </t>
-   <t>
-      An example of the &lt;relref&gt; element with text content might be:
-   </t>
-   <artwork>
-See
-&lt;relref section="2.3" target="RFC9999" displayFormat="bare"&gt;
-the protocol overview&lt;/relref&gt;
-for more information.
-</artwork>
-   <t>
-       An HTML formatter might generate:
-   </t>
-   <artwork>
-See 
-&lt;a href="http://www.rfc-editor.org/rfc/rfc9999.html#s-2.3"&gt;
-the protocol overview&lt;/a&gt;
-for more information.
-</artwork>
-   <t>
-   Note that the URL in the above example might be different when the RFC Editor deploys the v3 format.
-   </t>
-   <t/>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
-   <t anchor="element.relref.contents"><!--AG-->
-      <xref format="none" target="grammar.relref">Content model</xref>: only text content.</t>
-   <!--relref/@displayFormat-->
-   <section anchor="element.relref.attribute.displayFormat" toc="exclude">
-      <name>"displayFormat" Attribute</name>
-      <iref item="Attributes" subitem="displayFormat"/>
-      <iref item="relref element" subitem="displayFormat attribute"/>
-      <iref item="displayFormat attribute" subitem="in relref element"/>
-      <t>
-        This attribute is used to signal formatters what the desired format of the relative reference should be.
-        Formatters for document types that have linking capability should wrap each part of the displayed text in hyperlinks.
-        If there is content in the &lt;relref&gt; element, formatters will ignore the value of this attribute.
-      </t>
-      <dl newline="true">
-         <dt>"of"</dt>
-         <dd>
-            <t>
-            A formatter should display the relative reference as the word "Section" followed by a space, the contents of the "section" attribute
-            followed by a space, the word "of", another space, and the value from the "target" attribute enclosed in square brackets.
-          </t>
-            <t>
-            For example, with an input of:
-          </t>
-            <artwork>
-See
-&lt;relref section="2.3" target="RFC9999" displayFormat="of"/&gt;
-for an overview.
-</artwork>
-            <t>
-            An HTML formatter might generate:
-          </t>
-            <artwork>
-See
-&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
-Section 2.3&lt;/a&gt; of
-[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
-for an overview.
-</artwork>
-            <t>
-            Note that "displayFormat='of'" is the default for &lt;relref&gt;, so it does not need to be given in
-            a &lt;relref&gt; element if that format is desired.
-          </t>
-         </dd>
-         <dt>"comma"</dt>
-         <dd>
-            <t>
-            A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
-            a comma, a space, the word "Section" followed by a space, and the "section" attribute.
-          </t>
-            <t>
-            For example, with an input of:
-          </t>
-            <artwork>
-See
-&lt;relref section="2.3" target="RFC9999" displayFormat="comma"/&gt;,
-for an overview.
-</artwork>
-            <t>
-             An HTML formatter might generate:
-          </t>
-            <artwork>
-See
-[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;], 
-&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
-Section 2.3&lt;/a&gt;, for an overview.
-</artwork>
-         </dd>
-         <dt>"parens"</dt>
-         <dd>
-            <t>
-            A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
-            a space, a left parenthesis, the word "Section" followed by a space, the "section" attribute, and a right parenthesis.
-          </t>
-            <t>
-            For example, with an input of:
-          </t>
-            <artwork>
-See
-&lt;relref section="2.3" target="RFC9999" displayFormat="parens"/&gt;
-for an overview.
-</artwork>
-            <t>
-             An HTML formatter might generate:
-          </t>
-            <artwork>
-See
-[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
-(&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt; 
-Section 2.3&lt;/a&gt;)
-for an overview.
-</artwork>
-         </dd>
-         <dt>"bare"</dt>
-         <dd>
-            <t>
-            A formatter should display the relative reference as the contents of the "section" attribute
-            and nothing else. This is useful when there are multiple relative references to a single base reference.
-          </t>
-            <t>
-            For example:
-          </t>
-            <artwork>
-See Sections
-&lt;relref section="2.3" target="RFC9999" displayFormat="bare"/&gt;
-and
-&lt;relref section="2.4" target="RFC9999" displayFormat="of"/&gt;
-for an overview.
-</artwork>
-            <t>
-             An HTML formatter might generate:
-          </t>
-            <artwork>
-See Sections
-&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
-2.3&lt;/a&gt;
-and
-&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.4"&gt;
-Section 2.4&lt;/a&gt; of
-[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
-for an overview.
-</artwork>
-         </dd>
-      </dl>
-      <t><!--AG-->Allowed values:</t>
-      <ul><!--AG-->
-         <li>"of" (default)</li>
-         <li>"comma"</li>
-         <li>"parens"</li>
-         <li>"bare"</li>
-      </ul>
-   </section>
-   <!--relref/@relative-->
-   <section anchor="element.relref.attribute.relative" toc="exclude">
-      <name>"relative" Attribute</name>
-      <iref item="Attributes" subitem="relative"/>
-      <iref item="relref element" subitem="relative attribute"/>
-      <iref item="relative attribute" subitem="in relref element"/>
-      <t>
-         Specifies a relative reference from the URI in the target reference.
-         This value must include whatever leading character is needed to create
-         the relative reference; typically, this is "#" for HTML documents.
-      </t>
-   </section>
-   <!--relref/@section-->
-   <section anchor="element.relref.attribute.section" toc="exclude">
-      <name>"section" Attribute <em> (Mandatory)</em>
-      </name>
-      <iref item="Attributes" subitem="section"/>
-      <iref item="relref element" subitem="section attribute"/>
-      <iref item="section attribute" subitem="in relref element"/>
-      <t>
-         Specifies a section of the target reference.
-         If the reference is not an RFC or Internet-Draft in the v3 format, it is an error.
-      </t>
-   </section>
-   <!--relref/@target-->
-   <section anchor="element.relref.attribute.target" toc="exclude">
-      <name>"target" Attribute <em> (Mandatory)</em>
-      </name>
-      <iref item="Attributes" subitem="target"/>
-      <iref item="relref element" subitem="target attribute"/>
-      <iref item="target attribute" subitem="in relref element"/>
-      <t>
-        The anchor of the reference for this element. If this value is not an anchor to a
-        &lt;<x:ref>reference</x:ref>&gt; or &lt;<x:ref>referencegroup</x:ref>&gt; element, it is an error.
-        If the reference at the target has no URI, it is an error.
       </t>
    </section>
 </section>
@@ -4204,31 +3896,6 @@ for an overview.
       </t>
    </section>
 </section>
-<!--sortingcode-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sortingcode">
-   <name>
-      <tt>&lt;sortingcode&gt;</tt>
-   </name>
-   <x:anchor-alias value="sortingcode"/>
-   <iref item="Elements" subitem="sortingcode" primary="true"/>
-   <iref item="sortingcode element" primary="true"/>
-   <t>
-     A sorting code is related to postal codes in that it is used in addresses to allow sorting, for example to route mail to a certain postal centre or to distinguish streets with the same name in two different areas of the same settlement.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.sortingcode.contents"><!--AG-->
-      <xref format="none" target="grammar.sortingcode">Content model</xref>: only text content.</t>
-   <!--sortingcode/@ascii-->
-   <section anchor="element.sortingcode.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="sortingcode element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in sortingcode element"/>
-      <t>
-	      ASCII equivalent for sortingcode.
-      </t>
-   </section>
-</section>
 <!--sourcecode-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.sourcecode">
    <name>
@@ -4389,31 +4056,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
     </cref>
    </t>
 </section>
-<!--street-->
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.street">
-   <name>
-      <tt>&lt;street&gt;</tt>
-   </name>
-   <x:anchor-alias value="street"/>
-   <iref item="Elements" subitem="street" primary="true"/>
-   <iref item="street element" primary="true"/>
-   <t>
-      Provides a street address.
-   </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
-   <t anchor="element.street.contents"><!--AG-->
-      <xref format="none" target="grammar.street">Content model</xref>: only text content.</t>
-   <!--street/@ascii-->
-   <section anchor="element.street.attribute.ascii" toc="exclude">
-      <name>"ascii" Attribute</name>
-      <iref item="Attributes" subitem="ascii"/>
-      <iref item="street element" subitem="ascii attribute"/>
-      <iref item="ascii attribute" subitem="in street element"/>
-      <t>
-         The ASCII equivalent of the street address.
-      </t>
-   </section>
-</section>
 <!--strong-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext" anchor="element.strong">
    <name>
@@ -4427,7 +4069,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This element can be combined with other character formatting elements, and the
         formatting will be additive.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>xref</x:ref>&gt; (<xref target="element.xref"/>).</t>
    <t anchor="element.strong.contents"><!--AG-->
       <xref format="none" target="grammar.strong">Content model</xref>:
     </t>
@@ -4482,7 +4124,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This element can be combined with other character formatting elements, and the
         formatting will be additive.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>xref</x:ref>&gt; (<xref target="element.xref"/>).</t>
    <t anchor="element.sub.contents"><!--AG-->
       <xref format="none" target="grammar.sub">Content model</xref>:
     </t>
@@ -4531,7 +4173,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This element can be combined with other character formatting elements, and the
         formatting will be additive.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>xref</x:ref>&gt; (<xref target="element.xref"/>).</t>
    <t anchor="element.sup.contents"><!--AG-->
       <xref format="none" target="grammar.sup">Content model</xref>:
     </t>
@@ -4591,6 +4233,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       <li><!--AG-->
          <iref item="Elements" subitem="br"/>
          <iref item="br element" subitem="inside t"/>&lt;<x:ref>br</x:ref>&gt; elements (<xref target="element.br"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="contact"/>
+         <iref item="contact element" subitem="inside t"/>&lt;<x:ref>contact</x:ref>&gt; elements (<xref target="element.contact"/>)</li>
       <li><!--AG-->
          <iref item="Elements" subitem="cref"/>
          <iref item="cref element" subitem="inside t"/>&lt;<x:ref>cref</x:ref>&gt; elements (<xref target="element.cref"/>)</li>
@@ -4654,6 +4299,18 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          Deprecated. Instead, use &lt;<x:ref>dd</x:ref>&gt; inside of a definition list (&lt;<x:ref>dl</x:ref>&gt;).
       </t>
    </section>
+   <!--t/@indent-->
+   <section anchor="element.t.attribute.indent" toc="exclude">
+      <name>"indent" Attribute</name>
+      <iref item="Attributes" subitem="indent"/>
+      <iref item="t element" subitem="indent attribute"/>
+      <iref item="indent attribute" subitem="in t element"/>
+      <t>
+	 The indentation of the text element.
+	 A numeric value is interpreted as characters when rendering plain-text documents, and en-space units otherwise.
+	 Only non-negative integer indentation is allowed.
+      </t>
+   </section>
    <!--t/@keepWithNext-->
    <section anchor="element.t.attribute.keepWithNext" toc="exclude">
       <name>"keepWithNext" Attribute</name>
@@ -4711,7 +4368,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       to contain the rows of the table's footer. If the XML is converted to a representation that has page
       breaks (such as PDFs or printed HTML), the header and footer are meant to appear on each page.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.table.contents"><!--AG-->
       <xref format="none" target="grammar.table">Content model</xref>:</t>
    <t><!--AG-->In this order:</t>
@@ -5259,7 +4916,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         This element can be combined with other character formatting elements, and the
         formatting will be additive.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), and &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>refcontent</x:ref>&gt; (<xref target="element.refcontent"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>xref</x:ref>&gt; (<xref target="element.xref"/>).</t>
    <t anchor="element.tt.contents"><!--AG-->
       <xref format="none" target="grammar.tt">Content model</xref>:
     </t>
@@ -5425,6 +5082,24 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
         Document-wide unique identifier for the list.
       </t>
    </section>
+   <!--ul/@bare-->
+   <section anchor="element.ul.attribute.bare" toc="exclude">
+      <name>"bare" Attribute</name>
+      <iref item="Attributes" subitem="bare"/>
+      <iref item="ul element" subitem="bare attribute"/>
+      <iref item="bare attribute" subitem="in ul element"/>
+      <t>
+	 Can only be used with empty="true" (see below).
+	 This attribute controls whether the blank bullet has an horizontal extension or not.
+	 With bare="false", the empty list bullet will still occupy the same space as for empty="false".
+	 With empty="true", there will be no bullet at all, i.e., the list items will have no indentation.
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"true"</li>
+         <li>"false" (default)</li>
+      </ul>
+   </section>
    <!--ul/@empty-->
    <section anchor="element.ul.attribute.empty" toc="exclude">
       <name>"empty" Attribute</name>
@@ -5439,6 +5114,18 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <li>"false" (default)</li>
          <li>"true"</li>
       </ul>
+   </section>
+   <!--ul/@indent-->
+   <section anchor="element.ul.attribute.indent" toc="exclude">
+      <name>"indent" Attribute</name>
+      <iref item="Attributes" subitem="indent"/>
+      <iref item="ul element" subitem="indent attribute"/>
+      <iref item="indent attribute" subitem="in ul element"/>
+      <t>
+	 The indentation of the list elements relative to the start of the bullet or bullet text.
+	 A numeric value is interpreted as characters when rendering plain-text documents, and en-space units otherwise.
+	 Only non-negative integer indentation is allowed.
+      </t>
    </section>
    <!--ul/@spacing-->
    <section anchor="element.ul.attribute.spacing" toc="exclude">
@@ -5516,7 +5203,27 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>c</x:ref>&gt; (<xref target="element.c"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>postamble</x:ref>&gt; (<xref target="element.postamble"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>), and &lt;<x:ref>ttcol</x:ref>&gt; (<xref target="element.ttcol"/>).</t>
    <t anchor="element.xref.contents"><!--AG-->
-      <xref format="none" target="grammar.xref">Content model</xref>: only text content.</t>
+      <xref format="none" target="grammar.xref">Content model</xref>:
+    </t>
+   <t><!--AG-->In any order:</t>
+   <ul><!--AG-->
+      <li><!--AG-->Text</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="em"/>
+         <iref item="em element" subitem="inside xref"/>&lt;<x:ref>em</x:ref>&gt; elements (<xref target="element.em"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="strong"/>
+         <iref item="strong element" subitem="inside xref"/>&lt;<x:ref>strong</x:ref>&gt; elements (<xref target="element.strong"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="sub"/>
+         <iref item="sub element" subitem="inside xref"/>&lt;<x:ref>sub</x:ref>&gt; elements (<xref target="element.sub"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="sup"/>
+         <iref item="sup element" subitem="inside xref"/>&lt;<x:ref>sup</x:ref>&gt; elements (<xref target="element.sup"/>)</li>
+      <li><!--AG-->
+         <iref item="Elements" subitem="tt"/>
+         <iref item="tt element" subitem="inside xref"/>&lt;<x:ref>tt</x:ref>&gt; elements (<xref target="element.tt"/>)</li>
+   </ul>
    <!--xref/@format-->
    <section anchor="element.xref.attribute.format" toc="exclude">
       <name>"format" Attribute</name>
@@ -5638,6 +5345,94 @@ See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
          <li>"false" (default)</li>
       </ul>
    </section>
+   <!--xref/@relative-->
+   <section anchor="element.xref.attribute.relative" toc="exclude">
+      <name>"relative" Attribute</name>
+      <iref item="Attributes" subitem="relative"/>
+      <iref item="xref element" subitem="relative attribute"/>
+      <iref item="relative attribute" subitem="in xref element"/>
+      <t>
+	 Specifies a relative reference from the URI in the target reference.
+	 This value must include whatever leading character is needed to create the relative reference;
+	 typically "#" for HTML documents.
+      </t>
+   </section>
+   <!--xref/@section-->
+   <section anchor="element.xref.attribute.section" toc="exclude">
+      <name>"section" Attribute</name>
+      <iref item="Attributes" subitem="section"/>
+      <iref item="xref element" subitem="section attribute"/>
+      <iref item="section attribute" subitem="in xref element"/>
+      <t>
+	 Specifies a section of the target reference.
+	 If the reference is not an RFC or Internet-Draft in the v3 format,
+	 and no "relative" attribute has been provided, it is an error.
+      </t>
+   </section>
+   <!--xref/@sectionFormat-->
+   <section anchor="element.xref.attribute.sectionFormat" toc="exclude">
+      <name>"sectionFormat" Attribute</name>
+      <iref item="Attributes" subitem="sectionFormat"/>
+      <iref item="xref element" subitem="sectionFormat attribute"/>
+      <iref item="sectionFormat attribute" subitem="in xref element"/>
+      <t>
+	 This attribute tells formatters the desired
+	 format of the external reference.
+	 Formatters for 	 document types that have linking capability should wrap each
+	 part of the displayed text in hyperlinks. If there is content
+	 in the &lt;xref&gt; element, that content will be used when
+	 rendering the internal link part of the &lt;xref&gt; rendering, but
+	 will not affect the external link.
+      </t>
+      <dl newline="true">
+         <dt>"of"</dt>
+         <dd>
+	    The &lt;xref&gt; element will be displayed as an external link followed by an internal link,
+	    separated by the word 'of'.
+	    The external link will have as its display text the word "Section" followed by a space and the
+	    contents of the "section" attribute.
+	    This will be followed by a space, the word "of", another space,
+	    and an internal link to the relevant &lt;reference&gt; entry, formatted based on the "format" attribute.
+	 </dd>
+	 <dt>"comma"</dt>
+	 <dd>
+	    The &lt;xref&gt; element will be displayed as an internal link followed by an external link,
+	    separated by a comma.
+	    The external link will have as its display text the word "Section" followed by a space
+	    and the contents of the "section" attribute.
+	    The internal link will point to the relevant &lt;reference&gt; entry,
+	    and will be rendered according to the "format" attribute.
+	 </dd>
+	 <dt>"parens"</dt>
+	 <dd>
+	    The &lt;xref&gt; element will be displayed as an internal link followed by an external link within parentheses.
+	    The external link will have as its display text the word "Section" followed by a space
+	    and the contents of the "section" attribute.
+	    The internal link will point to the relevant &lt;reference&gt; entry,
+	    and will be rendered according to the "format" attribute.
+	 </dd>
+	 <dt>"bare"</dt>
+	 <dd>
+	    <t>The &lt;xref&gt; element will be displayed as an external link,
+	    possibly followed by the same link within parentheses.
+	    The first external link will have as its display text only contents of the "section" attribute;
+	    the second link will be present within parentheses only if the &lt;xref&gt; element has any text content,
+	    and will then have the text content as its display text.
+	    </t>
+	    <t>
+	       This value for the "sectionFormat" attribute is useful when it is desired to express
+      for instance "Sections 3.2 and 3.3 of [RFC7997]".
+	    </t>
+	 </dd>
+      </dl>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"of" (default)</li>
+         <li>"comma"</li>
+         <li>"parens"</li>
+         <li>"bare"</li>
+      </ul>
+   </section>
    <!--xref/@target-->
    <section anchor="element.xref.attribute.target" toc="exclude">
       <name>"target" Attribute <em> (Mandatory)</em>
@@ -5655,9 +5450,9 @@ See &lt;a href="#overview"&gt;section above&lt;/a&gt; for an overview.
 <?ENDINC xml2rfcv3-spec.xml ?>
 </section>
 
-<section xmlns:x="http://purl.org/net/xml2rfc/ext" title="Elements from v2 That Have Been Deprecated" anchor="deprecatedelements">
+<section xmlns:x="http://purl.org/net/xml2rfc/ext" title="Elements from v2 and original v3 That Have Been Deprecated" anchor="deprecatedelements">
 
-<t>This section lists the elements from v2 that have been deprecated. Note that some elements in
+<t>This section lists the elements from v2 and the original version of v3 that have been deprecated. Note that some elements in
 v3 have attributes from v2 that are deprecated; those are not listed here.</t>
 
 <?BEGININC xml2rfcv3-spec-deprecated.xml ?>
@@ -5695,6 +5490,106 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <iref item="Elements" subitem="xref"/>
          <iref item="xref element" subitem="inside c"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
+</section>
+<!--city-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.city"
+         title="&lt;city&gt;">
+   <x:anchor-alias value="city"/>
+   <iref item="Elements" subitem="city" primary="true"/>
+   <iref item="city element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.city.contents"><!--AG-->
+      <xref format="none" target="grammar.city">Content model</xref>: only text content.</t>
+   <!--city/@ascii-->
+   <section anchor="element.city.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="city element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in city element"/>
+      <t>
+         The ASCII equivalent of the city name.
+      </t>
+   </section>
+</section>
+<!--cityarea-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.cityarea"
+         title="&lt;cityarea&gt;">
+   <x:anchor-alias value="cityarea"/>
+   <iref item="Elements" subitem="cityarea" primary="true"/>
+   <iref item="cityarea element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.cityarea.contents"><!--AG-->
+      <xref format="none" target="grammar.cityarea">Content model</xref>: only text content.</t>
+   <!--cityarea/@ascii-->
+   <section anchor="element.cityarea.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="cityarea element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in cityarea element"/>
+      <t>
+	      The ASCII equivalent of the city area name.
+      </t>
+   </section>
+</section>
+<!--code-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.code"
+         title="&lt;code&gt;">
+   <x:anchor-alias value="code"/>
+   <iref item="Elements" subitem="code" primary="true"/>
+   <iref item="code element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.code.contents"><!--AG-->
+      <xref format="none" target="grammar.code">Content model</xref>: only text content.</t>
+   <!--code/@ascii-->
+   <section anchor="element.code.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="code element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in code element"/>
+      <t>
+         The ASCII equivalent of the postal code.
+      </t>
+   </section>
+</section>
+<!--extaddr-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.extaddr"
+         title="&lt;extaddr&gt;">
+   <x:anchor-alias value="extaddr"/>
+   <iref item="Elements" subitem="extaddr" primary="true"/>
+   <iref item="extaddr element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.extaddr.contents"><!--AG-->
+      <xref format="none" target="grammar.extaddr">Content model</xref>: only text content.</t>
+   <!--extaddr/@ascii-->
+   <section anchor="element.extaddr.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="extaddr element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in extaddr element"/>
+      <t>
+         ASCII equivalent for extaddr.
+      </t>
+   </section>
 </section>
 <!--facsimile-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
@@ -5812,6 +5707,31 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       </t>
    </section>
 </section>
+<!--pobox-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.pobox"
+         title="&lt;pobox&gt;">
+   <x:anchor-alias value="pobox"/>
+   <iref item="Elements" subitem="pobox" primary="true"/>
+   <iref item="pobox element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.pobox.contents"><!--AG-->
+      <xref format="none" target="grammar.pobox">Content model</xref>: only text content.</t>
+   <!--pobox/@ascii-->
+   <section anchor="element.pobox.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="pobox element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in pobox element"/>
+      <t>
+	      ASCII equivalent for pobox. 
+      </t>
+   </section>
+</section>
 <!--postamble-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
          anchor="element.postamble"
@@ -5904,6 +5824,272 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <iref item="xref element" subitem="inside preamble"/>&lt;<x:ref>xref</x:ref>&gt; elements (<xref target="element.xref"/>)</li>
    </ul>
 </section>
+<!--region-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.region"
+         title="&lt;region&gt;">
+   <x:anchor-alias value="region"/>
+   <iref item="Elements" subitem="region" primary="true"/>
+   <iref item="region element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.region.contents"><!--AG-->
+      <xref format="none" target="grammar.region">Content model</xref>: only text content.</t>
+   <!--region/@ascii-->
+   <section anchor="element.region.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="region element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in region element"/>
+      <t>
+         The ASCII equivalent of the region name.
+      </t>
+   </section>
+</section>
+<!--relref-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.relref"
+         title="&lt;relref&gt;">
+   <x:anchor-alias value="relref"/>
+   <iref item="Elements" subitem="relref" primary="true"/>
+   <iref item="relref element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>xref</x:ref>&gt; instead.
+   </t>
+   <t>
+      Represents a link to a specific part of a document that appears in a &lt;<x:ref>reference</x:ref>&gt; element.
+      Formatters that have links (such as HTML and PDF) render &lt;relref&gt; elements as external hyperlinks
+      to the specified part of the reference, creating the link target by combining the base URI from the
+      &lt;<x:ref>reference</x:ref>&gt; element with the "relative" attribute from this element.
+      The "target" attribute is required, and it must be the anchor of a &lt;<x:ref>reference</x:ref>&gt; element.
+   </t>
+   <t>   
+      The "section" attribute is required, and the "relative" attribute is optional.
+      If the reference is not an RFC or Internet-Draft that is in the v3 format, the element needs to have a "relative" attribute;
+      in this case, the value of the "section" attribute is ignored.
+   </t>
+   <t>
+      An example of the &lt;relref&gt; element with text content might be:
+   </t>
+   <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="bare"&gt;
+the protocol overview&lt;/relref&gt;
+for more information.
+</artwork>
+   <t>
+       An HTML formatter might generate:
+   </t>
+   <artwork>
+See 
+&lt;a href="http://www.rfc-editor.org/rfc/rfc9999.html#s-2.3"&gt;
+the protocol overview&lt;/a&gt;
+for more information.
+</artwork>
+   <t>
+   Note that the URL in the above example might be different when the RFC Editor deploys the v3 format.
+   </t>
+   <t/>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>annotation</x:ref>&gt; (<xref target="element.annotation"/>), &lt;<x:ref>blockquote</x:ref>&gt; (<xref target="element.blockquote"/>), &lt;<x:ref>cref</x:ref>&gt; (<xref target="element.cref"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>dt</x:ref>&gt; (<xref target="element.dt"/>), &lt;<x:ref>em</x:ref>&gt; (<xref target="element.em"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), &lt;<x:ref>name</x:ref>&gt; (<xref target="element.name"/>), &lt;<x:ref>preamble</x:ref>&gt; (<xref target="element.preamble"/>), &lt;<x:ref>strong</x:ref>&gt; (<xref target="element.strong"/>), &lt;<x:ref>sub</x:ref>&gt; (<xref target="element.sub"/>), &lt;<x:ref>sup</x:ref>&gt; (<xref target="element.sup"/>), &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>), &lt;<x:ref>td</x:ref>&gt; (<xref target="element.td"/>), &lt;<x:ref>th</x:ref>&gt; (<xref target="element.th"/>), and &lt;<x:ref>tt</x:ref>&gt; (<xref target="element.tt"/>).</t>
+   <t anchor="element.relref.contents"><!--AG-->
+      <xref format="none" target="grammar.relref">Content model</xref>: only text content.</t>
+   <!--relref/@displayFormat-->
+   <section anchor="element.relref.attribute.displayFormat"
+            toc="exclude"
+            title="&#34;displayFormat&#34; attribute">
+      <iref item="Attributes" subitem="displayFormat"/>
+      <iref item="relref element" subitem="displayFormat attribute"/>
+      <iref item="displayFormat attribute" subitem="in relref element"/>
+      <t>
+        This attribute is used to signal formatters what the desired format of the relative reference should be.
+        Formatters for document types that have linking capability should wrap each part of the displayed text in hyperlinks.
+        If there is content in the &lt;relref&gt; element, formatters will ignore the value of this attribute.
+      </t>
+      <dl newline="true">
+         <dt>"of"</dt>
+         <dd>
+            <t>
+            A formatter should display the relative reference as the word "Section" followed by a space, the contents of the "section" attribute
+            followed by a space, the word "of", another space, and the value from the "target" attribute enclosed in square brackets.
+          </t>
+            <t>
+            For example, with an input of:
+          </t>
+            <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="of"/&gt;
+for an overview.
+</artwork>
+            <t>
+            An HTML formatter might generate:
+          </t>
+            <artwork>
+See
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
+Section 2.3&lt;/a&gt; of
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
+for an overview.
+</artwork>
+            <t>
+            Note that "displayFormat='of'" is the default for &lt;relref&gt;, so it does not need to be given in
+            a &lt;relref&gt; element if that format is desired.
+          </t>
+         </dd>
+         <dt>"comma"</dt>
+         <dd>
+            <t>
+            A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
+            a comma, a space, the word "Section" followed by a space, and the "section" attribute.
+          </t>
+            <t>
+            For example, with an input of:
+          </t>
+            <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="comma"/&gt;,
+for an overview.
+</artwork>
+            <t>
+             An HTML formatter might generate:
+          </t>
+            <artwork>
+See
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;], 
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
+Section 2.3&lt;/a&gt;, for an overview.
+</artwork>
+         </dd>
+         <dt>"parens"</dt>
+         <dd>
+            <t>
+            A formatter should display the relative reference as the value from the "target" attribute enclosed in square brackets,
+            a space, a left parenthesis, the word "Section" followed by a space, the "section" attribute, and a right parenthesis.
+          </t>
+            <t>
+            For example, with an input of:
+          </t>
+            <artwork>
+See
+&lt;relref section="2.3" target="RFC9999" displayFormat="parens"/&gt;
+for an overview.
+</artwork>
+            <t>
+             An HTML formatter might generate:
+          </t>
+            <artwork>
+See
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
+(&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt; 
+Section 2.3&lt;/a&gt;)
+for an overview.
+</artwork>
+         </dd>
+         <dt>"bare"</dt>
+         <dd>
+            <t>
+            A formatter should display the relative reference as the contents of the "section" attribute
+            and nothing else. This is useful when there are multiple relative references to a single base reference.
+          </t>
+            <t>
+            For example:
+          </t>
+            <artwork>
+See Sections
+&lt;relref section="2.3" target="RFC9999" displayFormat="bare"/&gt;
+and
+&lt;relref section="2.4" target="RFC9999" displayFormat="of"/&gt;
+for an overview.
+</artwork>
+            <t>
+             An HTML formatter might generate:
+          </t>
+            <artwork>
+See Sections
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.3"&gt;
+2.3&lt;/a&gt;
+and
+&lt;a href="http://www.rfc-editor.org/info/rfc9999#s-2.4"&gt;
+Section 2.4&lt;/a&gt; of
+[&lt;a href="#RFC9999"&gt;RFC9999&lt;/a&gt;]
+for an overview.
+</artwork>
+         </dd>
+      </dl>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"of" (default)</li>
+         <li>"comma"</li>
+         <li>"parens"</li>
+         <li>"bare"</li>
+      </ul>
+   </section>
+   <!--relref/@relative-->
+   <section anchor="element.relref.attribute.relative"
+            toc="exclude"
+            title="&#34;relative&#34; attribute">
+      <iref item="Attributes" subitem="relative"/>
+      <iref item="relref element" subitem="relative attribute"/>
+      <iref item="relative attribute" subitem="in relref element"/>
+      <t>
+         Specifies a relative reference from the URI in the target reference.
+         This value must include whatever leading character is needed to create
+         the relative reference; typically, this is "#" for HTML documents.
+      </t>
+   </section>
+   <!--relref/@section-->
+   <section anchor="element.relref.attribute.section"
+            toc="exclude"
+            title="&#34;section&#34; attribute (Mandatory)">
+      <iref item="Attributes" subitem="section"/>
+      <iref item="relref element" subitem="section attribute"/>
+      <iref item="section attribute" subitem="in relref element"/>
+      <t>
+         Specifies a section of the target reference.
+         If the reference is not an RFC or Internet-Draft in the v3 format, it is an error.
+      </t>
+   </section>
+   <!--relref/@target-->
+   <section anchor="element.relref.attribute.target"
+            toc="exclude"
+            title="&#34;target&#34; attribute (Mandatory)">
+      <iref item="Attributes" subitem="target"/>
+      <iref item="relref element" subitem="target attribute"/>
+      <iref item="target attribute" subitem="in relref element"/>
+      <t>
+        The anchor of the reference for this element. If this value is not an anchor to a
+        &lt;<x:ref>reference</x:ref>&gt; or &lt;<x:ref>referencegroup</x:ref>&gt; element, it is an error.
+        If the reference at the target has no URI, it is an error.
+      </t>
+   </section>
+</section>
+<!--sortingcode-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.sortingcode"
+         title="&lt;sortingcode&gt;">
+   <x:anchor-alias value="sortingcode"/>
+   <iref item="Elements" subitem="sortingcode" primary="true"/>
+   <iref item="sortingcode element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.sortingcode.contents"><!--AG-->
+      <xref format="none" target="grammar.sortingcode">Content model</xref>: only text content.</t>
+   <!--sortingcode/@ascii-->
+   <section anchor="element.sortingcode.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="sortingcode element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in sortingcode element"/>
+      <t>
+	      ASCII equivalent for sortingcode.
+      </t>
+   </section>
+</section>
 <!--spanx-->
 <section xmlns:x="http://purl.org/net/xml2rfc/ext"
          anchor="element.spanx"
@@ -5945,6 +6131,31 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
          <li>"default"</li>
          <li>"preserve" (default)</li>
       </ul>
+   </section>
+</section>
+<!--street-->
+<section xmlns:x="http://purl.org/net/xml2rfc/ext"
+         anchor="element.street"
+         title="&lt;street&gt;">
+   <x:anchor-alias value="street"/>
+   <iref item="Elements" subitem="street" primary="true"/>
+   <iref item="street element" primary="true"/>
+   <t>
+      Deprecated, use  &lt;<x:ref>postalLine</x:ref>&gt; instead.
+   </t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>postal</x:ref>&gt; (<xref target="element.postal"/>).</t>
+   <t anchor="element.street.contents"><!--AG-->
+      <xref format="none" target="grammar.street">Content model</xref>: only text content.</t>
+   <!--street/@ascii-->
+   <section anchor="element.street.attribute.ascii"
+            toc="exclude"
+            title="&#34;ascii&#34; attribute">
+      <iref item="Attributes" subitem="ascii"/>
+      <iref item="street element" subitem="ascii attribute"/>
+      <iref item="ascii attribute" subitem="in street element"/>
+      <t>
+         The ASCII equivalent of the street address.
+      </t>
    </section>
 </section>
 <!--texttable-->
@@ -7269,7 +7480,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
       | region
       | sortingcode
       | street)*
-     | postalLine+)
+     | (postalLine+, country?))
   }
 
 <strong anchor="grammar.cityarea">cityarea</strong><iref item="cityarea element"/> =
@@ -7520,6 +7731,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute anchor { xsd:ID }?,
     attribute pn { xsd:ID }?,
     attribute hangText { text }?,
+    [ a:defaultValue = "0" ] attribute indent { text }?,
     [ a:defaultValue = "false" ]
     attribute keepWithNext { "false" | "true" }?,
     [ a:defaultValue = "false" ]
@@ -7527,6 +7739,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     (text
      | bcp14
      | br
+     | contact
      | cref
      | em
      | eref
@@ -7566,18 +7779,10 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     attribute cite { text }?,
     attribute quotedFrom { text }?,
-    ((artset
-      | artwork
-      | dl
-      | figure
-      | ol
-      | sourcecode
-      | t
-      | table
-      | ul)+
+    ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
      | (text
         | bcp14
         | br
@@ -7601,7 +7806,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "empty" ] attribute style { text }?,
     attribute hangIndent { text }?,
     attribute counter { text }?,
-    attribute pn { text }?,
+    attribute pn { xsd:ID }?,
     t+
   }
 
@@ -7615,7 +7820,9 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute group { text }?,
     [ a:defaultValue = "normal" ]
     attribute spacing { "normal" | "compact" }?,
-    attribute pn { text }?,
+    [ a:defaultValue = "adaptive" ]
+    attribute indent { text | "adaptive" }?,
+    attribute pn { xsd:ID }?,
     li+
   }
 
@@ -7628,7 +7835,10 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute spacing { "normal" | "compact" }?,
     ([ a:defaultValue = "false" ]
      attribute empty { "false" | "true" },
-     attribute pn { text }?)?,
+     [ a:defaultValue = "false" ]
+     attribute bare { "true" | "false" }?)?,
+    [ a:defaultValue = "3" ] attribute indent { text }?,
+    attribute pn { xsd:ID }?,
     li+
   }
 
@@ -7637,7 +7847,8 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
+    attribute derivedCounter { text }?,
+    attribute pn { xsd:ID }?,
     ((artset
       | artwork
       | blockquote
@@ -7646,6 +7857,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
       | ol
       | sourcecode
       | t
+      | table
       | ul)+
      | (text
         | bcp14
@@ -7672,7 +7884,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute spacing { "normal" | "compact" }?,
     [ a:defaultValue = "false" ]
     attribute newline { "false" | "true" }?,
-    [ a:defaultValue = "0" ] attribute indent { text }?,
+    [ a:defaultValue = "3" ] attribute indent { text }?,
     attribute pn { text }?,
     (dt, dd)+
   }
@@ -7703,8 +7915,17 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute xml:base { text }?,
     attribute xml:lang { text }?,
     attribute anchor { xsd:ID }?,
-    attribute pn { text }?,
-    ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
+    attribute pn { xsd:ID }?,
+    ((artset
+      | artwork
+      | aside
+      | dl
+      | figure
+      | ol
+      | sourcecode
+      | t
+      | table
+      | ul)+
      | (text
         | bcp14
         | br
@@ -7731,7 +7952,12 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     [ a:defaultValue = "default" ]
     attribute format { "default" | "title" | "counter" | "none" }?,
     attribute derivedContent { text }?,
-    text
+    [ a:defaultValue = "of" ]
+    attribute sectionFormat { "of" | "comma" | "parens" | "bare" }?,
+    attribute section { text }?,
+    attribute relative { text }?,
+    attribute derivedLink { text }?,
+    (text | em | strong | sub | sup | tt)*
   }
 
 <strong anchor="grammar.relref">relref</strong><iref item="relref element"/> =
@@ -8418,7 +8644,7 @@ to the v3 schema.</t>
 +       | region
 +       | sortingcode
 +       | street)*
-+      | postalLine+)
++      | (postalLine+, country?))
 +   }
 + cityarea =
 +   element cityarea {
@@ -8665,6 +8891,7 @@ to the v3 schema.</t>
       attribute anchor { xsd:ID }?,
 +     attribute pn { xsd:ID }?,
       attribute hangText { text }?,
++     [ a:defaultValue = "0" ] attribute indent { text }?,
 +     [ a:defaultValue = "false" ]
 +     attribute keepWithNext { "false" | "true" }?,
 +     [ a:defaultValue = "false" ]
@@ -8672,6 +8899,7 @@ to the v3 schema.</t>
       (text
 +      | bcp14
 +      | br
++      | contact
 +      | cref
 +      | em
 +      | eref
@@ -8711,18 +8939,10 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
 +     attribute cite { text }?,
 +     attribute quotedFrom { text }?,
-+     ((artset
-+       | artwork
-+       | dl
-+       | figure
-+       | ol
-+       | sourcecode
-+       | t
-+       | table
-+       | ul)+
++     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
 +      | (text
 +         | bcp14
 +         | br
@@ -8748,7 +8968,7 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "empty" ] attribute style { text }?,
       attribute hangIndent { text }?,
       attribute counter { text }?,
-+     attribute pn { text }?,
++     attribute pn { xsd:ID }?,
       t+
     }
 + ol =
@@ -8761,7 +8981,9 @@ to the v3 schema.</t>
 +     attribute group { text }?,
 +     [ a:defaultValue = "normal" ]
 +     attribute spacing { "normal" | "compact" }?,
-+     attribute pn { text }?,
++     [ a:defaultValue = "adaptive" ]
++     attribute indent { text | "adaptive" }?,
++     attribute pn { xsd:ID }?,
 +     li+
 +   }
 + ul =
@@ -8773,7 +8995,10 @@ to the v3 schema.</t>
 +     attribute spacing { "normal" | "compact" }?,
 +     ([ a:defaultValue = "false" ]
 +      attribute empty { "false" | "true" },
-+      attribute pn { text }?)?,
++      [ a:defaultValue = "false" ]
++      attribute bare { "true" | "false" }?)?,
++     [ a:defaultValue = "3" ] attribute indent { text }?,
++     attribute pn { xsd:ID }?,
 +     li+
 +   }
 + li =
@@ -8781,7 +9006,8 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
++     attribute derivedCounter { text }?,
++     attribute pn { xsd:ID }?,
 +     ((artset
 +       | artwork
 +       | blockquote
@@ -8790,6 +9016,7 @@ to the v3 schema.</t>
 +       | ol
 +       | sourcecode
 +       | t
++       | table
 +       | ul)+
 +      | (text
 +         | bcp14
@@ -8815,7 +9042,7 @@ to the v3 schema.</t>
 +     attribute spacing { "normal" | "compact" }?,
 +     [ a:defaultValue = "false" ]
 +     attribute newline { "false" | "true" }?,
-+     [ a:defaultValue = "0" ] attribute indent { text }?,
++     [ a:defaultValue = "3" ] attribute indent { text }?,
 +     attribute pn { text }?,
 +     (dt, dd)+
 +   }
@@ -8844,8 +9071,17 @@ to the v3 schema.</t>
 +     attribute xml:base { text }?,
 +     attribute xml:lang { text }?,
 +     attribute anchor { xsd:ID }?,
-+     attribute pn { text }?,
-+     ((artset | artwork | dl | figure | ol | sourcecode | t | ul)+
++     attribute pn { xsd:ID }?,
++     ((artset
++       | artwork
++       | aside
++       | dl
++       | figure
++       | ol
++       | sourcecode
++       | t
++       | table
++       | ul)+
 +      | (text
 +         | bcp14
 +         | br
@@ -8873,9 +9109,15 @@ to the v3 schema.</t>
       [ a:defaultValue = "default" ]
 -     attribute format { "counter" | "title" | "none" | "default" 
 +     attribute format { "default" | "title" | "counter" | "none" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
-+     text
++     [ a:defaultValue = "of" ]
++     attribute sectionFormat { "of" | "comma" | "parens" | "bare" 
++ }?,
++     attribute section { text }?,
++     attribute relative { text }?,
++     attribute derivedLink { text }?,
++     (text | em | strong | sub | sup | tt)*
 +   }
 + relref =
 +   element relref {
@@ -8884,7 +9126,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text },
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -9444,7 +9686,19 @@ to the v3 schema.</t>
     <li>Add &lt;seriesInfo;gt; element to &lt;<x:ref>referencegroup</x:ref>&gt;</li>
     <li>Clarify &lt;iref&gt; preserves case in entries, but sorts in normal alphabetical order.</li>
     <li>Allow text in &lt;<x:ref>date</x:ref>&gt; elements.</li>
-    <li>Alliw &lt;<x:ref>author</x:ref>&lt; in &lt;<x:ref>section</x:ref>&gt; elements.</li>
+    <li>Allow &lt;<x:ref>author</x:ref>&gt; in &lt;<x:ref>section</x:ref>&gt; elements.</li>
+    <li>Allow &lt;<x:ref>country</x:ref>&gt; after a sequence of &lt;<x:ref>postalLine</x:ref>&gt;.</li>
+    <li>Deprecate most subelements of &lt;<x:ref>postal</x:ref>&gt;.</li>
+    <li>Deprecate &lt;<x:ref>relref</x:ref>&gt;.</li>
+    <li>Add "indent" attribute to  &lt;<x:ref>t</x:ref>&gt; and   &lt;<x:ref>ol</x:ref>&gt;.</li>
+    <li>Allow  &lt;<x:ref>contact</x:ref>&gt; in multiple places.</li>
+    <li>Remove &lt;<x:ref>table</x:ref>&gt; from children of &lt;<x:ref>blockquote</x:ref>&gt;.</li>
+    <li>Add "empty", "bare", and "indent" attributes to  &lt;<x:ref>li</x:ref>&gt;.</li>
+    <li>Add &lt;<x:ref>table</x:ref>&gt; to children of &lt;<x:ref>ul</x:ref>&gt;.</li>
+    <li>Add "bare" and "indent" attributes to  &lt;<x:ref>ul</x:ref>&gt;.</li>
+    <li>Allow &lt;<x:ref>aside</x:ref>&gt; and &lt;<x:ref>table</x:ref>&gt; in &lt;<x:ref>dd</x:ref>&gt; elements.</li>
+    <li>Add "section", "sectionFormat", and "relative" attributes to  &lt;<x:ref>xref</x:ref>&gt;.
+       Allow formatting elements as well as text as children.</li>
   </ul>
 </section>
 </section>

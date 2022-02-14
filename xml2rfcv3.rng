@@ -358,9 +358,14 @@
             <ref name="street"/>
           </choice>
         </zeroOrMore>
-	<oneOrMore>
-	   <ref name="postalLine"/>
-	</oneOrMore>
+	<group>
+	   <oneOrMore>
+	      <ref name="postalLine"/>
+	   </oneOrMore>
+	   <optional>
+	      <ref name="country"/>
+	   </optional>
+	</group>
       </choice>
     </element>
   </define>
@@ -846,6 +851,9 @@
         <attribute name="hangText"/>
       </optional>
       <optional>
+         <attribute name="indent" a:defaultValue="0"/>
+      </optional>
+      <optional>
         <attribute name="keepWithNext" a:defaultValue="false">
           <choice>
             <value>false</value>
@@ -866,6 +874,7 @@
           <text/>
 	  <ref name="bcp14"/>
           <ref name="br"/>	  
+           <ref name="contact"/>
           <ref name="cref"/>
           <ref name="em"/>
           <ref name="eref"/>
@@ -930,7 +939,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <optional>
         <attribute name="cite"/>
@@ -948,7 +959,6 @@
             <ref name="ol"/>
             <ref name="sourcecode"/>
             <ref name="t"/>
-            <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
@@ -991,7 +1001,9 @@
         <attribute name="counter"/>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <oneOrMore>
         <ref name="t"/>
@@ -1028,8 +1040,18 @@
           </choice>
         </attribute>
       </optional>
+        <optional>
+         <attribute name="indent" a:defaultValue="adaptive">
+           <choice>
+             <text/>
+             <value>adaptive</value>
+           </choice>
+         </attribute>
+       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <oneOrMore>
         <ref name="li"/>
@@ -1064,9 +1086,22 @@
             <value>true</value>
           </choice>
         </attribute>
-      <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
-      </optional>
+         <optional>
+           <attribute name="bare" a:defaultValue="false">
+             <choice>
+                <value>true</value>
+               <value>false</value>
+              </choice>
+            </attribute>
+         </optional>
+       </optional>
+       <optional>
+         <attribute name="indent" a:defaultValue="3"/>
+       </optional>
+       <optional>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <oneOrMore>
         <ref name="li"/>
@@ -1087,7 +1122,12 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+         <attribute name="derivedCounter"><?hidden-in-prose?></attribute>
+      </optional>
+      <optional>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <choice>
         <oneOrMore>
@@ -1099,7 +1139,8 @@
             <ref name="figure"/>
             <ref name="ol"/>
             <ref name="sourcecode"/>
-            <ref name="t"/>
+	    <ref name="t"/>
+	    <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
@@ -1154,7 +1195,7 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="indent" a:defaultValue="0"/>
+        <attribute name="indent" a:defaultValue="3"/>
       </optional>
       <optional>
         <attribute name="pn"><?hidden-in-prose?></attribute>
@@ -1214,18 +1255,22 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <choice>
         <oneOrMore>
           <choice>
             <ref name="artset"/>
             <ref name="artwork"/>
+	    <ref name="aside"/>
             <ref name="dl"/>
             <ref name="figure"/>
             <ref name="ol"/>
             <ref name="sourcecode"/>
             <ref name="t"/>
+	    <ref name="table"/>
             <ref name="ul"/>
           </choice>
         </oneOrMore>
@@ -1282,7 +1327,35 @@
       <optional>
         <attribute name="derivedContent"><?hidden-in-prose?></attribute>
       </optional>
-      <text/>
+      <optional>
+        <attribute name="sectionFormat" a:defaultValue="of">
+          <choice>
+            <value>of</value>
+            <value>comma</value>
+            <value>parens</value>
+            <value>bare</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="section"/>
+      </optional>
+      <optional>
+        <attribute name="relative"/>
+      </optional>
+      <optional>
+        <attribute name="derivedLink"><?hidden-in-prose?></attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="em"/>
+          <ref name="strong"/>
+          <ref name="sub"/>
+          <ref name="sup"/>
+          <ref name="tt"/>
+        </choice>
+      </zeroOrMore>
     </element>
   </define>
   <define name="relref">
