@@ -1588,6 +1588,9 @@
                </choice>
             </attribute>
          </optional>
+         <optional>
+            <attribute name="derivedContent"><?hidden-in-prose?></attribute>
+         </optional>
          <attribute name="section">
             <a:annotation>Specifies a section of the target reference. If the reference is not an RFC or Internet-Draft in the v3 format, it is an error.</a:annotation>
          </attribute>
@@ -1653,7 +1656,9 @@
             </attribute>
          </optional>
          <optional>
-            <attribute name="pn"><?hidden-in-prose?></attribute>
+            <attribute name="pn"><?hidden-in-prose?>
+               <data type="ID"/>
+            </attribute>
          </optional>
          <empty/>
       </element>
@@ -1803,6 +1808,8 @@
                <ref name="iref"/>
                <ref name="relref"/>
                <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
                <ref name="tt"/>
                <ref name="xref"/>
             </choice>
@@ -1828,6 +1835,8 @@
                <ref name="iref"/>
                <ref name="relref"/>
                <ref name="strong"/>
+               <ref name="sub"/>
+               <ref name="sup"/>
                <ref name="tt"/>
                <ref name="xref"/>
             </choice>

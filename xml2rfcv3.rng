@@ -1378,6 +1378,9 @@
             <value>bare</value>
           </choice>
         </attribute>
+     </optional>
+     <optional>
+        <attribute name="derivedContent"><?hidden-in-prose?></attribute>
       </optional>
       <attribute name="section"/>
       <optional>
@@ -1430,7 +1433,9 @@
         </attribute>
       </optional>
       <optional>
-        <attribute name="pn"><?hidden-in-prose?></attribute>
+	 <attribute name="pn"><?hidden-in-prose?>
+	    <data type="ID"/>
+	 </attribute>
       </optional>
       <empty/>
     </element>
@@ -1571,6 +1576,8 @@
           <ref name="iref"/>
           <ref name="relref"/>
           <ref name="strong"/>
+	  <ref name="sub"/>
+	  <ref name="sup"/>
           <ref name="tt"/>
           <ref name="xref"/>
         </choice>
@@ -1594,7 +1601,9 @@
           <ref name="eref"/>
           <ref name="iref"/>
           <ref name="relref"/>
-          <ref name="strong"/>
+	  <ref name="strong"/>
+	  <ref name="sub"/>
+	  <ref name="sup"/>
           <ref name="tt"/>
           <ref name="xref"/>
         </choice>
