@@ -112,23 +112,22 @@ Desired result has single references in back, and choice of references+  or (ref
   <middle>
 <section title="Introduction">
 <t>
-  This document describes version 3 ("v3") of the "xml2rfc" vocabulary: an XML-based
+  This document describes the updated version 3 ("v3") of the "xml2rfc" vocabulary: an XML-based
   language ("Extensible Markup Language" <xref target="XML"/>) used for writing RFCs
   <xref target="RFC7322"/> and Internet-Drafts <xref target="IDGUIDE"/>.
 </t>
 <t>
   This document obsoletes <xref target="RFC7991"/>,
   <xref target="RFC7991"/> obsoleted the version 2 vocabulary ("v2") <xref target="RFC7749"/>, which
-  contains the extended language definition. <xref target="RFC7749"/> obsolted
+  contains the extended language definition. <xref target="RFC7749"/> obsoleted
   the original version ("v1") <xref target="RFC2629"/>. This document directly copies the
   material from <xref target="RFC7749"/> where possible.
 </t>
 <t>
-The v3 format will be used as part of the new RFC Series format described in <xref target="RFC6949"/>.
-The new format will be handled by one or more new tools for preparing the XML and
+The v3 format is used as part of the new RFC Series format described in <xref target="RFC6949"/>.
+The new format is handled by existing tools for preparing the XML and
 converting it to other representations.
-Features of the expected
-tools are described in <xref target="tools"/>. That section defines some terms 
+Features of the tools are described in <xref target="tools"/>. That section defines some terms 
 used throughout this document, such as "prep tool" and "formatter".
 </t>
 <t>
@@ -157,13 +156,14 @@ those changes to remain backwards-compatible with the details described in this 
 
 <section title="Design Criteria for the Changes in v3">
 
-<t>The design criteria of the changes from v2 to v3 are as follows:</t>
+<t>The design criteria of the changes from v2 to v3 were as follows:</t>
 
 <ul>
-<li>The intention is that starting and editing a v3 document will be easier than for a v2 document.</li>
+<li>The intention was that starting and editing a v3 document will be easier than for a v2 document.</li>
 <li>There will be good v2-to-v3 conversion tools for when an author wants to change versions.</li>
-<li>There are no current plans to make v3 XML the required submission format for drafts or
-RFCs. That might happen eventually, but it is likely to be years away.</li>
+<li>There were no plans to make v3 XML the required submission format for drafts or
+   RFCs. But starting in 2020, all RFCs were published using v3, and any v2 submissions were mechanically
+   converted to v3 before editing.  Submissions in v3 are strongly preferred.</li>
 </ul>
 
 <t>There is a desire to keep as much of the v2 grammar as makes sense within the above design
@@ -173,9 +173,9 @@ goal of starting and editing a v3 document being easier than for a v2 document i
 important than backwards compatibility with v2, given the latter two design criteria.</t>
 
 <t>
-v3 is upwards compatible with v2, meaning that a v2 document is meant to be a valid v3
-document as well. However, some features of v2 are deprecated in v3 in favor of new
-elements. Deprecated features are listed in <xref target="deprecated_features"/>
+v3 is largely compatible with v2, meaning that a v2 document is mostly a valid v3
+document as well. However, some features of v2 were deprecated in v3 in favor of new
+elements, and a few elements are used differently. Deprecated features are listed in <xref target="deprecated_features"/>
 and are described in <xref target="RFC7749"/>.
 </t>
 
@@ -924,7 +924,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
       This element is a container for content that is semantically less important or tangential
       to the content that surrounds it.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>) and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.aside.contents"><!--AG-->
       <xref format="none" target="grammar.aside">Content model</xref>:
     </t>
@@ -1168,7 +1168,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
    <t>
       Specifies that a block of text is a quotation.
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
+   <t><!--AG-->This element appears as a child element of &lt;<x:ref>aside</x:ref>&gt; (<xref target="element.aside"/>), &lt;<x:ref>dd</x:ref>&gt; (<xref target="element.dd"/>), &lt;<x:ref>li</x:ref>&gt; (<xref target="element.li"/>), and &lt;<x:ref>section</x:ref>&gt; (<xref target="element.section"/>).</t>
    <t anchor="element.blockquote.contents"><!--AG-->
       <xref format="none" target="grammar.blockquote">Content model</xref>:
     </t>
@@ -1654,6 +1654,9 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
                <iref item="Elements" subitem="aside"/>
                <iref item="aside element" subitem="inside dd"/>&lt;<x:ref>aside</x:ref>&gt; elements (<xref target="element.aside"/>)</li>
             <li><!--AG-->
+               <iref item="Elements" subitem="blockquote"/>
+               <iref item="blockquote element" subitem="inside dd"/>&lt;<x:ref>blockquote</x:ref>&gt; elements (<xref target="element.blockquote"/>)</li>
+            <li><!--AG-->
                <iref item="Elements" subitem="dl"/>
                <iref item="dl element" subitem="inside dd"/>&lt;<x:ref>dl</x:ref>&gt; elements (<xref target="element.dl"/>)</li>
             <li><!--AG-->
@@ -1760,9 +1763,7 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
      If a reference section is sorted, this element changes the sort order.
    </t>
    <t>
-     It is expected that this element will only be valid in input documents. It will likely be removed by prep
-     tools when preparing a final version after those tools have replaced all of the associated anchors, targets, and "derivedContent"
-     attributes.
+     Prep tools add a "derivedAnchor" attribute to the corresponding &lt;<x:ref>reference</x:ref>&gt; element with the display anchor.
    </t>
    <t><!--AG-->This element appears as a child element of &lt;<x:ref>back</x:ref>&gt; (<xref target="element.back"/>).</t>
    <t anchor="element.displayreference.contents"><!--AG-->
@@ -2428,6 +2429,9 @@ in this interesting report&lt;/a&gt;.
             <li><!--AG-->
                <iref item="Elements" subitem="artwork"/>
                <iref item="artwork element" subitem="inside li"/>&lt;<x:ref>artwork</x:ref>&gt; elements (<xref target="element.artwork"/>)</li>
+            <li><!--AG-->
+               <iref item="Elements" subitem="aside"/>
+               <iref item="aside element" subitem="inside li"/>&lt;<x:ref>aside</x:ref>&gt; elements (<xref target="element.aside"/>)</li>
             <li><!--AG-->
                <iref item="Elements" subitem="blockquote"/>
                <iref item="blockquote element" subitem="inside li"/>&lt;<x:ref>blockquote</x:ref>&gt; elements (<xref target="element.blockquote"/>)</li>
@@ -3185,12 +3189,28 @@ in this interesting report&lt;/a&gt;.
       <iref item="reference element" subitem="quote-title attribute"/>
       <iref item="quote-title attribute" subitem="in reference element"/>
       <t>
+	 Deprecated variant of the "quoteTitle" attribute.
+	 Prep tools turn this attribute into "quoteTitle".
+      </t>
+      <t><!--AG-->Allowed values:</t>
+      <ul><!--AG-->
+         <li>"true"</li>
+         <li>"false"</li>
+      </ul>
+   </section>
+   <!--reference/@quoteTitle-->
+   <section anchor="element.reference.attribute.quoteTitle" toc="exclude">
+      <name>"quoteTitle" Attribute</name>
+      <iref item="Attributes" subitem="quoteTitle"/>
+      <iref item="reference element" subitem="quoteTitle attribute"/>
+      <iref item="quoteTitle attribute" subitem="in reference element"/>
+      <t>
         Specifies whether or not the title in the reference should be quoted.
         This can be used to prevent quoting, such as on errata.
       </t>
       <t><!--AG-->Allowed values:</t>
       <ul><!--AG-->
-         <li>"true"</li>
+         <li>"true" (default)</li>
          <li>"false"</li>
       </ul>
    </section>
@@ -7296,23 +7316,33 @@ and expect that their values will survive processing by the prep tool.</t>
 
 <t>The attributes that are controlled by the prep tool are:</t>
 <ul>
-<li>The "pn" attribute in any element -- The number for this item within the section.  The numbering
-is shared with other elements of a section. The "pn" attribute is added to many block-level elements
-inside sections.</li>
+<li>The "pn" attribute -- The number for this item within the section.  The numbering
+is shared with other elements of a section. The "pn" attribute is added to these elements:
+&lt;<x:ref>abstract</x:ref>&gt;, &lt;<x:ref>artset</x:ref>&gt;,
+&lt;<x:ref>artwork</x:ref>&gt;, &lt;<x:ref>aside</x:ref>&gt;,
+&lt;<x:ref>blockquote</x:ref>&gt;, &lt;<x:ref>dd</x:ref>&gt;,
+&lt;<x:ref>dl</x:ref>&gt;, &lt;<x:ref>dt</x:ref>&gt;,
+&lt;<x:ref>figure</x:ref>&gt;, &lt;<x:ref>iref</x:ref>&gt;,
+&lt;<x:ref>li</x:ref>&gt;, &lt;<x:ref>list</x:ref>&gt;,
+&lt;<x:ref>note</x:ref>&gt;, &lt;<x:ref>ol</x:ref>&gt;,
+&lt;<x:ref>references</x:ref>&gt;, &lt;<x:ref>section</x:ref>&gt;,
+&lt;<x:ref>sourcecode</x:ref>&gt;, &lt;<x:ref>t</x:ref>&gt;,
+&lt;<x:ref>table</x:ref>&gt;, &lt;<x:ref>u</x:ref>&gt;, and
+&lt;<x:ref>ul</x:ref>&gt;
+.</li>
 
-<li>&lt;artwork&gt; originalSrc -- This attribute is filled with the original value of the "src"
-attribute if that attribute is removed by the prep tool.</li>
-
-<li>&lt;figure&gt; originalSrc -- This attribute is filled with the original value of the "src"
-attribute if that attribute is removed by the prep tool.</li>
+<li> originalSrc -- This attribute is filled with the original value of the "src"
+   attribute if that attribute is removed by the prep tool in &lt;<x:ref>artwork</x:ref>&gt;, &lt;<x:ref>figure</x:ref>&gt;,
+   and &lt;<x:ref>sourcecode</x:ref>&gt;.</li>
 
 <li>&lt;name&gt; "slugifiedName" attribute -- This attribute is filled with a "slugified" version of
 the text in the element.  This attribute can be used in the output formats for elements that have
 both names and numbers.</li>
 
-<li>&lt;relref&gt; "derivedLink" attribute -- This attribute is filled with the link that is derived
+<li>"derivedLink" attribute -- This attribute is filled with the link that is derived
 from combining the URI from the reference and the relative part that is either a copy of the
-"relative" attribute or a section number derived from the "section" attribute.</li>
+"relative" attribute or a section number derived from the "section" attribute.
+This attribute is added to &lt;<x:ref>relref</x:ref>&gt; and &lt;<x:ref>xref</x:ref>&gt;.</li>
 
 <li>&lt;rfc&gt; "expiresDate" attribute -- This attribute is filled with the date that an Internet-Draft
 expires. The date is in the format yyyy-mm-dd.</li>
@@ -7321,19 +7351,22 @@ expires. The date is in the format yyyy-mm-dd.</li>
 mode the prep tool was in when it processed the XML, such as whether it was processing a file
 to become an Internet-Draft or an RFC.</li>
 
-<li>&lt;rfc&gt; "scripts" attribute -- This attribute is filled with a list of scripts needed to
+<li>"scripts" attribute -- This attribute in the &lt;<x:ref>rfc</x:ref>&gt; element is filled with a list of scripts needed to
 render this document.  The list is comma-separated, with no spaces allowed.  The order is
 unimportant.  The names come from <xref target="UAX24"/>.  For example, if the document has Chinese
 characters in it, the value might be "Common,Latin,Han". </li>
 
-<li>&lt;sourcecode&gt; "originalSrc" attribute -- This attribute is filled with the original value of
-the "src" attribute if that attribute is removed by the prep tool.</li>
-
-<li>&lt;xref&gt; "derivedContent" attribute -- This attribute is filled in if there is no content in
-the &lt;xref&gt; element.  The value for this attribute is based on the value in the "displayFormat"
+<li>"derivedContent" attribute -- This attribute is filled in if there is no content in
+the &lt;xref&gt; or &lt;relref&gt; element.  The value for this attribute is based on the value in the "displayFormat"
 attribute.
 Examples of how this value is filled can be found in <xref target="element.xref.attribute.format"/>.
 </li>
+<li>"derivedAnchor" attribute -- This attribute in an &lt;<x:ref>xref</x:ref>&gt; element is filled in with the
+   display anchor from the corresponding &lt;<x:ref>displayreference</x:ref>&gt; element.
+   If there is no &lt;<x:ref>displayreference</x:ref>&gt;, this attribute is a copy of the "anchor" attribute.
+</li>
+<li>"derivedCounter" -- This attribute in a &lt;<x:ref>li</x:ref>&gt; element in an ordered
+   list is filled in with the item number in the list.</li>
 </ul>
 
 
@@ -7866,6 +7899,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     attribute pn { xsd:ID }?,
     ((artset
       | artwork
+      | aside
       | blockquote
       | dl
       | figure
@@ -7934,6 +7968,7 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
     ((artset
       | artwork
       | aside
+      | blockquote
       | dl
       | figure
       | ol
@@ -9032,6 +9067,7 @@ to the v3 schema.</t>
 +     attribute pn { xsd:ID }?,
 +     ((artset
 +       | artwork
++       | aside
 +       | blockquote
 +       | dl
 +       | figure
@@ -9097,6 +9133,7 @@ to the v3 schema.</t>
 +     ((artset
 +       | artwork
 +       | aside
++       | blockquote
 +       | dl
 +       | figure
 +       | ol
@@ -9731,6 +9768,8 @@ to the v3 schema.</t>
     <li>Allow &lt;<x:ref>iref</x:ref>&gt; as child of &lt;<x:ref>table</x:ref>&gt;.</li>
     <li>Change default "colspan" and "rowspan" from 0 to 1 in &lt;<x:ref>th</x:ref>&gt; and &lt;<x:ref>td</x:ref>&gt;.</li>
     <li>In &lt;<x:ref>back</x:ref>&gt; allow zero or more &lt;<x:ref>references</x:ref>&gt; optional.</li>
+    <li>Update description of prep tool generated attributes.</li>
+    <li>Turn quote-title back into quoteTitle</li>
   </ul>
 </section>
 </section>

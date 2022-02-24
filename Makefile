@@ -8,7 +8,8 @@ all: \
 #	draft-iab-rfc7991bis.unpg.txt \
 
 allhtml: \
-	all \
+	draft-iab-rfc7991bis.redxml \
+	xml2rfcv3-annotated.rng \
 	draft-iab-rfc7991bis.html
 
 xml2rfc.all: \

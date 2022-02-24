@@ -1136,6 +1136,7 @@
           <choice>
             <ref name="artset"/>
             <ref name="artwork"/>
+	    <ref name="aside"/>
             <ref name="blockquote"/>
             <ref name="dl"/>
             <ref name="figure"/>
@@ -1271,6 +1272,7 @@
             <ref name="artset"/>
             <ref name="artwork"/>
 	    <ref name="aside"/>
+	    <ref name="blockquote"/>
             <ref name="dl"/>
             <ref name="figure"/>
             <ref name="ol"/>
@@ -2352,7 +2354,7 @@
         <attribute name="target"/>
       </optional>
       <optional>
-        <attribute name="quoteTitle" a:defaultValue="true"><?hidden-in-prose?>
+        <attribute name="quoteTitle" a:defaultValue="true">
           <choice>
             <value>true</value>
             <value>false</value>
