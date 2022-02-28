@@ -4281,9 +4281,6 @@ See <xref target="cdata.and.escaping"/> for a description of how to deal with is
          <iref item="Elements" subitem="iref"/>
          <iref item="iref element" subitem="inside t"/>&lt;<x:ref>iref</x:ref>&gt; elements (<xref target="element.iref"/>)</li>
       <li><!--AG-->
-         <iref item="Elements" subitem="list"/>
-         <iref item="list element" subitem="inside t"/>&lt;<x:ref>list</x:ref>&gt; elements (<xref target="element.list"/>)</li>
-      <li><!--AG-->
          <iref item="Elements" subitem="relref"/>
          <iref item="relref element" subitem="inside t"/>&lt;<x:ref>relref</x:ref>&gt; elements (<xref target="element.relref"/>)</li>
       <li><!--AG-->
@@ -5701,7 +5698,6 @@ v3 have attributes from v2 that are deprecated; those are not listed here.</t>
       &lt;<x:ref>ul</x:ref>&gt; for list/@style "empty" or "symbols"; and
       &lt;<x:ref>ol</x:ref>&gt; for list/@style "letters", "numbers", "counter", or "format".
    </t>
-   <t><!--AG-->This element appears as a child element of &lt;<x:ref>t</x:ref>&gt; (<xref target="element.t"/>).</t>
    <t anchor="element.list.contents"><!--AG-->
       <xref format="none" target="grammar.list">Content model</xref>:
     </t>
@@ -7345,7 +7341,7 @@ from combining the URI from the reference and the relative part that is either a
 This attribute is added to &lt;<x:ref>relref</x:ref>&gt; and &lt;<x:ref>xref</x:ref>&gt;.</li>
 
 <li>&lt;rfc&gt; "expiresDate" attribute -- This attribute is filled with the date that an Internet-Draft
-expires. The date is in the format yyyy-mm-dd.</li>
+expires. The date is in the format yyyy-mm-dd.</li>	
 
 <li>&lt;rfc&gt; "mode" attribute -- This attribute is filled with a string that indicates what
 mode the prep tool was in when it processed the XML, such as whether it was processing a file
@@ -7792,7 +7788,6 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
      | em
      | eref
      | iref
-     | \list
      | relref
      | spanx
      | strong
@@ -8954,16 +8949,20 @@ to the v3 schema.</t>
 +     [ a:defaultValue = "false" ]
 +     attribute keepWithPrevious { "false" | "true" }?,
       (text
+-      | \list
+-      | figure
+-      | xref
 +      | bcp14
 +      | br
 +      | contact
 +      | cref
 +      | em
-+      | eref
-+      | iref
-       | \list
+       | eref
+       | iref
+-      | cref
 +      | relref
-+      | spanx
+       | spanx
+-      | vspace)*
 +      | strong
 +      | sub
 +      | sup
@@ -8982,10 +8981,8 @@ to the v3 schema.</t>
 +      | artwork
 +      | blockquote
 +      | dl
-       | figure
--      | xref
--      | eref
-       | iref
++      | figure
++      | iref
 +      | ol
 +      | t
 +      | table
@@ -9003,9 +9000,7 @@ to the v3 schema.</t>
 +      | (text
 +         | bcp14
 +         | br
-       | cref
--      | spanx
--      | vspace)*
++         | cref
 +         | em
 +         | eref
 +         | iref
@@ -9172,7 +9167,7 @@ to the v3 schema.</t>
 +     attribute derivedContent { text }?,
 +     [ a:defaultValue = "of" ]
 +     attribute sectionFormat { "of" | "comma" | "parens" | "bare" 
-  }?,
++ }?,
 +     attribute section { text }?,
 +     attribute relative { text }?,
 +     attribute derivedLink { text }?,
@@ -9185,7 +9180,7 @@ to the v3 schema.</t>
 +     attribute target { xsd:IDREF },
 +     [ a:defaultValue = "of" ]
 +     attribute displayFormat { "of" | "comma" | "parens" | "bare" 
-+ }?,
+  }?,
 +     attribute derivedContent { text }?,
 +     attribute section { text },
 +     attribute relative { text }?,
@@ -9770,6 +9765,7 @@ to the v3 schema.</t>
     <li>In &lt;<x:ref>back</x:ref>&gt; allow zero or more &lt;<x:ref>references</x:ref>&gt; optional.</li>
     <li>Update description of prep tool generated attributes.</li>
     <li>Turn quote-title back into quoteTitle</li>
+    <li>Remove deprecated &lt;list&gt; from &lt;t&gt;.</li>
   </ul>
 </section>
 </section>

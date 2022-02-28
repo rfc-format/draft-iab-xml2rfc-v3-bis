@@ -879,7 +879,6 @@
           <ref name="em"/>
           <ref name="eref"/>
           <ref name="iref"/>
-          <ref name="list"/>
           <ref name="relref"/>
           <ref name="spanx"/>
           <ref name="strong"/>
