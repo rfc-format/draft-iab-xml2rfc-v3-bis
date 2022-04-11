@@ -18,41 +18,6 @@ Notes for the author:
 
 ==================
 
-Most recent consensus decisions to be implemented:
-
-Issue #31 - consensus reached: add align, default center, wrapping the title to match the max table width for the table caption
-The caption will be centred under the table, and the combined table and
-caption will be aligned according to the 'align' attribute on <table>.
-## PR 68
-
-Issue #47 - consensus reached: change the <name> element schema to permit all inline elements that <tt> can contain, in addition to <tt>.
-## PR 69
-
-Issue #49 - decision made: References must be expanded and complete in the final XML.
-TOC and Index are completely derivable from the XML, but the actual format of those may change
-per publication format - no specification in the v3 spec required.
-
-Desired result has single references in back, and choice of references+  or (reference | referencegroup)* for references.
-
-   back =
-     element back {
-       attribute xml:base { text }?,
-       attribute xml:lang { text }?,
-       displayreference*,
-       references,
-       section*
-     }
-
-   references =
-     element references {
-       attribute xml:base { text }?,
-       attribute xml:lang { text }?,
-       attribute pn { text }?,
-       attribute anchor { xsd:ID }?,
-       attribute title { text }?,
-       name?,
-       (references+ | (reference | referencegroup)*)
-     }
 
 ======================
 
@@ -94,16 +59,16 @@ Desired result has single references in back, and choice of references+  or (ref
 
   <note title="Editorial Note" removeInRFC="true">
     <t>
-      Discussion of this draft takes place on the xml2rfc-dev@ietf.org
+      Discussion of this draft takes place on the rfc-interest@ietf.org
       mailing list, which has its home page at
-      <eref target="https://www.ietf.org/mailman/listinfo/xml2rfc-dev"/>.
+      <eref target="https://www.ietf.org/mailman/listinfo/rfc-interest"/>.
     </t>
     <t>
       Source code and issues list for this draft can be found at
       <eref target="&GH;"/>.
     </t>
     <t>
-      The changes in this draft are summarized in <xref target="changes.since.03"/>.
+      The changes in this draft are summarized in <xref target="changes.since.04"/>.
     </t>
   </note>
 
@@ -9769,6 +9734,7 @@ to the v3 schema.</t>
     <li>Remove deprecated &lt;list&gt; from &lt;t&gt;.</li>
     <li>Clarify that  &lt;<x:ref>artwork</x:ref>&gt; in &lt;<x:ref>artset</x:ref>&gt;
        must have "type" attribute.</li>
+    <li>Move discussion to rfc-i</li>
   </ul>
 </section>
 </section>
