@@ -676,6 +676,7 @@ the appendices for a complete description of these attributes.
    <iref item="artset element" primary="true"/>
    <t>
       This element allows for the support of alternative artwork formats. This will allow the renderer to pick the most appropriate &lt;artwork&gt; instance for its format from the alternatives present within an &lt;artset&gt; element.
+      Each of the &lt;artwork&gt; elements must have a "type" attribute.
    </t>
    <t>
       If more than one &lt;artwork&gt; element is found within an &lt;artset&gt; element, with the same "type" attribute, the rendere could select the first one, or possibly choose between the alternative instances based on the output format and some quality of the alternative instances that made one more suitable than the other for that particular format, such as size, aspect ration, etc.
@@ -9766,6 +9767,8 @@ to the v3 schema.</t>
     <li>Update description of prep tool generated attributes.</li>
     <li>Turn quote-title back into quoteTitle</li>
     <li>Remove deprecated &lt;list&gt; from &lt;t&gt;.</li>
+    <li>Clarify that  &lt;<x:ref>artwork</x:ref>&gt; in &lt;<x:ref>artset</x:ref>&gt;
+       must have "type" attribute.</li>
   </ul>
 </section>
 </section>

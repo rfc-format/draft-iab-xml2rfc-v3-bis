@@ -2058,7 +2058,7 @@
    </define>
    <define name="artset">
       <element name="artset">
-         <a:annotation>This element allows for the support of alternative artwork formats. This will allow the renderer to pick the most appropriate &lt;artwork&gt; instance for its format from the alternatives present within an &lt;artset&gt; element.</a:annotation>
+         <a:annotation>This element allows for the support of alternative artwork formats. This will allow the renderer to pick the most appropriate &lt;artwork&gt; instance for its format from the alternatives present within an &lt;artset&gt; element. Each of the &lt;artwork&gt; elements must have a "type" attribute.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
