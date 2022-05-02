@@ -30,7 +30,7 @@ Notes for the author:
 <rfc
     obsoletes="7991"
     ipr="trust200902"
-    docName="draft-iab-rfc7991bis-03"
+    docName="draft-iab-rfc7991bis-05"
     submissionType="IAB"
     category="info"
     xml:lang="en"
@@ -9698,11 +9698,6 @@ to the v3 schema.</t>
     <li>In &lt;<x:ref>rfc</x:ref>&gt;'s description of the "consensus" attribute, link to <xref target="attribute-consensus"/> (<eref target="&GH;/issues/88"/>)</li>
     <li>Undeprecate metadata attributes on &lt;<x:ref>rfc</x:ref>&gt; (<eref target="&GH;/issues/122"/>)</li>
     <li>Add "brackets" attribute on &lt;<x:ref>eref</x:ref>&gt; (<eref target="&GH;/issues/146"/>)</li>
-  </ul>
-</section>
-
-<section title="Since draft-iab-rfc7991bis-04" anchor="changes.since.04">
-  <ul x:when-empty="None yet.">
     <li>Add &lt;stream&gt; subelement</li>
     <li>Add &lt;u&gt; element</li>
     <li>Add &lt;br&gt; element</li>
@@ -9735,6 +9730,11 @@ to the v3 schema.</t>
     <li>Clarify that  &lt;<x:ref>artwork</x:ref>&gt; in &lt;<x:ref>artset</x:ref>&gt;
        must have "type" attribute.</li>
     <li>Move discussion to rfc-i</li>
+  </ul>
+</section>
+
+<section title="Since draft-iab-rfc7991bis-04" anchor="changes.since.04">
+  <ul x:when-empty="None yet.">
   </ul>
 </section>
 </section>
