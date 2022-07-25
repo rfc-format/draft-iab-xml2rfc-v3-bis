@@ -823,7 +823,7 @@
    </define>
    <define name="toc">
       <element name="toc">
-         <a:annotation>This element contains the Table of Contents. It is created automatically by the preptool based on the "tocInclude" and "tocDepth" attributes of the &lt;rfc&gt; element. Document authors should create it.</a:annotation>
+         <a:annotation>This element contains the Table of Contents. It is created automatically by the preptool based on the "tocInclude" and "tocDepth" attributes of the &lt;rfc&gt; element and the section headers. In prepared drafts, it has no effect on document rendering and contains no useful information. In prepared RFCs, it is used as the source for the table of contents.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -1181,7 +1181,7 @@
    </define>
    <define name="ol">
       <element name="ol">
-         <a:annotation>An ordered list. The labels on the items will be either a number or a letter, depending on the value of the style attribute.</a:annotation>
+         <a:annotation>An ordered list. The labels on the items will be either a number or a letter, depending on the value of the type attribute.</a:annotation>
          <optional>
             <attribute name="xml:base"><?hidden-in-prose?></attribute>
          </optional>
@@ -2718,7 +2718,7 @@
    </define>
    <define name="stream">
       <element name="stream">
-         <a:annotation>The document stream, one of IETF, IAB, IRTF, or independent.</a:annotation>
+         <a:annotation>The document stream, one of IETF, IAB, IRTF, independent, or editorial.</a:annotation>
          <optional>
             <choice>
                <value>IETF</value>
